@@ -29,10 +29,10 @@ window.RB = (function(){
   var KEYWORDS = {
     "Action":      {fr:"Action",        txt:"Se joue pendant ton tour ou dans un affrontement, uniquement quand la chaîne est vide."},
     "Reaction":    {fr:"Réaction",      txt:"Se joue à tout moment, même avant qu'un sort ou une capacité ne se résolve."},
-    "Hidden":      {fr:"Cachée",        txt:"Se cacher maintenant pour 1 Puissance (de n'importe quel domaine), afin de la révéler plus tard pour 0. Elle gagne Réaction."},
+    "Hidden":      {fr:"Cachée",        txt:"Se cacher maintenant pour 1 Pouvoir (de n'importe quel domaine), afin de la révéler plus tard pour 0. Elle gagne Réaction."},
     "Tank":        {fr:"Tank",          txt:"Les dégâts de combat doivent lui être assignés en premier."},
     "Backline":    {fr:"Arrière-garde", txt:"Les dégâts de combat doivent lui être assignés en dernier."},
-    "Deflect":     {fr:"Déviation",     txt:"L'adversaire doit payer 1 Puissance de plus, de n'importe quel domaine, pour la choisir avec un sort ou une capacité."},
+    "Deflect":     {fr:"Déviation",     txt:"L'adversaire doit payer 1 Pouvoir de plus, de n'importe quel domaine, pour la choisir avec un sort ou une capacité."},
     "Ganking":     {fr:"Gank",          txt:"Peut se déplacer d'un champ de bataille à un autre."},
     "Assault":     {fr:"Assaut",        txt:"+1 Puissance (ou plus) tant qu'elle est attaquante."},
     "Shield":      {fr:"Bouclier",      txt:"+2 Puissance (ou plus) tant qu'elle est défenseuse."},
@@ -40,7 +40,7 @@ window.RB = (function(){
     "Empower":     {fr:"Ascendant",     txt:"Paie le coût indiqué pour l'ascendre. Utilisable seulement si elle ne l'est pas déjà. L'état est permanent."},
     "Empowered":   {fr:"Ascendu",       txt:"Effet actif uniquement tant que l'unité est ascendue."},
     "Equip":       {fr:"Équiper",       txt:"Coût à payer pour attacher un Équipement à une unité que tu contrôles."},
-    "Weaponmaster":{fr:"Maître d'armes",txt:"Quand tu la joues, tu peux lui attacher un de tes Équipements pour 1 Puissance de moins, même s'il est déjà attaché ailleurs."},
+    "Weaponmaster":{fr:"Maître d'armes",txt:"Quand tu la joues, tu peux lui attacher un de tes Équipements pour 1 Pouvoir de moins, même s'il est déjà attaché ailleurs."},
     "Deathknell":  {fr:"Glas",          txt:"Effet qui se déclenche quand l\'unité meurt ; certaines cartes exigent en plus qu\'elle soit ascendue."},
     "Temporary":   {fr:"Temporaire",    txt:"Meurt au début de la phase initiale de son contrôleur, avant le score."},
     "Legion":      {fr:"Légion",        txt:"Effet obtenu si tu as déjà joué une autre carte ce tour-ci."},
@@ -56,7 +56,10 @@ window.RB = (function(){
     "Quick-Draw":  {fr:"Dégainage",     txt:"L'Équipement a Réaction ; quand tu le joues, attache-le à une unité que tu contrôles."},
     "Level":       {fr:"Niveau",        txt:"Effet obtenu tant que tu as assez d'XP (le nombre indiqué)."},
     "Add":         {fr:"Ajouter",       txt:"Ajoute la ressource indiquée à ta réserve. Ces capacités ne peuvent pas être contrées par une réaction."},
-    "Vengeance":   {fr:"Vengeance",     txt:"Effet lié à la mort d'une de tes unités."}
+    "Vengeance":   {fr:"Vengeance",     txt:"Effet lié à la mort d'une de tes unités."},
+    "Burn":        {fr:"Brûlure",       txt:"Met le nombre indiqué de cartes du dessus de ton deck principal dans ta défausse."},
+    "Unique":      {fr:"Unique",        txt:"Exception à la règle des 3 exemplaires : ton deck ne peut en contenir qu'un seul."},
+    "Recycle":     {fr:"Recycler",      txt:"Remet la carte sous ton deck principal. Recycler une rune donne du Pouvoir de son domaine."}
   };
 
   /* ---------- rendu des symboles ---------- */
@@ -72,9 +75,9 @@ window.RB = (function(){
     out = out.replace(/\[(\d+)\]/g, function(_, n){
       return '<span class="sym sym-e" title="' + n + ' Énergie">' + n + '</span>';
     });
-    out = out.replace(/\[A\]/g, '<span class="sym sym-p" title="1 Puissance, de n&#39;importe quel domaine"><b>P</b></span>');
-    out = out.replace(/\[C\]/g, '<span class="sym sym-p" title="1 Puissance"><b>P</b></span>');
-    out = out.replace(/\[S\]/g, '<span class="sym sym-m" title="Puissance de l\'unité">M</span>');
+    out = out.replace(/\[A\]/g, '<span class="sym sym-p" title="1 Pouvoir, de n&#39;importe quel domaine"><b>P</b></span>');
+    out = out.replace(/\[C\]/g, '<span class="sym sym-p" title="1 Pouvoir, du domaine de la carte"><b>P</b></span>');
+    out = out.replace(/\[S\]/g, '<span class="sym sym-m" title="Puissance (valeur de combat) de l\'unité">M</span>');
     out = out.replace(/\[T\]|\[E\]/g, '<span class="sym sym-t" title="Épuiser">↻</span>');
     out = out.replace(/\[&gt;\]/g, ' → ');
     out = out.replace(/\[([A-Za-zÀ-ÿ'\-]+)( \d+)?\]/g, function(whole, word, num){
@@ -107,7 +110,7 @@ window.RB = (function(){
   function costLine(c){
     var bits = [];
     if(c.e != null) bits.push(c.e + " Énergie");
-    if(c.p != null) bits.push(c.p + " Puissance");
+    if(c.p != null) bits.push(c.p + " Pouvoir");
     return bits.join(" + ") || "—";
   }
 
@@ -139,14 +142,15 @@ window.RB = (function(){
 
     var stats = "";
     if(c.e != null) stats += '<div class="stat"><span>Énergie</span><b>' + esc(c.e) + '</b></div>';
-    if(c.p != null) stats += '<div class="stat"><span>Puissance</span><b>' + esc(c.p) + '</b></div>';
-    if(c.m != null) stats += '<div class="stat"><span>Might</span><b>' + esc(c.m) + '</b></div>';
+    if(c.p != null) stats += '<div class="stat"><span>Pouvoir</span><b>' + esc(c.p) + '</b></div>';
+    if(c.m != null) stats += '<div class="stat"><span>Puissance</span><b>' + esc(c.m) + '</b></div>';
     stats += '<div class="stat"><span>Numéro</span><b>' + esc(c.code) + '</b></div>';
 
     return '<div class="detail">' +
       '<img src="' + esc(img(c, 640)) + '" alt="' + esc(c.n) + '">' +
       '<div class="detail-meta">' +
         '<h2>' + esc(displayName(c)) + '</h2>' +
+        (hasFrenchName(c) ? '<div class="vo-name">' + esc(nameVO(c)) + '</div>' : '') +
         '<div class="chips">' + chips.join("") + '</div>' +
         '<div class="stat-row">' + stats + '</div>' +
         '<div class="rules-text">' + symbols(c.tx || "Pas de texte de règles.") + '</div>' +
@@ -170,19 +174,35 @@ window.RB = (function(){
     }
     return '<div class="fr-block">' +
       '<div class="fr-head">Traduction française</div>' +
-      (t.n ? '<div class="fr-name">' + esc(t.n) + '</div>' : '') +
+      (t.n ? '' : '<div class="fr-name fr-vo">nom non traduit</div>') +
       '<p class="fr-text">' + esc(t.tx) + '</p>' +
       (t.note ? '<p class="fr-note">' + esc(t.note) + '</p>' : '') +
     '</div>';
   }
 
-  function displayName(c){
+  // Nom anglais, avec le champion en préfixe pour les légendes.
+  function nameVO(c){
     var base = c.fn || c.n;
     if(c.t === "Legend" && c.tg && c.tg.length && base.indexOf(c.tg[0]) === -1){
       return c.tg[0] + ", " + base;
     }
     return base;
   }
+
+  // Nom affiché : le français dès qu'il existe, sinon la VO.
+  function displayName(c){
+    var t = fr(c);
+    if(t && t.n){
+      if(c.t === "Legend" && c.tg && c.tg.length && t.n.indexOf(c.tg[0]) === -1){
+        return c.tg[0] + ", " + t.n;
+      }
+      return t.n;
+    }
+    return nameVO(c);
+  }
+
+  // Vrai quand le nom affiché diffère de la VO : on peut alors montrer les deux.
+  function hasFrenchName(c){ return displayName(c) !== nameVO(c); }
 
   function metaSetName(setId){
     var map = {OGN:"Origins", OGS:"Proving Grounds", SFD:"Spiritforged", UNL:"Unleashed", VEN:"Vendetta"};
@@ -229,7 +249,7 @@ window.RB = (function(){
     symbols: symbols, img: img, esc: esc,
     domColor: domColor, typeFR: typeFR, domFR: domFR, setFR: setFR, rarFR: rarFR,
     costLine: costLine, isReaction: isReaction, mightOf: mightOf,
-    fr: fr, frBlockHTML: frBlockHTML, displayName: displayName,
+    fr: fr, frBlockHTML: frBlockHTML, displayName: displayName, nameVO: nameVO, hasFrenchName: hasFrenchName,
     KEYWORDS: KEYWORDS, metaSetName: metaSetName
   };
 })();

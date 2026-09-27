@@ -502,3 +502,7 @@ label.field span{font-family:var(--cond);font-size:12px;letter-spacing:.12em;tex
 .rd-fr{margin:0;font-size:16px;line-height:1.5;white-space:pre-line}
 .rd-vo{margin:0;font-size:14px;line-height:1.45;color:var(--text-dim);white-space:pre-line}
 .rd-note{margin:0;font-size:13px;color:var(--text-faint);font-style:italic}
+
+/* nom anglais rappelé sous le titre français */
+.vo-name{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:-4px 0 10px}
+.fr-name.fr-vo{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-family:inherit}

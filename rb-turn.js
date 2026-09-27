@@ -67,7 +67,7 @@ window.Turn = (function(){
 
       S({ phase:4, tag:"Principale",
         text:"Phase <b>Principale</b>. Pour payer, tu <b>épuises 2 runes</b> : chaque rune épuisée donne <b>1 Énergie</b>.",
-        note:"Une rune peut faire deux choses différentes : l'épuiser donne de l'Énergie, la recycler donne de la Puissance de son domaine. Jamais les deux à la fois.",
+        note:"Une rune peut faire deux choses différentes : l'épuiser donne de l'Énergie, la recycler donne du Pouvoir de son domaine. Jamais les deux à la fois.",
         runes:{ready:4, spent:2, recycled:0}, pool:{e:2, p:0}, score:{you:3, them:1}, deck:4,
         hand:[C.rearguard],
         base:[u(C.enforcer, false)], bfA:poroHeld(), bfB:enemyDuo() }),
@@ -92,8 +92,8 @@ window.Turn = (function(){
         next:8 }),
 
       S({ phase:4, tag:"Avec accélération",
-        text:"Tu épuises une rune de plus et tu en <b>recycles</b> une : 1 Énergie et 1 Puissance en plus. Elle arrive <b>prête</b>.",
-        note:"Recycler une rune la met dans ta défausse de runes et donne de la Puissance de son domaine. C'est ce qui paie les coûts en Puissance.",
+        text:"Tu épuises une rune de plus et tu en <b>recycles</b> une : 1 Énergie et 1 Pouvoir en plus. Elle arrive <b>prête</b>.",
+        note:"Recycler une rune la met dans ta défausse de runes et donne du Pouvoir de son domaine. C'est ce qui paie les coûts en Pouvoir.",
         runes:{ready:2, spent:3, recycled:1}, pool:{e:0, p:0}, score:{you:3, them:1}, deck:4,
         base:[u(C.enforcer, false), u(C.rearguard, false, 0, "arrive prête")],
         bfA:poroHeld(), bfB:enemyDuo(),
@@ -169,7 +169,7 @@ window.Turn = (function(){
     var runeDots = "";
     for(var a=0;a<r.ready;a++)    runeDots += '<i class="rune ready" title="rune prête"></i>';
     for(var b=0;b<r.spent;b++)    runeDots += '<i class="rune spent" title="rune épuisée → Énergie"></i>';
-    for(var c=0;c<r.recycled;c++) runeDots += '<i class="rune recycled" title="rune recyclée → Puissance"></i>';
+    for(var c=0;c<r.recycled;c++) runeDots += '<i class="rune recycled" title="rune recyclée → Pouvoir"></i>';
     root.querySelector("#runes").innerHTML = runeDots;
     root.querySelector("#poolE").textContent = s.pool.e;
     root.querySelector("#poolP").textContent = s.pool.p;
@@ -254,7 +254,7 @@ window.Turn = (function(){
           '<div class="counter"><span>Ton score</span><b id="scoreYou">2</b><i>/ 8</i></div>' +
           '<div class="counter"><span>Adversaire</span><b id="scoreThem">1</b><i>/ 8</i></div>' +
           '<div class="counter"><span>Énergie</span><b id="poolE">0</b></div>' +
-          '<div class="counter"><span>Puissance</span><b id="poolP">0</b></div>' +
+          '<div class="counter"><span>Pouvoir</span><b id="poolP">0</b></div>' +
           '<div class="counter"><span>Deck de runes</span><b id="deckN">6</b></div>' +
         '</section>' +
 
@@ -262,7 +262,7 @@ window.Turn = (function(){
           '<span class="runes-label">Tes runes</span>' +
           '<div class="runes" id="runes"></div>' +
           '<span class="runes-key"><i class="rune ready"></i> prête <i class="rune spent"></i> épuisée → Énergie ' +
-            '<i class="rune recycled"></i> recyclée → Puissance</span>' +
+            '<i class="rune recycled"></i> recyclée → Pouvoir</span>' +
         '</section>' +
 
         '<section class="zones" id="zones"></section>' +
@@ -289,7 +289,7 @@ window.Turn = (function(){
 
         '<div class="rule-grid">' +
           '<div class="rule-card"><h3>A · B · C · D</h3><p>Réveil, Initiale, Canalisation, Pioche. Ces quatre phases s\'enchaînent <b>sans interruption possible</b>.</p></div>' +
-          '<div class="rule-card"><h3>Une rune, deux usages</h3><p>L\'<b>épuiser</b> donne 1 Énergie. La <b>recycler</b> donne 1 Puissance de son domaine. Au choix, pas les deux.</p></div>' +
+          '<div class="rule-card"><h3>Une rune, deux usages</h3><p>L\'<b>épuiser</b> donne 1 Énergie. La <b>recycler</b> donne 1 Pouvoir de son domaine. Au choix, pas les deux.</p></div>' +
           '<div class="rule-card"><h3>Rien ne se garde</h3><p>La réserve se vide à la fin de la Pioche <b>et</b> à la fin du tour. Les dégâts aussi sont effacés.</p></div>' +
         '</div>' +
       '</div>';

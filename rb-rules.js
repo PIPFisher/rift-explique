@@ -43,7 +43,8 @@ window.Rules = (function(){
       lede:"Les erreurs qu'on fait tous les premières parties.",
       steps:[
         {t:"Les unités arrivent épuisées", s:"Sauf mention contraire ou <b>Accélération</b>. Une unité jouée ce tour-ci ne peut donc pas bouger. Le matériel, lui, arrive prêt."},
-        {t:"Énergie et Puissance", s:"Épuiser une rune donne de l'<b>Énergie</b>, la recycler donne de la <b>Puissance</b> de son domaine. La même rune peut faire les deux, mais pas en même temps."},
+        {t:"Énergie et Pouvoir", s:"Épuiser une rune donne de l'<b>Énergie</b>, la recycler donne du <b>Pouvoir</b> de son domaine. La même rune peut faire les deux, mais pas en même temps."},
+        {t:"Pouvoir n'est pas Puissance", s:"Deux notions différentes que l'anglais distingue par <i>Power</i> et <i>Might</i>. Le <b>Pouvoir</b> est une ressource : elle vient des runes recyclées et sert à payer les coûts colorés. La <b>Puissance</b> est la valeur de combat imprimée sur l'unité. Sur ce site, le symbole <b>P</b> désigne le Pouvoir et <b>M</b> la Puissance."},
         {t:"La réserve se vide", s:"Ce qui n'est pas dépensé est perdu à la fin de la phase de pioche et à la fin du tour."},
         {t:"Une seule amélioration", s:"Une unité ne peut avoir qu'un seul bonus d'<b>Amélioration</b> à la fois. En revanche Assaut, Bouclier et Déviation se cumulent."},
         {t:"Contester n'est pas perdre", s:"Tant que l'affrontement n'est pas résolu, tu gardes le contrôle du champ de bataille."},

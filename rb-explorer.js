@@ -26,7 +26,9 @@ window.Explorer = (function(){
     }
     if(state.q){
       var q = state.q.toLowerCase();
-      var hay = (c.n + " " + (c.tx || "") + " " + (c.tg || []).join(" ") + " " + c.code).toLowerCase();
+      var t = RB.fr(c);
+      var hay = (c.n + " " + (c.fn || "") + " " + (c.tx || "") + " " + (c.tg || []).join(" ") + " " + c.code +
+                 (t ? " " + (t.n || "") + " " + (t.tx || "") : "")).toLowerCase();
       if(hay.indexOf(q) === -1) return false;
     }
     return true;
