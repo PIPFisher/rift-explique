@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Le Rift Expliqué — guide Riftbound</title>
+<meta name="description" content="Guide français de Riftbound : explorateur de cartes, règles de l'affrontement, animation de la chaîne et simulateur.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <span class="brand-name">Le Rift Expliqué</span>
+  </div>
+  <nav class="tabs" id="tabs" role="tablist">
+    <button class="tab" data-view="rules" role="tab">Les règles</button>
+    <button class="tab" data-view="chain" role="tab">La chaîne</button>
+    <button class="tab" data-view="sim" role="tab">Simulateur</button>
+    <button class="tab" data-view="explorer" role="tab">Les cartes</button>
+  </nav>
+</header>
+
+<main id="main">
+  <div class="loading" id="loading">Chargement des cartes…</div>
+</main>
+
+<div class="modal" id="modal" hidden>
+  <div class="modal-back" data-close></div>
+  <div class="modal-box" role="dialog" aria-modal="true">
+    <button class="modal-x" data-close aria-label="Fermer">✕</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<footer class="sitefoot">
+  <p>Projet de fan non officiel, sans lien avec Riot Games. Riftbound et League of Legends sont des marques de Riot&nbsp;Games, Inc. Les données et les illustrations des cartes appartiennent à Riot Games et sont affichées depuis leurs serveurs.</p>
+  <p>Les textes de cartes sont en version originale anglaise : les traductions officielles ne sont pas encore diffusées. Le lexique de l'onglet <strong>Les règles</strong> donne l'équivalent français de chaque mot-clé.</p>
+</footer>
+
+<script src="cards-data.js"></script>
+<script src="rb-core.js"></script>
+<script src="rb-explorer.js"></script>
+<script src="rb-chain.js"></script>
+<script src="rb-rules.js"></script>
+<script src="rb-sim.js"></script>
+<script src="rb-app.js"></script>
+</body>
+</html>
