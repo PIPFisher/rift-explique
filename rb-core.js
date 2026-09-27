@@ -41,7 +41,7 @@ window.RB = (function(){
     "Empowered":   {fr:"Ascendu",       txt:"Effet actif uniquement tant que l'unité est ascendue."},
     "Equip":       {fr:"Équiper",       txt:"Coût à payer pour attacher un Équipement à une unité que tu contrôles."},
     "Weaponmaster":{fr:"Maître d'armes",txt:"Quand tu la joues, tu peux lui attacher un de tes Équipements pour 1 Énergie de moins, même s'il est déjà attaché ailleurs."},
-    "Deathknell":  {fr:"Glas",          txt:"Effet qui se déclenche quand elle meurt en étant ascendue."},
+    "Deathknell":  {fr:"Glas",          txt:"Effet qui se déclenche quand l\'unité meurt ; certaines cartes exigent en plus qu\'elle soit ascendue."},
     "Temporary":   {fr:"Temporaire",    txt:"Meurt au début de la phase initiale de son contrôleur, avant le score."},
     "Legion":      {fr:"Légion",        txt:"Effet obtenu si tu as déjà joué une autre carte ce tour-ci."},
     "Vision":      {fr:"Vision",        txt:"Regarde la première carte de ton deck principal. Tu peux la recycler."},
