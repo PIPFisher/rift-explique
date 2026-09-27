@@ -36,7 +36,7 @@ window.RB_FR = {
   },
   "OGN-013/298": {
     n: "Poro ronchon",
-    tx: "Déviation. (L'adversaire doit payer 1 Énergie de plus pour me choisir avec un sort ou une capacité.)"
+    tx: "Déviation. (L'adversaire doit payer 1 Puissance de plus, de n'importe quel domaine, pour me choisir avec un sort ou une capacité.)"
   },
   "OGN-016/298": {
     n: "Duo dangereux",
@@ -90,7 +90,7 @@ window.RB_FR = {
   },
   "SFD-113/221": {
     n: null,
-    tx: "Maître d'armes. (Quand tu me joues, tu peux attacher un de tes Équipements sur moi pour 1 Énergie de moins, même s'il est déjà attaché ailleurs.)\nLa première fois que je conquiers à chaque tour, redresse-moi.",
+    tx: "Maître d'armes. (Quand tu me joues, tu peux attacher un de tes Équipements sur moi pour 1 Puissance de moins, même s'il est déjà attaché ailleurs.)\nLa première fois que je conquiers à chaque tour, redresse-moi.",
     note: "Se redresser après une conquête permet de repartir à l'assaut dans le même tour."
   },
   "UNL-112/219": {
@@ -186,11 +186,11 @@ window.RB_FR = {
 
   "SFD-002/221": {
     n: null,
-    tx: "Accélération. (Tu peux payer 1 Énergie + 1 Puissance en coût additionnel pour que j'arrive prête.)\nMaître d'armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Énergie de moins, même s'il est déjà attaché ailleurs.)"
+    tx: "Accélération. (Tu peux payer 1 Énergie + 1 Puissance en coût additionnel pour que j'arrive prête.)\nMaître d'armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Puissance de moins, même s'il est déjà attaché ailleurs.)"
   },
   "UNL-T02": {
     n: null,
-    tx: "Déviation. (L'adversaire doit payer 1 Énergie de plus pour me choisir avec un sort ou une capacité.)"
+    tx: "Déviation. (L'adversaire doit payer 1 Puissance de plus, de n'importe quel domaine, pour me choisir avec un sort ou une capacité.)"
   },
   "SFD-118/221": {
     n: null,
@@ -214,7 +214,7 @@ window.RB_FR = {
   },
   "SFD-092/221": {
     n: null,
-    tx: "Maître d'armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Énergie de moins, même s'il est déjà attaché ailleurs.)"
+    tx: "Maître d'armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Puissance de moins, même s'il est déjà attaché ailleurs.)"
   },
   "SFD-134/221": {
     n: null,
@@ -290,7 +290,7 @@ window.RB_FR = {
   },
   "SFD-127/221": {
     n: null,
-    tx: "Maître d'armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Énergie de moins, même s'il est déjà attaché ailleurs.)"
+    tx: "Maître d'armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Puissance de moins, même s'il est déjà attaché ailleurs.)"
   },
   "OGS-009/024": {
     n: null,
@@ -306,11 +306,11 @@ window.RB_FR = {
   },
   "SFD-037/221": {
     n: null,
-    tx: "Déviation. (L'adversaire doit payer 1 Énergie de plus pour me choisir avec un sort ou une capacité.)"
+    tx: "Déviation. (L'adversaire doit payer 1 Puissance de plus, de n'importe quel domaine, pour me choisir avec un sort ou une capacité.)"
   },
   "OGN-135/298": {
     n: null,
-    tx: "Cachée. (Cache-la maintenant pour 1 Énergie afin de la révéler plus tard pour 0.)"
+    tx: "Cachée. (Cache-la maintenant pour 1 Puissance (de n'importe quel domaine) afin de la révéler plus tard pour 0.)"
   },
   "OGN-215/298": {
     n: null,
@@ -326,7 +326,7 @@ window.RB_FR = {
   },
   "UNL-024/219": {
     n: null,
-    tx: "Accélération. (Tu peux payer 1 Énergie + 1 Puissance en coût additionnel pour que j'arrive prête.)\nAssaut 2. (+2 Puissance tant que je suis attaquante.)\nDéviation. (L'adversaire doit payer 1 Énergie de plus pour me choisir avec un sort ou une capacité.)\nGank. (Je peux me déplacer d'un champ de bataille à un autre.)"
+    tx: "Accélération. (Tu peux payer 1 Énergie + 1 Puissance en coût additionnel pour que j'arrive prête.)\nAssaut 2. (+2 Puissance tant que je suis attaquante.)\nDéviation. (L'adversaire doit payer 1 Puissance de plus, de n'importe quel domaine, pour me choisir avec un sort ou une capacité.)\nGank. (Je peux me déplacer d'un champ de bataille à un autre.)"
   },
   "SFD-172/221": {
     n: null,
@@ -362,7 +362,7 @@ window.RB_FR = {
   },
   "SFD-008/221": {
     n: null,
-    tx: "Maître d'armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Énergie de moins, même s'il est déjà attaché ailleurs.)"
+    tx: "Maître d'armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Puissance de moins, même s'il est déjà attaché ailleurs.)"
   },
   "SFD-009/221": {
     n: null,
@@ -410,7 +410,7 @@ window.RB_FR = {
   },
   "SFD-099/221": {
     n: null,
-    tx: "Maître d'armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Énergie de moins, même s'il est déjà attaché ailleurs.)"
+    tx: "Maître d'armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Puissance de moins, même s'il est déjà attaché ailleurs.)"
   },
   "SFD-108/221": {
     n: null,
@@ -423,5 +423,258 @@ window.RB_FR = {
   "OGS-005/024": {
     n: null,
     tx: "Bouclier. (+1 Puissance tant que je suis défenseuse.)"
+  },
+
+  /* ---------- socle du tournoi de Shenyang (cartes jouées dans 3 decks ou plus) ---------- */
+
+  "VEN-131/166": {
+    n: null,
+    tx: "Tue une unité ennemie du domaine Chaos, ou détruis un équipement ennemi du domaine Chaos.",
+    note: "Un des « Décrets » : chaque domaine a le sien, et chacun frappe un domaine précis."
+  },
+  "OGN-214/298": {
+    n: "Rune d'ordre",
+    tx: "Rune du domaine Ordre.",
+    note: "L'épuiser donne 1 Énergie. La recycler donne 1 Puissance d'Ordre."
+  },
+  "OGN-224/298": {
+    n: "Récupération",
+    tx: "Action.\nTu peux détruire un équipement. Pioche 1 carte.",
+    note: "La destruction est facultative : tu peux la jouer uniquement pour piocher."
+  },
+  "UNL-131/219": {
+    n: null,
+    tx: "Réaction.\nContre un sort. Il retourne dans la main de son propriétaire au lieu d'aller à sa défausse.\nPrédiction.",
+    note: "Le renvoi en main est un désavantage pour toi : l'adversaire pourra le rejouer."
+  },
+  "OGN-166/298": {
+    n: "Rune de chaos",
+    tx: "Rune du domaine Chaos.",
+    note: "L'épuiser donne 1 Énergie. La recycler donne 1 Puissance de Chaos."
+  },
+  "OGN-089/298": {
+    n: "Rune d'esprit",
+    tx: "Rune du domaine Esprit.",
+    note: "L'épuiser donne 1 Énergie. La recycler donne 1 Puissance d'Esprit."
+  },
+  "OGN-042/298": {
+    n: "Rune de calme",
+    tx: "Rune du domaine Calme.",
+    note: "L'épuiser donne 1 Énergie. La recycler donne 1 Puissance de Calme."
+  },
+  "OGN-105/298": {
+    n: "Singularité",
+    tx: "Inflige 6 dégâts à chacune de deux unités au maximum.",
+    note: "Deux unités différentes : impossible de concentrer les 12 dégâts sur une seule."
+  },
+  "OGN-183/298": {
+    n: "Partie truquée",
+    tx: "Action.\nRegarde les 3 premières cartes de ton deck principal. Mets-en 1 dans ta main et recycle les deux autres."
+  },
+  "OGN-209/298": {
+    n: "Supplice de la planche",
+    tx: "Chaque joueur tue une de ses unités.",
+    note: "Effet global : il ne « choisit » personne, donc il passe outre les protections comme Déviation ou « ne peut pas être choisie »."
+  },
+  "OGN-045/298": {
+    n: "Contre-sort",
+    tx: "Réaction.\nContre un sort dont le coût ne dépasse pas 4 Énergie et 1 Puissance.",
+    note: "On regarde le coût imprimé sur la carte, pas ce que l'adversaire a réellement payé."
+  },
+  "OGN-058/298": {
+    n: "Discipline",
+    tx: "Réaction.\nDonne +2 Puissance à une unité ce tour-ci. Pioche 1 carte."
+  },
+  "OGN-169/298": {
+    n: "Bourrasque",
+    tx: "Réaction.\nRenvoie dans la main de son propriétaire une unité de 3 Puissance ou moins présente sur un champ de bataille.",
+    note: "On compare la Puissance au moment de la résolution : une unité améliorée peut passer au-dessus de 3 et être sauvée."
+  },
+  "OGN-213/298": {
+    n: "Lame dissimulée",
+    tx: "Cachée.\nAction.\nTue une unité présente sur un champ de bataille. Son contrôleur pioche 2 cartes.",
+    note: "Jouée depuis sa position cachée, elle ne coûte rien et prend l'adversaire en plein affrontement."
+  },
+  "VEN-135a/166": {
+    n: null,
+    tx: "Cachée.\nQuand tu me joues ou que j'attaque, tu peux payer 2 Énergie pour étourdir une unité.\nTant qu'une unité ennemie étourdie est présente ici, j'ai +2 Puissance.",
+    note: "Étourdir = l'unité n'inflige pas de dégâts de combat ce tour-ci. Elle encaisse quand même."
+  },
+  "OGN-173/298": {
+    n: "Courant d'air",
+    tx: "Action.\nDéplace une unité alliée et redresse-la.",
+    note: "Le déplacement épuise normalement l'unité : ici elle arrive prête, donc capable de repartir ou de défendre."
+  },
+  "SFD-145/221": {
+    n: null,
+    tx: "Cachée.\nAction.\nÉchange la Puissance de deux unités présentes sur le même champ de bataille, ce tour-ci.",
+    note: "On échange les valeurs au moment de la résolution, bonus et améliorations compris."
+  },
+  "OGN-199/298": {
+    n: "Maître des marées",
+    tx: "Cachée.\nQuand tu me joues, tu peux choisir une unité alliée : je prends sa place et elle prend la mienne.",
+    note: "L'échange n'est pas un déplacement : il n'épuise pas et ne déclenche pas les effets de mouvement."
+  },
+  "UNL-176/219": {
+    n: null,
+    tx: "Embuscade.\nQuand j'attaque, j'étourdis une unité ennemie présente ici.",
+    note: "Embuscade permet de me jouer en Réaction, donc d'arriver en plein affrontement."
+  },
+  "SFD-080/221": {
+    n: null,
+    tx: "Action.\nRépétition 1 Énergie + 1 Puissance.\nInflige 1 dégât à trois unités au maximum situées au même endroit.",
+    note: "Avec la répétition, on peut infliger 2 dégâts aux mêmes cibles, ou viser deux groupes différents."
+  },
+  "VEN-040/166": {
+    n: null,
+    tx: "Réaction.\nChoisis une unité alliée engagée contre une unité ennemie de Furie, ou visée par un sort ennemi de Furie. Donne-lui +4 Puissance ce tour-ci."
+  },
+  "VEN-061/166": {
+    n: null,
+    tx: "Réaction.\nIgnore Déviation en payant le coût de ce sort.\nDonne −5 Puissance à une unité ennemie du domaine Corps ce tour-ci.",
+    note: "Le passage outre Déviation est ce qui rend ce décret redoutable contre les unités protégées."
+  },
+  "VEN-015/166": {
+    n: null,
+    tx: "Action.\nCe sort ne peut pas être contré.\nInflige 4 dégâts à une unité ennemie du domaine Calme."
+  },
+  "SFD-139/221": {
+    n: null,
+    tx: "Cachée.\nQuand tu le joues depuis sa position face cachée, attache-le à une unité que tu contrôles ici.\nÉquiper 1 Puissance.",
+    note: "Révélé, il s'attache gratuitement : c'est un renfort surprise en plein affrontement."
+  },
+  "SFD-074/221": {
+    n: null,
+    tx: "Quand tu me joues, tu peux détruire un équipement dont le coût en Énergie ne dépasse pas 1. Si tu le fais, crée un jeton d'équipement Or, épuisé.",
+    note: "Le jeton Or se détruit pour donner 1 Puissance : c'est une ressource, pas une arme."
+  },
+  "OGN-172/298": {
+    n: "Réprimande",
+    tx: "Action.\nRenvoie dans la main de son propriétaire une unité présente sur un champ de bataille."
+  },
+  "UNL-120/219": {
+    n: null,
+    tx: "Embuscade.\nJe peux être joué sur un champ de bataille où se trouvent des unités ennemies, même si tu n'y as aucune unité.",
+    note: "C'est l'exception : normalement, Embuscade exige d'avoir déjà des unités sur place."
+  },
+  "OGN-287/298": {
+    n: "Sceau de la tempête",
+    tx: "Quand tu conquiers ici, recycle une de tes runes.",
+    note: "Recycler donne de la Puissance : ce champ de bataille finance tes coûts en Puissance."
+  },
+  "OGN-095/298": {
+    n: "Assommoir",
+    tx: "Réaction.\nDonne −1 Puissance à une unité ce tour-ci, sans descendre sous 1. Pioche 1 carte."
+  },
+  "OGN-116/298": {
+    n: "Sentinelle aux mille queues",
+    tx: "Accélération.\nQuand tu me joues, donne −3 Puissance aux unités ennemies ce tour-ci, sans descendre sous 1.",
+    note: "Effet global : il touche même les unités qui ne peuvent pas être choisies."
+  },
+  "UNL-150a/219": {
+    n: null,
+    tx: "Déviation.\nQuand un adversaire joue une unité alors que je suis sur un champ de bataille, étourdis-la. Il ne peut pas la déplacer ce tour-ci."
+  },
+  "OGN-077/298": {
+    n: "Sablier de Zhonya",
+    tx: "Cachée.\nLa prochaine fois qu'une unité alliée devrait mourir, détruis cet équipement à la place. Rappelle cette unité, épuisée.",
+    note: "Le rappel n'est pas un déplacement. Le déclenchement est obligatoire : il part sur la première unité qui meurt, pas forcément celle que tu voulais sauver."
+  },
+  "SFD-001/221": {
+    n: null,
+    tx: "Réaction.\nDonne à une unité alliée présente sur un champ de bataille +2 Puissance ce tour-ci pour chaque unité ennemie présente au même endroit."
+  },
+  "VEN-044/166": {
+    n: null,
+    tx: "Quand tu joues ta première carte du tour, si je suis sur un champ de bataille, ta carte suivante de ce tour coûte 2 Énergie et 2 Puissance de moins."
+  },
+  "SFD-161/221": {
+    n: null,
+    tx: "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+    note: "Équipement sans effet : il ne sert qu'à ajouter sa Puissance à l'unité équipée."
+  },
+  "UNL-042/219": {
+    n: null,
+    tx: "Cachée.\nAction.\nÉtourdis une unité. (Elle n'inflige pas de dégâts de combat ce tour-ci.)\nSi tu l'as jouée depuis ta main, pioche 1 carte.",
+    note: "La pioche est perdue si tu la révèles depuis sa position cachée : c'est le prix de la gratuité."
+  },
+  "VEN-003/166": {
+    n: null,
+    tx: "Détruis un équipement.\nFlux 4 Énergie + 1 Puissance. (Tu peux la jouer depuis ta défausse pour son coût de Flux. Elle est ensuite bannie.)"
+  },
+  "UNL-153/219": {
+    n: null,
+    tx: "Glas → crée dans ta base un jeton d'unité Oiseau de 1 Puissance avec Déviation. (Effet obtenu quand je meurs.)"
+  },
+  "OGN-043/298": {
+    n: "Charme",
+    tx: "Déplace une unité ennemie.",
+    note: "Déplacement forcé : il peut tirer un défenseur hors de son champ, ou en envoyer un dans un affrontement perdu."
+  },
+  "UNL-073/219": {
+    n: null,
+    tx: "Inflige 3 dégâts à une unité ennemie. Si elle meurt ce tour-ci, crée un jeton d'équipement Or, épuisé."
+  },
+  "SFD-140/221": {
+    n: null,
+    tx: "Quand tu me joues, tu peux jouer depuis ta défausse un sort dont le coût en Énergie ne dépasse pas 3, sans payer son Énergie. Recycle ce sort après l'avoir joué.",
+    note: "Le coût en Puissance reste dû : seule l'Énergie est offerte."
+  },
+  "OGN-212/298": {
+    n: "Forge du futur",
+    tx: "Quand tu le joues, crée un jeton d'unité Recrue de 1 Puissance dans ta base.\nDétruis cet équipement : recycle jusqu'à 4 cartes depuis les défausses."
+  },
+  "VEN-101/166": {
+    n: null,
+    tx: "Tu peux payer 1 Énergie en coût additionnel pour me jouer.\nQuand tu me joues, si tu as payé ce coût, bannis une carte d'une défausse pour donner Assaut 2 à une unité ce tour-ci."
+  },
+  "OGN-221/298": {
+    n: "Décret impérial",
+    tx: "Action.\nCe tour-ci, dès qu'une unité subit des dégâts, elle meurt.",
+    note: "S'applique à toutes les unités, les tiennes comprises. Un seul dégât suffit à tuer."
+  },
+  "SFD-057/221": {
+    n: null,
+    tx: "Déviation.\nQuand tu me choisis ou que tu me redresses, donne-moi +1 Puissance ce tour-ci."
+  },
+  "UNL-143a/219": {
+    n: null,
+    tx: "Embuscade.\nQuand j'attaque ou je défends, si une unité ennemie est seule ici, donne-moi +2 Puissance ce tour-ci et gagne 2 XP."
+  },
+  "SFD-045/221": {
+    n: null,
+    tx: "Réaction.\nContre un sort ou une capacité ennemie qui choisit une unité ou un équipement allié.",
+    note: "Ne contre que ce qui te vise : sans ciblage, l'effet passe."
+  },
+  "VEN-012/166": {
+    n: null,
+    tx: "Redresse une unité et donne-lui Assaut 3 ce tour-ci.\nFlux 3 Énergie + 1 Puissance. (Tu peux la jouer depuis ta défausse pour son coût de Flux. Elle est ensuite bannie.)"
+  },
+  "UNL-053/219": {
+    n: null,
+    tx: "(Les unités à 0 Puissance peuvent conquérir et tenir un champ de bataille.)\nQuand tu me joues, pioche 1 carte.\nGlas → choisis un adversaire : il révèle sa main, tu peux voir ses cartes face cachée ce tour-ci, et tu gagnes 1 XP.",
+    note: "Une unité à 0 Puissance meurt dès le premier dégât, mais elle suffit à tenir un champ de bataille."
+  },
+  "UNL-078/219": {
+    n: null,
+    tx: "Temporaire.\nQuand tu le joues, crée dans ta base un jeton d'unité Farfadet de 3 Puissance, prêt et Temporaire.\nGlas → répète l'effet de mise en jeu de cet équipement."
+  },
+  "OGN-289/298": {
+    n: "Pic de Targon",
+    tx: "Quand tu conquiers ici, redresse 2 runes à la fin de ce tour."
+  },
+  "VEN-066/166": {
+    n: null,
+    tx: "Cachée.\nBannis une unité, puis son propriétaire la rejoue au même endroit sans payer son coût.",
+    note: "Sur une unité ennemie, ça annule ses améliorations et ses équipements. Sur la tienne, ça relance ses effets d'arrivée."
+  },
+  "VEN-037/166": {
+    n: null,
+    tx: "Quand tu me joues, si tu contrôles 7 runes ou plus, choisis un équipement ennemi : s'il est ascendu, retire-lui son ascendance ; sinon, détruis-le."
+  },
+  "OGN-123/298": {
+    n: "Puissance incontrôlable",
+    tx: "Épuise toutes tes unités, puis inflige 12 dégâts à TOUTES les unités présentes sur des champs de bataille.",
+    note: "Y compris les tiennes. C'est une remise à zéro du plateau, pas une frappe ciblée."
   }
 };

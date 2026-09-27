@@ -29,10 +29,10 @@ window.RB = (function(){
   var KEYWORDS = {
     "Action":      {fr:"Action",        txt:"Se joue pendant ton tour ou dans un affrontement, uniquement quand la chaîne est vide."},
     "Reaction":    {fr:"Réaction",      txt:"Se joue à tout moment, même avant qu'un sort ou une capacité ne se résolve."},
-    "Hidden":      {fr:"Cachée",        txt:"Se cacher maintenant pour 1 Puissance, afin de la révéler plus tard pour 0. Elle gagne Réaction."},
+    "Hidden":      {fr:"Cachée",        txt:"Se cacher maintenant pour 1 Puissance (de n'importe quel domaine), afin de la révéler plus tard pour 0. Elle gagne Réaction."},
     "Tank":        {fr:"Tank",          txt:"Les dégâts de combat doivent lui être assignés en premier."},
     "Backline":    {fr:"Arrière-garde", txt:"Les dégâts de combat doivent lui être assignés en dernier."},
-    "Deflect":     {fr:"Déviation",     txt:"L'adversaire doit payer 1 Énergie de plus pour la choisir avec un sort ou une capacité."},
+    "Deflect":     {fr:"Déviation",     txt:"L'adversaire doit payer 1 Puissance de plus, de n'importe quel domaine, pour la choisir avec un sort ou une capacité."},
     "Ganking":     {fr:"Gank",          txt:"Peut se déplacer d'un champ de bataille à un autre."},
     "Assault":     {fr:"Assaut",        txt:"+1 Puissance (ou plus) tant qu'elle est attaquante."},
     "Shield":      {fr:"Bouclier",      txt:"+2 Puissance (ou plus) tant qu'elle est défenseuse."},
@@ -40,7 +40,7 @@ window.RB = (function(){
     "Empower":     {fr:"Ascendant",     txt:"Paie le coût indiqué pour l'ascendre. Utilisable seulement si elle ne l'est pas déjà. L'état est permanent."},
     "Empowered":   {fr:"Ascendu",       txt:"Effet actif uniquement tant que l'unité est ascendue."},
     "Equip":       {fr:"Équiper",       txt:"Coût à payer pour attacher un Équipement à une unité que tu contrôles."},
-    "Weaponmaster":{fr:"Maître d'armes",txt:"Quand tu la joues, tu peux lui attacher un de tes Équipements pour 1 Énergie de moins, même s'il est déjà attaché ailleurs."},
+    "Weaponmaster":{fr:"Maître d'armes",txt:"Quand tu la joues, tu peux lui attacher un de tes Équipements pour 1 Puissance de moins, même s'il est déjà attaché ailleurs."},
     "Deathknell":  {fr:"Glas",          txt:"Effet qui se déclenche quand l\'unité meurt ; certaines cartes exigent en plus qu\'elle soit ascendue."},
     "Temporary":   {fr:"Temporaire",    txt:"Meurt au début de la phase initiale de son contrôleur, avant le score."},
     "Legion":      {fr:"Légion",        txt:"Effet obtenu si tu as déjà joué une autre carte ce tour-ci."},
@@ -72,7 +72,7 @@ window.RB = (function(){
     out = out.replace(/\[(\d+)\]/g, function(_, n){
       return '<span class="sym sym-e" title="' + n + ' Énergie">' + n + '</span>';
     });
-    out = out.replace(/\[A\]/g, '<span class="sym sym-e" title="1 Énergie">E</span>');
+    out = out.replace(/\[A\]/g, '<span class="sym sym-p" title="1 Puissance, de n&#39;importe quel domaine"><b>P</b></span>');
     out = out.replace(/\[C\]/g, '<span class="sym sym-p" title="1 Puissance"><b>P</b></span>');
     out = out.replace(/\[S\]/g, '<span class="sym sym-m" title="Puissance de l\'unité">M</span>');
     out = out.replace(/\[T\]/g, '<span class="sym sym-t" title="Épuiser">↻</span>');
