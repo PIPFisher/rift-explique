@@ -6,6 +6,7 @@
 
   var VIEWS = {
     rules:    { mod:function(){ return window.Rules; },    title:"Les règles" },
+    turn:     { mod:function(){ return window.Turn; },     title:"Un tour de jeu" },
     chain:    { mod:function(){ return window.Chain; },    title:"La chaîne" },
     sim:      { mod:function(){ return window.Sim; },      title:"Simulateur" },
     explorer: { mod:function(){ return window.Explorer; }, title:"Les cartes" }
