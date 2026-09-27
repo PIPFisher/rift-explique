@@ -1,6 +1,12 @@
 {
  "version": 1,
  "generated": "2026-09-27",
+ "config": {
+  "ingameDelay": 0,
+  "gridDelay": 110,
+  "panelWidth": 400,
+  "side": "left"
+ },
  "byCode": {
   "OGN-001": {
    "n": "Terreur enflammée",
@@ -208,6 +214,306 @@
    "tx": "Je ne peux pas être choisie par les sorts et capacités ennemis.",
    "note": "Les effets globaux, qui ne « choisissent » personne, l'atteignent quand même.",
    "en": "Ruin Runner"
+  },
+  "SFD-002": {
+   "n": null,
+   "tx": "Accélération. (Tu peux payer 1 Énergie + 1 Puissance en coût additionnel pour que j'arrive prête.)\nMaître d'armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Énergie de moins, même s'il est déjà attaché ailleurs.)",
+   "en": "Armed Assailant"
+  },
+  "UNL-T02": {
+   "n": null,
+   "tx": "Déviation. (L'adversaire doit payer 1 Énergie de plus pour me choisir avec un sort ou une capacité.)",
+   "en": "Bird"
+  },
+  "SFD-118": {
+   "n": null,
+   "tx": "Équiper 1 Énergie + 1 Puissance. (Attacher cet équipement à une unité que tu contrôles.)",
+   "en": "Boneshiver"
+  },
+  "SFD-133": {
+   "n": null,
+   "tx": "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "en": "Boots of Swiftness"
+  },
+  "SFD-042": {
+   "n": null,
+   "tx": "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "en": "Brutalizer"
+  },
+  "SFD-064": {
+   "n": null,
+   "tx": "Dégainage. (Cet équipement a Réaction ; quand tu le joues, attache-le à une unité que tu contrôles.)\nÉquiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "en": "Cloth Armor"
+  },
+  "VEN-048": {
+   "n": null,
+   "tx": "Quand tu me joues, pioche 1 carte.",
+   "en": "Cloud Drake"
+  },
+  "SFD-092": {
+   "n": null,
+   "tx": "Maître d'armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Énergie de moins, même s'il est déjà attaché ailleurs.)",
+   "en": "Combat Chef"
+  },
+  "SFD-134": {
+   "n": null,
+   "tx": "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "en": "Cull"
+  },
+  "OGN-210": {
+   "n": null,
+   "tx": "Assaut. (+1 Puissance tant que je suis attaquante.)",
+   "en": "Daring Poro"
+  },
+  "SFD-124": {
+   "n": null,
+   "tx": "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "en": "Doran's Ring"
+  },
+  "SFD-033": {
+   "n": null,
+   "tx": "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "en": "Doran's Shield"
+  },
+  "SFD-006": {
+   "n": null,
+   "tx": "J'arrive prête.",
+   "en": "Eager Drakehound"
+  },
+  "SFD-073": {
+   "n": null,
+   "tx": "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "en": "Experimental Hexplate"
+  },
+  "SFD-153": {
+   "n": null,
+   "tx": "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "en": "Eye of the Herald"
+  },
+  "SFD-051": {
+   "n": null,
+   "tx": "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "en": "Guardian Angel"
+  },
+  "VEN-027": {
+   "n": null,
+   "tx": "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "en": "Hand Hammer"
+  },
+  "SFD-102": {
+   "n": null,
+   "tx": "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "en": "Hexdrinker"
+  },
+  "VEN-118": {
+   "n": null,
+   "tx": "Tank. (Les dégâts de combat doivent m'être assignés en premier.)",
+   "en": "Horns of the Dragon"
+  },
+  "UNL-096": {
+   "n": null,
+   "tx": "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "en": "Hunter's Machete"
+  },
+  "OGN-248": {
+   "n": null,
+   "tx": "Inflige 2 dégâts à une unité.\nInflige 2 dégâts à une unité.\nInflige 2 dégâts à une unité.\nInflige 2 dégâts à une unité.\nInflige 2 dégâts à une unité.\nInflige 2 dégâts à une unité.",
+   "en": "Icathian Rain"
+  },
+  "UNL-002": {
+   "n": null,
+   "tx": "Embuscade. (Tu peux me jouer en Réaction sur un champ de bataille où tu as des unités.)\nAssaut 2. (+2 Puissance tant que je suis attaquante.)",
+   "en": "Inferna"
+  },
+  "OGN-086": {
+   "n": null,
+   "tx": "Vision. (Quand tu me joues, regarde la première carte de ton deck principal. Tu peux la recycler.)\nBouclier. (+1 Puissance tant que je suis défenseuse.)",
+   "en": "Jeweled Colossus"
+  },
+  "VEN-SP1": {
+   "n": null,
+   "tx": "Accélération.\nQuand je conquiers, pioche 1 carte.",
+   "en": "Kai'Sa, Survivor"
+  },
+  "SFD-156": {
+   "n": null,
+   "tx": "Assaut 2. (+2 Puissance tant que je suis attaquante.)",
+   "en": "Laurent Duelist"
+  },
+  "OGN-087": {
+   "n": null,
+   "tx": "Tank. (Les dégâts de combat doivent m'être assignés en premier.)\nQuand tu me joues, pioche 1 carte.",
+   "en": "Lecturing Yordle"
+  },
+  "SFD-127": {
+   "n": null,
+   "tx": "Maître d'armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Énergie de moins, même s'il est déjà attaché ailleurs.)",
+   "en": "Master Bingwen"
+  },
+  "OGS-009": {
+   "n": null,
+   "tx": "Gank. (Je peux me déplacer d'un champ de bataille à un autre.)\nJ'arrive prête.",
+   "en": "Master Yi"
+  },
+  "UNL-036": {
+   "n": null,
+   "tx": "Bouclier 2. (+2 Puissance tant que je suis défenseuse.)\nTank. (Les dégâts de combat doivent m'être assignés en premier.)",
+   "en": "Mutated Mouser"
+  },
+  "OGN-171": {
+   "n": null,
+   "tx": "Vision. (Quand tu me joues, regarde la première carte de ton deck principal. Tu peux la recycler.)",
+   "en": "Mystic Poro"
+  },
+  "SFD-037": {
+   "n": null,
+   "tx": "Déviation. (L'adversaire doit payer 1 Énergie de plus pour me choisir avec un sort ou une capacité.)",
+   "en": "Navori Scout"
+  },
+  "OGN-135": {
+   "n": null,
+   "tx": "Cachée. (Cache-la maintenant pour 1 Énergie afin de la révéler plus tard pour 0.)",
+   "en": "Pakaa Cub"
+  },
+  "OGN-215": {
+   "n": null,
+   "tx": "Assaut. (+1 Puissance tant que je suis attaquante.)",
+   "en": "Petty Officer"
+  },
+  "UNL-220": {
+   "n": null,
+   "tx": "Déviation.",
+   "en": "Pouty Poro"
+  },
+  "SFD-016": {
+   "n": null,
+   "tx": "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "en": "Recurve Bow"
+  },
+  "UNL-024": {
+   "n": null,
+   "tx": "Accélération. (Tu peux payer 1 Énergie + 1 Puissance en coût additionnel pour que j'arrive prête.)\nAssaut 2. (+2 Puissance tant que je suis attaquante.)\nDéviation. (L'adversaire doit payer 1 Énergie de plus pour me choisir avec un sort ou une capacité.)\nGank. (Je peux me déplacer d'un champ de bataille à un autre.)",
+   "en": "Rengar, Unseen"
+  },
+  "SFD-172": {
+   "n": null,
+   "tx": "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "en": "Sacred Shears"
+  },
+  "OGN-174": {
+   "n": null,
+   "tx": "Vision. (Quand tu me joues, regarde la première carte de ton deck principal. Tu peux la recycler.)\nTu peux me jouer sur un champ de bataille libre.",
+   "en": "Sai Scout"
+  },
+  "OGN-204": {
+   "n": null,
+   "tx": "Épuiser : Réaction — ajoute 1 Puissance. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)",
+   "en": "Seal of Discord"
+  },
+  "OGN-081": {
+   "n": null,
+   "tx": "Épuiser : Réaction — ajoute 1 Puissance. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)",
+   "en": "Seal of Focus"
+  },
+  "OGN-120": {
+   "n": null,
+   "tx": "Épuiser : Réaction — ajoute 1 Puissance. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)",
+   "en": "Seal of Insight"
+  },
+  "OGN-040": {
+   "n": null,
+   "tx": "Épuiser : Réaction — ajoute 1 Puissance. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)",
+   "en": "Seal of Rage"
+  },
+  "OGN-163": {
+   "n": null,
+   "tx": "Épuiser : Réaction — ajoute 1 Puissance. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)",
+   "en": "Seal of Strength"
+  },
+  "OGN-245": {
+   "n": null,
+   "tx": "Épuiser : Réaction — ajoute 1 Puissance. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)",
+   "en": "Seal of Unity"
+  },
+  "SFD-008": {
+   "n": null,
+   "tx": "Maître d'armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Énergie de moins, même s'il est déjà attaché ailleurs.)",
+   "en": "Sentinel Adept"
+  },
+  "SFD-009": {
+   "n": null,
+   "tx": "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "en": "Serrated Dirk"
+  },
+  "SFD-030": {
+   "n": null,
+   "tx": "Équiper 1 Énergie + 1 Puissance. (Attacher cet équipement à une unité que tu contrôles.)",
+   "en": "Skyfall of Areion"
+  },
+  "OGN-176": {
+   "n": null,
+   "tx": "Tu peux me jouer sur un champ de bataille libre.",
+   "en": "Sneaky Deckhand"
+  },
+  "UNL-039": {
+   "n": null,
+   "tx": "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "en": "Soul Sword"
+  },
+  "VEN-123": {
+   "n": null,
+   "tx": "Embuscade. (Tu peux me jouer en Réaction sur un champ de bataille où tu as des unités.)",
+   "en": "Soulspinner"
+  },
+  "OGN-052": {
+   "n": null,
+   "tx": "Bouclier. (+1 Puissance tant que je suis défenseuse.)",
+   "en": "Stalwart Poro"
+  },
+  "SFD-056": {
+   "n": null,
+   "tx": "Dégainage. (Cet équipement a Réaction ; quand tu le joues, attache-le à une unité que tu contrôles.)\nÉquiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "en": "Sterak's Gage"
+  },
+  "OGN-054": {
+   "n": null,
+   "tx": "Bouclier. (+1 Puissance tant que je suis défenseuse.)\nTank. (Les dégâts de combat doivent m'être assignés en premier.)",
+   "en": "Sunlit Guardian"
+  },
+  "UNL-099": {
+   "n": null,
+   "tx": "Bouclier 2. (+2 Puissance tant que je suis défenseuse.)\nTank. (Les dégâts de combat doivent m'être assignés en premier.)",
+   "en": "Towering Combatant"
+  },
+  "SFD-115": {
+   "n": null,
+   "tx": "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "en": "Trinity Force"
+  },
+  "OGS-016": {
+   "n": null,
+   "tx": "J'arrive prête.",
+   "en": "Vanguard Attendant"
+  },
+  "SFD-099": {
+   "n": null,
+   "tx": "Maître d'armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Énergie de moins, même s'il est déjà attaché ailleurs.)",
+   "en": "Veteran Poro"
+  },
+  "SFD-108": {
+   "n": null,
+   "tx": "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "en": "Warmog's Armor"
+  },
+  "SFD-086": {
+   "n": null,
+   "tx": "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "en": "World Atlas"
+  },
+  "OGS-005": {
+   "n": null,
+   "tx": "Bouclier. (+1 Puissance tant que je suis défenseuse.)",
+   "en": "Zephyr Sage"
   }
  },
  "byName": {
@@ -244,9 +550,9 @@
    "code": "OGN-012"
   },
   "pouty poro": {
-   "n": "Poro ronchon",
-   "tx": "Déviation. (L'adversaire doit payer 1 Énergie de plus pour me choisir avec un sort ou une capacité.)",
-   "code": "OGN-013"
+   "n": null,
+   "tx": "Déviation.",
+   "code": "UNL-220"
   },
   "dangerous duo": {
    "n": "Duo dangereux",
@@ -347,14 +653,14 @@
    "code": "UNL-097"
   },
   "kai'sa, survivor": {
-   "n": "Kai'Sa - Survivante",
-   "tx": "Accélération. (Tu peux payer 1 Énergie + 1 Puissance en coût additionnel pour que j'arrive prête.)\nQuand je conquiers, pioche 1 carte.",
-   "code": "OGN-039"
+   "n": null,
+   "tx": "Accélération.\nQuand je conquiers, pioche 1 carte.",
+   "code": "VEN-SP1"
   },
   "kai'sa": {
-   "n": "Kai'Sa - Survivante",
-   "tx": "Accélération. (Tu peux payer 1 Énergie + 1 Puissance en coût additionnel pour que j'arrive prête.)\nQuand je conquiers, pioche 1 carte.",
-   "code": "OGN-039"
+   "n": null,
+   "tx": "Accélération.\nQuand je conquiers, pioche 1 carte.",
+   "code": "VEN-SP1"
   },
   "brynhir thundersong": {
    "n": "Brynhir Chantefoudre",
@@ -434,12 +740,301 @@
    "tx": "Je ne peux pas être choisie par les sorts et capacités ennemis.",
    "note": "Les effets globaux, qui ne « choisissent » personne, l'atteignent quand même.",
    "code": "SFD-105"
+  },
+  "armed assailant": {
+   "n": null,
+   "tx": "Accélération. (Tu peux payer 1 Énergie + 1 Puissance en coût additionnel pour que j'arrive prête.)\nMaître d'armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Énergie de moins, même s'il est déjà attaché ailleurs.)",
+   "code": "SFD-002"
+  },
+  "bird": {
+   "n": null,
+   "tx": "Déviation. (L'adversaire doit payer 1 Énergie de plus pour me choisir avec un sort ou une capacité.)",
+   "code": "UNL-T02"
+  },
+  "boneshiver": {
+   "n": null,
+   "tx": "Équiper 1 Énergie + 1 Puissance. (Attacher cet équipement à une unité que tu contrôles.)",
+   "code": "SFD-118"
+  },
+  "boots of swiftness": {
+   "n": null,
+   "tx": "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "code": "SFD-133"
+  },
+  "brutalizer": {
+   "n": null,
+   "tx": "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "code": "SFD-042"
+  },
+  "cloth armor": {
+   "n": null,
+   "tx": "Dégainage. (Cet équipement a Réaction ; quand tu le joues, attache-le à une unité que tu contrôles.)\nÉquiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "code": "SFD-064"
+  },
+  "cloud drake": {
+   "n": null,
+   "tx": "Quand tu me joues, pioche 1 carte.",
+   "code": "VEN-048"
+  },
+  "combat chef": {
+   "n": null,
+   "tx": "Maître d'armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Énergie de moins, même s'il est déjà attaché ailleurs.)",
+   "code": "SFD-092"
+  },
+  "cull": {
+   "n": null,
+   "tx": "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "code": "SFD-134"
+  },
+  "daring poro": {
+   "n": null,
+   "tx": "Assaut. (+1 Puissance tant que je suis attaquante.)",
+   "code": "OGN-210"
+  },
+  "doran's ring": {
+   "n": null,
+   "tx": "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "code": "SFD-124"
+  },
+  "doran's shield": {
+   "n": null,
+   "tx": "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "code": "SFD-033"
+  },
+  "eager drakehound": {
+   "n": null,
+   "tx": "J'arrive prête.",
+   "code": "SFD-006"
+  },
+  "experimental hexplate": {
+   "n": null,
+   "tx": "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "code": "SFD-073"
+  },
+  "eye of the herald": {
+   "n": null,
+   "tx": "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "code": "SFD-153"
+  },
+  "guardian angel": {
+   "n": null,
+   "tx": "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "code": "SFD-051"
+  },
+  "hand hammer": {
+   "n": null,
+   "tx": "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "code": "VEN-027"
+  },
+  "hexdrinker": {
+   "n": null,
+   "tx": "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "code": "SFD-102"
+  },
+  "horns of the dragon": {
+   "n": null,
+   "tx": "Tank. (Les dégâts de combat doivent m'être assignés en premier.)",
+   "code": "VEN-118"
+  },
+  "hunter's machete": {
+   "n": null,
+   "tx": "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "code": "UNL-096"
+  },
+  "icathian rain": {
+   "n": null,
+   "tx": "Inflige 2 dégâts à une unité.\nInflige 2 dégâts à une unité.\nInflige 2 dégâts à une unité.\nInflige 2 dégâts à une unité.\nInflige 2 dégâts à une unité.\nInflige 2 dégâts à une unité.",
+   "code": "OGN-248"
+  },
+  "inferna": {
+   "n": null,
+   "tx": "Embuscade. (Tu peux me jouer en Réaction sur un champ de bataille où tu as des unités.)\nAssaut 2. (+2 Puissance tant que je suis attaquante.)",
+   "code": "UNL-002"
+  },
+  "jeweled colossus": {
+   "n": null,
+   "tx": "Vision. (Quand tu me joues, regarde la première carte de ton deck principal. Tu peux la recycler.)\nBouclier. (+1 Puissance tant que je suis défenseuse.)",
+   "code": "OGN-086"
+  },
+  "laurent duelist": {
+   "n": null,
+   "tx": "Assaut 2. (+2 Puissance tant que je suis attaquante.)",
+   "code": "SFD-156"
+  },
+  "lecturing yordle": {
+   "n": null,
+   "tx": "Tank. (Les dégâts de combat doivent m'être assignés en premier.)\nQuand tu me joues, pioche 1 carte.",
+   "code": "OGN-087"
+  },
+  "master bingwen": {
+   "n": null,
+   "tx": "Maître d'armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Énergie de moins, même s'il est déjà attaché ailleurs.)",
+   "code": "SFD-127"
+  },
+  "master yi": {
+   "n": null,
+   "tx": "Gank. (Je peux me déplacer d'un champ de bataille à un autre.)\nJ'arrive prête.",
+   "code": "OGS-009"
+  },
+  "mutated mouser": {
+   "n": null,
+   "tx": "Bouclier 2. (+2 Puissance tant que je suis défenseuse.)\nTank. (Les dégâts de combat doivent m'être assignés en premier.)",
+   "code": "UNL-036"
+  },
+  "mystic poro": {
+   "n": null,
+   "tx": "Vision. (Quand tu me joues, regarde la première carte de ton deck principal. Tu peux la recycler.)",
+   "code": "OGN-171"
+  },
+  "navori scout": {
+   "n": null,
+   "tx": "Déviation. (L'adversaire doit payer 1 Énergie de plus pour me choisir avec un sort ou une capacité.)",
+   "code": "SFD-037"
+  },
+  "pakaa cub": {
+   "n": null,
+   "tx": "Cachée. (Cache-la maintenant pour 1 Énergie afin de la révéler plus tard pour 0.)",
+   "code": "OGN-135"
+  },
+  "petty officer": {
+   "n": null,
+   "tx": "Assaut. (+1 Puissance tant que je suis attaquante.)",
+   "code": "OGN-215"
+  },
+  "recurve bow": {
+   "n": null,
+   "tx": "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "code": "SFD-016"
+  },
+  "rengar, unseen": {
+   "n": null,
+   "tx": "Accélération. (Tu peux payer 1 Énergie + 1 Puissance en coût additionnel pour que j'arrive prête.)\nAssaut 2. (+2 Puissance tant que je suis attaquante.)\nDéviation. (L'adversaire doit payer 1 Énergie de plus pour me choisir avec un sort ou une capacité.)\nGank. (Je peux me déplacer d'un champ de bataille à un autre.)",
+   "code": "UNL-024"
+  },
+  "rengar": {
+   "n": null,
+   "tx": "Accélération. (Tu peux payer 1 Énergie + 1 Puissance en coût additionnel pour que j'arrive prête.)\nAssaut 2. (+2 Puissance tant que je suis attaquante.)\nDéviation. (L'adversaire doit payer 1 Énergie de plus pour me choisir avec un sort ou une capacité.)\nGank. (Je peux me déplacer d'un champ de bataille à un autre.)",
+   "code": "UNL-024"
+  },
+  "sacred shears": {
+   "n": null,
+   "tx": "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "code": "SFD-172"
+  },
+  "sai scout": {
+   "n": null,
+   "tx": "Vision. (Quand tu me joues, regarde la première carte de ton deck principal. Tu peux la recycler.)\nTu peux me jouer sur un champ de bataille libre.",
+   "code": "OGN-174"
+  },
+  "seal of discord": {
+   "n": null,
+   "tx": "Épuiser : Réaction — ajoute 1 Puissance. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)",
+   "code": "OGN-204"
+  },
+  "seal of focus": {
+   "n": null,
+   "tx": "Épuiser : Réaction — ajoute 1 Puissance. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)",
+   "code": "OGN-081"
+  },
+  "seal of insight": {
+   "n": null,
+   "tx": "Épuiser : Réaction — ajoute 1 Puissance. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)",
+   "code": "OGN-120"
+  },
+  "seal of rage": {
+   "n": null,
+   "tx": "Épuiser : Réaction — ajoute 1 Puissance. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)",
+   "code": "OGN-040"
+  },
+  "seal of strength": {
+   "n": null,
+   "tx": "Épuiser : Réaction — ajoute 1 Puissance. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)",
+   "code": "OGN-163"
+  },
+  "seal of unity": {
+   "n": null,
+   "tx": "Épuiser : Réaction — ajoute 1 Puissance. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)",
+   "code": "OGN-245"
+  },
+  "sentinel adept": {
+   "n": null,
+   "tx": "Maître d'armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Énergie de moins, même s'il est déjà attaché ailleurs.)",
+   "code": "SFD-008"
+  },
+  "serrated dirk": {
+   "n": null,
+   "tx": "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "code": "SFD-009"
+  },
+  "skyfall of areion": {
+   "n": null,
+   "tx": "Équiper 1 Énergie + 1 Puissance. (Attacher cet équipement à une unité que tu contrôles.)",
+   "code": "SFD-030"
+  },
+  "sneaky deckhand": {
+   "n": null,
+   "tx": "Tu peux me jouer sur un champ de bataille libre.",
+   "code": "OGN-176"
+  },
+  "soul sword": {
+   "n": null,
+   "tx": "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "code": "UNL-039"
+  },
+  "soulspinner": {
+   "n": null,
+   "tx": "Embuscade. (Tu peux me jouer en Réaction sur un champ de bataille où tu as des unités.)",
+   "code": "VEN-123"
+  },
+  "stalwart poro": {
+   "n": null,
+   "tx": "Bouclier. (+1 Puissance tant que je suis défenseuse.)",
+   "code": "OGN-052"
+  },
+  "sterak's gage": {
+   "n": null,
+   "tx": "Dégainage. (Cet équipement a Réaction ; quand tu le joues, attache-le à une unité que tu contrôles.)\nÉquiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "code": "SFD-056"
+  },
+  "sunlit guardian": {
+   "n": null,
+   "tx": "Bouclier. (+1 Puissance tant que je suis défenseuse.)\nTank. (Les dégâts de combat doivent m'être assignés en premier.)",
+   "code": "OGN-054"
+  },
+  "towering combatant": {
+   "n": null,
+   "tx": "Bouclier 2. (+2 Puissance tant que je suis défenseuse.)\nTank. (Les dégâts de combat doivent m'être assignés en premier.)",
+   "code": "UNL-099"
+  },
+  "trinity force": {
+   "n": null,
+   "tx": "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "code": "SFD-115"
+  },
+  "vanguard attendant": {
+   "n": null,
+   "tx": "J'arrive prête.",
+   "code": "OGS-016"
+  },
+  "veteran poro": {
+   "n": null,
+   "tx": "Maître d'armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Énergie de moins, même s'il est déjà attaché ailleurs.)",
+   "code": "SFD-099"
+  },
+  "warmog's armor": {
+   "n": null,
+   "tx": "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "code": "SFD-108"
+  },
+  "world atlas": {
+   "n": null,
+   "tx": "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "code": "SFD-086"
+  },
+  "zephyr sage": {
+   "n": null,
+   "tx": "Bouclier. (+1 Puissance tant que je suis défenseuse.)",
+   "code": "OGS-005"
   }
- },
- "config": {
-  "ingameDelay": 0,
-  "gridDelay": 110,
-  "panelWidth": 400,
-  "side": "left"
  }
 }

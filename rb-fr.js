@@ -180,5 +180,248 @@ window.RB_FR = {
     n: null,
     tx: "Je ne peux pas être choisie par les sorts et capacités ennemis.",
     note: "Les effets globaux, qui ne « choisissent » personne, l'atteignent quand même."
+  },
+
+  /* ---------- formules de rappel officielles (correspondance exacte) ---------- */
+
+  "SFD-002/221": {
+    n: null,
+    tx: "Accélération. (Tu peux payer 1 Énergie + 1 Puissance en coût additionnel pour que j'arrive prête.)\nMaître d'armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Énergie de moins, même s'il est déjà attaché ailleurs.)"
+  },
+  "UNL-T02": {
+    n: null,
+    tx: "Déviation. (L'adversaire doit payer 1 Énergie de plus pour me choisir avec un sort ou une capacité.)"
+  },
+  "SFD-118/221": {
+    n: null,
+    tx: "Équiper 1 Énergie + 1 Puissance. (Attacher cet équipement à une unité que tu contrôles.)"
+  },
+  "SFD-133/221": {
+    n: null,
+    tx: "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)"
+  },
+  "SFD-042/221": {
+    n: null,
+    tx: "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)"
+  },
+  "SFD-064/221": {
+    n: null,
+    tx: "Dégainage. (Cet équipement a Réaction ; quand tu le joues, attache-le à une unité que tu contrôles.)\nÉquiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)"
+  },
+  "VEN-048/166": {
+    n: null,
+    tx: "Quand tu me joues, pioche 1 carte."
+  },
+  "SFD-092/221": {
+    n: null,
+    tx: "Maître d'armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Énergie de moins, même s'il est déjà attaché ailleurs.)"
+  },
+  "SFD-134/221": {
+    n: null,
+    tx: "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)"
+  },
+  "OGN-210/298": {
+    n: null,
+    tx: "Assaut. (+1 Puissance tant que je suis attaquante.)"
+  },
+  "SFD-124/221": {
+    n: null,
+    tx: "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)"
+  },
+  "SFD-033/221": {
+    n: null,
+    tx: "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)"
+  },
+  "SFD-006/221": {
+    n: null,
+    tx: "J'arrive prête."
+  },
+  "SFD-073/221": {
+    n: null,
+    tx: "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)"
+  },
+  "SFD-153/221": {
+    n: null,
+    tx: "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)"
+  },
+  "SFD-051/221": {
+    n: null,
+    tx: "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)"
+  },
+  "VEN-027/166": {
+    n: null,
+    tx: "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)"
+  },
+  "SFD-102/221": {
+    n: null,
+    tx: "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)"
+  },
+  "VEN-118/166": {
+    n: null,
+    tx: "Tank. (Les dégâts de combat doivent m'être assignés en premier.)"
+  },
+  "UNL-096/219": {
+    n: null,
+    tx: "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)"
+  },
+  "OGN-248/298": {
+    n: null,
+    tx: "Inflige 2 dégâts à une unité.\nInflige 2 dégâts à une unité.\nInflige 2 dégâts à une unité.\nInflige 2 dégâts à une unité.\nInflige 2 dégâts à une unité.\nInflige 2 dégâts à une unité."
+  },
+  "UNL-002/219": {
+    n: null,
+    tx: "Embuscade. (Tu peux me jouer en Réaction sur un champ de bataille où tu as des unités.)\nAssaut 2. (+2 Puissance tant que je suis attaquante.)"
+  },
+  "OGN-086/298": {
+    n: null,
+    tx: "Vision. (Quand tu me joues, regarde la première carte de ton deck principal. Tu peux la recycler.)\nBouclier. (+1 Puissance tant que je suis défenseuse.)"
+  },
+  "VEN-SP1/006": {
+    n: null,
+    tx: "Accélération.\nQuand je conquiers, pioche 1 carte."
+  },
+  "SFD-156/221": {
+    n: null,
+    tx: "Assaut 2. (+2 Puissance tant que je suis attaquante.)"
+  },
+  "OGN-087/298": {
+    n: null,
+    tx: "Tank. (Les dégâts de combat doivent m'être assignés en premier.)\nQuand tu me joues, pioche 1 carte."
+  },
+  "SFD-127/221": {
+    n: null,
+    tx: "Maître d'armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Énergie de moins, même s'il est déjà attaché ailleurs.)"
+  },
+  "OGS-009/024": {
+    n: null,
+    tx: "Gank. (Je peux me déplacer d'un champ de bataille à un autre.)\nJ'arrive prête."
+  },
+  "UNL-036/219": {
+    n: null,
+    tx: "Bouclier 2. (+2 Puissance tant que je suis défenseuse.)\nTank. (Les dégâts de combat doivent m'être assignés en premier.)"
+  },
+  "OGN-171/298": {
+    n: null,
+    tx: "Vision. (Quand tu me joues, regarde la première carte de ton deck principal. Tu peux la recycler.)"
+  },
+  "SFD-037/221": {
+    n: null,
+    tx: "Déviation. (L'adversaire doit payer 1 Énergie de plus pour me choisir avec un sort ou une capacité.)"
+  },
+  "OGN-135/298": {
+    n: null,
+    tx: "Cachée. (Cache-la maintenant pour 1 Énergie afin de la révéler plus tard pour 0.)"
+  },
+  "OGN-215/298": {
+    n: null,
+    tx: "Assaut. (+1 Puissance tant que je suis attaquante.)"
+  },
+  "UNL-220/219": {
+    n: null,
+    tx: "Déviation."
+  },
+  "SFD-016/221": {
+    n: null,
+    tx: "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)"
+  },
+  "UNL-024/219": {
+    n: null,
+    tx: "Accélération. (Tu peux payer 1 Énergie + 1 Puissance en coût additionnel pour que j'arrive prête.)\nAssaut 2. (+2 Puissance tant que je suis attaquante.)\nDéviation. (L'adversaire doit payer 1 Énergie de plus pour me choisir avec un sort ou une capacité.)\nGank. (Je peux me déplacer d'un champ de bataille à un autre.)"
+  },
+  "SFD-172/221": {
+    n: null,
+    tx: "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)"
+  },
+  "OGN-174/298": {
+    n: null,
+    tx: "Vision. (Quand tu me joues, regarde la première carte de ton deck principal. Tu peux la recycler.)\nTu peux me jouer sur un champ de bataille libre."
+  },
+  "OGN-204/298": {
+    n: null,
+    tx: "Épuiser : Réaction — ajoute 1 Puissance. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)"
+  },
+  "OGN-081/298": {
+    n: null,
+    tx: "Épuiser : Réaction — ajoute 1 Puissance. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)"
+  },
+  "OGN-120/298": {
+    n: null,
+    tx: "Épuiser : Réaction — ajoute 1 Puissance. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)"
+  },
+  "OGN-040/298": {
+    n: null,
+    tx: "Épuiser : Réaction — ajoute 1 Puissance. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)"
+  },
+  "OGN-163/298": {
+    n: null,
+    tx: "Épuiser : Réaction — ajoute 1 Puissance. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)"
+  },
+  "OGN-245/298": {
+    n: null,
+    tx: "Épuiser : Réaction — ajoute 1 Puissance. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)"
+  },
+  "SFD-008/221": {
+    n: null,
+    tx: "Maître d'armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Énergie de moins, même s'il est déjà attaché ailleurs.)"
+  },
+  "SFD-009/221": {
+    n: null,
+    tx: "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)"
+  },
+  "SFD-030/221": {
+    n: null,
+    tx: "Équiper 1 Énergie + 1 Puissance. (Attacher cet équipement à une unité que tu contrôles.)"
+  },
+  "OGN-176/298": {
+    n: null,
+    tx: "Tu peux me jouer sur un champ de bataille libre."
+  },
+  "UNL-039/219": {
+    n: null,
+    tx: "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)"
+  },
+  "VEN-123/166": {
+    n: null,
+    tx: "Embuscade. (Tu peux me jouer en Réaction sur un champ de bataille où tu as des unités.)"
+  },
+  "OGN-052/298": {
+    n: null,
+    tx: "Bouclier. (+1 Puissance tant que je suis défenseuse.)"
+  },
+  "SFD-056/221": {
+    n: null,
+    tx: "Dégainage. (Cet équipement a Réaction ; quand tu le joues, attache-le à une unité que tu contrôles.)\nÉquiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)"
+  },
+  "OGN-054/298": {
+    n: null,
+    tx: "Bouclier. (+1 Puissance tant que je suis défenseuse.)\nTank. (Les dégâts de combat doivent m'être assignés en premier.)"
+  },
+  "UNL-099/219": {
+    n: null,
+    tx: "Bouclier 2. (+2 Puissance tant que je suis défenseuse.)\nTank. (Les dégâts de combat doivent m'être assignés en premier.)"
+  },
+  "SFD-115/221": {
+    n: null,
+    tx: "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)"
+  },
+  "OGS-016/024": {
+    n: null,
+    tx: "J'arrive prête."
+  },
+  "SFD-099/221": {
+    n: null,
+    tx: "Maître d'armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Énergie de moins, même s'il est déjà attaché ailleurs.)"
+  },
+  "SFD-108/221": {
+    n: null,
+    tx: "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)"
+  },
+  "SFD-086/221": {
+    n: null,
+    tx: "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)"
+  },
+  "OGS-005/024": {
+    n: null,
+    tx: "Bouclier. (+1 Puissance tant que je suis défenseuse.)"
   }
 };
