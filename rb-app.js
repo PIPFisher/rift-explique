@@ -100,7 +100,7 @@
   }
 
   function cardUnder(target){
-    var el = target.closest(".card, .mini");
+    var el = target.closest(".card, .mini, .dk-line, .rd-card");
     if(!el || !el.dataset.id) return null;
     return RB.byId[el.dataset.id] || null;
   }
@@ -128,8 +128,8 @@
     var link = e.target.closest("[data-card]");
     if(link){ openCard(link.dataset.card); return; }
 
-    var card = e.target.closest(".card");
-    if(card && card.dataset.id && !e.target.closest("#presults") && !e.target.closest("button")){
+    var card = e.target.closest(".card, .dk-line, .rd-card");
+    if(card && card.dataset.id && !e.target.closest("#presults") && !e.target.closest("#dkResults") && !e.target.closest("button")){
       openCard(card.dataset.id);
     }
   });

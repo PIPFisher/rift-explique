@@ -431,7 +431,7 @@ label.field span{font-family:var(--cond);font-size:12px;letter-spacing:.12em;tex
 .peek[hidden]{display:none}
 @keyframes peekIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 .peek-img{
-  height:min(640px, 76vh);width:auto;max-width:46vw;flex:none;
+  height:min(640px, 76vh);width:auto;aspect-ratio:744/1039;max-width:46vw;flex:none;
   border-radius:8px;border:1px solid var(--line);
 }
 .peek-side{display:flex;flex-direction:column;gap:9px;min-width:0;width:380px;max-height:76vh;overflow:hidden}
@@ -451,7 +451,7 @@ label.field span{font-family:var(--cond);font-size:12px;letter-spacing:.12em;tex
 .fr-missing .fr-head{color:var(--text-faint)}
 
 /* cartes paysage (champs de bataille) : on borne autrement */
-.peek-img[src*="1039x744"], .peek-img.landscape{height:auto;width:min(460px,46vw)}
+.peek-img.landscape{height:auto;width:min(480px,46vw);aspect-ratio:1039/744}
 @media (max-width:820px){ .peek{display:none} }
 
 /* ================= deck ================= */
