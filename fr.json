@@ -435,5 +435,11 @@
    "note": "Les effets globaux, qui ne « choisissent » personne, l'atteignent quand même.",
    "code": "SFD-105"
   }
+ },
+ "config": {
+  "ingameDelay": 0,
+  "gridDelay": 110,
+  "panelWidth": 400,
+  "side": "left"
  }
 }
