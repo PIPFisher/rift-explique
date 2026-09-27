@@ -676,5 +676,646 @@ window.RB_FR = {
     n: "Puissance incontrôlable",
     tx: "Épuise toutes tes unités, puis inflige 12 dégâts à TOUTES les unités présentes sur des champs de bataille.",
     note: "Y compris les tiennes. C'est une remise à zéro du plateau, pas une frappe ciblée."
+  },
+
+  /* ---------- tournoi de Shenyang : cartes vues dans 3 decks ou plus ---------- */
+
+  "OGN-122/298": {
+    n: "Distorsion temporelle",
+    tx: "Joue un tour supplémentaire après celui-ci. Bannis ce sort.",
+    note: "Le tour supplémentaire est complet : réveil, score, canalisation, pioche."
+  },
+  "UNL-106/219": {
+    n: null,
+    tx: "Réaction.\nChoisis une unité alliée sur un champ de bataille. Contre un sort ou une capacité ennemie qui la choisit, elle et aucune autre unité alliée.",
+    note: "Inefficace contre les effets qui visent plusieurs de tes unités à la fois."
+  },
+  "SFD-209/221": {
+    n: null,
+    tx: "Les joueurs ne peuvent pas marquer ici avant leur troisième tour."
+  },
+  "SFD-216/221": {
+    n: null,
+    tx: "Aucune unité ne peut être jouée ici.",
+    note: "On ne peut y arriver qu'en s'y déplaçant depuis un autre endroit."
+  },
+  "OGN-022/298": {
+    n: "Rayon thermique",
+    tx: "Action.\nDétruis tous les équipements.",
+    note: "Tous, y compris les tiens."
+  },
+  "SFD-217/221": {
+    n: null,
+    tx: "Quand tu conquiers ici, pioche 1 carte pour chaque autre champ de bataille que toi ou tes alliés contrôlez."
+  },
+  "UNL-212/219": {
+    n: null,
+    tx: "Au début de la phase Initiale de chaque joueur, inflige 1 dégât à chaque unité présente ici. (Avant le score.)",
+    note: "Une unité à 1 Puissance ne survit donc jamais assez longtemps pour tenir le lieu."
+  },
+  "OGN-179/298": {
+    n: "Dégâts collatéraux",
+    tx: "Action.\nChaque joueur détruit un de ses équipements.",
+    note: "Effet global : il ne choisit personne, donc il passe outre les protections."
+  },
+  "SFD-036/221": {
+    n: null,
+    tx: "Glas — si je suis morte seule, pioche 1 carte. (Je suis seule s'il n'y a aucune autre unité alliée ici.)"
+  },
+  "VEN-164/166": {
+    n: null,
+    tx: "Chaque sort qui choisit une ou plusieurs unités alliées présentes ici coûte 1 Puissance de moins."
+  },
+  "OGN-298/298": {
+    n: "Profondeurs de Zaun",
+    tx: "Quand tu conquiers ici, défausse 1 carte, puis pioche 1 carte."
+  },
+  "VEN-100/166": {
+    n: null,
+    tx: "Crée deux jetons d'unité Tentacule de 1 Puissance à Bilgewater.\nFlux 3 Énergie. (Tu peux la jouer depuis ta défausse pour son coût de Flux. Elle est ensuite bannie.)"
+  },
+  "OGN-103/298": {
+    n: null,
+    tx: "Quand tu joues un sort, donne-moi +1 Puissance ce tour-ci.",
+    note: "Le bonus s'accumule : plusieurs sorts dans le tour, autant de +1."
+  },
+  "VEN-112a/166": {
+    n: null,
+    tx: "Quand je conquiers, crée un jeton d'unité Clone d'ombre de 0 Puissance dans ta base.\nAction → 1 Énergie + 1 Puissance : échange ma position avec celle d'un Clone d'ombre que tu contrôles.",
+    note: "L'échange n'est pas un déplacement : il n'épuise pas et ne déclenche pas d'affrontement."
+  },
+  "UNL-118a/219": {
+    n: "Dragon ancestral",
+    tx: "N'importe quelle quantité de mes dégâts suffit à tuer une unité ennemie.\nQuand tu me joues, choisis jusqu'à une unité ennemie à chaque endroit et inflige-lui 1 dégât.",
+    note: "1 dégât suffit à tuer : l'effet d'arrivée peut donc nettoyer une unité par endroit, quelle que soit sa Puissance."
+  },
+  "OGN-160/298": {
+    n: "Aurore éclatante",
+    tx: "À la fin de ton tour, révèle les cartes du dessus de ton deck principal jusqu'à révéler une unité. Joue-la sans payer son coût et recycle les autres.",
+    note: "L'unité arrive épuisée, comme toute unité jouée."
+  },
+  "OGN-134/298": {
+    n: "Mobilisation",
+    tx: "Canalise 1 rune, épuisée. Si tu ne peux pas, pioche 1 carte."
+  },
+  "VEN-157/166": {
+    n: null,
+    tx: "N'importe quel joueur peut payer 2 Puissance en coût additionnel pour jouer un Dragon. S'il le fait, il le joue sur ce champ de bataille."
+  },
+  "UNL-103/219": {
+    n: null,
+    tx: "Réaction.\nAu choix :\n— choisis jusqu'à 3 cartes dans les défausses adverses : leurs propriétaires les recyclent ;\n— ou pioche 1 carte."
+  },
+  "SFD-043/221": {
+    n: null,
+    tx: "Cachée.\nAction.\nRenvoie à leur base autant d'unités alliées que tu veux depuis un champ de bataille.",
+    note: "Sauvetage en masse : joué en plein affrontement, il vide le champ avant les dégâts."
+  },
+  "VEN-028/166": {
+    n: null,
+    tx: "Quand un combat auquel j'ai participé se termine, ascends-moi.\nAscendue → j'ai +2 Puissance."
+  },
+  "UNL-145/219": {
+    n: null,
+    tx: "Cachée.\nArrière-garde.\nUne fois par tour, quand une unité ennemie meurt alors que je suis sur un champ de bataille, crée un jeton d'équipement Or, épuisé."
+  },
+  "SFD-218/221": {
+    n: null,
+    tx: "Quand tu conquiers ici avec au moins une unité Puissante, tu peux payer 1 Énergie pour piocher 1 carte. (Une unité est Puissante tant qu'elle a 5 Puissance ou plus.)"
+  },
+  "VEN-095/166": {
+    n: null,
+    tx: "Quand je me déplace, tu peux Brûler 1 pour me donner +1 Puissance ce tour-ci. (Brûler 1 : mets la première carte de ton deck principal dans ta défausse.)"
+  },
+  "OGN-185/298": {
+    n: "Marchand itinérant",
+    tx: "Quand je me déplace, défausse 1 carte, puis pioche 1 carte."
+  },
+  "UNL-141/219": {
+    n: null,
+    tx: "Cachée.\nArrière-garde.\nQuand tu me joues depuis ma position face cachée pendant ton tour, tu peux amener sur mon champ de bataille une unité ennemie située ailleurs."
+  },
+  "VEN-166/166": {
+    n: null,
+    tx: "Quand un combat commence ici, l'attaquant et le défenseur ajoutent chacun 1 Énergie."
+  },
+  "UNL-215/219": {
+    n: null,
+    tx: "La première fois qu'un joueur joue ici une unité qui n'est pas un jeton, chaque tour, il peut renvoyer à sa base une autre unité qu'il contrôle ici."
+  },
+  "UNL-070/219": {
+    n: null,
+    tx: "Donne Temporaire à un équipement. (Il meurt au début de la phase Initiale de son contrôleur, avant le score.)",
+    note: "Façon détournée de détruire un équipement : il part au tour suivant, pas tout de suite."
+  },
+  "VEN-158/166": {
+    n: null,
+    tx: "Les joueurs ignorent Déviation en payant les sorts et capacités qui choisissent quelque chose ici.",
+    note: "Ce champ de bataille annule la protection des unités qui s'y trouvent."
+  },
+  "SFD-155/221": {
+    n: null,
+    tx: "Glas — crée un jeton d'équipement Or, épuisé."
+  },
+  "OGN-294/298": {
+    n: "Camp de guerre trifarian",
+    tx: "Les unités présentes ici ont +1 Puissance. (Les attaquants aussi.)"
+  },
+  "OGN-234/298": {
+    n: null,
+    tx: "Quand tu me joues, tue une unité ennemie.",
+    note: "Pas de ciblage conditionnel : c'est un retrait sec à l'arrivée."
+  },
+  "OGN-138/298": {
+    n: "Catalyseur de l'éternité",
+    tx: "Canalise 2 runes, épuisées. Si tu n'as pas pu en canaliser 2 ainsi, pioche 1 carte."
+  },
+  "UNL-069/219": {
+    n: null,
+    tx: "Crée deux jetons d'unité Farfadet de 3 Puissance, prêts et Temporaires. (Chacun meurt au début de la phase Initiale de son contrôleur, avant le score.)",
+    note: "Ils arrivent prêts : 6 Puissance immédiatement utilisable pour attaquer."
+  },
+  "UNL-207/219": {
+    n: null,
+    tx: "Quand tu tiens ce champ de bataille, tu peux renvoyer à sa base une unité présente sur un champ de bataille."
+  },
+  "SFD-159/221": {
+    n: null,
+    tx: "Tant qu'une autre unité alliée est ici, j'ai +1 Puissance."
+  },
+  "UNL-169/219": {
+    n: null,
+    tx: "Quand tu me joues, choisis un adversaire : il révèle sa main, tu choisis une carte révélée et tu la bannis. Quand il tient un champ de bataille, elle retourne dans sa main (même si j'ai quitté le plateau).",
+    note: "Ce n'est pas une destruction : la carte revient dès qu'il marque un point en tenant."
+  },
+  "SFD-109/221": {
+    n: null,
+    tx: "Maître d'armes.\nTu peux payer 2 Puissance en coût additionnel pour me jouer.\nQuand tu me joues, si tu as payé ce coût, prends un équipement ennemi et place-le dans ta base. Tu le contrôles tant que je reste sur le plateau. Si c'est un Équipement, attache-le-moi.",
+    note: "Le vol s'annule si je quitte le plateau : l'équipement retourne à son propriétaire."
+  },
+  "OGN-128/298": {
+    n: "Confrontation",
+    tx: "Action.\nChoisis une unité alliée et une unité ennemie. Elles s'infligent mutuellement des dégâts égaux à leur Puissance."
+  },
+  "SFD-048/221": {
+    n: null,
+    tx: "Quand je me déplace, pioche 1 carte."
+  },
+  "OGN-067/298": {
+    n: null,
+    tx: "Tank.\nQuand tu me joues sur un champ de bataille, tu peux y amener une unité ennemie.\nQuand je tiens un champ de bataille, je retourne dans la main de mon propriétaire.",
+    note: "Je marque le point, puis je pars : on me rejoue au tour suivant."
+  },
+  "OGN-027/298": {
+    n: null,
+    tx: "Quand tu joues ta deuxième carte dans un tour, donne-moi +2 Puissance ce tour-ci et redresse-moi."
+  },
+  "VEN-038/166": {
+    n: null,
+    tx: "Je ne peux pas être choisie par les sorts et capacités ennemis, sauf si je suis en combat.\nQuand je me déplace vers un champ de bataille, donne-moi +2 Puissance ce tour-ci.",
+    note: "Intouchable hors combat : pour la retirer, il faut d'abord l'engager."
+  },
+  "UNL-113/219": {
+    n: null,
+    tx: "Chasse 2.\nNiveau 6 → j'ai Déviation et Gank. (Tant que tu as 6 XP ou plus.)"
+  },
+  "OGN-046/298": {
+    n: "En garde",
+    tx: "Réaction.\nDonne +1 Puissance à une unité alliée ce tour-ci, puis encore +1 si c'est la seule unité que tu contrôles là-bas."
+  },
+  "VEN-084a/166": {
+    n: null,
+    tx: "Ascendante 3 Énergie + 1 Puissance.\nAscendue → j'ai +3 Puissance et je ne peux pas subir de dégâts, sauf en combat."
+  },
+  "SFD-070/221": {
+    n: null,
+    tx: "Cachée.\nAction.\nInflige 3 dégâts à une unité présente sur un champ de bataille. Crée un jeton d'équipement Or, épuisé."
+  },
+  "VEN-058/166": {
+    n: null,
+    tx: "(J'arrive épuisée.)\nQuand tu me joues, si tu contrôles 3 autres équipements ou plus, pioche 1 carte."
+  },
+  "SFD-136/221": {
+    n: null,
+    tx: "Réaction.\nRépétition 2 Énergie.\nContre un sort, sauf si son contrôleur paie 2 Énergie.",
+    note: "Ce n'est pas un contre sec : l'adversaire peut toujours payer pour passer."
+  },
+  "OGS-011/024": {
+    n: "Flash",
+    tx: "Réaction.\nRenvoie jusqu'à 2 unités alliées à leur base.",
+    note: "Sortie d'urgence : joué avant les dégâts, il sauve les unités engagées."
+  },
+  "SFD-003/221": {
+    n: null,
+    tx: "Action.\nRépétition 1 Énergie.\nDonne Assaut 2 à une unité."
+  },
+  "UNL-116/219": {
+    n: null,
+    tx: "Déviation.\nQuand tu me joues, si le score d'un adversaire est à 3 points ou moins de la victoire, redresse-moi et gagne 3 XP.",
+    note: "Carte de secours : elle ne s'active que quand tu es en train de perdre."
+  },
+  "UNL-158/219": {
+    n: null,
+    tx: "Quand tu le joues, gagne 1 XP.\nÉquiper — dépense 1 XP pour l'attacher à une unité que tu contrôles."
+  },
+  "UNL-095/219": {
+    n: null,
+    tx: "Action.\nDonne +3 Puissance à une unité alliée ce tour-ci. Si elle gagne un combat ce tour-ci, gagne 2 XP."
+  },
+  "VEN-075/166": {
+    n: null,
+    tx: "Cet équipement arrive épuisé.\nAscendant — 1 Énergie et épuiser cet équipement.\nRéaction → épuiser : ajoute 1 Énergie. S'il est ascendu, ajoute 2 Énergie à la place."
+  },
+  "VEN-049/166": {
+    n: null,
+    tx: "Pioche 1 carte.\nFlux 2 Énergie. (Tu peux la jouer depuis ta défausse pour son coût de Flux. Elle est ensuite bannie.)"
+  },
+  "OGN-218/298": {
+    n: "Capitaine de l'avant-garde",
+    tx: "Légion — quand tu me joues, crée ici deux jetons d'unité Recrue de 1 Puissance."
+  },
+  "UNL-173/219": {
+    n: null,
+    tx: "Réaction.\nEn coût additionnel, tue une unité alliée Puissante. (Une unité est Puissante tant qu'elle a 5 Puissance ou plus.)\nPioche 2 cartes et canalise 1 rune, épuisée."
+  },
+  "UNL-209/219": {
+    n: null,
+    tx: "Au début de ta phase Initiale, tu peux tuer une unité que tu contrôles ici pour piocher 1 carte. (Avant le score.)"
+  },
+  "SFD-220/221": {
+    n: null,
+    tx: "Quand tu conquiers ici, tu peux payer 1 Énergie pour créer un jeton d'équipement Or, épuisé."
+  },
+  "VEN-102/166": {
+    n: null,
+    tx: "Quand un adversaire joue un équipement, tu peux me bannir pour le bannir."
+  },
+  "SFD-163/221": {
+    n: null,
+    tx: "Réaction.\nTue une unité alliée pour donner à une autre unité alliée un bonus de Puissance égal à la sienne, ce tour-ci. Pioche 1 carte."
+  },
+  "OGN-286/298": {
+    n: "Arène de l'Ordalie",
+    tx: "Quand tu tiens ce champ de bataille, déclenche les effets de conquête des unités présentes ici."
+  },
+  "SFD-177/221": {
+    n: null,
+    tx: "Accélération.\nQuand j'attaque, tu peux amener sur ce champ de bataille autant de tes unités-jetons que tu veux."
+  },
+  "OGN-104/298": {
+    n: "Retraite",
+    tx: "Réaction.\nRenvoie une unité alliée dans la main de son propriétaire. Il canalise 1 rune, épuisée.",
+    note: "Sauve l'unité et compense le tempo : la rune canalisée reste utilisable au tour suivant."
+  },
+  "OGN-114/298": {
+    n: "Avenir prometteur",
+    tx: "Pioche 4 cartes."
+  },
+  "OGN-038/298": {
+    n: "Kadregrin l'infernal",
+    tx: "Quand tu me joues, pioche 1 carte pour chacune de tes unités Puissantes. (Une unité est Puissante tant qu'elle a 5 Puissance ou plus.)"
+  },
+  "OGN-129/298": {
+    n: "Défi",
+    tx: "Action.\nLes unités que tu joues ce tour-ci arrivent prêtes. Pioche 1 carte.",
+    note: "Casse la règle de base : les unités posées après ce sort peuvent attaquer immédiatement."
+  },
+  "OGN-014/298": {
+    n: "Foudroiement",
+    tx: "Action.\nLe coût en Énergie de ce sort est réduit de la plus haute Puissance parmi tes unités.\nInflige 5 dégâts à une unité présente sur un champ de bataille.",
+    note: "Avec une unité à 8 Puissance, il ne coûte plus que la Puissance indiquée."
+  },
+  "OGN-295/298": {
+    n: "Antre de Vilemaw",
+    tx: "Les unités ne peuvent pas quitter ce champ de bataille pour retourner à la base.",
+    note: "Piège : on ne peut plus se replier, seulement mourir ou avancer ailleurs."
+  },
+  "UNL-147/219": {
+    n: "Baron Nashor",
+    tx: "En me jouant, ajoute le jeton de champ de bataille Fosse du Baron au plateau s'il n'y est pas déjà. Si tu le fais, j'arrive là-bas. (« Les unités peuvent s'y déplacer depuis n'importe où. »)\nJe ne peux pas être choisi par les sorts et capacités ennemis.\nTes autres unités ont +2 Puissance.",
+    note: "La Fosse du Baron compte comme un champ de bataille supplémentaire pour la règle du dernier point."
+  },
+  "OGN-060/298": {
+    n: "Masque de prescience",
+    tx: "Quand une unité alliée attaque ou défend seule, donne-lui +1 Puissance ce tour-ci."
+  },
+  "OGN-083/298": {
+    n: "Consultation du passé",
+    tx: "Cachée.\nRéaction.\nPioche 2 cartes."
+  },
+  /* ---------- Shenyang : cartes jouées dans 2 decks ---------- */
+
+  "UNL-003/219": {
+    n: "Marai espiègle",
+    tx: "Cachée. (Cache-la maintenant pour 1 Puissance, de n'importe quel domaine, afin de la révéler plus tard pour 0.)\nQuand tu me joues sur un champ de bataille, inflige 2 dégâts à une unité ennemie présente ici.",
+    note: "Posée face cachée, elle se révèle en Réaction : les 2 dégâts peuvent tomber en pleine chaîne, pendant l'affrontement."
+  },
+  "UNL-205/219": {
+    n: "Hall abandonné",
+    tx: "Quand un joueur joue un sort, il peut donner +1 Puissance à une unité qu'il contrôle ici, ce tour-ci.",
+    note: "L'effet marche pour les deux joueurs, pas seulement pour celui qui tient le champ de bataille."
+  },
+  "OGN-056/298": {
+    n: "Adaptatron",
+    tx: "Quand je conquiers, tu peux tuer un Équipement. Si tu le fais, améliore-moi. (Si je n'ai pas d'amélioration, je reçois +1 Puissance.)",
+    note: "L'Équipement détruit peut être le tien comme celui de l'adversaire."
+  },
+  "OGN-211/298": {
+    n: "Fabricante dévouée",
+    tx: "Quand tu me joues, crée ici un jeton d'unité Recrue de 1 Puissance."
+  },
+  "SFD-150/221": {
+    n: "Derniers sacrements",
+    tx: "Équiper — 1 Puissance et recycler 2 cartes de ta défausse. (Coût à payer : attacher cet équipement à une unité que tu contrôles.)",
+    note: "Il faut donc au moins 2 cartes dans ta défausse pour pouvoir l'équiper."
+  },
+  "SFD-212/221": {
+    n: "Champ de mines",
+    tx: "Quand tu conquiers ici, mets les 2 premières cartes de ton deck principal dans ta défausse.",
+    note: "Ce n'est pas un choix : conquérir ici te coûte 2 cartes de deck à chaque fois."
+  },
+  "VEN-043/166": {
+    n: "Pattes d'acier",
+    tx: "Déviation. (L'adversaire doit payer 1 Puissance de plus, de n'importe quel domaine, pour me choisir avec un sort ou une capacité.)\nAscendant 7 Énergie. (7 Énergie : m'ascendre. Utilisable seulement si je ne le suis pas déjà.)\nAscendue : j'ai +7 Puissance.",
+    note: "1 Énergie pour 0 Puissance au départ ; une fois ascendue, elle devient une menace à 7, et l'ascension est définitive."
+  },
+  "VEN-099/166": {
+    n: "Guerrier de la tornade",
+    tx: "Cachée. (Cache-la maintenant pour 1 Puissance, de n'importe quel domaine, afin de la révéler plus tard pour 0.)\nQuand tu me joues depuis ma position face cachée, tu peux ascendre une carte présente ici. Elle perd son ascension à la fin du tour.",
+    note: "Ascension temporaire : de quoi débloquer un effet « Ascendu » le temps d'un affrontement, sans payer son coût."
+  },
+  "OGN-181/298": {
+    n: "Sac à merveilles",
+    tx: "Épuiser : renvoie un autre Équipement allié, une unité alliée ou une carte Cachée dans la main de son propriétaire.",
+    note: "Sert surtout à récupérer une unité qui allait mourir, ou à rejouer un effet « quand tu me joues »."
+  },
+  "SFD-032/221": {
+    n: null,
+    tx: "Quand tu me joues, tu peux tuer un Équipement."
+  },
+  "VEN-114/166": {
+    n: "Kharox",
+    tx: "Ascendant 6 Énergie + 2 Puissance. (Coût à payer pour m'ascendre. Utilisable seulement si je ne le suis pas déjà.)\nQuand je deviens Ascendu, choisis un adversaire : il subit Brûlure 3. Puis tu peux choisir une unité dans sa défausse et la jouer sans payer son coût. (Brûlure 3 : il met les 3 premières cartes de son deck principal dans sa défausse.)",
+    note: "La brûlure alimente ta propre pioche d'unités : plus son deck se vide, plus tu as de cibles à voler."
+  },
+  "VEN-081/166": {
+    n: "Déferlement",
+    tx: "Donne +6 Puissance à une unité ce tour-ci.\nFlux 4 Énergie. (Tu peux me jouer depuis ta défausse pour ce coût de Flux. Je suis ensuite bannie.)",
+    note: "Deux usages dans la partie : une fois depuis la main, une fois depuis la défausse."
+  },
+  "SFD-207/221": {
+    n: "Estrade de l'Empereur",
+    tx: "Quand tu conquiers ici, tu peux payer 1 Énergie et renvoyer une unité que tu contrôles ici dans la main de son propriétaire. Si tu le fais, crée ici un jeton d'unité Soldat des sables de 2 Puissance.",
+    note: "Sert à recycler un effet « quand tu me joues » tout en gardant un corps sur place."
+  },
+  "SFD-110/221": {
+    n: "Fiora",
+    tx: "Quand j'attaque ou que je défends en duel, ma Puissance est doublée pour ce combat.",
+    note: "« En duel » veut dire seule contre une seule unité : dès qu'il y a une troisième unité au combat, l'effet ne s'applique pas."
+  },
+  "SFD-149/221": {
+    n: "Ezreal",
+    tx: "Quand tu me joues, défausse 1 carte, puis pioche 2 cartes.\nLes coûts additionnels facultatifs que tu paies coûtent 1 Énergie ou 1 Puissance de moins.",
+    note: "La réduction vise les coûts marqués « tu peux payer… » : Accélération, Répétition, Ascendant, Cachée…"
+  },
+  "OGN-186/298": {
+    n: "Coffre au trésor",
+    tx: "Quand cet équipement quitte le plateau, pioche 1 carte et canalise 1 rune, épuisée.\n1 Puissance, épuiser : tuer cet équipement.",
+    note: "Tu peux donc l'encaisser toi-même quand tu en as besoin, sans attendre que l'adversaire le détruise."
+  },
+  "SFD-066/221": {
+    n: "Toucher glacial",
+    tx: "Réaction. (Se joue à tout moment, même avant qu'un sort ou une capacité ne se résolve.)\nRépétition 2 Énergie. (Tu peux payer le coût additionnel pour répéter l'effet du sort.)\nDonne -2 Puissance à une unité ce tour-ci.",
+    note: "En répétant, tu peux mettre les deux -2 sur la même unité ou les répartir : les cibles se choisissent au lancement."
+  },
+  "UNL-080/219": {
+    n: "Hwei",
+    tx: "Quand je me déplace, pioche 1 carte puis défausse 1 carte. Ensuite, selon le type de la carte défaussée :\n— Sort : pioche 1 carte.\n— Équipement : redresse jusqu'à 2 runes.\n— Unité : je gagne +3 Puissance ce tour-ci.",
+    note: "Avec Gank ou un effet de déplacement, il rejoue son effet à chaque mouvement."
+  },
+  "UNL-063/219": {
+    n: "Éclipse",
+    tx: "Réaction. (Se joue à tout moment, même avant qu'un sort ou une capacité ne se résolve.)\nDonne -4 Puissance à une unité ce tour-ci.\nPrédiction. (Regarde la première carte de ton deck principal. Tu peux la recycler.)",
+    note: "Une unité à 4 Puissance ou moins tombe à 0 : elle meurt tout de suite."
+  },
+  "SFD-029/221": {
+    n: "Rek'Sai",
+    tx: "Accélération. (Tu peux payer 1 Énergie + 1 Puissance en coût additionnel pour que j'arrive prête.)\nAssaut. (+1 Puissance tant que je suis attaquante.)\nLes unités alliées jouées depuis un endroit autre que la main d'un joueur ont Accélération.",
+    note: "Récompense les decks qui rejouent des unités depuis la défausse ou le deck : elles arrivent prêtes et peuvent attaquer aussitôt."
+  },
+  "VEN-124/166": {
+    n: null,
+    tx: "Ascendant — tuer une unité alliée. (Coût à payer pour m'ascendre. Utilisable seulement si je ne le suis pas déjà.)\nAscendu : j'ai +2 Puissance.",
+    note: "Le coût n'est pas en ressources mais en unité : idéal avec un jeton ou une unité qui a un effet « quand je meurs »."
+  },
+  "UNL-006/219": {
+    n: "Requineau",
+    tx: "Accélération. (Tu peux payer 1 Énergie + 1 Puissance en coût additionnel pour que j'arrive prête.)\nAssaut 4. (+4 Puissance tant que je suis attaquante.)",
+    note: "1 Puissance en défense, 5 en attaque : à jouer offensivement, jamais pour tenir un champ de bataille."
+  },
+  "OGN-291/298": {
+    n: "Le Sanctuaire aux chandelles",
+    tx: "Quand tu conquiers ici, regarde les 2 premières cartes de ton deck principal. Tu peux en recycler une ou les deux. Remets celles que tu gardes sur le dessus, dans l'ordre que tu veux."
+  },
+  "OGN-232/298": {
+    n: "Fiora",
+    tx: "Tant que je suis Puissante, j'ai Déviation, Gank et Bouclier. (Je suis Puissante tant que j'ai 5 Puissance ou plus.)",
+    note: "À 4 Puissance de base, il lui faut une amélioration ou un sort pour atteindre 5 et débloquer les trois mots-clés."
+  },
+  "OGN-207/298": {
+    n: "Appel à la gloire",
+    tx: "Réaction. (Se joue à tout moment, même avant qu'un sort ou une capacité ne se résolve.)\nEn me jouant, tu peux dépenser une amélioration en coût additionnel. Si tu le fais, ignore mon coût.\nDonne +3 Puissance à une unité ce tour-ci.",
+    note: "Gratuit si tu sacrifies une amélioration déjà posée : un tour de combat surprise sans toucher à tes runes."
+  },
+  "OGN-280/298": {
+    n: "Bosquet du Dieu-Saule",
+    tx: "Quand tu tiens ce champ de bataille, pioche 1 carte.",
+    note: "« Tenir » veut dire le contrôler au début de ton tour sans avoir eu à le conquérir ce tour-ci."
+  },
+  "OGN-099/298": {
+    n: "Ramasse-ordures",
+    tx: "Recycler 3 cartes de ta défausse, 1 Énergie, épuiser : pioche 1 carte.",
+    note: "Il faut payer les trois éléments du coût en même temps : la défausse doit contenir au moins 3 cartes."
+  },
+  "OGN-216/298": {
+    n: "Éclaireur planant",
+    tx: "Glas — canalise 1 rune, épuisée. (Effet obtenu quand je meurs.)",
+    note: "La rune canalisée arrive épuisée : elle ne servira qu'au tour suivant."
+  },
+  "OGN-096/298": {
+    n: "Sentinelle vigilante",
+    tx: "Glas — pioche 1 carte. (Effet obtenu quand je meurs.)"
+  },
+  "VEN-137/166": {
+    n: "Lunettes fumées",
+    tx: "Équiper 1 Énergie + 1 Puissance. (Attacher cet équipement à une unité que tu contrôles.)\nEn l'attachant à une unité, choisis une autre unité alliée : l'unité équipée devient une copie de celle-ci tant que cet équipement lui reste attaché.",
+    note: "La copie prend tout : Puissance, mots-clés et capacités. Détache l'équipement et l'unité redevient elle-même."
+  },
+  "UNL-028/219": {
+    n: "Pyke",
+    tx: "Cachée. (Cache-la maintenant pour 1 Puissance, de n'importe quel domaine, afin de la révéler plus tard pour 0.)\nGank. (Je peux me déplacer d'un champ de bataille à un autre.)\nTu peux payer 1 Puissance en coût additionnel pour me jouer.\nQuand tu me joues, si tu as payé ce coût, redresse-moi et donne-moi +2 Puissance ce tour-ci.",
+    note: "Révélé depuis sa position cachée en pleine chaîne, prêt et à 4 Puissance : l'embuscade type."
+  },
+  "VEN-080/166": {
+    n: "Démolisseur noxien",
+    tx: "Quand je conquiers, tu peux tuer un Équipement dont le coût en Énergie ne dépasse pas ma Puissance."
+  },
+  "SFD-007/221": {
+    n: "Brouilleur à gemme",
+    tx: "Quand tu me joues, donne Gank à une unité ce tour-ci. (Elle peut se déplacer d'un champ de bataille à un autre.)",
+    note: "Permet un déplacement surprise vers un champ de bataille laissé sans défense."
+  },
+  "SFD-026/221": {
+    n: "Rumble",
+    tx: "Chacun de tes Mécas a Assaut. (+1 Puissance tant que nous sommes attaquants.)\nQuand je conquiers, tu peux recycler une autre unité alliée pour jouer un Méca depuis ta défausse. Réduis son coût en Énergie de la Puissance de l'unité recyclée.",
+    note: "Recycler une grosse unité peut rendre le Méca gratuit."
+  },
+  "SFD-044/221": {
+    n: "Quartier-maître de la Légion",
+    tx: "En coût additionnel pour me jouer, renvoie un Équipement allié dans la main de son propriétaire.",
+    note: "Ce coût est obligatoire : sans Équipement allié sur le plateau, elle est injouable. En échange, un effet « quand tu le joues » d'équipement peut être relancé."
+  },
+  "SFD-213/221": {
+    n: "Forge d'Ornn",
+    tx: "Tant que tu contrôles ce champ de bataille, le premier Équipement non-jeton que tu joues chaque tour coûte 1 Énergie de moins."
+  },
+  "SFD-065/221": {
+    n: "Prévisionniste",
+    tx: "Tes Mécas ont Vision. (Quand tu nous joues, regarde la première carte de ton deck principal. Tu peux la recycler.)"
+  },
+  "OGN-249/298": {
+    n: "Tempête implacable",
+    tx: "Quand tu joues une unité Puissante, tu peux m'épuiser pour canaliser 1 rune, épuisée. (Une unité est Puissante tant qu'elle a 5 Puissance ou plus.)",
+    note: "Légende de Volibear : une rune de plus par tour si ton deck enchaîne les grosses unités."
+  },
+  "OGN-041/298": {
+    n: "Volibear",
+    tx: "Déviation 2. (L'adversaire doit payer 2 Puissance de plus, de n'importe quel domaine, pour me choisir avec un sort ou une capacité.)\nQuand j'attaque, inflige 5 dégâts répartis comme tu veux entre les unités ennemies présentes ici.",
+    note: "Les 5 dégâts partent à l'ouverture de l'affrontement, avant les dégâts de combat : de quoi nettoyer les petites unités avant l'échange."
+  },
+  "UNL-093/219": {
+    n: "Sage de l'Âme du Dragon",
+    tx: "Réaction : épuiser — ajoute 1 Énergie. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)",
+    note: "Une rune vivante : elle donne de l'Énergie même en pleine chaîne adverse."
+  },
+  "VEN-088/166": {
+    n: "Jayce",
+    tx: "Quand je deviens prêt, choisis un effet à me donner ce tour-ci :\n— Assaut 2 (+2 Puissance tant que je suis attaquant) ;\n— Déviation 2 (l'adversaire doit payer 2 Puissance de plus pour me choisir) ;\n— Gank (je peux me déplacer d'un champ de bataille à un autre).",
+    note: "Le choix se refait à chaque fois qu'il se redresse, donc au minimum une fois par tour lors de ta phase de réveil."
+  },
+  "UNL-104/219": {
+    n: "Gemmedragon paisible",
+    tx: "Quand tu me joues, ou que tu joues un autre Dragon, redresse jusqu'à 2 runes.",
+    note: "Rend une partie de son coût dès qu'il arrive, et finance les Dragons suivants."
+  },
+  "SFD-219/221": {
+    n: "L'Arbre de papier",
+    tx: "Quand tu tiens ce champ de bataille, chaque joueur canalise 1 rune, épuisée.",
+    note: "Attention, l'adversaire en profite aussi : ce n'est un avantage que si tu utilises mieux tes runes que lui."
+  },
+  "VEN-127/166": {
+    n: "Lacération",
+    tx: "Choisis une unité. Si elle est Ascendue, retire-lui son ascension. Puis tue-la si elle a 3 Puissance ou moins.\nFlux 4 Énergie + 2 Puissance. (Tu peux me jouer depuis ta défausse pour ce coût de Flux. Je suis ensuite bannie.)",
+    note: "Réponse aux unités qui ne sont grosses que grâce à leur ascension : on la retire d'abord, on tue ensuite."
+  },
+  "UNL-165/219": {
+    n: "L'Appel des ombres",
+    tx: "Choisis une unité alliée qui n'est pas Temporaire. Donne-lui Temporaire. Pioche 2 cartes. (Elle meurt au début de la phase Initiale de son contrôleur, avant le score.)",
+    note: "Deux cartes contre une unité qui ne verra pas ton prochain tour : à jouer sur une unité qui allait mourir de toute façon."
+  },
+  "UNL-092/219": {
+    n: "Diplomate démacien",
+    tx: "Quand tu me joues, gagne 1 XP."
+  },
+  "UNL-060/219": {
+    n: "Vilemaw",
+    tx: "Embuscade. (Tu peux me jouer en Réaction sur un champ de bataille où tu as des unités.)\nLes unités ennemies présentes ici qui ont moins de Puissance que moi n'infligent pas de dégâts de combat.\nQuand je tiens un champ de bataille, pioche 1 carte.",
+    note: "Arrivée en Réaction au milieu d'un affrontement, elle peut annuler d'un coup les dégâts de tout un groupe d'unités plus petites."
+  },
+  "OGN-048/298": {
+    n: "Méditation",
+    tx: "Réaction. (Se joue à tout moment, même avant qu'un sort ou une capacité ne se résolve.)\nEn coût additionnel, tu peux épuiser une unité alliée. Si tu le fais, pioche 2 cartes. Sinon, pioche 1 carte.",
+    note: "Épuiser une unité l'empêche d'attaquer ou de défendre ce tour-ci : la deuxième carte se paie en tempo."
+  },
+  "SFD-087/221": {
+    n: "Prémonition",
+    tx: "Réaction. (Se joue à tout moment, même avant qu'un sort ou une capacité ne se résolve.)\nPioche 3 cartes."
+  },
+  "OGN-047/298": {
+    n: "Trouve ton centre",
+    tx: "Action. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nSi le score d'un adversaire est à 3 points ou moins du score de victoire, je coûte 2 Énergie de moins.\nPioche 1 carte et canalise 1 rune, épuisée.",
+    note: "Carte de rattrapage : elle devient très bon marché justement quand tu es en train de perdre."
+  },
+  "VEN-126/166": {
+    n: "Barrière de Ki",
+    tx: "Réaction. (Se joue à tout moment, même avant qu'un sort ou une capacité ne se résolve.)\nChoisis une unité : les 7 prochains dégâts qui lui seraient infligés ce tour-ci sont évités. (L'adversaire peut lui assigner des dégâts de combat en plus pour la tuer quand même.)",
+    note: "Ce n'est pas une invulnérabilité : au combat, l'adversaire peut choisir de lui envoyer plus de 7 dégâts."
+  },
+  "UNL-175/219": {
+    n: "Retraite tactique",
+    tx: "Réaction. (Se joue à tout moment, même avant qu'un sort ou une capacité ne se résolve.)\nChoisis une unité alliée. La prochaine fois qu'elle devrait mourir ce tour-ci, soigne-la, épuise-la et rappelle-la à la base à la place. (Ce n'est pas un déplacement.)",
+    note: "Elle survit mais quitte le champ de bataille : tu sauves l'unité, pas la position."
+  },
+  "UNL-117/219": {
+    n: "Horreur arachnoïde",
+    tx: "Chasse 2. (Quand je conquiers ou que je tiens un champ de bataille, gagne 2 XP.)\nJe peux être jouée sur un champ de bataille occupé si une unité ennemie y est seule.\nTes autres unités peuvent être jouées sur un champ de bataille occupé si une unité ennemie y est seule.",
+    note: "Casse la règle normale : d'habitude on ne peut poser une unité que dans sa base ou sur un champ de bataille libre."
+  },
+  "OGN-288/298": {
+    n: "Cime étoilée",
+    tx: "Quand tu tiens ce champ de bataille, tu peux canaliser 1 rune, épuisée."
+  },
+  "SFD-130/221": {
+    n: "Chasseur de trésors",
+    tx: "Quand je me déplace, crée un jeton d'équipement Or, épuisé.",
+    note: "Le jeton Or se recycle pour de la Puissance : combiné à Gank, il finance tes sorts tour après tour."
+  },
+  "VEN-169/166": {
+    n: "Zed",
+    tx: "Tu peux défausser 1 carte en coût additionnel pour me jouer.\nQuand tu me joues, si tu as payé ce coût, crée un jeton d'unité Clone d'ombre de 0 Puissance.",
+    note: "Le clone à 0 Puissance ne frappe pas, mais il occupe une place : il sert à contester un champ de bataille ou à absorber des dégâts."
+  },
+  "SFD-023/221": {
+    n: "Lumière perforante",
+    tx: "Répétition 2 Énergie + 1 Puissance. (Tu peux payer le coût additionnel pour répéter l'effet du sort.)\nInflige 2 dégâts à une unité présente sur un champ de bataille, puis 2 dégâts à une autre unité au maximum.",
+    note: "Répété, il touche jusqu'à quatre unités : une bonne réponse à un déploiement large de petites unités."
+  },
+  "SFD-147/221": {
+    n: null,
+    tx: "Renvoie toutes les unités et tous les Équipements dans les mains de leurs propriétaires.",
+    note: "Remise à zéro totale du plateau, la tienne comprise. Les cartes ne sont pas détruites : elles reviennent en main et devront être rejouées."
+  },
+  "UNL-132/219": {
+    n: "Bête pêcheuse",
+    tx: "Quand tu me joues, renvoie toutes les unités qui ont 2 Puissance ou moins dans les mains de leurs propriétaires.",
+    note: "Elle renvoie aussi tes propres petites unités : à jouer quand le plateau adverse est large et le tien vide."
+  },
+  "OGN-282/298": {
+    n: "Monastère d'Hirana",
+    tx: "Quand tu conquiers ici, tu peux dépenser une amélioration pour piocher 1 carte."
+  },
+  "SFD-014/221": {
+    n: "Minotaure justicier",
+    tx: "Les unités ne peuvent pas se déplacer vers une base.",
+    note: "Effet global, pour les deux joueurs : plus personne ne peut se replier, y compris toi."
+  },
+  "OGN-084/298": {
+    n: "Apprenti impatient",
+    tx: "Tant que je suis sur un champ de bataille, les coûts en Énergie des sorts que tu joues sont réduits de 1, sans pouvoir descendre sous 1 Énergie.",
+    note: "Il doit sortir de la base pour que la réduction s'applique — donc s'exposer au combat."
+  },
+  "OGN-110/298": {
+    n: "Ekko",
+    tx: "Accélération. (Tu peux payer 1 Énergie + 1 Puissance en coût additionnel pour que j'arrive prêt.)\nGlas — recycle-moi pour redresser tes runes. (Effet obtenu quand je meurs.)",
+    note: "Mourir lui rend toutes tes runes : un échange de combat peut financer un second tour complet dans le même tour."
+  },
+  "UNL-061/219": {
+    n: "Coup de théâtre",
+    tx: "Réaction. (Se joue à tout moment, même avant qu'un sort ou une capacité ne se résolve.)\nRépétition 2 Énergie. (Tu peux payer le coût additionnel pour répéter l'effet du sort.)\nPioche 1 carte."
+  },
+  "OGN-242/298": {
+    n: "Hameçon appâté",
+    tx: "1 Énergie + 1 Puissance, épuiser : tue une unité alliée. Regarde les 5 premières cartes de ton deck principal. Tu peux y bannir une unité dont la Puissance ne dépasse pas de plus de 1 celle de l'unité tuée, et la jouer sans payer son coût. Puis recycle les autres.",
+    note: "Échelle de Puissance : une unité à 3 permet d'en chercher une à 4 au maximum. L'unité cherchée est bannie du deck puis jouée : elle ne repasse pas par la main."
   }
 };

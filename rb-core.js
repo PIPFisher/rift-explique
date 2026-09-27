@@ -75,7 +75,7 @@ window.RB = (function(){
     out = out.replace(/\[A\]/g, '<span class="sym sym-p" title="1 Puissance, de n&#39;importe quel domaine"><b>P</b></span>');
     out = out.replace(/\[C\]/g, '<span class="sym sym-p" title="1 Puissance"><b>P</b></span>');
     out = out.replace(/\[S\]/g, '<span class="sym sym-m" title="Puissance de l\'unité">M</span>');
-    out = out.replace(/\[T\]/g, '<span class="sym sym-t" title="Épuiser">↻</span>');
+    out = out.replace(/\[T\]|\[E\]/g, '<span class="sym sym-t" title="Épuiser">↻</span>');
     out = out.replace(/\[&gt;\]/g, ' → ');
     out = out.replace(/\[([A-Za-zÀ-ÿ'\-]+)( \d+)?\]/g, function(whole, word, num){
       var k = KEYWORDS[word];
