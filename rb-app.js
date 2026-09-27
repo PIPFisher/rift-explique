@@ -9,6 +9,7 @@
     turn:     { mod:function(){ return window.Turn; },     title:"Un tour de jeu" },
     chain:    { mod:function(){ return window.Chain; },    title:"La chaîne" },
     sim:      { mod:function(){ return window.Sim; },      title:"Simulateur" },
+    deck:     { mod:function(){ return window.Deck; },     title:"Mon deck" },
     explorer: { mod:function(){ return window.Explorer; }, title:"Les cartes" }
   };
 
@@ -61,7 +62,7 @@
   function peekHTML(c){
     return '<img class="peek-img" src="' + RB.esc(RB.img(c, 620)) + '" alt="' + RB.esc(c.n) + '">' +
       '<div class="peek-side">' +
-        '<div class="peek-name">' + RB.esc(c.n) + '</div>' +
+        '<div class="peek-name">' + RB.esc(RB.displayName(c)) + '</div>' +
         '<div class="peek-meta">' + RB.esc(RB.typeFR(c.t)) + ' · ' +
           RB.esc((c.d || []).map(RB.domFR).join(" / ")) +
           (c.e != null ? ' · ' + RB.esc(c.e) + ' Énergie' : '') +

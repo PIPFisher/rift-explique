@@ -123,7 +123,7 @@ window.RB = (function(){
              '<img loading="lazy" src="' + esc(img(c, opts.w || 320)) + '" alt="' + esc(c.n) + '" ' +
                'onerror="this.style.visibility=\'hidden\'">' +
              (opts.caption === false ? "" :
-               '<div class="card-cap"><b>' + esc(c.n) + '</b><i>' + esc(c.e == null ? typeFR(c.t) : c.e) + '</i></div>') +
+               '<div class="card-cap"><b>' + esc(displayName(c)) + '</b><i>' + esc(c.e == null ? typeFR(c.t) : c.e) + '</i></div>') +
            '</article>';
   }
 
@@ -146,7 +146,7 @@ window.RB = (function(){
     return '<div class="detail">' +
       '<img src="' + esc(img(c, 640)) + '" alt="' + esc(c.n) + '">' +
       '<div class="detail-meta">' +
-        '<h2>' + esc(c.n) + '</h2>' +
+        '<h2>' + esc(displayName(c)) + '</h2>' +
         '<div class="chips">' + chips.join("") + '</div>' +
         '<div class="stat-row">' + stats + '</div>' +
         '<div class="rules-text">' + symbols(c.tx || "Pas de texte de règles.") + '</div>' +
@@ -174,6 +174,14 @@ window.RB = (function(){
       '<p class="fr-text">' + esc(t.tx) + '</p>' +
       (t.note ? '<p class="fr-note">' + esc(t.note) + '</p>' : '') +
     '</div>';
+  }
+
+  function displayName(c){
+    var base = c.fn || c.n;
+    if(c.t === "Legend" && c.tg && c.tg.length && base.indexOf(c.tg[0]) === -1){
+      return c.tg[0] + ", " + base;
+    }
+    return base;
   }
 
   function metaSetName(setId){
@@ -221,7 +229,7 @@ window.RB = (function(){
     symbols: symbols, img: img, esc: esc,
     domColor: domColor, typeFR: typeFR, domFR: domFR, setFR: setFR, rarFR: rarFR,
     costLine: costLine, isReaction: isReaction, mightOf: mightOf,
-    fr: fr, frBlockHTML: frBlockHTML,
+    fr: fr, frBlockHTML: frBlockHTML, displayName: displayName,
     KEYWORDS: KEYWORDS, metaSetName: metaSetName
   };
 })();
