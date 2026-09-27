@@ -65,7 +65,7 @@ window.Explorer = (function(){
         '<div class="eyebrow">Collection · ' + RB.cards.length + ' cartes</div>' +
         '<h1>Les cartes</h1>' +
         '<p class="lede">Toutes les cartes des cinq extensions, avec leurs illustrations officielles. ' +
-        'Clique sur une carte pour son texte complet ; survole un mot-clé pour sa traduction française.</p>' +
+        'Les 1189 cartes sont traduites en français. Clique sur une carte pour son texte complet et sa traduction ; survole un mot-clé pour son explication.</p>' +
       '</div>' +
       '<div class="panel" style="margin-bottom:16px">' +
         '<div class="filters">' +

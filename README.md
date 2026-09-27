@@ -63,6 +63,6 @@ Il ne calcule **pas** les effets des sorts : quand une carte se résout, le jour
 
 Projet de fan non officiel, sans lien avec Riot Games. Riftbound et League of Legends sont des marques de Riot Games, Inc. Les données et les illustrations des cartes appartiennent à Riot Games ; les images sont affichées depuis leurs serveurs et ne sont pas redistribuées ici.
 
-Les textes de cartes sont en version originale anglaise : les traductions officielles ne sont pas encore diffusées. Le lexique de l'onglet « Les règles » donne l'équivalent français de chaque mot-clé.
+Riot ne publie pas encore Riftbound en français. Les 1189 cartes sont traduites à la main dans `rb-fr.js`, avec le texte original anglais conservé à côté, et une note explicative sur les cartes difficiles à comprendre. Le lexique de l'onglet « Les règles » donne l'équivalent français de chaque mot-clé.
 
 Si tu veux passer à la voie officielle, Riot fournit une clé d'API sur son [portail développeur](https://developer.riotgames.com/docs/riftbound), qui donne accès aux visuels et aux traductions officielles quand elles existent.
