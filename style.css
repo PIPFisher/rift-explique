@@ -420,8 +420,8 @@ label.field span{font-family:var(--cond);font-size:12px;letter-spacing:.12em;tex
 /* ================= aperçu au survol ================= */
 .peek{
   position:fixed;z-index:80;pointer-events:none;
-  display:flex;gap:14px;align-items:flex-start;
-  max-width:min(680px, calc(100vw - 24px));
+  display:flex;gap:16px;align-items:flex-start;
+  max-width:min(880px, calc(100vw - 24px));
   background:linear-gradient(180deg,rgba(19,37,47,.98),rgba(10,20,28,.98));
   border:1px solid var(--gold);border-radius:6px;
   box-shadow:0 22px 50px -18px #000, 0 0 0 1px rgba(217,169,74,.18);
@@ -430,23 +430,28 @@ label.field span{font-family:var(--cond);font-size:12px;letter-spacing:.12em;tex
 }
 .peek[hidden]{display:none}
 @keyframes peekIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
-.peek-img{width:250px;flex:none;border-radius:6px;border:1px solid var(--line)}
-.peek-side{display:flex;flex-direction:column;gap:8px;min-width:0;width:340px}
-.peek-name{font-family:var(--serif);font-size:19px;line-height:1.2;color:var(--text)}
-.peek-meta{font-family:var(--cond);font-size:13.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-faint)}
-.peek-vo{font-size:13px;line-height:1.45;color:var(--text-dim);white-space:pre-line;
-  border-left:2px solid var(--line);padding-left:10px}
+.peek-img{
+  height:min(640px, 76vh);width:auto;max-width:46vw;flex:none;
+  border-radius:8px;border:1px solid var(--line);
+}
+.peek-side{display:flex;flex-direction:column;gap:9px;min-width:0;width:380px;max-height:76vh;overflow:hidden}
+.peek-name{font-family:var(--serif);font-size:23px;line-height:1.18;color:var(--text)}
+.peek-meta{font-family:var(--cond);font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-faint)}
+.peek-vo{font-size:14.5px;line-height:1.5;color:var(--text-dim);white-space:pre-line;
+  border-left:2px solid var(--line);padding-left:11px}
 
 .fr-block{border:1px solid rgba(217,169,74,.35);border-radius:4px;
   background:rgba(217,169,74,.07);padding:9px 11px;display:flex;flex-direction:column;gap:4px}
 .fr-head{font-family:var(--cond);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
-.fr-name{font-family:var(--serif);font-size:16px;color:var(--gold-soft)}
-.fr-text{margin:0;font-size:14.5px;line-height:1.5;color:var(--text);white-space:pre-line}
+.fr-name{font-family:var(--serif);font-size:18px;color:var(--gold-soft)}
+.fr-text{margin:0;font-size:16px;line-height:1.55;color:var(--text);white-space:pre-line}
 .fr-note{margin:0;font-size:12.5px;color:var(--text-dim);font-style:italic}
 .fr-missing{border-color:var(--line-soft);background:rgba(19,37,47,.5)}
 .fr-missing p{margin:0;font-size:13px;color:var(--text-faint)}
 .fr-missing .fr-head{color:var(--text-faint)}
 
+/* cartes paysage (champs de bataille) : on borne autrement */
+.peek-img[src*="1039x744"], .peek-img.landscape{height:auto;width:min(460px,46vw)}
 @media (max-width:820px){ .peek{display:none} }
 
 /* ================= deck ================= */

@@ -60,7 +60,8 @@
   var peekId = null, peekTimer = null;
 
   function peekHTML(c){
-    return '<img class="peek-img" src="' + RB.esc(RB.img(c, 620)) + '" alt="' + RB.esc(c.n) + '">' +
+    return '<img class="peek-img' + (c.o === "landscape" ? " landscape" : "") + '" src="' +
+        RB.esc(RB.img(c, 820)) + '" alt="' + RB.esc(c.n) + '">' +
       '<div class="peek-side">' +
         '<div class="peek-name">' + RB.esc(RB.displayName(c)) + '</div>' +
         '<div class="peek-meta">' + RB.esc(RB.typeFR(c.t)) + ' · ' +
