@@ -1,0 +1,439 @@
+{
+ "version": 1,
+ "generated": "2026-09-27",
+ "byCode": {
+  "OGN-001": {
+   "n": "Terreur enflammée",
+   "tx": "Accélération. (Tu peux payer 1 Énergie + 1 Puissance en coût additionnel pour que j'arrive prête.)",
+   "en": "Blazing Scorcher"
+  },
+  "OGN-003": {
+   "n": "Brute techno-chimique",
+   "tx": "Assaut 2. (+2 Puissance tant que je suis attaquante.)\nQuand tu me joues, défausse 1 carte.",
+   "note": "Le défaussement fait partie du coût : il faut une carte en main pour la jouer.",
+   "en": "Chemtech Enforcer"
+  },
+  "OGN-004": {
+   "n": "Fendoir",
+   "tx": "Action. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nDonne Assaut 3 à une unité ce tour-ci. (+3 Puissance tant qu'elle attaque.)",
+   "en": "Cleave"
+  },
+  "OGN-009": {
+   "n": "Rayon Hextech",
+   "tx": "Action.\nInflige 3 dégâts à une unité présente sur un champ de bataille.",
+   "note": "Ne peut pas viser une unité restée à la base.",
+   "en": "Hextech Ray"
+  },
+  "OGN-010": {
+   "n": "Légionnaire d'arrière-garde",
+   "tx": "Accélération. (Tu peux payer 1 Énergie + 1 Puissance en coût additionnel pour que j'arrive prête.)",
+   "en": "Legion Rearguard"
+  },
+  "OGN-012": {
+   "n": "Fantassin noxien",
+   "tx": "Légion — je coûte 2 Énergie de moins. (Effet obtenu si tu as déjà joué une autre carte ce tour-ci.)",
+   "en": "Noxus Hopeful"
+  },
+  "OGN-013": {
+   "n": "Poro ronchon",
+   "tx": "Déviation. (L'adversaire doit payer 1 Énergie de plus pour me choisir avec un sort ou une capacité.)",
+   "en": "Pouty Poro"
+  },
+  "OGN-016": {
+   "n": "Duo dangereux",
+   "tx": "Légion — quand tu me joues, donne +2 Puissance à une unité ce tour-ci. (Effet obtenu si tu as déjà joué une autre carte ce tour-ci.)",
+   "en": "Dangerous Duo"
+  },
+  "OGN-133": {
+   "n": null,
+   "tx": "Réaction. (Se joue à tout moment, même avant qu'un sort ne se résolve.)\nInflige 1 dégât à toutes les unités présentes sur des champs de bataille.",
+   "note": "Touche aussi tes propres unités.",
+   "en": "Flurry of Blades"
+  },
+  "SFD-082": {
+   "n": null,
+   "tx": "Quand j'attaque ou je défends, j'inflige des dégâts égaux à ma Puissance à une unité ennemie présente ici.\nJe n'inflige pas de dégâts de combat.\n1 Puissance : Action — me renvoyer à ta base.",
+   "note": "Le déclenchement part à l'ouverture de l'affrontement ; l'action de repli se joue ensuite, chaîne vide.",
+   "en": "Ezreal, Dashing"
+  },
+  "UNL-128": {
+   "n": null,
+   "tx": "Réaction.\nRenvoie une unité alliée et une unité ennemie dans les mains de leurs propriétaires.",
+   "note": "Ne contre rien : ce qui est déjà sur la chaîne se résout quand même.",
+   "en": "Star-Crossed"
+  },
+  "SFD-183": {
+   "n": "Lucian - Purificateur",
+   "tx": "Chacun de tes Équipements donne Assaut. (+1 Puissance tant que l'unité équipée est attaquante.)",
+   "note": "L'effet s'applique à tous tes équipements attachés et se cumule avec un Assaut déjà présent sur la carte.",
+   "en": "Purifier"
+  },
+  "UNL-210": {
+   "n": null,
+   "tx": "Tant qu'une unité défend seule ici, elle a −2 Puissance. (Elle est seule s'il n'y a aucune autre unité alliée ici.)",
+   "note": "Champ de bataille : pousse l'adversaire à défendre à plusieurs, sinon son unité fond.",
+   "en": "Forbidding Waste"
+  },
+  "SFD-208": {
+   "n": null,
+   "tx": "Tant que tu contrôles ce champ de bataille, tes légendes ont « Épuiser : attacher un Équipement que tu contrôles à une unité que tu contrôles ».",
+   "en": "Forge of the Fluft"
+  },
+  "OGN-297": {
+   "n": "Tertre venteux",
+   "tx": "Les unités présentes ici ont Gank. (Elles peuvent se déplacer d'un champ de bataille à un autre.)",
+   "en": "Windswept Hillock"
+  },
+  "OGN-126": {
+   "n": "Rune de corps",
+   "tx": "Rune du domaine Corps.",
+   "note": "L'épuiser donne 1 Énergie. La recycler donne 1 Puissance de Corps.",
+   "en": "Body Rune"
+  },
+  "OGN-007": {
+   "n": "Rune de fureur",
+   "tx": "Rune du domaine Furie.",
+   "note": "L'épuiser donne 1 Énergie. La recycler donne 1 Puissance de Furie.",
+   "en": "Fury Rune"
+  },
+  "SFD-113": {
+   "n": null,
+   "tx": "Maître d'armes. (Quand tu me joues, tu peux attacher un de tes Équipements sur moi pour 1 Énergie de moins, même s'il est déjà attaché ailleurs.)\nLa première fois que je conquiers à chaque tour, redresse-moi.",
+   "note": "Se redresser après une conquête permet de repartir à l'assaut dans le même tour.",
+   "en": "Lucian, Merciless"
+  },
+  "UNL-112": {
+   "n": null,
+   "tx": "Quand je me déplace vers un champ de bataille, tu peux y déplacer une unité ennemie.",
+   "note": "Sert à isoler un défenseur, ou à tirer une unité hors d'un champ que l'adversaire tenait.",
+   "en": "Irresistible Faefolk"
+  },
+  "OGN-136": {
+   "n": "Novice de la fosse",
+   "tx": "Quand tu me joues, améliore une autre unité alliée. (Si elle n'a pas déjà une amélioration, elle reçoit +1 Puissance.)",
+   "note": "Une unité ne peut porter qu'une seule amélioration à la fois.",
+   "en": "Pit Rookie"
+  },
+  "OGN-132": {
+   "n": "Second du capitaine",
+   "tx": "Quand tu me joues, redresse une autre unité.",
+   "note": "Permet de faire attaquer une unité déjà épuisée, ou de la rendre disponible pour défendre.",
+   "en": "First Mate"
+  },
+  "UNL-097": {
+   "n": null,
+   "tx": "Quand tu me joues, pioche 1 carte si tes autres unités totalisent 5 Puissance ou plus.",
+   "en": "Kinkou Initiate"
+  },
+  "OGN-039": {
+   "n": "Kai'Sa - Survivante",
+   "tx": "Accélération. (Tu peux payer 1 Énergie + 1 Puissance en coût additionnel pour que j'arrive prête.)\nQuand je conquiers, pioche 1 carte.",
+   "en": "Kai'Sa, Survivor"
+  },
+  "OGN-026": {
+   "n": "Brynhir Chantefoudre",
+   "tx": "Quand tu me joues, les adversaires ne peuvent plus jouer de cartes ce tour-ci.",
+   "note": "Verrouille la chaîne : plus aucune réaction adverse jusqu'à la fin du tour. À poser avant d'attaquer.",
+   "en": "Brynhir Thundersong"
+  },
+  "SFD-021": {
+   "n": null,
+   "tx": "Glas — crée deux jetons d'unité Méca de 3 Puissance dans ta base. (Effet obtenu quand je meurs.)",
+   "note": "Mourir n'est pas une perte sèche : tu récupères 6 Puissance répartie sur deux corps.",
+   "en": "Ferrous Forerunner"
+  },
+  "SFD-095": {
+   "n": "Lame de Doran",
+   "tx": "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "note": "L'équipement ajoute sa Puissance à l'unité équipée, et revient à la base si elle meurt.",
+   "en": "Doran's Blade"
+  },
+  "SFD-022": {
+   "n": null,
+   "tx": "Dégainage. (Cet équipement a Réaction ; quand tu le joues, attache-le à une unité que tu contrôles.)\nÉquiper 1 Puissance.",
+   "note": "Le Dégainage évite le coût d'équipement, mais uniquement au moment où tu le joues.",
+   "en": "Long Sword"
+  },
+  "UNL-019": {
+   "n": null,
+   "tx": "Équiper 1 Énergie + 1 Puissance. (Attacher cet équipement à une unité que tu contrôles.)",
+   "en": "Blighted Battleaxe"
+  },
+  "SFD-097": {
+   "n": null,
+   "tx": "Action.\nDonne +5 Puissance à une unité ce tour-ci.",
+   "note": "Se joue aussi en plein affrontement, tant que la chaîne est vide et que tu as le focus.",
+   "en": "Punch First"
+  },
+  "OGN-156": {
+   "n": "Sabotage",
+   "tx": "Choisis un adversaire. Il révèle sa main. Choisis-y une carte qui n'est pas une unité : il la recycle.",
+   "en": "Sabotage"
+  },
+  "OGN-029": {
+   "n": "Étoile filante",
+   "tx": "Inflige 3 dégâts à une unité.\nInflige 3 dégâts à une unité.",
+   "note": "Deux effets distincts : tu peux viser deux unités différentes, ou concentrer 6 dégâts sur une seule.",
+   "en": "Falling Star"
+  },
+  "SFD-184": {
+   "n": null,
+   "tx": "Action.\nDéplace une unité alliée. Tu peux lui attacher un Équipement du même contrôleur. Ce tour-ci, cette unité a « Quand je conquiers, tu peux me renvoyer à ma base ».",
+   "en": "Relentless Pursuit"
+  },
+  "VEN-085": {
+   "n": null,
+   "tx": "Choisis un adversaire. Il révèle sa main et tu y choisis une carte du domaine Esprit : il la recycle.",
+   "en": "Decree of Strength"
+  },
+  "OGN-145": {
+   "n": "Détermination sans faille",
+   "tx": "Réaction.\nEmpêche tous les dégâts de sorts et de capacités ce tour-ci.",
+   "note": "Ne protège pas des dégâts de combat : seulement de ceux qui viennent d'un sort ou d'une capacité.",
+   "en": "Unyielding Spirit"
+  },
+  "VEN-011": {
+   "n": null,
+   "tx": "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "en": "Pendulum Blade"
+  },
+  "VEN-083": {
+   "n": null,
+   "tx": "En jouant ce sort, tu peux payer 1 Puissance en coût additionnel.\nChoisis une unité alliée et une unité ennemie. Si tu as payé le coût additionnel, donne +2 Puissance à l'unité alliée ce tour-ci. Elles s'infligent mutuellement des dégâts égaux à leur Puissance.",
+   "note": "Hors combat, les blessures non létales restent jusqu'à la fin du tour.",
+   "en": "Rampage"
+  },
+  "SFD-105": {
+   "n": null,
+   "tx": "Je ne peux pas être choisie par les sorts et capacités ennemis.",
+   "note": "Les effets globaux, qui ne « choisissent » personne, l'atteignent quand même.",
+   "en": "Ruin Runner"
+  }
+ },
+ "byName": {
+  "blazing scorcher": {
+   "n": "Terreur enflammée",
+   "tx": "Accélération. (Tu peux payer 1 Énergie + 1 Puissance en coût additionnel pour que j'arrive prête.)",
+   "code": "OGN-001"
+  },
+  "chemtech enforcer": {
+   "n": "Brute techno-chimique",
+   "tx": "Assaut 2. (+2 Puissance tant que je suis attaquante.)\nQuand tu me joues, défausse 1 carte.",
+   "note": "Le défaussement fait partie du coût : il faut une carte en main pour la jouer.",
+   "code": "OGN-003"
+  },
+  "cleave": {
+   "n": "Fendoir",
+   "tx": "Action. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nDonne Assaut 3 à une unité ce tour-ci. (+3 Puissance tant qu'elle attaque.)",
+   "code": "OGN-004"
+  },
+  "hextech ray": {
+   "n": "Rayon Hextech",
+   "tx": "Action.\nInflige 3 dégâts à une unité présente sur un champ de bataille.",
+   "note": "Ne peut pas viser une unité restée à la base.",
+   "code": "OGN-009"
+  },
+  "legion rearguard": {
+   "n": "Légionnaire d'arrière-garde",
+   "tx": "Accélération. (Tu peux payer 1 Énergie + 1 Puissance en coût additionnel pour que j'arrive prête.)",
+   "code": "OGN-010"
+  },
+  "noxus hopeful": {
+   "n": "Fantassin noxien",
+   "tx": "Légion — je coûte 2 Énergie de moins. (Effet obtenu si tu as déjà joué une autre carte ce tour-ci.)",
+   "code": "OGN-012"
+  },
+  "pouty poro": {
+   "n": "Poro ronchon",
+   "tx": "Déviation. (L'adversaire doit payer 1 Énergie de plus pour me choisir avec un sort ou une capacité.)",
+   "code": "OGN-013"
+  },
+  "dangerous duo": {
+   "n": "Duo dangereux",
+   "tx": "Légion — quand tu me joues, donne +2 Puissance à une unité ce tour-ci. (Effet obtenu si tu as déjà joué une autre carte ce tour-ci.)",
+   "code": "OGN-016"
+  },
+  "flurry of blades": {
+   "n": null,
+   "tx": "Réaction. (Se joue à tout moment, même avant qu'un sort ne se résolve.)\nInflige 1 dégât à toutes les unités présentes sur des champs de bataille.",
+   "note": "Touche aussi tes propres unités.",
+   "code": "OGN-133"
+  },
+  "ezreal, dashing": {
+   "n": null,
+   "tx": "Quand j'attaque ou je défends, j'inflige des dégâts égaux à ma Puissance à une unité ennemie présente ici.\nJe n'inflige pas de dégâts de combat.\n1 Puissance : Action — me renvoyer à ta base.",
+   "note": "Le déclenchement part à l'ouverture de l'affrontement ; l'action de repli se joue ensuite, chaîne vide.",
+   "code": "SFD-082"
+  },
+  "ezreal": {
+   "n": null,
+   "tx": "Quand j'attaque ou je défends, j'inflige des dégâts égaux à ma Puissance à une unité ennemie présente ici.\nJe n'inflige pas de dégâts de combat.\n1 Puissance : Action — me renvoyer à ta base.",
+   "note": "Le déclenchement part à l'ouverture de l'affrontement ; l'action de repli se joue ensuite, chaîne vide.",
+   "code": "SFD-082"
+  },
+  "star-crossed": {
+   "n": null,
+   "tx": "Réaction.\nRenvoie une unité alliée et une unité ennemie dans les mains de leurs propriétaires.",
+   "note": "Ne contre rien : ce qui est déjà sur la chaîne se résout quand même.",
+   "code": "UNL-128"
+  },
+  "purifier": {
+   "n": "Lucian - Purificateur",
+   "tx": "Chacun de tes Équipements donne Assaut. (+1 Puissance tant que l'unité équipée est attaquante.)",
+   "note": "L'effet s'applique à tous tes équipements attachés et se cumule avec un Assaut déjà présent sur la carte.",
+   "code": "SFD-183"
+  },
+  "forbidding waste": {
+   "n": null,
+   "tx": "Tant qu'une unité défend seule ici, elle a −2 Puissance. (Elle est seule s'il n'y a aucune autre unité alliée ici.)",
+   "note": "Champ de bataille : pousse l'adversaire à défendre à plusieurs, sinon son unité fond.",
+   "code": "UNL-210"
+  },
+  "forge of the fluft": {
+   "n": null,
+   "tx": "Tant que tu contrôles ce champ de bataille, tes légendes ont « Épuiser : attacher un Équipement que tu contrôles à une unité que tu contrôles ».",
+   "code": "SFD-208"
+  },
+  "windswept hillock": {
+   "n": "Tertre venteux",
+   "tx": "Les unités présentes ici ont Gank. (Elles peuvent se déplacer d'un champ de bataille à un autre.)",
+   "code": "OGN-297"
+  },
+  "body rune": {
+   "n": "Rune de corps",
+   "tx": "Rune du domaine Corps.",
+   "note": "L'épuiser donne 1 Énergie. La recycler donne 1 Puissance de Corps.",
+   "code": "OGN-126"
+  },
+  "fury rune": {
+   "n": "Rune de fureur",
+   "tx": "Rune du domaine Furie.",
+   "note": "L'épuiser donne 1 Énergie. La recycler donne 1 Puissance de Furie.",
+   "code": "OGN-007"
+  },
+  "lucian, merciless": {
+   "n": null,
+   "tx": "Maître d'armes. (Quand tu me joues, tu peux attacher un de tes Équipements sur moi pour 1 Énergie de moins, même s'il est déjà attaché ailleurs.)\nLa première fois que je conquiers à chaque tour, redresse-moi.",
+   "note": "Se redresser après une conquête permet de repartir à l'assaut dans le même tour.",
+   "code": "SFD-113"
+  },
+  "lucian": {
+   "n": null,
+   "tx": "Maître d'armes. (Quand tu me joues, tu peux attacher un de tes Équipements sur moi pour 1 Énergie de moins, même s'il est déjà attaché ailleurs.)\nLa première fois que je conquiers à chaque tour, redresse-moi.",
+   "note": "Se redresser après une conquête permet de repartir à l'assaut dans le même tour.",
+   "code": "SFD-113"
+  },
+  "irresistible faefolk": {
+   "n": null,
+   "tx": "Quand je me déplace vers un champ de bataille, tu peux y déplacer une unité ennemie.",
+   "note": "Sert à isoler un défenseur, ou à tirer une unité hors d'un champ que l'adversaire tenait.",
+   "code": "UNL-112"
+  },
+  "pit rookie": {
+   "n": "Novice de la fosse",
+   "tx": "Quand tu me joues, améliore une autre unité alliée. (Si elle n'a pas déjà une amélioration, elle reçoit +1 Puissance.)",
+   "note": "Une unité ne peut porter qu'une seule amélioration à la fois.",
+   "code": "OGN-136"
+  },
+  "first mate": {
+   "n": "Second du capitaine",
+   "tx": "Quand tu me joues, redresse une autre unité.",
+   "note": "Permet de faire attaquer une unité déjà épuisée, ou de la rendre disponible pour défendre.",
+   "code": "OGN-132"
+  },
+  "kinkou initiate": {
+   "n": null,
+   "tx": "Quand tu me joues, pioche 1 carte si tes autres unités totalisent 5 Puissance ou plus.",
+   "code": "UNL-097"
+  },
+  "kai'sa, survivor": {
+   "n": "Kai'Sa - Survivante",
+   "tx": "Accélération. (Tu peux payer 1 Énergie + 1 Puissance en coût additionnel pour que j'arrive prête.)\nQuand je conquiers, pioche 1 carte.",
+   "code": "OGN-039"
+  },
+  "kai'sa": {
+   "n": "Kai'Sa - Survivante",
+   "tx": "Accélération. (Tu peux payer 1 Énergie + 1 Puissance en coût additionnel pour que j'arrive prête.)\nQuand je conquiers, pioche 1 carte.",
+   "code": "OGN-039"
+  },
+  "brynhir thundersong": {
+   "n": "Brynhir Chantefoudre",
+   "tx": "Quand tu me joues, les adversaires ne peuvent plus jouer de cartes ce tour-ci.",
+   "note": "Verrouille la chaîne : plus aucune réaction adverse jusqu'à la fin du tour. À poser avant d'attaquer.",
+   "code": "OGN-026"
+  },
+  "ferrous forerunner": {
+   "n": null,
+   "tx": "Glas — crée deux jetons d'unité Méca de 3 Puissance dans ta base. (Effet obtenu quand je meurs.)",
+   "note": "Mourir n'est pas une perte sèche : tu récupères 6 Puissance répartie sur deux corps.",
+   "code": "SFD-021"
+  },
+  "doran's blade": {
+   "n": "Lame de Doran",
+   "tx": "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "note": "L'équipement ajoute sa Puissance à l'unité équipée, et revient à la base si elle meurt.",
+   "code": "SFD-095"
+  },
+  "long sword": {
+   "n": null,
+   "tx": "Dégainage. (Cet équipement a Réaction ; quand tu le joues, attache-le à une unité que tu contrôles.)\nÉquiper 1 Puissance.",
+   "note": "Le Dégainage évite le coût d'équipement, mais uniquement au moment où tu le joues.",
+   "code": "SFD-022"
+  },
+  "blighted battleaxe": {
+   "n": null,
+   "tx": "Équiper 1 Énergie + 1 Puissance. (Attacher cet équipement à une unité que tu contrôles.)",
+   "code": "UNL-019"
+  },
+  "punch first": {
+   "n": null,
+   "tx": "Action.\nDonne +5 Puissance à une unité ce tour-ci.",
+   "note": "Se joue aussi en plein affrontement, tant que la chaîne est vide et que tu as le focus.",
+   "code": "SFD-097"
+  },
+  "sabotage": {
+   "n": "Sabotage",
+   "tx": "Choisis un adversaire. Il révèle sa main. Choisis-y une carte qui n'est pas une unité : il la recycle.",
+   "code": "OGN-156"
+  },
+  "falling star": {
+   "n": "Étoile filante",
+   "tx": "Inflige 3 dégâts à une unité.\nInflige 3 dégâts à une unité.",
+   "note": "Deux effets distincts : tu peux viser deux unités différentes, ou concentrer 6 dégâts sur une seule.",
+   "code": "OGN-029"
+  },
+  "relentless pursuit": {
+   "n": null,
+   "tx": "Action.\nDéplace une unité alliée. Tu peux lui attacher un Équipement du même contrôleur. Ce tour-ci, cette unité a « Quand je conquiers, tu peux me renvoyer à ma base ».",
+   "code": "SFD-184"
+  },
+  "decree of strength": {
+   "n": null,
+   "tx": "Choisis un adversaire. Il révèle sa main et tu y choisis une carte du domaine Esprit : il la recycle.",
+   "code": "VEN-085"
+  },
+  "unyielding spirit": {
+   "n": "Détermination sans faille",
+   "tx": "Réaction.\nEmpêche tous les dégâts de sorts et de capacités ce tour-ci.",
+   "note": "Ne protège pas des dégâts de combat : seulement de ceux qui viennent d'un sort ou d'une capacité.",
+   "code": "OGN-145"
+  },
+  "pendulum blade": {
+   "n": null,
+   "tx": "Équiper 1 Puissance. (1 Puissance : attacher cet équipement à une unité que tu contrôles.)",
+   "code": "VEN-011"
+  },
+  "rampage": {
+   "n": null,
+   "tx": "En jouant ce sort, tu peux payer 1 Puissance en coût additionnel.\nChoisis une unité alliée et une unité ennemie. Si tu as payé le coût additionnel, donne +2 Puissance à l'unité alliée ce tour-ci. Elles s'infligent mutuellement des dégâts égaux à leur Puissance.",
+   "note": "Hors combat, les blessures non létales restent jusqu'à la fin du tour.",
+   "code": "VEN-083"
+  },
+  "ruin runner": {
+   "n": null,
+   "tx": "Je ne peux pas être choisie par les sorts et capacités ennemis.",
+   "note": "Les effets globaux, qui ne « choisissent » personne, l'atteignent quand même.",
+   "code": "SFD-105"
+  }
+ }
+}
