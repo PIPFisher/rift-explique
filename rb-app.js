@@ -38,6 +38,7 @@
   function openCard(id){
     var c = RB.byId[id];
     if(!c) return;
+    hidePeek();
     modalBody.innerHTML = RB.detailHTML(c);
     modal.hidden = false;
     document.body.style.overflow = "hidden";
@@ -47,6 +48,72 @@
     modalBody.innerHTML = "";
     document.body.style.overflow = "";
   }
+
+
+  /* ---------- aperçu au survol : grande carte + traduction ---------- */
+  var peek = document.createElement("div");
+  peek.className = "peek";
+  peek.hidden = true;
+  document.body.appendChild(peek);
+
+  var peekId = null, peekTimer = null;
+
+  function peekHTML(c){
+    return '<img class="peek-img" src="' + RB.esc(RB.img(c, 620)) + '" alt="' + RB.esc(c.n) + '">' +
+      '<div class="peek-side">' +
+        '<div class="peek-name">' + RB.esc(c.n) + '</div>' +
+        '<div class="peek-meta">' + RB.esc(RB.typeFR(c.t)) + ' · ' +
+          RB.esc((c.d || []).map(RB.domFR).join(" / ")) +
+          (c.e != null ? ' · ' + RB.esc(c.e) + ' Énergie' : '') +
+          (c.p != null ? ' + ' + RB.esc(c.p) + ' Puissance' : '') +
+          (c.m != null ? ' · Puissance ' + RB.esc(c.m) : '') +
+        '</div>' +
+        '<div class="peek-vo">' + RB.symbols(c.tx || "") + '</div>' +
+        RB.frBlockHTML(c) +
+      '</div>';
+  }
+
+  function placePeek(x, y){
+    var w = peek.offsetWidth || 660, h = peek.offsetHeight || 460;
+    var left = x + 24, top = y - h / 2;
+    if(left + w > window.innerWidth - 12) left = x - w - 24;
+    if(left < 12) left = 12;
+    if(top < 12) top = 12;
+    if(top + h > window.innerHeight - 12) top = Math.max(12, window.innerHeight - h - 12);
+    peek.style.left = left + "px";
+    peek.style.top  = top + "px";
+  }
+
+  function showPeek(c, x, y){
+    if(peekId === c.id && !peek.hidden){ placePeek(x, y); return; }
+    peekId = c.id;
+    peek.innerHTML = peekHTML(c);
+    peek.hidden = false;
+    placePeek(x, y);
+  }
+  function hidePeek(){
+    peek.hidden = true;
+    peekId = null;
+    if(peekTimer){ clearTimeout(peekTimer); peekTimer = null; }
+  }
+
+  function cardUnder(target){
+    var el = target.closest(".card, .mini");
+    if(!el || !el.dataset.id) return null;
+    return RB.byId[el.dataset.id] || null;
+  }
+
+  document.addEventListener("mousemove", function(e){
+    if(!modal.hidden) return hidePeek();
+    var c = cardUnder(e.target);
+    if(!c){ if(!peek.hidden) hidePeek(); return; }
+    if(peekTimer) clearTimeout(peekTimer);
+    var x = e.clientX, y = e.clientY;
+    if(!peek.hidden && peekId === c.id){ placePeek(x, y); return; }
+    peekTimer = setTimeout(function(){ showPeek(c, x, y); }, 140);
+  });
+  document.addEventListener("scroll", hidePeek, true);
+  window.addEventListener("blur", hidePeek);
 
   tabs.addEventListener("click", function(e){
     var b = e.target.closest(".tab");

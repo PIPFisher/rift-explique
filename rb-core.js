@@ -150,8 +150,30 @@ window.RB = (function(){
         '<div class="chips">' + chips.join("") + '</div>' +
         '<div class="stat-row">' + stats + '</div>' +
         '<div class="rules-text">' + symbols(c.tx || "Pas de texte de règles.") + '</div>' +
+        frBlockHTML(c) +
         '<p class="hint">Illustration : ' + esc(c.a || "—") + '. Survole un mot-clé pour sa traduction.</p>' +
       '</div></div>';
+  }
+
+  function fr(card){
+    var t = window.RB_FR && window.RB_FR[card.code];
+    return t || null;
+  }
+
+  function frBlockHTML(card){
+    var t = fr(card);
+    if(!t){
+      return '<div class="fr-block fr-missing">' +
+        '<div class="fr-head">Traduction française</div>' +
+        '<p>Pas encore traduite. Le lexique de l\'onglet <b>Les règles</b> donne le sens de chaque mot-clé.</p>' +
+      '</div>';
+    }
+    return '<div class="fr-block">' +
+      '<div class="fr-head">Traduction française</div>' +
+      (t.n ? '<div class="fr-name">' + esc(t.n) + '</div>' : '') +
+      '<p class="fr-text">' + esc(t.tx) + '</p>' +
+      (t.note ? '<p class="fr-note">' + esc(t.note) + '</p>' : '') +
+    '</div>';
   }
 
   function metaSetName(setId){
@@ -199,6 +221,7 @@ window.RB = (function(){
     symbols: symbols, img: img, esc: esc,
     domColor: domColor, typeFR: typeFR, domFR: domFR, setFR: setFR, rarFR: rarFR,
     costLine: costLine, isReaction: isReaction, mightOf: mightOf,
+    fr: fr, frBlockHTML: frBlockHTML,
     KEYWORDS: KEYWORDS, metaSetName: metaSetName
   };
 })();
