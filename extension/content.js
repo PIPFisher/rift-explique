@@ -199,12 +199,40 @@
     }).replace(/\u0000 \d+/g, "");
   }
 
+  /* ---------- symboles de ressources ----------
+     Les cartes officielles écrivent les coûts en pictogrammes, pas en mots.
+     On fait de même : l'œil saute le coût et va droit à l'effet. */
+  function gEnergie(n) {
+    return '<span class="rbfr-g rbfr-g-e" title="' + n + ' Énergie">' +
+      '<svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8.6"/></svg>' +
+      '<i>' + n + '</i></span>';
+  }
+  function gRune(n, partout) {
+    // quand le coût vaut plusieurs runes, on répète le losange : chacun en vaut un
+    var t = (n > 4 ? n + ' essences runiques' : '1 essence runique') +
+            (partout ? ", de n'importe quel domaine" : '');
+    var d = '<span class="rbfr-g rbfr-g-p' + (partout ? ' rbfr-g-any' : '') + '" title="' + t + '">' +
+      '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.4 18.6 10 10 18.6 1.4 10Z"/></svg>';
+    if (n > 4) return d + '<i>' + n + '</i></span>';
+    var out = '';
+    for (var i = 0; i < n; i++) out += d + '</span>';
+    return out;
+  }
+  function gPuissance() {
+    return '<span class="rbfr-g rbfr-g-m" title="Puissance">' +
+      '<svg viewBox="0 0 20 20" aria-hidden="true">' +
+      '<path d="M2.6 2.6h14.8v7.1c0 4.2-3 6.9-7.4 8.6-4.4-1.7-7.4-4.4-7.4-8.6Z"/>' +
+      '</svg></span>';
+  }
+
   function markResources(s) {
     return s
-      .replace(/(\d+) Énergie/g, '<b class="rbfr-r rbfr-r-e">$1&nbsp;Énergie</b>')
-      .replace(/(\d+) (Essences? runiques?)/g, '<b class="rbfr-r rbfr-r-p">$1&nbsp;$2</b>')
-      .replace(/([+\-−]\d+) Puissance/g, '<b class="rbfr-r rbfr-r-m">$1&nbsp;Puissance</b>')
-      .replace(/(\d+) XP/g, '<b class="rbfr-r rbfr-r-x">$1&nbsp;XP</b>');
+      .replace(/(\d+) Énergie/g, function (_, n) { return gEnergie(n); })
+      .replace(/(\d+) Essences? runiques?(,? de n'importe quel domaine)?/g,
+        function (_, n, partout) { return gRune(parseInt(n, 10), !!partout); })
+      .replace(/([+\-−]?\d+) Puissance/g,
+        function (_, n) { return '<b class="rbfr-r">' + n + '</b>' + gPuissance(); })
+      .replace(/(\d+) XP/g, '<b class="rbfr-r">$1&nbsp;XP</b>');
   }
 
   // n'habille que le texte hors parenthèses ; le rappel passe en retrait
@@ -217,12 +245,13 @@
       if (close === -1) { out += markResources(markKeywords(esc(line.slice(i)))); break; }
       out += markResources(markKeywords(esc(line.slice(i, open))));
       var terminal = line.slice(close + 1).trim() === "";
+      // le rappel garde ses mots, mais reçoit les mêmes pictogrammes
       out += '<span class="rbfr-rem' + (terminal ? " rbfr-rem-b" : "") + '">' +
-        esc(line.slice(open + 1, close)) + "</span>";
+        markResources(esc(line.slice(open + 1, close))) + "</span>";
       i = close + 1;
     }
     out = out.replace(/\.(\s*)(<span class="rbfr-rem)/g, "$1$2");
-    out = out.replace(/(<\/b>)\.\s*$/, "$1");
+    out = out.replace(/(<\/(?:b|span)>)\.\s*$/, "$1");
     return out;
   }
 

@@ -61,7 +61,7 @@
 .rbfr-line.rbfr-bullet{ padding-left: 14px; text-indent: -14px; margin-top: -5px; }
 
 /* le rappel de règles officiel : en retrait, effacé */
-.rbfr-rem{ color: #6F8D9A; font-size: .82em; line-height: 1.5; }
+.rbfr-rem{ color: #6F8D9A; font-size: .76em; line-height: 1.5; }
 .rbfr-rem-b{
   display: block;
   margin-top: 4px;
@@ -69,14 +69,37 @@
   border-left: 1px solid #1B3440;
 }
 
-/* mot-clé : un mot coloré, sans pastille ni cadre */
-.rbfr-k{ font-weight: 600; white-space: nowrap; color: #9FBECC; }
-.rbfr-k-reac{ color: #79C89B; }
-.rbfr-k-act{ color: #D9B463; }
+/* mot-clé : la couleur des pastilles officielles, en texte seul
+   t vert sapin · e vert olive · c magenta · n gris */
+.rbfr-k{ font-weight: 600; white-space: nowrap; }
+.rbfr-k-t{ color: #4FC2A8; }
+.rbfr-k-e{ color: #B5D64F; }
+.rbfr-k-c{ color: #EE6E9C; }
+.rbfr-k-n{ color: #A9BCC6; }
 
-/* ressources : du gras, rien de plus */
+/* ressources : pictogrammes, comme sur les cartes */
 .rbfr-r{ font-weight: 600; }
 .rbfr-rem .rbfr-r, .rbfr-rem .rbfr-k{ color: inherit; font-weight: 600; }
+.rbfr-g{
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  width: 1.14em;
+  height: 1.14em;
+  vertical-align: -.22em;
+  margin: 0 .05em;
+}
+.rbfr-g svg{ position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.rbfr-g svg *{ stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.rbfr-g i{ position: relative; font-style: normal; font-weight: 700; font-size: .66em; line-height: 1; }
+.rbfr-g-e svg circle{ fill: rgba(240,206,134,.13); stroke: #F0CE86; stroke-width: 1.5; }
+.rbfr-g-e i{ color: #F0CE86; }
+.rbfr-g-p svg path{ fill: rgba(142,210,223,.15); stroke: #8ED2DF; stroke-width: 1.5; }
+.rbfr-g-p i{ color: #8ED2DF; }
+.rbfr-g-p.rbfr-g-any svg path{ fill: rgba(190,166,224,.17); stroke: #C3A9E4; }
+.rbfr-g-p.rbfr-g-any i{ color: #C3A9E4; }
+.rbfr-g-m{ margin-left: .12em; }
+.rbfr-g-m svg path{ fill: rgba(228,238,242,.10); stroke: #E4EEF2; stroke-width: 1.4; }
 
 .rbfr-note{
   margin: 0 0 8px;
