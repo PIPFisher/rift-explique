@@ -153,15 +153,101 @@ window.RB = (function(){
         (hasFrenchName(c) ? '<div class="vo-name">' + esc(nameVO(c)) + '</div>' : '') +
         '<div class="chips">' + chips.join("") + '</div>' +
         '<div class="stat-row">' + stats + '</div>' +
-        '<div class="rules-text">' + symbols(c.tx || "Pas de texte de règles.") + '</div>' +
         frBlockHTML(c) +
-        '<p class="hint">Illustration : ' + esc(c.a || "—") + '. Survole un mot-clé pour sa traduction.</p>' +
+        '<details class="vo-box"><summary>Texte original anglais</summary>' +
+          '<div class="rules-text">' + symbols(c.tx || "Pas de texte de règles.") + '</div>' +
+        '</details>' +
+        '<p class="hint">Illustration : ' + esc(c.a || "—") + '. Survole un mot-clé anglais pour sa traduction.</p>' +
       '</div></div>';
   }
 
   function fr(card){
     var t = window.RB_FR && window.RB_FR[card.code];
     return t || null;
+  }
+
+  /* ---------- mise en forme du texte français ----------
+     Trois niveaux de lecture :
+       · le mot-clé, en pastille colorée selon sa famille ;
+       · l'effet, en taille normale — c'est ce que fait la carte ;
+       · le rappel de règles entre parenthèses, plus petit et en retrait.  */
+
+  // famille -> mots-clés. L'ordre compte : les formes longues d'abord.
+  var KW_FAM = [
+    ["t-reac", ["Réaction"]],
+    ["t-act",  ["Action"]],
+    ["combat", ["Arrière-garde", "Déviation", "Assaut", "Bouclier", "Tank", "Gank",
+                "Puissante", "Puissantes", "Embuscade"]],
+    ["cout",   ["Maître d'armes", "Accélération", "Ascendant", "Ascendues", "Ascendus",
+                "Ascendue", "Ascendu", "Équiper", "Dégainage", "Répétition", "Flux", "Unique"]],
+    ["decl",   ["Prédiction", "Temporaire", "Vengeance", "Brûlure", "Légion", "Chasse",
+                "Cachées", "Cachée", "Vision", "Niveau", "Glas"]]
+  ];
+  // mots-clés dont le nombre qui suit fait partie de la valeur
+  var KW_VAL = /^(Assaut|Bouclier|Déviation|Chasse|Niveau|Brûlure|Prédiction)$/;
+
+  var KW_RE = (function(){
+    var all = [];
+    KW_FAM.forEach(function(f){ f[1].forEach(function(w){ all.push([w, f[0]]); }); });
+    all.sort(function(a, b){ return b[0].length - a[0].length; });
+    var esc2 = function(s){ return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); };
+    return {
+      list: all,
+      re: new RegExp("(^|[^A-Za-zÀ-ÿ])(" + all.map(function(x){ return esc2(x[0]); }).join("|") + ")(?![A-Za-zÀ-ÿ])", "g"),
+      fam: all.reduce(function(m, x){ m[x[0]] = x[1]; return m; }, {})
+    };
+  })();
+
+  function markKeywords(s){
+    return s.replace(KW_RE.re, function(_, pre, word, off, whole){
+      var fam = KW_RE.fam[word];
+      var label = word;
+      if(KW_VAL.test(word)){
+        var after = whole.slice(off + pre.length + word.length).match(/^ (\d+)/);
+        if(after) label = word + " " + after[1];
+      }
+      return pre + '<b class="k k-' + fam + '">' + label + '</b>' +
+             (label !== word ? "\u0000" : "");   // marque le nombre déjà consommé
+    }).replace(/\u0000 \d+/g, "");
+  }
+
+  function markResources(s){
+    return s
+      .replace(/(\d+) Énergie/g, '<b class="r r-e">$1&nbsp;Énergie</b>')
+      .replace(/(\d+) Pouvoir/g, '<b class="r r-p">$1&nbsp;Pouvoir</b>')
+      .replace(/([+\-−]\d+) Puissance/g, '<b class="r r-m">$1&nbsp;Puissance</b>')
+      .replace(/(\d+) XP/g, '<b class="r r-x">$1&nbsp;XP</b>');
+  }
+
+  // Découpe une ligne en segments hors/dans parenthèses, n'habille que le hors-parenthèses.
+  function frLineHTML(line){
+    var out = "", i = 0, n = line.length;
+    while(i < n){
+      var open = line.indexOf("(", i);
+      if(open === -1){ out += markResources(markKeywords(esc(line.slice(i)))); break; }
+      var close = line.indexOf(")", open);
+      if(close === -1){ out += markResources(markKeywords(esc(line.slice(i)))); break; }
+      out += markResources(markKeywords(esc(line.slice(i, open))));
+      var inner = line.slice(open + 1, close);
+      var terminal = line.slice(close + 1).trim() === "";
+      out += '<span class="fr-rem' + (terminal ? " fr-rem-b" : "") + '">' + esc(inner) + '</span>';
+      i = close + 1;
+    }
+    // le point qui précède un rappel devient inutile, le retrait le remplace
+    out = out.replace(/\.(\s*)(<span class="fr-rem)/g, "$1$2");
+    out = out.replace(/(<\/b>)\.\s*$/, "$1");
+    return out;
+  }
+
+  function frTextHTML(tx){
+    if(!tx) return "";
+    return tx.split("\n").map(function(line){
+      var t = line.trim();
+      if(!t) return "";
+      var cls = "fr-line";
+      if(/^[—-]\s/.test(t)) cls += " fr-bullet";
+      return '<span class="' + cls + '">' + frLineHTML(t) + '</span>';
+    }).join("");
   }
 
   function frBlockHTML(card){
@@ -175,7 +261,7 @@ window.RB = (function(){
     return '<div class="fr-block">' +
       '<div class="fr-head">Traduction française</div>' +
       (t.n ? '' : '<div class="fr-name fr-vo">nom non traduit</div>') +
-      '<p class="fr-text">' + esc(t.tx) + '</p>' +
+      '<div class="fr-text">' + frTextHTML(t.tx) + '</div>' +
       (t.note ? '<p class="fr-note">' + esc(t.note) + '</p>' : '') +
     '</div>';
   }
@@ -249,7 +335,7 @@ window.RB = (function(){
     symbols: symbols, img: img, esc: esc,
     domColor: domColor, typeFR: typeFR, domFR: domFR, setFR: setFR, rarFR: rarFR,
     costLine: costLine, isReaction: isReaction, mightOf: mightOf,
-    fr: fr, frBlockHTML: frBlockHTML, displayName: displayName, nameVO: nameVO, hasFrenchName: hasFrenchName,
+    fr: fr, frBlockHTML: frBlockHTML, frTextHTML: frTextHTML, displayName: displayName, nameVO: nameVO, hasFrenchName: hasFrenchName,
     KEYWORDS: KEYWORDS, metaSetName: metaSetName
   };
 })();

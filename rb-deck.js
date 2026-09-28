@@ -163,7 +163,7 @@ window.Deck = (function(){
                 RB.esc((c.d || []).map(RB.domFR).join(" / ")) +
                 (c.e != null ? ' · ' + RB.esc(c.e) + ' Énergie' : '') +
                 (c.m != null ? ' · Puissance ' + RB.esc(c.m) : '') + '</div>' +
-              (t ? '<p class="rd-fr">' + RB.esc(t.tx) + '</p>' +
+              (t ? '<div class="rd-fr fr-text">' + RB.frTextHTML(t.tx) + '</div>' +
                    (t.note ? '<p class="rd-note">' + RB.esc(t.note) + '</p>' : '')
                  : '<p class="rd-vo">' + RB.symbols(c.tx || "") + '</p>' +
                    '<p class="rd-note">Pas encore traduite.</p>') +

@@ -444,8 +444,29 @@ label.field span{font-family:var(--cond);font-size:12px;letter-spacing:.12em;tex
   background:rgba(217,169,74,.07);padding:9px 11px;display:flex;flex-direction:column;gap:4px}
 .fr-head{font-family:var(--cond);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
 .fr-name{font-family:var(--serif);font-size:18px;color:var(--gold-soft)}
-.fr-text{margin:0;font-size:16px;line-height:1.55;color:var(--text);white-space:pre-line}
-.fr-note{margin:0;font-size:12.5px;color:var(--text-dim);font-style:italic}
+/* ---------- lecture du texte français ----------
+   Deux accents seulement : le moment où la carte se joue.
+   Tout le reste vit dans la hiérarchie, pas dans la couleur. */
+.fr-text{display:flex;flex-direction:column;gap:10px;margin:0;
+  font-size:16px;line-height:1.6;color:var(--text);white-space:normal}
+.fr-line{display:block}
+.fr-line.fr-bullet{padding-left:14px;text-indent:-14px;margin-top:-5px}
+
+/* le rappel de règles officiel : en retrait, effacé */
+.fr-rem{color:var(--text-faint);font-size:13px;line-height:1.5}
+.fr-rem-b{display:block;margin-top:4px;padding-left:11px;
+  border-left:1px solid var(--line-soft)}
+
+/* mot-clé : un mot coloré, sans pastille ni cadre */
+.k{font-weight:600;letter-spacing:.01em;white-space:nowrap;color:#9FBECC}
+.k-t-reac{color:#79C89B}
+.k-t-act{color:#D9B463}
+
+/* ressources : du gras, rien de plus */
+.r{font-weight:600}
+.fr-rem .r,.fr-rem .k{color:inherit;font-weight:600}
+
+
 .fr-missing{border-color:var(--line-soft);background:rgba(19,37,47,.5)}
 .fr-missing p{margin:0;font-size:13px;color:var(--text-faint)}
 .fr-missing .fr-head{color:var(--text-faint)}
@@ -510,3 +531,18 @@ label.field span{font-family:var(--cond);font-size:12px;letter-spacing:.12em;tex
 /* renvoi vers l'extension, en pied de page */
 .foot-ext a{color:var(--teal,#46B4C4);text-decoration:none;border-bottom:1px solid rgba(70,180,196,.4)}
 .foot-ext a:hover{border-bottom-color:currentColor}
+
+/* texte original anglais, replié par défaut */
+.vo-box{border-top:1px solid var(--line-soft);padding-top:8px}
+.vo-box summary{cursor:pointer;font-family:var(--cond);font-size:12px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--text-faint);list-style:none;outline:none}
+.vo-box summary::-webkit-details-marker{display:none}
+.vo-box summary::before{content:'▸ ';display:inline-block;transition:transform .15s}
+.vo-box[open] summary::before{content:'▾ '}
+.vo-box summary:hover{color:var(--text-dim)}
+.vo-box .rules-text{margin-top:7px;font-size:14px;color:var(--text-dim)}
+
+/* la note : notre commentaire, distinct du rappel officiel */
+.fr-note{margin:3px 0 0;font-size:13.5px;line-height:1.5;font-style:normal;
+  color:var(--text-dim);padding-left:11px;border-left:1px solid rgba(217,169,74,.45)}
+.rd-fr.fr-text{font-size:15px}
