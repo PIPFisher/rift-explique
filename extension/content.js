@@ -155,6 +155,86 @@
       .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
   }
 
+  /* ---------------- mise en forme du texte -------------------
+     Trois niveaux de lecture :
+       · le mot-clé, en pastille colorée selon sa famille ;
+       · l'effet, en taille normale — c'est ce que fait la carte ;
+       · le rappel de règles entre parenthèses, plus petit et en retrait. */
+
+  var KW_FAM = [
+    ["reac", ["Réaction"]],
+    ["act", ["Action"]],
+    ["cbt", ["Arrière-garde", "Déviation", "Assaut", "Bouclier", "Tank", "Gank",
+             "Puissante", "Puissantes", "Embuscade"]],
+    ["cost", ["Maître d'armes", "Accélération", "Ascendant", "Ascendues", "Ascendus",
+              "Ascendue", "Ascendu", "Équiper", "Dégainage", "Répétition", "Flux", "Unique"]],
+    ["trig", ["Prédiction", "Temporaire", "Vengeance", "Brûlure", "Légion", "Chasse",
+              "Cachées", "Cachée", "Vision", "Niveau", "Glas"]]
+  ];
+  var KW_VAL = /^(Assaut|Bouclier|Déviation|Chasse|Niveau|Brûlure|Prédiction)$/;
+
+  var KW = (function () {
+    var all = [];
+    KW_FAM.forEach(function (f) { f[1].forEach(function (w) { all.push([w, f[0]]); }); });
+    all.sort(function (a, b) { return b[0].length - a[0].length; });
+    var q = function (s) { return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); };
+    var fam = {};
+    all.forEach(function (x) { fam[x[0]] = x[1]; });
+    return {
+      re: new RegExp("(^|[^A-Za-zÀ-ÿ])(" + all.map(function (x) { return q(x[0]); }).join("|") + ")(?![A-Za-zÀ-ÿ])", "g"),
+      fam: fam
+    };
+  })();
+
+  function markKeywords(s) {
+    return s.replace(KW.re, function (_, pre, word, off, whole) {
+      var label = word;
+      if (KW_VAL.test(word)) {
+        var m = whole.slice(off + pre.length + word.length).match(/^ (\d+)/);
+        if (m) label = word + " " + m[1];
+      }
+      return pre + '<b class="rbfr-k rbfr-k-' + KW.fam[word] + '">' + label + "</b>" +
+        (label !== word ? "\u0000" : "");
+    }).replace(/\u0000 \d+/g, "");
+  }
+
+  function markResources(s) {
+    return s
+      .replace(/(\d+) Énergie/g, '<b class="rbfr-r rbfr-r-e">$1&nbsp;Énergie</b>')
+      .replace(/(\d+) Pouvoir/g, '<b class="rbfr-r rbfr-r-p">$1&nbsp;Pouvoir</b>')
+      .replace(/([+\-−]\d+) Puissance/g, '<b class="rbfr-r rbfr-r-m">$1&nbsp;Puissance</b>')
+      .replace(/(\d+) XP/g, '<b class="rbfr-r rbfr-r-x">$1&nbsp;XP</b>');
+  }
+
+  // n'habille que le texte hors parenthèses ; le rappel passe en retrait
+  function lineHTML(line) {
+    var out = "", i = 0, n = line.length;
+    while (i < n) {
+      var open = line.indexOf("(", i);
+      if (open === -1) { out += markResources(markKeywords(esc(line.slice(i)))); break; }
+      var close = line.indexOf(")", open);
+      if (close === -1) { out += markResources(markKeywords(esc(line.slice(i)))); break; }
+      out += markResources(markKeywords(esc(line.slice(i, open))));
+      var terminal = line.slice(close + 1).trim() === "";
+      out += '<span class="rbfr-rem' + (terminal ? " rbfr-rem-b" : "") + '">' +
+        esc(line.slice(open + 1, close)) + "</span>";
+      i = close + 1;
+    }
+    out = out.replace(/\.(\s*)(<span class="rbfr-rem)/g, "$1$2");
+    out = out.replace(/(<\/b>)\.\s*$/, "$1");
+    return out;
+  }
+
+  function frTextHTML(tx) {
+    if (!tx) return "";
+    return tx.split("\n").map(function (line) {
+      var t = line.trim();
+      if (!t) return "";
+      return '<span class="rbfr-line' + (/^[—-]\s/.test(t) ? " rbfr-bullet" : "") + '">' +
+        lineHTML(t) + "</span>";
+    }).join("");
+  }
+
   function panelHTML(t, code, name) {
     if (!t) {
       return '<div class="rbfr-head">Riftbound en français</div>' +
@@ -166,7 +246,7 @@
         (code ? '<span class="rbfr-code">' + esc(code) + '</span>' : '') + '</div>' +
       (t.n ? '<div class="rbfr-name">' + esc(t.n) + '</div>'
            : '<div class="rbfr-name rbfr-vo">' + esc(t.en || name || code) + '<span> · nom non traduit</span></div>') +
-      '<p class="rbfr-text">' + esc(t.tx) + '</p>' +
+      '<div class="rbfr-text">' + frTextHTML(t.tx) + '</div>' +
       (t.note ? '<p class="rbfr-note">' + esc(t.note) + '</p>' : '') +
       '<a class="rbfr-link" href="' + SITE + '" target="_blank" rel="noopener">Le Rift Expliqué ↗</a>';
   }

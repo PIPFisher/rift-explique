@@ -50,17 +50,41 @@
 .rbfr-name.rbfr-vo span{ font-size: 12px; letter-spacing: .08em; text-transform: uppercase; opacity: .75; }
 
 .rbfr-text{
-  margin: 0 0 7px;
-  white-space: pre-line;
+  margin: 0 0 9px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  line-height: 1.6;
   color: #E4EEF2;
 }
+.rbfr-line{ display: block; }
+.rbfr-line.rbfr-bullet{ padding-left: 14px; text-indent: -14px; margin-top: -5px; }
+
+/* le rappel de règles officiel : en retrait, effacé */
+.rbfr-rem{ color: #6F8D9A; font-size: .82em; line-height: 1.5; }
+.rbfr-rem-b{
+  display: block;
+  margin-top: 4px;
+  padding-left: 11px;
+  border-left: 1px solid #1B3440;
+}
+
+/* mot-clé : un mot coloré, sans pastille ni cadre */
+.rbfr-k{ font-weight: 600; white-space: nowrap; color: #9FBECC; }
+.rbfr-k-reac{ color: #79C89B; }
+.rbfr-k-act{ color: #D9B463; }
+
+/* ressources : du gras, rien de plus */
+.rbfr-r{ font-weight: 600; }
+.rbfr-rem .rbfr-r, .rbfr-rem .rbfr-k{ color: inherit; font-weight: 600; }
+
 .rbfr-note{
-  margin: 0 0 7px;
+  margin: 0 0 8px;
   font-size: 13.5px;
-  font-style: italic;
+  line-height: 1.5;
   color: #93AEB9;
-  border-left: 2px solid #22414F;
-  padding-left: 10px;
+  border-left: 1px solid rgba(217,169,74,.45);
+  padding-left: 11px;
 }
 .rbfr-missing{
   margin: 0 0 7px;
