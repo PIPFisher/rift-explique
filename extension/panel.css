@@ -1,0 +1,132 @@
+/* Riftbound en français — panneau de traduction */
+
+.rbfr-panel{
+  position: fixed;
+  z-index: 2147483000;
+  width: 380px;
+  max-width: calc(100vw - 24px);
+  max-height: 70vh;
+  overflow: auto;
+  pointer-events: none;
+  background: linear-gradient(180deg, #13252F 0%, #0A141C 100%);
+  border: 1px solid #D9A94A;
+  border-radius: 8px;
+  box-shadow: 0 24px 50px -20px rgba(0,0,0,.85);
+  padding: 13px 15px 14px;
+  color: #E4EEF2;
+  font-family: "Barlow", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.rbfr-inline{
+  margin: 14px 0 18px;
+  background: linear-gradient(180deg, rgba(19,37,47,.96) 0%, rgba(10,20,28,.96) 100%);
+  border: 1px solid rgba(217,169,74,.55);
+  border-radius: 8px;
+  padding: 14px 16px 15px;
+  color: #E4EEF2;
+  font-family: "Barlow", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 15.5px;
+  line-height: 1.55;
+  max-width: 640px;
+}
+
+.rbfr-head{
+  font-size: 12px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: #D9A94A;
+  margin-bottom: 6px;
+}
+.rbfr-name{
+  font-size: 19px;
+  line-height: 1.2;
+  color: #F0CE86;
+  margin-bottom: 7px;
+  font-weight: 600;
+}
+.rbfr-name.rbfr-vo{ color: #93AEB9; font-weight: 500; font-size: 17px; }
+.rbfr-name.rbfr-vo span{ font-size: 12px; letter-spacing: .08em; text-transform: uppercase; opacity: .75; }
+
+.rbfr-text{
+  margin: 0 0 7px;
+  white-space: pre-line;
+  color: #E4EEF2;
+}
+.rbfr-note{
+  margin: 0 0 7px;
+  font-size: 13.5px;
+  font-style: italic;
+  color: #93AEB9;
+  border-left: 2px solid #22414F;
+  padding-left: 10px;
+}
+.rbfr-missing{
+  margin: 0 0 7px;
+  font-size: 14px;
+  color: #93AEB9;
+}
+.rbfr-link{
+  display: inline-block;
+  font-size: 12.5px;
+  letter-spacing: .06em;
+  color: #46B4C4;
+  text-decoration: none;
+  pointer-events: auto;
+}
+.rbfr-link:hover{ text-decoration: underline; }
+
+/* pastille discrète sur les cartes déjà traduites */
+a.rbfr-has{ position: relative; }
+a.rbfr-has::after{
+  content: "FR";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  z-index: 5;
+  font-family: "Barlow", system-ui, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: #0A141C;
+  background: #D9A94A;
+  border-radius: 3px;
+  padding: 1px 4px;
+  pointer-events: none;
+  opacity: .92;
+}
+
+/* ---- panneau ancré, pour le simulateur ---- */
+.rbfr-panel.rbfr-docked{
+  left: auto !important;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 400px;
+  max-height: 76vh;
+  font-size: 16px;
+  line-height: 1.55;
+}
+.rbfr-panel.rbfr-docked .rbfr-name{ font-size: 21px; }
+.rbfr-panel.rbfr-docked .rbfr-text{ font-size: 16.5px; }
+
+.rbfr-head{ display: flex; align-items: baseline; gap: 8px; }
+.rbfr-code{
+  font-size: 11px;
+  letter-spacing: .1em;
+  color: #5F7D8A;
+  margin-left: auto;
+}
+
+/* liseré discret sur les cartes traduites, en jeu */
+img.rbfr-img-has{
+  outline: 2px solid rgba(217,169,74,.75);
+  outline-offset: -2px;
+  border-radius: 6px;
+}
+
+.rbfr-panel.rbfr-docked.rbfr-left{
+  right: auto !important;
+  left: 24px;
+}
