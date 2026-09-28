@@ -12,7 +12,7 @@ window.Rules = (function(){
         {t:"Attaquant et défenseur", s:"Celui qui <b>bouge</b> ses unités est l'attaquant. Celui qui était déjà là est le défenseur. Ça ne dépend pas de qui joue son tour."},
         {t:"Champ de bataille vide", s:"Arriver sur un endroit sans défenseur donne un affrontement <b>sans combat</b> : pas de dégâts, et les déclenchements « quand j'attaque » ne partent pas."},
         {t:"Les dégâts sont simultanés", s:"Chaque unité inflige des dégâts égaux à sa puissance, en même temps. Il n'y a pas de premier frappeur : on ne peut pas taper sans être tapé, sauf effet qui retire l'unité du combat avant."},
-        {t:"L'assignation", s:"Il faut assigner des dégâts <b>létaux</b> à une unité avant de passer à la suivante. <b>Tank</b> encaisse en premier, <b>Arrière-garde</b> en dernier."},
+        {t:"L'assignation", s:"Il faut assigner des dégâts <b>létaux</b> à une unité avant de passer à la suivante. <b>Tank</b> encaisse en premier, <b>Arrière-ligne</b> en dernier."},
         {t:"Les trois issues", s:"Seuls les attaquants survivent → ils <b>conquièrent</b>. Les deux camps survivent → les attaquants sont <b>renvoyés à la base</b>. Tout le monde meurt → le champ de bataille reste <b>non contrôlé</b>."},
         {t:"Le nettoyage", s:"Juste après les dégâts, <b>toutes</b> les unités du plateau sont soignées, pas seulement celles qui ont combattu. Rien ne se reporte au tour suivant."}
       ]
@@ -43,10 +43,10 @@ window.Rules = (function(){
       lede:"Les erreurs qu'on fait tous les premières parties.",
       steps:[
         {t:"Les unités arrivent épuisées", s:"Sauf mention contraire ou <b>Accélération</b>. Une unité jouée ce tour-ci ne peut donc pas bouger. Le matériel, lui, arrive prêt."},
-        {t:"Énergie et Pouvoir", s:"Épuiser une rune donne de l'<b>Énergie</b>, la recycler donne du <b>Pouvoir</b> de son domaine. La même rune peut faire les deux, mais pas en même temps."},
-        {t:"Pouvoir n'est pas Puissance", s:"Deux notions différentes que l'anglais distingue par <i>Power</i> et <i>Might</i>. Le <b>Pouvoir</b> est une ressource : elle vient des runes recyclées et sert à payer les coûts colorés. La <b>Puissance</b> est la valeur de combat imprimée sur l'unité. Sur ce site, le symbole <b>P</b> désigne le Pouvoir et <b>M</b> la Puissance."},
+        {t:"Énergie et Essence runique", s:"Épuiser une rune donne de l'<b>Énergie</b>, la recycler donne de l'<b>Essence runique</b> de son domaine. La même rune peut faire les deux, mais pas en même temps."},
+        {t:"Essence runique et Puissance", s:"Deux notions que l'anglais distingue par <i>Power</i> et <i>Might</i>, et que la VF nomme ainsi. L'<b>essence runique</b> est une ressource : elle vient des runes recyclées et sert à payer les coûts colorés. La <b>Puissance</b> est la valeur de combat imprimée sur l'unité. Sur ce site, le symbole <b>P</b> désigne l'essence runique et <b>M</b> la Puissance."},
         {t:"La réserve se vide", s:"Ce qui n'est pas dépensé est perdu à la fin de la phase de pioche et à la fin du tour."},
-        {t:"Une seule amélioration", s:"Une unité ne peut avoir qu'un seul bonus d'<b>Amélioration</b> à la fois. En revanche Assaut, Bouclier et Déviation se cumulent."},
+        {t:"Une seule amélioration", s:"Une unité ne peut avoir qu'un seul bonus d'<b>Amélioration</b> à la fois. En revanche Assaut, Bouclier et Protection se cumulent."},
         {t:"Contester n'est pas perdre", s:"Tant que l'affrontement n'est pas résolu, tu gardes le contrôle du champ de bataille."},
         {t:"Les cibles sont verrouillées", s:"On choisit les cibles au moment où la carte est posée sur la chaîne, pas à la résolution. Impossible de changer d'avis après la réponse de l'adversaire."}
       ]

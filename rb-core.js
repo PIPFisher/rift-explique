@@ -16,12 +16,12 @@ window.RB = (function(){
     "Chaos":"Chaos", "Order":"Ordre", "Colorless":"Incolore"
   };
   var RAR_FR = {
-    "Common":"Commune", "Uncommon":"Peu commune", "Rare":"Rare",
-    "Epic":"Épique", "Showcase":"Vitrine"
+    "Common":"Commun", "Uncommon":"Peu commun", "Rare":"Rare",
+    "Epic":"Épique", "Showcase":"Showcase"
   };
   var SET_FR = {
-    "Origins":"Origines", "Proving Grounds":"Terrain d'entraînement",
-    "Spiritforged":"Armes Spirituelles", "Unleashed":"Unleashed", "Vendetta":"Vendetta"
+    "Origins":"Origins", "Proving Grounds":"Proving Grounds",
+    "Spiritforged":"Spiritforged", "Unleashed":"Unleashed", "Vendetta":"Vendetta"
   };
 
   /* ---------- lexique des mots-clés ----------
@@ -29,19 +29,19 @@ window.RB = (function(){
   var KEYWORDS = {
     "Action":      {fr:"Action",        txt:"Se joue pendant ton tour ou dans un affrontement, uniquement quand la chaîne est vide."},
     "Reaction":    {fr:"Réaction",      txt:"Se joue à tout moment, même avant qu'un sort ou une capacité ne se résolve."},
-    "Hidden":      {fr:"Cachée",        txt:"Se cacher maintenant pour 1 Pouvoir (de n'importe quel domaine), afin de la révéler plus tard pour 0. Elle gagne Réaction."},
+    "Hidden":      {fr:"Caché",          txt:"Se cacher maintenant pour 1 Essence runique (de n'importe quel domaine), afin de la révéler plus tard pour 0. Elle gagne Réaction."},
     "Tank":        {fr:"Tank",          txt:"Les dégâts de combat doivent lui être assignés en premier."},
-    "Backline":    {fr:"Arrière-garde", txt:"Les dégâts de combat doivent lui être assignés en dernier."},
-    "Deflect":     {fr:"Déviation",     txt:"L'adversaire doit payer 1 Pouvoir de plus, de n'importe quel domaine, pour la choisir avec un sort ou une capacité."},
+    "Backline":    {fr:"Arrière-ligne", txt:"Les dégâts de combat doivent lui être assignés en dernier."},
+    "Deflect":     {fr:"Protection",    txt:"L'adversaire doit payer 1 Essence runique de plus, de n'importe quel domaine, pour la choisir avec un sort ou une capacité."},
     "Ganking":     {fr:"Gank",          txt:"Peut se déplacer d'un champ de bataille à un autre."},
     "Assault":     {fr:"Assaut",        txt:"+1 Puissance (ou plus) tant qu'elle est attaquante."},
     "Shield":      {fr:"Bouclier",      txt:"+2 Puissance (ou plus) tant qu'elle est défenseuse."},
     "Accelerate":  {fr:"Accélération",  txt:"Tu peux payer un coût additionnel pour qu'elle arrive prête au lieu d'épuisée."},
-    "Empower":     {fr:"Ascendant",     txt:"Paie le coût indiqué pour l'ascendre. Utilisable seulement si elle ne l'est pas déjà. L'état est permanent."},
-    "Empowered":   {fr:"Ascendu",       txt:"Effet actif uniquement tant que l'unité est ascendue."},
+    "Empower":     {fr:"Amplification",  txt:"Paie le coût indiqué pour l'amplifier. Utilisable seulement si elle ne l'est pas déjà. L'état est permanent."},
+    "Empowered":   {fr:"Amplifié",       txt:"Effet actif uniquement tant que l'unité est amplifiée."},
     "Equip":       {fr:"Équiper",       txt:"Coût à payer pour attacher un Équipement à une unité que tu contrôles."},
-    "Weaponmaster":{fr:"Maître d'armes",txt:"Quand tu la joues, tu peux lui attacher un de tes Équipements pour 1 Pouvoir de moins, même s'il est déjà attaché ailleurs."},
-    "Deathknell":  {fr:"Glas",          txt:"Effet qui se déclenche quand l\'unité meurt ; certaines cartes exigent en plus qu\'elle soit ascendue."},
+    "Weaponmaster":{fr:"Expert en armes",txt:"Quand tu la joues, tu peux lui attacher un de tes Équipements pour 1 Essence runique de moins, même s'il est déjà attaché ailleurs."},
+    "Deathknell":  {fr:"Agonie",         txt:"Effet qui se déclenche quand l\'unité meurt ; certaines cartes exigent en plus qu\'elle soit amplifiée."},
     "Temporary":   {fr:"Temporaire",    txt:"Meurt au début de la phase initiale de son contrôleur, avant le score."},
     "Legion":      {fr:"Légion",        txt:"Effet obtenu si tu as déjà joué une autre carte ce tour-ci."},
     "Vision":      {fr:"Vision",        txt:"Regarde la première carte de ton deck principal. Tu peux la recycler."},
@@ -53,13 +53,13 @@ window.RB = (function(){
     "Flow":        {fr:"Flux",          txt:"Tu peux la jouer depuis ta défausse pour son coût de Flux. Elle est ensuite bannie."},
     "Buff":        {fr:"Amélioration",  txt:"Donne un bonus de +1 Puissance si l'unité n'en a pas déjà un. Une seule à la fois."},
     "Mighty":      {fr:"Puissante",     txt:"Une unité est Puissante tant qu'elle a 5 Puissance ou plus."},
-    "Quick-Draw":  {fr:"Dégainage",     txt:"L'Équipement a Réaction ; quand tu le joues, attache-le à une unité que tu contrôles."},
+    "Quick-Draw":  {fr:"Dégainer",      txt:"L'Équipement a Réaction ; quand tu le joues, attache-le à une unité que tu contrôles."},
     "Level":       {fr:"Niveau",        txt:"Effet obtenu tant que tu as assez d'XP (le nombre indiqué)."},
     "Add":         {fr:"Ajouter",       txt:"Ajoute la ressource indiquée à ta réserve. Ces capacités ne peuvent pas être contrées par une réaction."},
     "Vengeance":   {fr:"Vengeance",     txt:"Effet lié à la mort d'une de tes unités."},
-    "Burn":        {fr:"Brûlure",       txt:"Met le nombre indiqué de cartes du dessus de ton deck principal dans ta défausse."},
+    "Burn":        {fr:"Brûler",        txt:"Met le nombre indiqué de cartes du dessus de ton deck principal dans ta défausse."},
     "Unique":      {fr:"Unique",        txt:"Exception à la règle des 3 exemplaires : ton deck ne peut en contenir qu'un seul."},
-    "Recycle":     {fr:"Recycler",      txt:"Remet la carte sous ton deck principal. Recycler une rune donne du Pouvoir de son domaine."}
+    "Recycle":     {fr:"Recycler",      txt:"Remet la carte sous ton deck principal. Recycler une rune donne de l'Essence runique de son domaine."}
   };
 
   /* ---------- rendu des symboles ---------- */
@@ -75,8 +75,8 @@ window.RB = (function(){
     out = out.replace(/\[(\d+)\]/g, function(_, n){
       return '<span class="sym sym-e" title="' + n + ' Énergie">' + n + '</span>';
     });
-    out = out.replace(/\[A\]/g, '<span class="sym sym-p" title="1 Pouvoir, de n&#39;importe quel domaine"><b>P</b></span>');
-    out = out.replace(/\[C\]/g, '<span class="sym sym-p" title="1 Pouvoir, du domaine de la carte"><b>P</b></span>');
+    out = out.replace(/\[A\]/g, '<span class="sym sym-p" title="1 Essence runique, de n&#39;importe quel domaine"><b>P</b></span>');
+    out = out.replace(/\[C\]/g, '<span class="sym sym-p" title="1 Essence runique, du domaine de la carte"><b>P</b></span>');
     out = out.replace(/\[S\]/g, '<span class="sym sym-m" title="Puissance (valeur de combat) de l\'unité">M</span>');
     out = out.replace(/\[T\]|\[E\]/g, '<span class="sym sym-t" title="Épuiser">↻</span>');
     out = out.replace(/\[&gt;\]/g, ' → ');
@@ -110,7 +110,7 @@ window.RB = (function(){
   function costLine(c){
     var bits = [];
     if(c.e != null) bits.push(c.e + " Énergie");
-    if(c.p != null) bits.push(c.p + " Pouvoir");
+    if(c.p != null) bits.push(c.p + " Essence runique");
     return bits.join(" + ") || "—";
   }
 
@@ -142,7 +142,7 @@ window.RB = (function(){
 
     var stats = "";
     if(c.e != null) stats += '<div class="stat"><span>Énergie</span><b>' + esc(c.e) + '</b></div>';
-    if(c.p != null) stats += '<div class="stat"><span>Pouvoir</span><b>' + esc(c.p) + '</b></div>';
+    if(c.p != null) stats += '<div class="stat"><span>Essence runique</span><b>' + esc(c.p) + '</b></div>';
     if(c.m != null) stats += '<div class="stat"><span>Puissance</span><b>' + esc(c.m) + '</b></div>';
     stats += '<div class="stat"><span>Numéro</span><b>' + esc(c.code) + '</b></div>';
 
@@ -173,18 +173,18 @@ window.RB = (function(){
        · le rappel de règles entre parenthèses, plus petit et en retrait.  */
 
   // famille -> mots-clés. L'ordre compte : les formes longues d'abord.
+  // Familles de couleurs relevées sur les cartes officielles :
+  //   t  vert sapin  #147864  Action, Réaction, Légion, Accélération, Dégainer, Équiper
+  //   e  vert olive  #96B432  Agonie, Caché, Amplifié, Protection, Chasse, Niveau, Temporaire
+  //   c  magenta     #C8326E  Assaut, Bouclier, Tank
+  //   n  gris        #787878  Vision, Amplification
   var KW_FAM = [
-    ["t-reac", ["Réaction"]],
-    ["t-act",  ["Action"]],
-    ["combat", ["Arrière-garde", "Déviation", "Assaut", "Bouclier", "Tank", "Gank",
-                "Puissante", "Puissantes", "Embuscade"]],
-    ["cout",   ["Maître d'armes", "Accélération", "Ascendant", "Ascendues", "Ascendus",
-                "Ascendue", "Ascendu", "Équiper", "Dégainage", "Répétition", "Flux", "Unique"]],
-    ["decl",   ["Prédiction", "Temporaire", "Vengeance", "Brûlure", "Légion", "Chasse",
-                "Cachées", "Cachée", "Vision", "Niveau", "Glas"]]
+    ["t", ["Accélération", "Répétition", "Embuscade", "Réaction", "Dégainer", "Action", "Légion", "Caché", "Flux"]],
+    ["e", ["Amplifiées", "Amplifiés", "Amplifiée", "Amplifié", "Temporaire", "Protection", "Vengeance", "Agonie", "Chasse", "Niveau", "Vision", "Gank"]],
+    ["c", ["Arrière-ligne", "Bouclier", "Assaut", "Tank"]],
+    ["n", ["Expert en armes", "Amplification", "Prédiction", "Puissantes", "Puissante", "Équiper", "Brûler", "Unique"]]
   ];
-  // mots-clés dont le nombre qui suit fait partie de la valeur
-  var KW_VAL = /^(Assaut|Bouclier|Déviation|Chasse|Niveau|Brûlure|Prédiction)$/;
+  var KW_VAL = /^(Assaut|Bouclier|Protection|Chasse|Niveau|Brûler|Prédiction)$/;
 
   var KW_RE = (function(){
     var all = [];
@@ -214,7 +214,7 @@ window.RB = (function(){
   function markResources(s){
     return s
       .replace(/(\d+) Énergie/g, '<b class="r r-e">$1&nbsp;Énergie</b>')
-      .replace(/(\d+) Pouvoir/g, '<b class="r r-p">$1&nbsp;Pouvoir</b>')
+      .replace(/(\d+) (Essences? runiques?)/g, '<b class="r r-p">$1&nbsp;$2</b>')
       .replace(/([+\-−]\d+) Puissance/g, '<b class="r r-m">$1&nbsp;Puissance</b>')
       .replace(/(\d+) XP/g, '<b class="r r-x">$1&nbsp;XP</b>');
   }
