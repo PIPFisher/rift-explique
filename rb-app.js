@@ -5,7 +5,8 @@
   "use strict";
 
   var VIEWS = {
-    rules:    { mod:function(){ return window.Rules; },    title:"Les règles" },
+    regles:   { mod:function(){ return window.Regles; },   title:"Les règles" },
+    rules:    { mod:function(){ return window.Rules; },    title:"Bien démarrer" },
     turn:     { mod:function(){ return window.Turn; },     title:"Un tour de jeu" },
     chain:    { mod:function(){ return window.Chain; },    title:"La chaîne" },
     sim:      { mod:function(){ return window.Sim; },      title:"Simulateur" },
@@ -149,7 +150,7 @@
   });
 
   RB.load().then(function(){
-    show(location.hash.slice(1) || "rules");
+    show((location.hash.slice(1)||"regles").split("/")[0]);
   }).catch(function(err){
     main.innerHTML = '<div class="panel"><h2>Chargement impossible</h2>' +
       '<p class="lede" style="margin-top:8px">Les données des cartes n\'ont pas pu être lues (' +
