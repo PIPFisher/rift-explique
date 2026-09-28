@@ -161,17 +161,18 @@
        · l'effet, en taille normale — c'est ce que fait la carte ;
        · le rappel de règles entre parenthèses, plus petit et en retrait. */
 
+  // Familles de couleurs relevées sur les cartes officielles :
+  //   t  vert sapin  #147864  Action, Réaction, Légion, Accélération, Dégainer, Équiper
+  //   e  vert olive  #96B432  Agonie, Caché, Amplifié, Protection, Chasse, Niveau, Temporaire
+  //   c  magenta     #C8326E  Assaut, Bouclier, Tank
+  //   n  gris        #787878  Vision, Amplification
   var KW_FAM = [
-    ["reac", ["Réaction"]],
-    ["act", ["Action"]],
-    ["cbt", ["Arrière-garde", "Déviation", "Assaut", "Bouclier", "Tank", "Gank",
-             "Puissante", "Puissantes", "Embuscade"]],
-    ["cost", ["Maître d'armes", "Accélération", "Ascendant", "Ascendues", "Ascendus",
-              "Ascendue", "Ascendu", "Équiper", "Dégainage", "Répétition", "Flux", "Unique"]],
-    ["trig", ["Prédiction", "Temporaire", "Vengeance", "Brûlure", "Légion", "Chasse",
-              "Cachées", "Cachée", "Vision", "Niveau", "Glas"]]
+    ["t", ["Accélération", "Répétition", "Embuscade", "Réaction", "Dégainer", "Action", "Légion", "Caché", "Flux"]],
+    ["e", ["Amplifiées", "Amplifiés", "Amplifiée", "Amplifié", "Temporaire", "Protection", "Vengeance", "Agonie", "Chasse", "Niveau", "Vision", "Gank"]],
+    ["c", ["Arrière-ligne", "Bouclier", "Assaut", "Tank"]],
+    ["n", ["Expert en armes", "Amplification", "Prédiction", "Puissantes", "Puissante", "Équiper", "Brûler", "Unique"]]
   ];
-  var KW_VAL = /^(Assaut|Bouclier|Déviation|Chasse|Niveau|Brûlure|Prédiction)$/;
+  var KW_VAL = /^(Assaut|Bouclier|Protection|Chasse|Niveau|Brûler|Prédiction)$/;
 
   var KW = (function () {
     var all = [];
@@ -201,7 +202,7 @@
   function markResources(s) {
     return s
       .replace(/(\d+) Énergie/g, '<b class="rbfr-r rbfr-r-e">$1&nbsp;Énergie</b>')
-      .replace(/(\d+) Pouvoir/g, '<b class="rbfr-r rbfr-r-p">$1&nbsp;Pouvoir</b>')
+      .replace(/(\d+) (Essences? runiques?)/g, '<b class="rbfr-r rbfr-r-p">$1&nbsp;$2</b>')
       .replace(/([+\-−]\d+) Puissance/g, '<b class="rbfr-r rbfr-r-m">$1&nbsp;Puissance</b>')
       .replace(/(\d+) XP/g, '<b class="rbfr-r rbfr-r-x">$1&nbsp;XP</b>');
   }
