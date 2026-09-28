@@ -34,8 +34,13 @@
     main.innerHTML = "";
     VIEWS[name].mod().mount(main);
     document.title = VIEWS[name].title + " — Le Rift Expliqué";
-    if(location.hash.slice(1) !== name) history.replaceState(null, "", "#" + name);
-    window.scrollTo({top:0, behavior:"instant"});
+    // on ne réécrit l'adresse que si elle ne désigne pas déjà cette vue :
+    // un lien profond comme #regles/mots-cles/mc-equip doit survivre.
+    var h = decodeURIComponent(location.hash.slice(1));
+    if(h.split("/")[0] !== name){
+      history.replaceState(null, "", "#" + name);
+      window.scrollTo({top:0, behavior:"instant"});
+    }
   }
 
   function openCard(id){
@@ -145,12 +150,17 @@
   });
 
   window.addEventListener("hashchange", function(){
-    var h = location.hash.slice(1);
-    if(h && h !== current) show(h);
+    var h = decodeURIComponent(location.hash.slice(1));
+    if(!h) return;
+    var vue = h.split("/")[0];
+    if(vue !== current){ show(vue); return; }
+    // même vue, ancre différente : on se contente de faire défiler
+    var cible = document.getElementById(h);
+    if(cible) cible.scrollIntoView({block:"start"});
   });
 
   RB.load().then(function(){
-    show((location.hash.slice(1)||"regles").split("/")[0]);
+    show((decodeURIComponent(location.hash.slice(1))||"regles").split("/")[0]);
   }).catch(function(err){
     main.innerHTML = '<div class="panel"><h2>Chargement impossible</h2>' +
       '<p class="lede" style="margin-top:8px">Les données des cartes n\'ont pas pu être lues (' +
