@@ -15,7 +15,7 @@ window.REGLES_DATA = {
     id: "chaine",
     titre: "La chaîne, le focus et la priorité",
     couleur: "sarcelle",
-    eyebrow: "Chapitre 1 · articles 311 à 340",
+    eyebrow: "Quand deux cartes se répondent",
     lede: "Trois notions qu'on confond sans arrêt, et dont tout le reste découle. " +
       "La <b>chaîne</b> est l'endroit où les cartes attendent ; la <b>priorité</b> est le droit " +
       "de répondre ; le <b>focus</b> est le droit d'ouvrir. Un joueur peut avoir le focus sans " +
@@ -24,6 +24,8 @@ window.REGLES_DATA = {
       {
         id: "ch-quoi",
         titre: "Ce qu'est la chaîne",
+        q: "Il a joué après moi : qui se résout en premier ?",
+        rep: "Lui. Le dernier élément posé se résout le premier — répondre à un sort, c'est le devancer.",
         ref: "327 à 331",
         intro: "Rien ne se résout au moment où on le joue. Tout passe d'abord par la chaîne, " +
           "où l'adversaire peut réagir.",
@@ -45,6 +47,8 @@ window.REGLES_DATA = {
       {
         id: "ch-prio",
         titre: "Priorité et focus",
+        q: "J'ai le focus, je fais ce que je veux ?",
+        rep: "Non. Le focus est le droit de <b>rouvrir</b> la chaîne, la priorité celui d'<b>agir</b> : il faut les deux. Mais passer la priorité ne fait pas perdre le focus.",
         ref: "311 à 313",
         intro: "La priorité est le droit d'agir. Le focus est une permission supplémentaire, " +
           "propre aux affrontements.",
@@ -70,6 +74,8 @@ window.REGLES_DATA = {
       {
         id: "ch-etapes",
         titre: "Les quatre étapes de résolution",
+        q: "À partir de quand ma carte est-elle vraiment jouée ?",
+        rep: "Une fois <b>finalisée</b>. Avant, elle est en attente et tout peut encore être annulé — et on ne peut pas répondre à une unité qui arrive, elle saute l'attente.",
         ref: "332 à 340",
         intro: "Une chaîne se vide toujours selon la même boucle. La connaître évite la moitié des disputes de table.",
         regles: [
@@ -101,7 +107,7 @@ window.REGLES_DATA = {
     id: "affrontement",
     titre: "L'affrontement",
     couleur: "rouge",
-    eyebrow: "Chapitre 2 · articles 341 à 348 et 459 à 466",
+    eyebrow: "Quand on se dispute un champ de bataille",
     lede: "Le chapitre le plus dense du jeu, et celui qui bloque le plus de parties. " +
       "Un affrontement est une <b>fenêtre</b> où les deux joueurs posent des sorts à tour de rôle ; " +
       "un combat est ce qui arrive ensuite, si les deux camps ont encore des unités sur place.",
@@ -109,6 +115,8 @@ window.REGLES_DATA = {
       {
         id: "af-quoi",
         titre: "Affrontement et combat ne sont pas la même chose",
+        q: "On se bat dès qu'on arrive sur un champ de bataille ?",
+        rep: "Non. L'affrontement est la fenêtre où l'on joue des sorts ; le combat n'arrive qu'après, et seulement si <b>deux joueurs</b> ont des unités sur place.",
         ref: "341 à 344, 460",
         intro: "La confusion la plus fréquente. L'affrontement est une phase de discussion ; " +
           "le combat est la résolution des dégâts. On peut avoir l'un sans l'autre.",
@@ -142,6 +150,8 @@ window.REGLES_DATA = {
       {
         id: "af-focus",
         titre: "Qui parle, et dans quel ordre",
+        q: "C'est à qui de jouer pendant un affrontement ?",
+        rep: "À celui qui a contesté le champ de bataille, puis on alterne chaque fois qu'une chaîne se vide. L'affrontement se termine quand les deux passent <b>d'affilée</b>.",
         ref: "345 à 348",
         intro: "Le déroulé d'un affrontement se résume à une règle de tour de parole. " +
           "Elle décide qui peut encore agir avant que les dégâts tombent.",
@@ -169,6 +179,8 @@ window.REGLES_DATA = {
       {
         id: "af-etapes",
         titre: "Les trois étapes du combat",
+        q: "Qui est l'attaquant, et que se passe-t-il exactement ?",
+        rep: "Celui qui a bougé, même si ce n'est pas son tour. Chaque camp répartit ensuite sa Puissance totale, tout est infligé d'un coup, et les survivants sont soignés.",
         ref: "463 à 466",
         intro: "Une fois l'affrontement clos, le combat se déroule toujours dans cet ordre.",
         regles: [
@@ -199,6 +211,8 @@ window.REGLES_DATA = {
       {
         id: "af-assignation",
         titre: "Répartir les dégâts : la règle du létal",
+        q: "Je peux étaler mes dégâts comme je veux ?",
+        rep: "Non. L'attaquant répartit en premier, et il faut tuer une unité <b>complètement</b> avant de passer à la suivante — sans jamais mettre plus que le minimum nécessaire.",
         ref: "465.2.c",
         intro: "C'est ici que se jouent les litiges les plus techniques. La répartition n'est pas libre : " +
           "elle est contrainte dans les deux sens.",
@@ -231,13 +245,15 @@ window.REGLES_DATA = {
     id: "score",
     titre: "Marquer des points",
     couleur: "or",
-    eyebrow: "Chapitre 3 · articles 467 à 472",
+    eyebrow: "Quand il faut compter les points",
     lede: "On gagne en marquant, pas en tuant. Deux façons de marquer, une limite stricte par " +
       "champ de bataille et par tour, et une condition particulière pour le tout dernier point.",
     sections: [
       {
         id: "sc-deux",
         titre: "Les deux façons de marquer",
+        q: "Comment je gagne un point, au juste ?",
+        rep: "En prenant un champ de bataille (<b>conquérir</b>) ou en le gardant jusqu'à ta phase initiale (<b>tenir</b>). Un même endroit ne rapporte qu'une fois par tour et par joueur.",
         ref: "467 à 470",
         regles: [
           { ref: "468", t: "Marquer, c'est gagner un point en prenant ou en gardant un champ de bataille.",
@@ -259,6 +275,8 @@ window.REGLES_DATA = {
       {
         id: "sc-dernier",
         titre: "Le dernier point",
+        q: "Je suis à un point de gagner : je conquiers et c'est fini ?",
+        rep: "Pas forcément. Arrivé là, la conquête ne donne le point final que si tu as marqué sur <b>tous</b> les champs de bataille ce tour-ci. Sinon, tu pioches une carte.",
         ref: "471.1",
         intro: "La règle qui surprend tout le monde en fin de partie, et qui décide des victoires serrées.",
         regles: [
@@ -282,7 +300,7 @@ window.REGLES_DATA = {
     id: "mots-cles",
     titre: "Les mots-clés",
     couleur: "vert",
-    eyebrow: "Chapitre 4 · articles 801 à 829",
+    eyebrow: "Quand un mot surligné pose question",
     lede: "Les vingt-cinq mots surlignés qu'on trouve sur les cartes. Chacun est un raccourci " +
       "pour une phrase de règles complète : ce chapitre donne cette phrase, puis ce qui " +
       "coince en pratique. Le rappel entre parenthèses est celui qu'affiche la traduction " +
@@ -292,6 +310,8 @@ window.REGLES_DATA = {
       {
         id: "mc-general",
         titre: "Ce qui vaut pour tous",
+        q: "J'ai deux fois le même mot-clé : ça cumule ?",
+        rep: "Ça dépend du mot. Certains sont redondants, d'autres additionnent leurs valeurs, d'autres se déclenchent séparément — le classement des trois familles est ci-dessous.",
         ref: "801 à 803",
         intro: "Quatre règles générales, à connaître avant les mots eux-mêmes. Elles règlent " +
           "la plupart des « et si j'en ai deux ? ».",
@@ -316,6 +336,8 @@ window.REGLES_DATA = {
       {
         id: "mc-quand",
         titre: "Quand tu as le droit de jouer",
+        q: "Est-ce que j'ai le droit de jouer ça maintenant ?",
+        rep: "Action, Réaction, Embuscade, Caché et Flux ne changent pas ce que fait la carte : ils changent le <b>moment</b> où tu peux la poser, ou l'endroit d'où tu la sors.",
         ref: "806, 811, 813, 822, 829",
         intro: "Ces mots-clés ne changent pas ce que fait la carte : ils changent le moment " +
           "où tu peux la poser, ou l'endroit d'où tu peux la sortir. C'est de la permission, " +
@@ -361,6 +383,8 @@ window.REGLES_DATA = {
       {
         id: "mc-combat",
         titre: "Au combat",
+        q: "Quels mots-clés comptent pendant un combat ?",
+        rep: "Assaut et Bouclier donnent de la Puissance selon le rôle tenu ; Tank et Arrière-ligne imposent l'ordre des dégâts ; Gank ouvre les déplacements.",
         ref: "807, 810, 814, 815, 826",
         intro: "Deux mots donnent de la Puissance selon le rôle tenu, deux autres imposent " +
           "l'ordre dans lequel les dégâts sont assignés, et un dernier ouvre les déplacements.",
@@ -404,6 +428,8 @@ window.REGLES_DATA = {
       {
         id: "mc-couts",
         titre: "Les coûts",
+        q: "Ce coût en plus, je le paie à quel moment ?",
+        rep: "Accélération et Répétition se paient <b>en jouant la carte</b>, jamais après. Protection, elle, fait payer l'adversaire quand il te choisit.",
         ref: "805, 809, 820",
         intro: "Trois mots-clés qui touchent au prix d'une carte : deux que tu paies toi, " +
           "un que tu fais payer à l'adversaire.",
@@ -439,6 +465,8 @@ window.REGLES_DATA = {
       {
         id: "mc-declench",
         titre: "Les déclenchements",
+        q: "Quand est-ce que ça se déclenche, exactement ?",
+        rep: "Agonie à la mort, Vision à l'arrivée, Temporaire au début de ta phase initiale (avant le score), Chasse quand tu conquiers ou que tu tiens.",
         ref: "808, 816, 817, 823",
         intro: "Quatre mots-clés qui posent une capacité déclenchée sur la chaîne quand " +
           "l'événement arrive.",
@@ -475,6 +503,8 @@ window.REGLES_DATA = {
       {
         id: "mc-equip",
         titre: "Les équipements",
+        q: "Comment j'attache un équipement, et quand ?",
+        rep: "Équiper est une capacité à activer ; Dégainer permet de le poser et de l'attacher en plein affrontement ; Expert en armes le fait à moindre coût quand l'unité arrive.",
         ref: "818, 819, 821",
         intro: "Trois mots-clés propres aux Équipements : celui qui attache, celui qui " +
           "attache vite, et celui qui attache gratuitement.",
@@ -512,6 +542,8 @@ window.REGLES_DATA = {
       {
         id: "mc-condition",
         titre: "Les effets sous condition",
+        q: "Pourquoi ce texte ne s'applique pas ?",
+        rep: "Légion, Niveau et Amplifié n'allument leur texte que si la condition est remplie — une autre carte jouée, assez d'XP, le statut amplifié — et l'éteignent dès qu'elle tombe.",
         ref: "812, 824, 827, 828",
         intro: "Ces mots-clés n'agissent pas seuls : ils allument un bout de texte quand " +
           "une condition est remplie, et l'éteignent dès qu'elle ne l'est plus.",
@@ -546,6 +578,8 @@ window.REGLES_DATA = {
       {
         id: "mc-deck",
         titre: "À la construction du deck",
+        q: "Je peux en mettre plusieurs dans mon deck ?",
+        rep: "Pas si la carte est <b>Unique</b> : un seul exemplaire, et ça ne change rien pendant la partie.",
         ref: "825",
         intro: "Un seul mot-clé ne fait rien pendant la partie et tout avant elle.",
         mots: [
