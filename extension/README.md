@@ -39,9 +39,40 @@ Va sur [riftatlas.com/cards](https://riftatlas.com/cards) et passe la souris sur
 
 | Où | Ce qui se passe |
 |---|---|
-| Grille de cartes sur Rift Atlas | Un panneau s'ouvre à côté du curseur |
+| Grille de cartes sur Rift Atlas | Un panneau s'ouvre à côté de la carte survolée |
 | Fiche d'une carte | Le panneau est inséré dans la page, sous le titre |
-| Simulateur en partie | Le panneau est ancré à gauche de l'écran, affichage immédiat |
+| Simulateur en partie | Le panneau s'ouvre à côté de la carte, immédiatement, en plus grand |
+
+Le panneau s'ouvre **toujours au même endroit** : collé au bord gauche de la
+carte, aligné sur son haut. Une seule exception, les cartes du bord gauche de
+l'écran, où il passe à droite. Jamais au-dessus ni en dessous : l'œil apprend
+une position et y va sans chercher.
+
+Le côté gauche n'est pas un hasard. En partie, Rift Atlas affiche son propre
+agrandissement de la carte survolée, systématiquement à sa droite, dans un
+calque placé tout en haut de la pile. En prenant la gauche, le panneau ne lui
+dispute pas la place : la traduction d'un côté, la carte agrandie de l'autre.
+Pour les rares cas où le chevauchement reste inévitable, le panneau monte à
+la même hauteur de pile et passe devant, plutôt que de disparaître derrière.
+
+Il laisse passer les clics : même posé sur le plateau, il n'empêche pas de
+jouer.
+
+## Couper et rallumer
+
+La touche **`²`** (au-dessus de Tab) coupe et rallume les traductions. Tout
+disparaît alors : le panneau, les pastilles FR et les liserés dorés. Un bref
+message confirme l'état, qui est retenu d'une partie à l'autre.
+
+La touche est ignorée pendant que tu écris, donc elle ne gêne pas le chat du
+simulateur.
+
+Pour en changer, modifier `config.toggleKey` dans `fr.json` avec un code de
+touche (`"KeyT"`, `"F2"`, `"Backslash"`…). C'est un code de **position**, pas
+de caractère : il vaut pour toutes les dispositions de clavier.
+
+Pour le fixer à un bord de l'écran plutôt qu'à côté de la carte, changer
+`config.side` dans `fr.json` : `"auto"` (par défaut), `"left"` ou `"right"`.
 
 Une pastille **FR** marque les cartes déjà traduites dans les grilles, et un liseré doré les entoure en partie.
 
@@ -85,6 +116,14 @@ Dans le simulateur, les visuels de cartes ne reçoivent pas les événements de 
 
 L'extension **n'envoie aucune donnée** et ne modifie pas le contenu des sites : elle ajoute uniquement un panneau de lecture par-dessus. Sa seule requête sortante va chercher le fichier de traductions sur `pipfisher.github.io`.
 
-## Mentions
+## Licence et mentions
 
-Projet de fan non officiel, sans lien avec Riot Games ni avec Rift Atlas. Riftbound et League of Legends sont des marques de Riot Games, Inc.
+Projet de fan non officiel, sans lien avec Riot Games ni avec Rift Atlas.
+Riftbound et League of Legends sont des marques de Riot Games, Inc. Le texte
+original des cartes et les illustrations leur appartiennent.
+
+La **traduction française**, les **notes explicatives** et le code sont
+l'œuvre de Fisher, sous licence **CC BY-NC-ND 4.0** : libre d'usage et de
+partage tel quel, avec crédit ; pas de republication sous un autre nom, pas
+d'usage commercial, pas de version modifiée. Voir `LICENSE.md` à la racine du
+dépôt.

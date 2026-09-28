@@ -2,7 +2,11 @@
 
 .rbfr-panel{
   position: fixed;
-  z-index: 2147483000;
+  /* Rift Atlas monte son agrandissement au survol tout en haut de la pile
+     (2147483647). On s'aligne sur la même valeur : à égalité, c'est l'ordre
+     du document qui tranche, et le panneau est ajouté après <body>, donc
+     il passe devant. Sans ça il disparaît derrière la carte agrandie. */
+  z-index: 2147483647;
   width: 380px;
   max-width: calc(100vw - 24px);
   max-height: 70vh;
@@ -80,26 +84,24 @@
 /* ressources : pictogrammes, comme sur les cartes */
 .rbfr-r{ font-weight: 600; }
 .rbfr-rem .rbfr-r, .rbfr-rem .rbfr-k{ color: inherit; font-weight: 600; }
+/* pictogrammes officiels Riot (images) : on ne fait que les dimensionner */
 .rbfr-g{
-  position: relative;
-  display: inline-grid;
-  place-items: center;
-  width: 1.14em;
-  height: 1.14em;
-  vertical-align: -.22em;
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  vertical-align: -.26em;
   margin: 0 .05em;
+  /* le site hôte ne doit pas leur imposer ses propres styles d'image */
+  max-width: none; max-height: none; min-width: 0; min-height: 0;
+  border: 0; border-radius: 0; box-shadow: none; background: none; filter: none;
 }
-.rbfr-g svg{ position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
-.rbfr-g svg *{ stroke-linejoin: round; vector-effect: non-scaling-stroke; }
-.rbfr-g i{ position: relative; font-style: normal; font-weight: 700; font-size: .66em; line-height: 1; }
-.rbfr-g-e svg circle{ fill: rgba(240,206,134,.13); stroke: #F0CE86; stroke-width: 1.5; }
-.rbfr-g-e i{ color: #F0CE86; }
-.rbfr-g-p svg path{ fill: rgba(142,210,223,.15); stroke: #8ED2DF; stroke-width: 1.5; }
-.rbfr-g-p i{ color: #8ED2DF; }
-.rbfr-g-p.rbfr-g-any svg path{ fill: rgba(190,166,224,.17); stroke: #C3A9E4; }
-.rbfr-g-p.rbfr-g-any i{ color: #C3A9E4; }
-.rbfr-g-m{ margin-left: .12em; }
-.rbfr-g-m svg path{ fill: rgba(228,238,242,.10); stroke: #E4EEF2; stroke-width: 1.4; }
+/* Les runes de domaine sont pleines (pastille colorée), les autres sont des
+   traits nus : on agrandit un peu ces dernières pour égaliser le poids à l'œil. */
+.rbfr-g-p + .rbfr-g-p{ margin-left: -.04em; }
+.rbfr-g-m{ width: 1.3em; height: 1.3em; margin-left: .1em; vertical-align: -.3em; }
+.rbfr-g-x{ width: 1.34em; height: 1.34em; vertical-align: -.3em; }
+.rbfr-g-p[src$="rune_rainbow.svg"],
+.rbfr-g-p[src$="card_type_rune.svg"]{ width: 1.34em; height: 1.34em; vertical-align: -.3em; }
 
 .rbfr-note{
   margin: 0 0 8px;
@@ -144,19 +146,23 @@ a.rbfr-has::after{
   opacity: .92;
 }
 
-/* ---- panneau ancré, pour le simulateur ---- */
-.rbfr-panel.rbfr-docked{
-  left: auto !important;
-  right: 24px;
-  top: 50%;
-  transform: translateY(-50%);
+/* ---- en jeu : plus grand et plus lisible, quelle que soit la position ---- */
+.rbfr-panel.rbfr-ingame{
   width: 400px;
   max-height: 76vh;
   font-size: 16px;
   line-height: 1.55;
 }
-.rbfr-panel.rbfr-docked .rbfr-name{ font-size: 21px; }
-.rbfr-panel.rbfr-docked .rbfr-text{ font-size: 16.5px; }
+.rbfr-panel.rbfr-ingame .rbfr-name{ font-size: 21px; }
+.rbfr-panel.rbfr-ingame .rbfr-text{ font-size: 16.5px; }
+
+/* ---- panneau ancré à un bord (réglage side: "left" ou "right") ---- */
+.rbfr-panel.rbfr-docked{
+  left: auto !important;
+  right: 24px;
+  top: 50% !important;
+  transform: translateY(-50%);
+}
 
 .rbfr-head{ display: flex; align-items: baseline; gap: 8px; }
 .rbfr-code{
@@ -175,5 +181,55 @@ img.rbfr-img-has{
 
 .rbfr-panel.rbfr-docked.rbfr-left{
   right: auto !important;
-  left: 24px;
+  left: 24px !important;
+}
+
+/* bonus donné à l'unité équipée (bas des cartes d'équipement) */
+.rbfr-equip{
+  margin-top: 9px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(217,169,74,.22);
+  font-size: .92em;
+  color: #C9D8E0;
+}
+.rbfr-equip span{ color: #7D93A0; }
+.rbfr-equip-h{ margin-bottom: 5px; }
+.rbfr-equip .rbfr-text{ gap: 6px; }
+
+/* confirmation brève quand on coupe ou rallume les traductions */
+.rbfr-toast{
+  position: fixed;
+  left: 50%;
+  bottom: 42px;
+  transform: translateX(-50%);
+  z-index: 2147483647;
+  pointer-events: none;
+  opacity: 0;
+  padding: 9px 17px;
+  border-radius: 999px;
+  border: 1px solid #D9A94A;
+  background: linear-gradient(180deg, #13252F 0%, #0A141C 100%);
+  box-shadow: 0 14px 34px -14px rgba(0,0,0,.9);
+  color: #E4EEF2;
+  font-family: "Barlow", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 14px;
+  letter-spacing: .02em;
+  white-space: nowrap;
+}
+.rbfr-toast-off{ border-color: #4A5A64; color: #9BB0BC; }
+.rbfr-toast-go{ animation: rbfrToast 1.5s ease forwards; }
+@keyframes rbfrToast{
+  0%   { opacity: 0; transform: translateX(-50%) translateY(6px); }
+  12%  { opacity: 1; transform: translateX(-50%) translateY(0); }
+  72%  { opacity: 1; transform: translateX(-50%) translateY(0); }
+  100% { opacity: 0; transform: translateX(-50%) translateY(-4px); }
+}
+
+/* paternité de la traduction, discrète mais présente sur chaque carte */
+.rbfr-credit{
+  display: block;
+  margin-top: 3px;
+  font-size: 10.5px;
+  letter-spacing: .04em;
+  color: #5F7D8A;
 }
