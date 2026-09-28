@@ -468,19 +468,15 @@ label.field span{font-family:var(--cond);font-size:12px;letter-spacing:.12em;tex
 /* ressources : pictogrammes, comme sur les cartes */
 .r{font-weight:600}
 .fr-rem .r,.fr-rem .k{color:inherit;font-weight:600}
-.g{position:relative;display:inline-grid;place-items:center;
-  width:1.14em;height:1.14em;vertical-align:-.22em;margin:0 .05em}
-.g svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
-.g svg *{stroke-linejoin:round;vector-effect:non-scaling-stroke}
-.g i{position:relative;font-style:normal;font-weight:700;font-size:.66em;line-height:1}
-.g-e svg circle{fill:rgba(240,206,134,.13);stroke:var(--gold-soft);stroke-width:1.5}
-.g-e i{color:var(--gold-soft)}
-.g-p svg path{fill:rgba(142,210,223,.15);stroke:#8ED2DF;stroke-width:1.5}
-.g-p i{color:#8ED2DF}
-.g-p.g-any svg path{fill:rgba(190,166,224,.17);stroke:#C3A9E4}
-.g-p.g-any i{color:#C3A9E4}
-.g-m{margin-left:.12em}
-.g-m svg path{fill:rgba(228,238,242,.10);stroke:var(--text);stroke-width:1.4}
+/* pictogrammes officiels Riot (images) : on ne fait que les dimensionner.
+   Les runes de domaine sont pleines (pastille colorée), les autres sont des
+   traits nus : on agrandit un peu ces dernières pour égaliser le poids à l'œil. */
+.g{display:inline-block;width:1.2em;height:1.2em;vertical-align:-.26em;margin:0 .05em}
+.g-p+.g-p{margin-left:-.04em}
+.g-m{width:1.3em;height:1.3em;margin-left:.1em;vertical-align:-.3em}
+.g-x{width:1.34em;height:1.34em;vertical-align:-.3em}
+.g-p[src$="rune_rainbow.svg"],
+.g-p[src$="card_type_rune.svg"]{width:1.34em;height:1.34em;vertical-align:-.3em}
 
 
 .fr-missing{border-color:var(--line-soft);background:rgba(19,37,47,.5)}
@@ -562,3 +558,10 @@ label.field span{font-family:var(--cond);font-size:12px;letter-spacing:.12em;tex
 .fr-note{margin:3px 0 0;font-size:13.5px;line-height:1.5;font-style:normal;
   color:var(--text-dim);padding-left:11px;border-left:1px solid rgba(217,169,74,.45)}
 .rd-fr.fr-text{font-size:15px}
+
+/* bonus donné à l'unité équipée (bas des cartes d'équipement) */
+.fr-equip{margin-top:9px;padding-top:8px;border-top:1px solid rgba(217,169,74,.22);
+  font-size:13.5px;color:var(--text-dim)}
+.fr-equip span{color:var(--text-faint)}
+.fr-equip-h{margin-bottom:5px}
+.fr-equip .fr-text{gap:6px}

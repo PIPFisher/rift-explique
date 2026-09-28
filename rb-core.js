@@ -214,53 +214,97 @@ window.RB = (function(){
   /* ---------- symboles de ressources ----------
      Les cartes officielles écrivent les coûts en pictogrammes, pas en mots.
      On fait de même : l'œil saute le coût et va droit à l'effet. */
-  function gEnergie(n){
-    return '<span class="g g-e" title="' + n + ' Énergie">' +
-      '<svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8.6"/></svg>' +
-      '<i>' + n + '</i></span>';
+  // Les pictogrammes officiels de Riot, servis depuis leurs serveurs : mêmes
+  // formes et mêmes couleurs que sur les cartes imprimées, rien n'est recopié.
+  var GLYPH = "https://assetcdn.rgpub.io/public/live/riot-shared/" +
+              "player-experiences/riot-glyphs/rb/latest/";
+  var RUNE_FILE = {
+    "Fury":"rune_fury.svg", "Body":"rune_body.svg", "Mind":"rune_mind.svg",
+    "Calm":"rune_calm.svg", "Chaos":"rune_chaos.svg", "Order":"rune_order.svg"
+  };
+  function glyph(file, alt, cls){
+    return '<img class="g ' + cls + '" src="' + GLYPH + file + '" ' +
+           'alt="' + esc(alt) + '" title="' + esc(alt) + '" loading="lazy" decoding="async">';
   }
-  function gRune(n, partout){
-    // quand le coût vaut plusieurs runes, on répète le losange : chacun en vaut un
-    var t = (n > 4 ? n + " essences runiques" : "1 essence runique") +
-            (partout ? ", de n'importe quel domaine" : "");
-    var d = '<span class="g g-p' + (partout ? " g-any" : "") + '" title="' + t + '">' +
-      '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.4 18.6 10 10 18.6 1.4 10Z"/></svg>';
-    if(n > 4) return d + '<i>' + n + '</i></span>';
+  function gEnergie(n){
+    var v = parseInt(n, 10);
+    // Riot dessine le chiffre dans la pastille, de 0 à 12 ; au-delà on écrit le mot.
+    if(isNaN(v) || v < 0 || v > 12) return '<b class="r">' + n + '&nbsp;Énergie</b>';
+    return glyph("energy_" + v + ".svg", v + " Énergie", "g-e");
+  }
+  function gRune(n, partout, card){
+    var doms = (card && card.d) || [];
+    var file, quoi;
+    if(partout){
+      file = "rune_rainbow.svg"; quoi = "de n'importe quel domaine";
+    } else if(doms.length === 1 && RUNE_FILE[doms[0]]){
+      file = RUNE_FILE[doms[0]]; quoi = "du domaine " + domFR(doms[0]);
+    } else {
+      // carte bi-domaine : le coût se paie dans l'un ou l'autre, on reste neutre
+      file = "card_type_rune.svg";
+      quoi = doms.length ? "du domaine de la carte (" + doms.map(domFR).join(" ou ") + ")"
+                         : "du domaine de la carte";
+    }
+    // un pictogramme = une essence runique, comme sur les cartes
+    if(n > 4) return glyph(file, n + " essences runiques, " + quoi, "g-p") +
+                     '<b class="r">×' + n + '</b>';
     var out = "";
-    for(var i = 0; i < n; i++) out += d + '</span>';
+    for(var i = 0; i < n; i++) out += glyph(file, "1 essence runique, " + quoi, "g-p");
     return out;
   }
-  function gPuissance(){
-    return '<span class="g g-m" title="Puissance">' +
-      '<svg viewBox="0 0 20 20" aria-hidden="true">' +
-      '<path d="M2.6 2.6h14.8v7.1c0 4.2-3 6.9-7.4 8.6-4.4-1.7-7.4-4.4-7.4-8.6Z"/>' +
-      '</svg></span>';
+  function gPuissance(){ return glyph("might.svg", "Puissance", "g-m"); }
+  function gEpuiser(){ return glyph("exhaust.svg", "Épuiser", "g-x"); }
+
+  // Un coût en essence runique peut être « de n'importe quel domaine », et la
+  // précision est parfois détachée du chiffre (« 1 Essence runique de plus, de
+  // n'importe quel domaine »), voire rejetée dans un rappel entre parenthèses.
+  // On repère donc la portée sur la ligne entière, avant tout découpage.
+  var RUNE_RE = /(\d+) Essences? runiques?/g;
+  function scanRunes(line){
+    var hits = [], m;
+    RUNE_RE.lastIndex = 0;
+    while((m = RUNE_RE.exec(line))) hits.push({ start: m.index, end: RUNE_RE.lastIndex });
+    return hits.map(function(h, i){
+      var stop = i + 1 < hits.length ? hits[i + 1].start : line.length;
+      var suite = line.slice(h.end, Math.min(stop, h.end + 48));
+      return /^[^.;!?]*n'importe quel domaine/.test(suite);
+    });
   }
 
-  function markResources(s){
+  function markResources(s, card, etat){
     return s
+      // le coût d'activation est un pictogramme sur les cartes, pas un mot
+      .replace(/Épuiser\s*:/g, function(){ return gEpuiser() + " :"; })
       .replace(/(\d+) Énergie/g, function(_, n){ return gEnergie(n); })
-      .replace(/(\d+) Essences? runiques?(,? de n'importe quel domaine)?/g,
-        function(_, n, partout){ return gRune(parseInt(n, 10), !!partout); })
+      // « de plus / de moins » se garde, la mention du domaine est absorbée
+      .replace(/(\d+) Essences? runiques?( de (?:plus|moins))?(,? \(?de n'importe quel domaine\)?,?)?/g,
+        function(_, n, suite, partout){
+          var libre = !!partout;
+          if(etat && etat.runes){ libre = etat.runes[etat.i] || libre; etat.i++; }
+          return gRune(parseInt(n, 10), libre, card) + (suite || "");
+        })
       .replace(/([+\-−]?\d+) Puissance/g,
         function(_, n){ return '<b class="r">' + n + '</b>' + gPuissance(); })
       .replace(/(\d+) XP/g, '<b class="r">$1&nbsp;XP</b>');
   }
 
   // Découpe une ligne en segments hors/dans parenthèses, n'habille que le hors-parenthèses.
-  function frLineHTML(line){
+  function frLineHTML(line, card){
+    // les fragments sont traités de gauche à droite : le compteur suit les
+    // coûts en essence runique dans le même ordre que le repérage ci-dessus
+    var etat = { runes: scanRunes(line), i: 0 };
     var out = "", i = 0, n = line.length;
     while(i < n){
       var open = line.indexOf("(", i);
-      if(open === -1){ out += markResources(markKeywords(esc(line.slice(i)))); break; }
+      if(open === -1){ out += markResources(markKeywords(esc(line.slice(i))), card, etat); break; }
       var close = line.indexOf(")", open);
-      if(close === -1){ out += markResources(markKeywords(esc(line.slice(i)))); break; }
-      out += markResources(markKeywords(esc(line.slice(i, open))));
+      if(close === -1){ out += markResources(markKeywords(esc(line.slice(i))), card, etat); break; }
+      out += markResources(markKeywords(esc(line.slice(i, open))), card, etat);
       var inner = line.slice(open + 1, close);
       var terminal = line.slice(close + 1).trim() === "";
       // le rappel garde ses mots, mais reçoit les mêmes pictogrammes
       out += '<span class="fr-rem' + (terminal ? " fr-rem-b" : "") + '">' +
-             markResources(esc(inner)) + '</span>';
+             markResources(esc(inner), card, etat) + '</span>';
       i = close + 1;
     }
     // le point qui précède un rappel devient inutile, le retrait le remplace
@@ -269,15 +313,31 @@ window.RB = (function(){
     return out;
   }
 
-  function frTextHTML(tx){
+  function frTextHTML(tx, card){
     if(!tx) return "";
     return tx.split("\n").map(function(line){
       var t = line.trim();
       if(!t) return "";
       var cls = "fr-line";
       if(/^[—-]\s/.test(t)) cls += " fr-bullet";
-      return '<span class="' + cls + '">' + frLineHTML(t) + '</span>';
+      return '<span class="' + cls + '">' + frLineHTML(t, card) + '</span>';
     }).join("");
+  }
+
+  // Les équipements portent en bas de carte le bonus donné à l'unité équipée.
+  // C'est un champ (mightBonus chez Riot), pas du texte de règles : aucune
+  // traduction ne pouvait le reprendre, il faut donc l'afficher à part.
+  function equipHTML(card){
+    if(!card || (card.mb == null && !card.ef)) return "";
+    var h = '<div class="fr-equip">';
+    if(card.mb != null){
+      h += '<div class="fr-equip-h"><b class="r">' + esc(card.mb) + '</b>' +
+           gPuissance() + ' <span>à l\'unité équipée</span></div>';
+    }
+    // l'effet que l'unité gagne une fois équipée : second champ de la carte,
+    // imprimé en bas, absent lui aussi du texte de règles
+    if(card.ef) h += '<div class="fr-text">' + frTextHTML(card.ef, card) + '</div>';
+    return h + '</div>';
   }
 
   function frBlockHTML(card){
@@ -291,7 +351,8 @@ window.RB = (function(){
     return '<div class="fr-block">' +
       '<div class="fr-head">Traduction française</div>' +
       (t.n ? '' : '<div class="fr-name fr-vo">nom non traduit</div>') +
-      '<div class="fr-text">' + frTextHTML(t.tx) + '</div>' +
+      '<div class="fr-text">' + frTextHTML(t.tx, card) + '</div>' +
+      equipHTML(card) +
       (t.note ? '<p class="fr-note">' + esc(t.note) + '</p>' : '') +
     '</div>';
   }
