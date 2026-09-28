@@ -453,18 +453,34 @@ label.field span{font-family:var(--cond);font-size:12px;letter-spacing:.12em;tex
 .fr-line.fr-bullet{padding-left:14px;text-indent:-14px;margin-top:-5px}
 
 /* le rappel de règles officiel : en retrait, effacé */
-.fr-rem{color:var(--text-faint);font-size:13px;line-height:1.5}
+.fr-rem{color:var(--text-faint);font-size:12.5px;line-height:1.5}
 .fr-rem-b{display:block;margin-top:4px;padding-left:11px;
   border-left:1px solid var(--line-soft)}
 
-/* mot-clé : un mot coloré, sans pastille ni cadre */
-.k{font-weight:600;letter-spacing:.01em;white-space:nowrap;color:#9FBECC}
-.k-t-reac{color:#79C89B}
-.k-t-act{color:#D9B463}
+/* mot-clé : la couleur des pastilles officielles, en texte seul
+   t vert sapin · e vert olive · c magenta · n gris */
+.k{font-weight:600;letter-spacing:.01em;white-space:nowrap}
+.k-t{color:#4FC2A8}
+.k-e{color:#B5D64F}
+.k-c{color:#EE6E9C}
+.k-n{color:#A9BCC6}
 
-/* ressources : du gras, rien de plus */
+/* ressources : pictogrammes, comme sur les cartes */
 .r{font-weight:600}
 .fr-rem .r,.fr-rem .k{color:inherit;font-weight:600}
+.g{position:relative;display:inline-grid;place-items:center;
+  width:1.14em;height:1.14em;vertical-align:-.22em;margin:0 .05em}
+.g svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.g svg *{stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.g i{position:relative;font-style:normal;font-weight:700;font-size:.66em;line-height:1}
+.g-e svg circle{fill:rgba(240,206,134,.13);stroke:var(--gold-soft);stroke-width:1.5}
+.g-e i{color:var(--gold-soft)}
+.g-p svg path{fill:rgba(142,210,223,.15);stroke:#8ED2DF;stroke-width:1.5}
+.g-p i{color:#8ED2DF}
+.g-p.g-any svg path{fill:rgba(190,166,224,.17);stroke:#C3A9E4}
+.g-p.g-any i{color:#C3A9E4}
+.g-m{margin-left:.12em}
+.g-m svg path{fill:rgba(228,238,242,.10);stroke:var(--text);stroke-width:1.4}
 
 
 .fr-missing{border-color:var(--line-soft);background:rgba(19,37,47,.5)}
