@@ -41,6 +41,24 @@ window.Regles = (function(){
     '</div>';
   }
 
+  /* ---------- un mot-clé ---------- */
+  function motHTML(m){
+    var cherchable = (m.m + " " + (m.vo || "") + " " + (m.r || "") +
+                      " " + (m.p || []).join(" ")).toLowerCase();
+    return '<div class="rg-m" data-t="' + esc(cherchable) + '">' +
+      '<div class="rg-m-head">' +
+        '<h4>' + esc(m.m) + '</h4>' +
+        (m.vo ? '<span class="rg-m-vo">' + esc(m.vo) + '</span>' : '') +
+        '<a class="rg-ref rg-m-ref" href="' + D.source + '" target="_blank" rel="noopener" ' +
+          'title="Article ' + esc(m.ref) + ' des règles officielles">' + esc(m.ref) + '</a>' +
+      '</div>' +
+      (m.r ? '<p class="rg-m-r">' + m.r + '</p>' : '') +
+      ((m.p && m.p.length)
+        ? '<ul class="rg-m-p">' + m.p.map(function(x){ return '<li>' + x + '</li>'; }).join("") + '</ul>'
+        : '') +
+    '</div>';
+  }
+
   function encartsHTML(s){
     var h = "";
     if(s.cas && s.cas.length){
@@ -67,7 +85,10 @@ window.Regles = (function(){
         (s.ref ? '<span class="rg-s-ref">articles ' + esc(s.ref) + '</span>' : '') +
       '</div>' +
       (s.intro ? '<p class="rg-intro">' + s.intro + '</p>' : '') +
-      '<div class="rg-rs">' + (s.regles || []).map(regleHTML).join("") + '</div>' +
+      ((s.mots && s.mots.length)
+        ? '<div class="rg-ms">' + s.mots.map(motHTML).join("") + '</div>' : '') +
+      ((s.regles && s.regles.length)
+        ? '<div class="rg-rs">' + s.regles.map(regleHTML).join("") + '</div>' : '') +
       encartsHTML(s) +
     '</section>';
   }
