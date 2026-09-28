@@ -10,7 +10,8 @@
     chain:    { mod:function(){ return window.Chain; },    title:"La chaîne" },
     sim:      { mod:function(){ return window.Sim; },      title:"Simulateur" },
     deck:     { mod:function(){ return window.Deck; },     title:"Mon deck" },
-    explorer: { mod:function(){ return window.Explorer; }, title:"Les cartes" }
+    explorer: { mod:function(){ return window.Explorer; }, title:"Les cartes" },
+    extension:{ mod:function(){ return window.Extension; }, title:"L'extension Chrome" }
   };
 
   var main = document.getElementById("main");

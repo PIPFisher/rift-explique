@@ -565,3 +565,47 @@ label.field span{font-family:var(--cond);font-size:12px;letter-spacing:.12em;tex
 .fr-equip span{color:var(--text-faint)}
 .fr-equip-h{margin-bottom:5px}
 .fr-equip .fr-text{gap:6px}
+
+/* ============================================================
+   Onglet Extension — la page qu'on envoie aux joueurs
+   ============================================================ */
+.xt-hero{display:flex;gap:26px;align-items:center;flex-wrap:wrap;
+  background:linear-gradient(135deg,rgba(217,169,74,.10) 0%,rgba(19,37,47,.5) 60%)}
+.xt-hero-main{flex:1 1 280px}
+.xt-dl{display:inline-block;padding:13px 26px;border-radius:4px;
+  background:linear-gradient(180deg,#E7BC63 0%,#C9973C 100%);
+  color:#12202A;font-family:var(--cond);font-size:19px;font-weight:700;
+  letter-spacing:.06em;text-transform:uppercase;text-decoration:none;
+  box-shadow:0 10px 26px -12px rgba(217,169,74,.8);transition:transform .12s ease}
+.xt-dl:hover{transform:translateY(-1px)}
+.xt-dl-sub{margin:9px 0 0;font-size:12.5px;color:var(--text-faint)}
+.xt-facts{list-style:none;margin:0;padding:0;display:grid;
+  grid-template-columns:repeat(2,minmax(110px,1fr));gap:10px 22px;flex:0 1 300px}
+.xt-facts li{font-size:12.5px;color:var(--text-faint);letter-spacing:.02em}
+.xt-facts b{display:block;font-family:var(--cond);font-size:27px;color:var(--gold-soft);
+  line-height:1.1;letter-spacing:.02em}
+
+.xt-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(272px,1fr));gap:12px}
+.xt-card{border:1px solid var(--line-soft);border-radius:3px;
+  background:rgba(19,37,47,.4);padding:13px 15px}
+.xt-card h3{margin:0 0 5px;font-family:var(--cond);font-size:16px;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--gold-soft)}
+.xt-card p{margin:0;font-size:13.5px;color:var(--text-dim);line-height:1.55}
+
+.xt-warn{margin:14px 0 0;padding:10px 13px;border-left:2px solid var(--gold-soft);
+  background:rgba(217,169,74,.07);font-size:13px;color:var(--text-dim)}
+
+.xt-lic-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:12px;margin:14px 0 12px}
+.xt-lic{border:1px solid var(--line-soft);border-radius:3px;padding:12px 15px;
+  background:rgba(19,37,47,.4)}
+.xt-lic h3{margin:0 0 7px;font-family:var(--cond);font-size:15px;letter-spacing:.07em;
+  text-transform:uppercase}
+.xt-lic.ok{border-color:rgba(122,190,120,.35)}
+.xt-lic.ok h3{color:#8FCB86}
+.xt-lic.no{border-color:rgba(214,110,124,.32)}
+.xt-lic.no h3{color:#E08794}
+.xt-lic ul{margin:0;padding-left:17px}
+.xt-lic li{font-size:13px;color:var(--text-dim);line-height:1.6}
+.xt-licence code,.xt-card code,.step-item code{font-size:12.5px;padding:1px 5px;
+  border-radius:3px;background:rgba(10,20,28,.7);color:var(--gold-soft)}
