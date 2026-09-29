@@ -39,8 +39,8 @@ window.RB_FR = {
     note: "Se marie avec Jinx : défaussée par elle, cette unité revient sur le plateau pour 1 Essence runique."
   },
   "OGN-007/298": {
-    n: "Rune de fureur",
-    tx: "Rune du domaine Furie.",
+    n: "Rune de Furie",
+    tx: "Aucun texte de règles.",
     note: "L'épuiser donne 1 Énergie. La recycler donne 1 Essence runique de Furie."
   },
   "OGN-007a/298": {
@@ -224,8 +224,8 @@ window.RB_FR = {
     note: "Les 5 dégâts partent à l'ouverture de l'affrontement, avant les dégâts de combat : de quoi nettoyer les petites unités avant l'échange."
   },
   "OGN-042/298": {
-    n: "Rune de calme",
-    tx: "Rune du domaine Calme.",
+    n: "Rune de Calme",
+    tx: "Aucun texte de règles.",
     note: "L'épuiser donne 1 Énergie. La recycler donne 1 Essence runique de Calme."
   },
   "OGN-042a/298": {
@@ -466,8 +466,8 @@ window.RB_FR = {
     note: "8 Puissance nue pour 7 Énergie : une grosse masse sans mot-clé."
   },
   "OGN-089/298": {
-    n: "Rune d'esprit",
-    tx: "Rune du domaine Esprit.",
+    n: "Rune d'Esprit",
+    tx: "Aucun texte de règles.",
     note: "L'épuiser donne 1 Énergie. La recycler donne 1 Essence runique d'Esprit."
   },
   "OGN-089a/298": {
@@ -665,8 +665,8 @@ window.RB_FR = {
     tx: "Tant que je suis améliorée, j'ai Gank. (Je peux me déplacer d'un champ de bataille à un autre.)"
   },
   "OGN-126/298": {
-    n: "Rune de corps",
-    tx: "Rune du domaine Corps.",
+    n: "Rune de Corps",
+    tx: "Aucun texte de règles.",
     note: "L'épuiser donne 1 Énergie. La recycler donne 1 Essence runique de Corps."
   },
   "OGN-126a/298": {
@@ -876,8 +876,8 @@ window.RB_FR = {
     tx: "Quand tu me joues, reprends en main une unité de ta défausse."
   },
   "OGN-166/298": {
-    n: "Rune de chaos",
-    tx: "Rune du domaine Chaos.",
+    n: "Rune de Chaos",
+    tx: "Aucun texte de règles.",
     note: "L'épuiser donne 1 Énergie. La recycler donne 1 Essence runique de Chaos."
   },
   "OGN-166a/298": {
@@ -987,6 +987,11 @@ window.RB_FR = {
   },
   "OGN-189/298": {
     n: "Kayn",
+    tx: "Gank. (Je peux me déplacer d'un champ de bataille à un autre.)\nSi je me suis déplacé deux fois ce tour-ci, je ne subis aucun dégât.",
+    note: "Deux déplacements le rendent intouchable pour le tour : il faut donc un second effet de déplacement en plus de son Gank."
+  },
+  "OGN-189/000": {
+    n: "Kayn, Libéré",
     tx: "Gank. (Je peux me déplacer d'un champ de bataille à un autre.)\nSi je me suis déplacé deux fois ce tour-ci, je ne subis aucun dégât.",
     note: "Deux déplacements le rendent intouchable pour le tour : il faut donc un second effet de déplacement en plus de son Gank."
   },
@@ -1123,8 +1128,8 @@ window.RB_FR = {
     note: "Jouée depuis sa position cachée, elle ne coûte rien et prend l'adversaire en plein affrontement."
   },
   "OGN-214/298": {
-    n: "Rune d'ordre",
-    tx: "Rune du domaine Ordre.",
+    n: "Rune d'Ordre",
+    tx: "Aucun texte de règles.",
     note: "L'épuiser donne 1 Énergie. La recycler donne 1 Essence runique d'Ordre."
   },
   "OGN-214a/298": {
@@ -1783,6 +1788,44 @@ window.RB_FR = {
     tx: "Action. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nDonne +2 Puissance à tes unités ce tour-ci.",
     note: "Toutes tes unités, partout sur le plateau, pas seulement celles engagées."
   },
+
+  /* ---------- RAD ---------- */
+  "RAD-179/167": {
+    n: "Aphelios, l'Exalté",
+    tx: "Quand tu m'attaches un Équipement, choisis un effet que tu n'as pas déjà choisi ce tour-ci —\n— redresse 2 runes ;\n— canalise 1 rune, épuisée ;\n— améliore une unité alliée. (Améliorer une unité : lui donner +1 Puissance si elle n'en a pas déjà une.)",
+    note: "Chaque Équipement attaché rouvre le choix, mais jamais le même effet deux fois dans le tour : il faut en attacher trois pour tout prendre."
+  },
+  "RAD-180/167": {
+    n: "Ezreal, le Fringant",
+    tx: "Quand j'attaque ou que je défends, inflige des dégâts égaux à ma Puissance à une unité ennemie présente ici. Je n'inflige pas de dégâts de combat.\n1 Essence runique d'Esprit : Action — déplace-moi vers ta base. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)",
+    note: "Il frappe en entrant en combat, pas à la répartition des dégâts : payé à temps, il tape puis repart sans jamais encaisser."
+  },
+  "RAD-181/167": {
+    n: "Yone, maître de lame",
+    tx: "Expert en armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Essence runique de moins, même s'il est déjà attaché ailleurs.)\nQuand je conquiers un champ de bataille que personne ne contrôlait, inflige des dégâts égaux à ma Puissance à une unité ennemie présente dans une base.",
+    note: "L'effet ne vaut que sur un endroit libre : reprendre un champ de bataille à l'adversaire ne le déclenche pas."
+  },
+  "RAD-182/167": {
+    n: "Kayn, Libéré",
+    tx: "Gank. (Je peux me déplacer d'un champ de bataille à un autre.)\nSi je me suis déplacé deux fois ce tour-ci, je ne subis aucun dégât.",
+    note: "Deux déplacements le rendent intouchable pour le tour : il faut donc un second effet de déplacement en plus de son Gank."
+  },
+  "RAD-183/167": {
+    n: "Sett, le Caïd",
+    tx: "Tank. (Les dégâts de combat doivent m'être assignés en premier.)\nJ'ai +1 Puissance pour chaque unité alliée améliorée présente sur mon champ de bataille.",
+    note: "Tank l'oblige à encaisser le premier, et les améliorations autour de lui le font grossir : plus il protège, plus il frappe fort."
+  },
+  "RAD-R02": {
+    n: "Rune de Calme",
+    tx: "Aucun texte de règles.",
+    note: "L'épuiser donne 1 Énergie. La recycler donne 1 Essence runique de Calme."
+  },
+  "RAD-R02a": {
+    n: "Rune de Calme",
+    tx: "Aucun texte de règles.",
+    note: "L'épuiser donne 1 Énergie. La recycler donne 1 Essence runique de Calme."
+  },
+
   "SFD-001/221": {
     n: "Contre toute attente",
     tx: "Réaction. (Se joue à tout moment, même avant qu'un sort ou une capacité ne se résolve.)\nDonne à une unité alliée présente sur un champ de bataille +2 Puissance ce tour-ci pour chaque unité ennemie présente au même endroit."
@@ -3536,7 +3579,7 @@ window.RB_FR = {
   },
   "UNL-079a/219": {
     n: "Diana",
-    tx: "Quand un affrontement commence ici, tu peux payer 1 Énergie. Si tu le fais, fais une Prédiction, puis révèle la première carte de ton deck principal : si c'est un sort, pioche-la.",
+    tx: "Quand un affrontement commence ici, tu peux payer 1 Énergie. Si tu le fais, fais une Prédiction, puis révèle la première carte de ton deck principal : si c'est un sort, pioche-la. (Faire une Prédiction : regarde la première carte de ton deck principal, tu peux la recycler.)",
     note: "La Prédiction sert justement à placer un sort sur le dessus avant de révéler : les deux moitiés fonctionnent ensemble."
   },
   "UNL-080/219": {
@@ -3890,7 +3933,7 @@ window.RB_FR = {
   },
   "UNL-145a/219": {
     n: "Pyke",
-    tx: "Caché.\nArrière-ligne. (Les dégâts de combat doivent m'être assignés en dernier.)\nUne fois par tour, quand une unité ennemie meurt alors que je suis sur un champ de bataille, crée un jeton d'équipement Or, épuisé."
+    tx: "Caché. (Me cacher maintenant pour 1 Essence runique, de n'importe quel domaine, afin de me révéler plus tard pour 0. Je gagne Réaction.)\nArrière-ligne. (Les dégâts de combat doivent m'être assignés en dernier.)\nUne fois par tour, quand une unité ennemie meurt alors que je suis sur un champ de bataille, crée un jeton d'équipement Or, épuisé. (Ce jeton a « Réaction — le tuer et l'épuiser : ajoute 1 Essence runique, de n'importe quel domaine. »)"
   },
   "UNL-146/219": {
     n: "Syndra",
@@ -3928,7 +3971,7 @@ window.RB_FR = {
   },
   "UNL-150a/219": {
     n: "Vex",
-    tx: "Protection. (L'adversaire doit payer 1 Essence runique de plus, de n'importe quel domaine, pour me choisir avec un sort ou une capacité.)\nQuand un adversaire joue une unité alors que je suis sur un champ de bataille, étourdis-la. Il ne peut pas la déplacer ce tour-ci."
+    tx: "Protection. (L'adversaire doit payer 1 Essence runique de plus, de n'importe quel domaine, pour me choisir avec un sort ou une capacité.)\nQuand un adversaire joue une unité alors que je suis sur un champ de bataille, étourdis-la. Il ne peut pas la déplacer ce tour-ci. (Elle n'inflige pas de dégâts de combat ce tour-ci.)"
   },
   "UNL-151/219": {
     n: "Soldat de Bandle",
@@ -4055,7 +4098,7 @@ window.RB_FR = {
   },
   "UNL-176a/219": {
     n: "Vi",
-    tx: "Embuscade. (Tu peux me jouer en Réaction sur un champ de bataille où tu as des unités.)\nQuand j'attaque, j'étourdis une unité ennemie présente ici.",
+    tx: "Embuscade. (Tu peux me jouer en Réaction sur un champ de bataille où tu as des unités.)\nQuand j'attaque, j'étourdis une unité ennemie présente ici. (Elle n'inflige pas de dégâts de combat ce tour-ci.)",
     note: "Embuscade permet de me jouer en Réaction, donc d'arriver en plein affrontement."
   },
   "UNL-177/219": {
@@ -4589,7 +4632,7 @@ window.RB_FR = {
   },
   "VEN-023a/166": {
     n: "Zed",
-    tx: "Tu peux défausser 1 carte en coût additionnel pour me jouer.\nQuand tu me joues, si tu as payé ce coût, crée un jeton d'unité Clone d'ombre de 0 Puissance.",
+    tx: "Tu peux défausser 1 carte en coût additionnel pour me jouer.\nQuand tu me joues, si tu as payé ce coût, crée un jeton d'unité Clone d'ombre de 0 Puissance. (Ce jeton a « Quand j'attaque, tu peux bannir une unité de ta défausse : si tu le fais, donne-moi Assaut 4 ce tour-ci. »)",
     note: "Le clone à 0 Puissance ne frappe pas, mais il occupe une place : il sert à contester un champ de bataille ou à absorber des dégâts."
   },
   "VEN-024/166": {
@@ -5063,7 +5106,7 @@ window.RB_FR = {
   },
   "VEN-113a/166": {
     n: "Kennen",
-    tx: "Quand tu me joues, subis Brûler 2. (Mets les 2 premières cartes de ton deck principal dans ta défausse.)\nQuand je conquiers, donne à un sort de ta défausse le mot-clé Flux pour un coût égal au sien, ce tour-ci.",
+    tx: "Quand tu me joues, subis Brûler 2. (Mets les 2 premières cartes de ton deck principal dans ta défausse.)\nQuand je conquiers, donne à un sort de ta défausse le mot-clé Flux pour un coût égal au sien, ce tour-ci. (Tu peux le jouer depuis ta défausse pour ce coût de Flux, puis il est banni.)",
     note: "La brûlure remplit ta propre défausse, puis la conquête te permet d'y rejouer un sort : les deux moitiés se répondent."
   },
   "VEN-114/166": {
@@ -5172,7 +5215,7 @@ window.RB_FR = {
   },
   "VEN-135a/166": {
     n: "Kennen",
-    tx: "Caché.\nQuand tu me joues ou que j'attaque, tu peux payer 2 Énergie pour étourdir une unité.\nTant qu'une unité ennemie étourdie est présente ici, j'ai +2 Puissance.",
+    tx: "Caché. (Me cacher maintenant pour 1 Essence runique, de n'importe quel domaine, afin de me révéler plus tard pour 0. Je gagne Réaction.)\nQuand tu me joues ou que j'attaque, tu peux payer 2 Énergie pour étourdir une unité. (Elle n'inflige pas de dégâts de combat ce tour-ci.)\nTant qu'une unité ennemie étourdie est présente ici, j'ai +2 Puissance.",
     note: "L'unité étourdie encaisse quand même les dégâts : elle n'en inflige simplement aucun."
   },
   "VEN-136/166": {

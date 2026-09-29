@@ -10,9 +10,9 @@ window.Extension = (function(){
   var DOSSIER = REPO + "/tree/main/extension";
 
   var ATOUTS = [
-    { t:"Les 1189 cartes",
+    { t:"Les 1197 cartes",
       s:"Nom, texte de règles et, sur les cartes qui le méritent, une note qui explique le piège. " +
-        "Tout le jeu est couvert : Origins, Proving Grounds, Spiritforged, Unleashed et Vendetta." },
+        "Tout le jeu est couvert : Origins, Proving Grounds, Spiritforged, Unleashed, Vendetta et Radiance." },
     { t:"La terminologie officielle",
       s:"Essence runique, Puissance, Agonie, Amplification, Protection… les termes retenus sont ceux " +
         "de la version française du jeu, pas une traduction maison." },
@@ -78,9 +78,9 @@ window.Extension = (function(){
           '<p class="xt-dl-sub">Archive du projet · installation en 5 minutes, une seule fois</p>' +
         '</div>' +
         '<ul class="xt-facts">' +
-          '<li><b>1189</b> cartes traduites</li>' +
-          '<li><b>1637</b> notes explicatives</li>' +
-          '<li><b>5</b> extensions couvertes</li>' +
+          '<li><b>1197</b> cartes traduites</li>' +
+          '<li><b>969</b> rappels de règles</li>' +
+          '<li><b>834</b> notes explicatives</li>' +
           '<li><b>0</b> donnée envoyée</li>' +
         '</ul>' +
       '</section>' +

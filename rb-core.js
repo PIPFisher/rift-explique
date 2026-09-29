@@ -289,6 +289,17 @@ window.RB = (function(){
   }
 
   // Découpe une ligne en segments hors/dans parenthèses, n'habille que le hors-parenthèses.
+  // Trouve la parenthèse fermante correspondante, et non la première venue :
+  // « (… (de n'importe quel domaine) …) » doit être pris d'un bloc.
+  function fermanteDe(line, open){
+    var profondeur = 0;
+    for(var k = open; k < line.length; k++){
+      if(line[k] === "(") profondeur++;
+      else if(line[k] === ")" && --profondeur === 0) return k;
+    }
+    return -1;
+  }
+
   function frLineHTML(line, card){
     // les fragments sont traités de gauche à droite : le compteur suit les
     // coûts en essence runique dans le même ordre que le repérage ci-dessus
@@ -297,7 +308,7 @@ window.RB = (function(){
     while(i < n){
       var open = line.indexOf("(", i);
       if(open === -1){ out += markResources(markKeywords(esc(line.slice(i))), card, etat); break; }
-      var close = line.indexOf(")", open);
+      var close = fermanteDe(line, open);
       if(close === -1){ out += markResources(markKeywords(esc(line.slice(i))), card, etat); break; }
       out += markResources(markKeywords(esc(line.slice(i, open))), card, etat);
       var inner = line.slice(open + 1, close);
@@ -309,7 +320,8 @@ window.RB = (function(){
     }
     // le point qui précède un rappel devient inutile, le retrait le remplace
     out = out.replace(/\.(\s*)(<span class="fr-rem)/g, "$1$2");
-    out = out.replace(/(<\/(?:b|span)>)\.\s*$/, "$1");
+    // (pas de retrait du point final ici : il mangeait le point des lignes
+    // qui se terminent par un mot-clé, « … ont Bouclier. » par exemple)
     return out;
   }
 
