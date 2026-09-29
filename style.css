@@ -70,10 +70,8 @@ a{color:var(--gold-soft)}
 .brand:active:not(:disabled){transform:none}
 .brand:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 .brand-mark{
-  width:16px;height:16px;flex:none;
-  background:linear-gradient(135deg,var(--gold),#8A5F1E);
-  transform:rotate(45deg);
-  border-radius:2px;
+  width:21px;height:21px;flex:none;
+  transition:filter .15s;
 }
 .brand-name{
   font-family:var(--serif);font-weight:700;font-size:17px;letter-spacing:.02em;
