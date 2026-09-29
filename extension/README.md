@@ -60,28 +60,32 @@ jouer.
 
 ## Les trois gestes
 
+Chaque geste répond à **deux touches** : `²` (au-dessus de Tab) et `F2`. La
+première est la plus rapide sur un clavier français ; la seconde existe et
+porte le même nom sur tous les claviers.
+
 | Touche | Effet |
 |---|---|
-| **`²`** (au-dessus de Tab) | Coupe et rallume les traductions |
-| **`*`** (à droite d'Entrée) ou **`Maj`+`²`** | Bascule entre panneau complet et texte de la carte seul |
-| **`Ctrl`+`²`** | Fige le panneau sur place et le rend cliquable |
+| **`²`** ou **`F2`** | Coupe et rallume les traductions |
+| **`Maj`+`²`** / **`Maj`+`F2`**, ou **`*`** (à droite d'Entrée) | Bascule entre panneau complet et texte de la carte seul |
+| **`Ctrl`+`²`** / **`Ctrl`+`F2`** | Fige le panneau sur place et le rend cliquable |
 
-**`²`** fait tout disparaître : le panneau, les pastilles FR et les liserés
+**`²`** (ou `F2`) fait tout disparaître : le panneau, les pastilles FR et les liserés
 dorés.
 
-**`Maj`+`²`** ne coupe rien, il allège. Par défaut le panneau explique : chaque
+**`Maj`+`²`** (ou `Maj`+`F2`) ne coupe rien, il allège. Par défaut le panneau explique : chaque
 mot-clé est suivi de son rappel de règles entre parenthèses, et les cartes
 difficiles portent une note. En mode sobre, ces deux choses disparaissent et il
 ne reste que le texte de la carte, traduit — ce que lit quelqu'un qui connaît
 déjà ses cartes et veut juste aller vite.
 
-**`Ctrl`+`²`** cloue le panneau où il est. Normalement il suit la souris et
+**`Ctrl`+`²`** (ou `Ctrl`+`F2`) cloue le panneau où il est. Normalement il suit la souris et
 disparaît dès qu'on quitte la carte, ce qui rend le lien vers le site
 inatteignable : le panneau laisse passer les clics, pour ne jamais bloquer le
 plateau. Figé, il reste en place, reprend les clics et son lien devient
 cliquable. Un liseré doré et un rappel sous le panneau signalent l'état.
 
-On en sort par **`Échap`**, par **`Ctrl`+`²`** à nouveau, ou simplement en
+On en sort par **`Échap`**, par le même raccourci à nouveau, ou simplement en
 cliquant ailleurs — ce clic-là atteint quand même ce qu'il visait, donc rien
 n'est jamais bloqué. Le panneau se libère aussi tout seul dès qu'on clique sur
 son lien, et l'état n'est jamais retenu d'une session à l'autre.
@@ -92,10 +96,13 @@ retenus d'une partie à l'autre, séparément.
 Les touches sont ignorées pendant que tu écris, donc elles ne gênent pas le
 chat du simulateur.
 
-Pour en changer, modifier `config.toggleKey` et `config.modeKey` dans
-`fr.json` avec un code de touche (`"KeyT"`, `"F2"`, `"Backslash"`…). C'est un
-code de **position**, pas de caractère : il vaut pour toutes les dispositions
-de clavier. `Maj`+`²` reste toujours valable comme raccourci de mode.
+Pour en changer, modifier `config.toggleKey` (la touche principale),
+`config.altKey` (sa doublure) et `config.modeKey` dans `fr.json`, avec un code
+de touche (`"KeyT"`, `"F2"`, `"Backslash"`…). C'est un code de **position**,
+pas de caractère : `Backquote` désigne la touche au-dessus de Tab, quelle que
+soit la lettre imprimée dessus. Mettre `config.altKey` à `""` supprime la
+seconde touche. `Maj` et `Ctrl` restent toujours valables sur l'une comme sur
+l'autre.
 
 Pour le fixer à un bord de l'écran plutôt qu'à côté de la carte, changer
 `config.side` dans `fr.json` : `"auto"` (par défaut), `"left"` ou `"right"`.

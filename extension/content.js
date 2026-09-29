@@ -11,7 +11,7 @@
   "use strict";
 
   var REMOTE = "https://pipfisher.github.io/rift-explique/fr.json";
-  var VERSION = "1.15.0";
+  var VERSION = "1.16.0";
 
   // Reprise après un rechargement de l'extension. Chrome laisse l'ancien
   // script tourner dans les onglets déjà ouverts : le service worker nous
@@ -38,6 +38,11 @@
   // Isolée, atteignable de la main gauche, et revendiquée par aucun site.
   // Modifiable via config.toggleKey dans fr.json (code clavier, ex. "KeyT").
   var TOUCHE = "Backquote";
+  // Même chose sur F2. Backquote est un code de *position* : la touche existe
+  // presque partout, mais elle ne porte « ² » que sur un clavier français, et
+  // certains portables ne l'ont pas. F2 est lisible sur tous les claviers,
+  // ne sert à rien dans le navigateur, et se trouve au même endroit partout.
+  var TOUCHE_BIS = "F2";
   var ACTIF = true;
   // Deuxième touche : bascule entre le panneau complet (rappels de règles
   // entre parenthèses + note explicative) et le panneau sobre, qui ne montre
@@ -66,8 +71,15 @@
     if (c.side === "auto" || c.side === "left" || c.side === "right") SIDE = c.side;
     if (typeof c.toggleKey === "string" && c.toggleKey) TOUCHE = c.toggleKey;
     if (typeof c.modeKey === "string" && c.modeKey) MODE_TOUCHE = c.modeKey;
-    // deux fois la même touche rendrait l'interrupteur inatteignable
-    if (MODE_TOUCHE === TOUCHE) MODE_TOUCHE = null;
+    if (typeof c.altKey === "string") TOUCHE_BIS = c.altKey || null;
+    // deux fois la même touche rendrait l'un des gestes inatteignable
+    if (TOUCHE_BIS === TOUCHE) TOUCHE_BIS = null;
+    if (MODE_TOUCHE === TOUCHE || MODE_TOUCHE === TOUCHE_BIS) MODE_TOUCHE = null;
+  }
+
+  // la touche principale, dans l'une ou l'autre de ses deux positions
+  function estPrincipale(code) {
+    return code === TOUCHE || (TOUCHE_BIS && code === TOUCHE_BIS);
   }
 
   /* ---------------- interrupteur clavier ---------------- */
@@ -164,17 +176,20 @@
     // on ne vole pas les touches pendant qu'on écrit (le chat du simulateur)
     if (saisieEnCours(e.target) || saisieEnCours(document.activeElement)) return;
 
-    if (e.key === "Escape" && FIGE) { e.preventDefault(); libere(); return; }
+    if ((e.key === "Escape" || e.code === "Escape") && FIGE) {
+      e.preventDefault(); libere(); return;
+    }
 
     var nu      = !e.ctrlKey && !e.altKey && !e.metaKey && !e.shiftKey;
     var majSeul = e.shiftKey && !e.ctrlKey && !e.altKey && !e.metaKey;
     var ctrlSeul= e.ctrlKey && !e.shiftKey && !e.altKey && !e.metaKey;
 
-    var surToggle = (e.code === TOUCHE && nu);
-    // Maj + ² sert d'alias au changement de mode : une seule touche à retenir
+    var principale = estPrincipale(e.code);
+    var surToggle = (principale && nu);
+    // Maj + la touche sert d'alias au changement de mode : une seule à retenir
     var surMode   = (MODE_TOUCHE && e.code === MODE_TOUCHE && nu) ||
-                    (e.code === TOUCHE && majSeul);
-    var surFige   = (e.code === TOUCHE && ctrlSeul);
+                    (principale && majSeul);
+    var surFige   = (principale && ctrlSeul);
 
     if (!surToggle && !surMode && !surFige) return;
     e.preventDefault();
@@ -685,8 +700,10 @@
       console.log("[Riftbound FR] " + VERSION +
         " · placement : " + (SIDE === "auto" ? "à gauche de la carte" : "ancré à " + SIDE) +
         " · " + Object.keys((DATA && DATA.byCode) || {}).length + " entrées" +
-        " · " + TOUCHE + " : afficher/masquer" + (ACTIF ? "" : " (éteint)") +
-        " · " + (MODE_TOUCHE || "Maj+" + TOUCHE) + " : complet/sobre" + (SOBRE ? " (sobre)" : ""));
+        " · " + TOUCHE + (TOUCHE_BIS ? " ou " + TOUCHE_BIS : "") + " : afficher/masquer" +
+        (ACTIF ? "" : " (éteint)") +
+        " · " + (MODE_TOUCHE || "Maj+" + TOUCHE) + " : complet/sobre" + (SOBRE ? " (sobre)" : "") +
+        " · Ctrl+" + TOUCHE + " : figer");
     } catch (e) {}
   });
 })();

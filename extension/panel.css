@@ -258,7 +258,7 @@ img.rbfr-img-has{
   box-shadow: 0 0 0 3px rgba(240,206,134,.22), 0 24px 50px -20px rgba(0,0,0,.85);
 }
 .rbfr-panel.rbfr-fige::after{
-  content: "Échap ou Ctrl + ² pour libérer";
+  content: "Échap pour libérer";
   display: block;
   margin-top: 9px;
   padding-top: 7px;
