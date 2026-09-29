@@ -11,7 +11,7 @@
   "use strict";
 
   var REMOTE = "https://pipfisher.github.io/rift-explique/fr.json";
-  var VERSION = "1.18.0";
+  var VERSION = "1.18.1";
 
   // Reprise après un rechargement de l'extension. Chrome laisse l'ancien
   // script tourner dans les onglets déjà ouverts : le service worker nous
@@ -689,16 +689,33 @@
 
   /* ---------------- fiche détaillée (base de cartes) ---------------- */
 
+  // Rift Atlas dessine deux fois son titre : une version pour le téléphone,
+  // une pour l'écran large, et masque celle qui ne sert pas. Prendre le
+  // premier h1 venu, c'est une chance sur deux de se greffer sur la branche
+  // masquée — le panneau existe alors, correct, mais invisible.
+  function titreVisible() {
+    var h1s = document.querySelectorAll("h1");
+    for (var i = 0; i < h1s.length; i++) {
+      if (h1s[i].offsetParent !== null || h1s[i].getBoundingClientRect().width > 0) return h1s[i];
+    }
+    return h1s[0] || null;
+  }
+
   function injectDetail() {
     if (!ACTIF || INGAME || !/^\/card\//.test(location.pathname)) return;
-    var h1 = document.querySelector("h1");
+    var h1 = titreVisible();
     if (!h1) return;
     var code = codeFromHref(location.pathname);
     var old = document.querySelector(".rbfr-inline");
     // idempotent : déjà en place pour cette carte, il n'y a rien à refaire.
     // C'est ce qui permet de le rappeler en boucle pour rattraper une page
-    // lente, sans reconstruire le panneau à chaque passage.
-    if (old && old.dataset.code === code) return;
+    // lente, sans reconstruire le panneau à chaque passage. Une exception :
+    // s'il a fini dans une branche masquée — page réorganisée après coup —
+    // il faut le replacer, sinon il reste invisible pour toujours.
+    if (old && old.dataset.code === code) {
+      if (old.offsetParent !== null || old.getBoundingClientRect().height > 0) return;
+      if (old.parentElement === h1.parentElement) return;  // rien de mieux à proposer
+    }
     if (old) old.remove();
     var box = document.createElement("section");
     box.dataset.code = code || "";
