@@ -23,18 +23,19 @@ window.Extension = (function(){
       s:"Sarcelle pour la façon de jouer la carte, vert pour ses capacités, rose pour son rôle au combat. " +
         "Les rappels de règles passent en petit et en retrait : le regard va d'abord à l'effet." },
     { t:"Une touche pour tout couper",
-      s:"La touche « ² » éteint et rallume les traductions en pleine partie. Panneau, pastilles et " +
-        "liserés disparaissent d'un coup. L'état est retenu d'une partie à l'autre." },
+      s:"La touche « ² » — ou « F2 », pour les claviers qui n'ont pas de « ² » — éteint et rallume " +
+        "les traductions en pleine partie. Panneau, pastilles et liserés disparaissent d'un coup. " +
+        "L'état est retenu d'une partie à l'autre." },
     { t:"Attraper le panneau au vol",
       s:"Le panneau suit la souris et laisse passer les clics, pour ne jamais gêner le plateau. " +
-        "« Ctrl&nbsp;+&nbsp;² » le fige où il est et lui rend les clics, le temps d'ouvrir le lien " +
+        "« Ctrl&nbsp;+&nbsp;² » — ou « Ctrl&nbsp;+&nbsp;F2 » — le fige où il est et lui rend les clics, le temps d'ouvrir le lien " +
         "vers ce site. On en sort par Échap, ou en cliquant ailleurs — et ce clic-là atteint quand " +
         "même ce qu'il visait." },
     { t:"Débutant ou habitué, au choix",
       s:"Par défaut, le panneau explique : chaque mot-clé est suivi de son rappel de règles, et " +
         "les cartes retorses reçoivent une note. Quand tu connais tes cartes, « Maj&nbsp;+&nbsp;² » " +
-        "range tout ça et ne laisse que le texte de la carte, traduit. Une seule ligne par effet, " +
-        "rien à survoler en trop." },
+        "(ou « Maj&nbsp;+&nbsp;F2 ») range tout ça et ne laisse que le texte de la carte, traduit. " +
+        "Une seule ligne par effet, rien à survoler en trop." },
     { t:"Mise à jour automatique",
       s:"Les traductions sont relues depuis ce site une fois par jour. Une correction publiée ici " +
         "arrive chez toi sans rien réinstaller." }
