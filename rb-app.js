@@ -126,6 +126,10 @@
     if(b) show(b.dataset.view);
   });
 
+  // le titre mène à l'extension : c'est ce qu'on vient chercher en premier
+  var brand = document.getElementById("brand");
+  if(brand) brand.addEventListener("click", function(){ show("extension"); });
+
   document.addEventListener("click", function(e){
     if(e.target.closest("[data-close]")){ closeModal(); return; }
 

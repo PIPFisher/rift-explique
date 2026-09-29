@@ -25,6 +25,11 @@ window.Extension = (function(){
     { t:"Une touche pour tout couper",
       s:"La touche « ² » éteint et rallume les traductions en pleine partie. Panneau, pastilles et " +
         "liserés disparaissent d'un coup. L'état est retenu d'une partie à l'autre." },
+    { t:"Attraper le panneau au vol",
+      s:"Le panneau suit la souris et laisse passer les clics, pour ne jamais gêner le plateau. " +
+        "« Ctrl&nbsp;+&nbsp;² » le fige où il est et lui rend les clics, le temps d'ouvrir le lien " +
+        "vers ce site. On en sort par Échap, ou en cliquant ailleurs — et ce clic-là atteint quand " +
+        "même ce qu'il visait." },
     { t:"Débutant ou habitué, au choix",
       s:"Par défaut, le panneau explique : chaque mot-clé est suivi de son rappel de règles, et " +
         "les cartes retorses reçoivent une note. Quand tu connais tes cartes, « Maj&nbsp;+&nbsp;² » " +

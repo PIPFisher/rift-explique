@@ -59,7 +59,16 @@ a{color:var(--gold-soft)}
   display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;
   padding:10px 16px;
 }
-.brand{display:flex;align-items:center;gap:9px}
+/* le titre est un bouton (il mène à l'onglet Extension) : on efface tout
+   l'habillage que la règle générale des boutons lui donnerait */
+.brand{display:flex;align-items:center;gap:9px;
+  font-family:inherit;font-size:inherit;letter-spacing:normal;text-transform:none;
+  background:none;border:none;border-radius:4px;padding:2px 4px;margin:-2px -4px;
+  color:var(--text);cursor:pointer;transition:color .18s}
+.brand:hover:not(:disabled){background:none;border-color:transparent;color:var(--gold-soft)}
+.brand:hover .brand-mark{filter:brightness(1.25)}
+.brand:active:not(:disabled){transform:none}
+.brand:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 .brand-mark{
   width:16px;height:16px;flex:none;
   background:linear-gradient(135deg,var(--gold),#8A5F1E);
