@@ -404,21 +404,41 @@
       .replace(/(\d+) XP/g, '<b class="rbfr-r">$1&nbsp;XP</b>');
   }
 
+  // Trouve la parenthèse fermante qui correspond à celle ouverte en `open`,
+  // et non la première venue : « (… (de n'importe quel domaine) …) » doit
+  // être pris d'un bloc.
+  function fermanteDe(line, open) {
+    var profondeur = 0;
+    for (var k = open; k < line.length; k++) {
+      if (line[k] === "(") profondeur++;
+      else if (line[k] === ")" && --profondeur === 0) return k;
+    }
+    return -1;
+  }
+
   // n'habille que le texte hors parenthèses ; le rappel passe en retrait
   function lineHTML(line, doms) {
     // les fragments sont traités de gauche à droite : le compteur suit les
     // coûts en essence runique dans le même ordre que le repérage ci-dessus
     var etat = { runes: scanRunes(line), i: 0 };
+    // une ligne entièrement entre parenthèses est le texte de la carte, pas
+    // un commentaire : elle doit rester lisible même en mode sobre
+    var seul = /^\s*\(.*\)\s*$/.test(line) && fermanteDe(line, line.indexOf("(")) === line.lastIndexOf(")");
     var out = "", i = 0, n = line.length;
     while (i < n) {
       var open = line.indexOf("(", i);
       if (open === -1) { out += markResources(markKeywords(esc(line.slice(i))), doms, etat); break; }
-      var close = line.indexOf(")", open);
+      var close = fermanteDe(line, open);
       if (close === -1) { out += markResources(markKeywords(esc(line.slice(i))), doms, etat); break; }
-      out += markResources(markKeywords(esc(line.slice(i, open))), doms, etat);
+      var avant = line.slice(i, open);
+      // l'espace qui précède le rappel part avec lui : sans cela, le masquer
+      // laisserait un trou au milieu de la phrase
+      var espace = /\s$/.test(avant) ? " " : "";
+      out += markResources(markKeywords(esc(avant.replace(/\s+$/, ""))), doms, etat);
       var terminal = line.slice(close + 1).trim() === "";
       // le rappel garde ses mots, mais reçoit les mêmes pictogrammes
-      out += '<span class="rbfr-rem' + (terminal ? " rbfr-rem-b" : "") + '">' +
+      out += '<span class="rbfr-rem' + (terminal ? " rbfr-rem-b" : "") +
+        (seul ? " rbfr-rem-seul" : "") + '">' + espace +
         markResources(esc(line.slice(open + 1, close)), doms, etat) + "</span>";
       i = close + 1;
     }
@@ -426,7 +446,6 @@
     // mais indispensable quand il est masqué en mode sobre. On le garde donc
     // dans le balisage, caché par défaut, rendu visible par le mode sobre.
     out = out.replace(/\.(\s*)(<span class="rbfr-rem)/g, '<span class="rbfr-dot">.</span>$1$2');
-    out = out.replace(/(<\/(?:b|span)>)\.\s*$/, "$1");
     return out;
   }
 

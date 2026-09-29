@@ -242,4 +242,8 @@ img.rbfr-img-has{
 .rbfr-dot{ display: none; }
 .rbfr-sobre .rbfr-rem,
 .rbfr-sobre .rbfr-note{ display: none !important; }
+/* une ligne entièrement entre parenthèses est le texte de la carte :
+   elle reste, et reprend l'allure du texte normal */
+.rbfr-sobre .rbfr-rem-seul{ display: inline !important;
+  color: inherit; font-size: inherit; line-height: inherit; }
 .rbfr-sobre .rbfr-dot{ display: inline; }
