@@ -31,6 +31,12 @@ Clic droit sur le fichier téléchargé → *Extraire tout*. Tu obtiens un dossi
 
 Va sur [riftatlas.com/cards](https://riftatlas.com/cards) et passe la souris sur une carte : un panneau doit s'ouvrir avec la traduction.
 
+> **Ne déplace plus ce dossier après l'avoir chargé, et ne le supprime pas.**
+> Chrome ne copie pas l'extension : il garde le chemin du dossier et relit les
+> fichiers à chaque démarrage. Le déplacer, le renommer ou vider son dossier de
+> téléchargements désactive l'extension sans prévenir. Range-le une bonne fois
+> quelque part de durable avant de le charger.
+
 > Chrome affichera un bandeau « Désactiver les extensions en mode développeur » à chaque démarrage. C'est normal pour une extension installée ainsi, il suffit de le fermer. Ne clique pas sur « Désactiver ».
 
 ---
@@ -147,7 +153,19 @@ Dans le simulateur, les visuels de cartes ne reçoivent pas les événements de 
 
 ## Vie privée
 
-L'extension **n'envoie aucune donnée** et ne modifie pas le contenu des sites : elle ajoute uniquement un panneau de lecture par-dessus. Sa seule requête sortante va chercher le fichier de traductions sur `pipfisher.github.io`.
+L'extension **ne collecte rien, ne mesure rien, n'envoie nulle part ce que tu
+fais** : pas de compte, pas de statistiques, pas de suivi. Elle ne modifie pas
+non plus le contenu des sites, elle ajoute un panneau de lecture par-dessus.
+
+Deux requêtes sortantes, à connaître pour que ce soit dit honnêtement :
+
+- le fichier de traductions, sur `pipfisher.github.io` — une fois par jour ;
+- les pictogrammes officiels (énergie, runes, puissance), servis par le serveur
+  de Riot `assetcdn.rgpub.io` au moment où un panneau s'affiche.
+
+Comme toute requête web, elles font connaître ton adresse IP à GitHub et à Riot.
+Rien d'autre n'est transmis, et rien ne dit à ces serveurs quelle carte tu
+consultes.
 
 ## Licence et mentions
 

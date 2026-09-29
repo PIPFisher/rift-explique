@@ -11,7 +11,7 @@
   "use strict";
 
   var REMOTE = "https://pipfisher.github.io/rift-explique/fr.json";
-  var VERSION = "1.16.0";
+  var VERSION = "1.17.0";
 
   // Reprise après un rechargement de l'extension. Chrome laisse l'ancien
   // script tourner dans les onglets déjà ouverts : le service worker nous
@@ -69,9 +69,16 @@
     // "auto" : le panneau suit la carte survolée. "left"/"right" : il reste
     // collé à ce bord de l'écran, comme avant.
     if (c.side === "auto" || c.side === "left" || c.side === "right") SIDE = c.side;
-    if (typeof c.toggleKey === "string" && c.toggleKey) TOUCHE = c.toggleKey;
-    if (typeof c.modeKey === "string" && c.modeKey) MODE_TOUCHE = c.modeKey;
-    if (typeof c.altKey === "string") TOUCHE_BIS = c.altKey || null;
+    // Le fichier de traductions est distant : il ne doit pas pouvoir confisquer
+    // n'importe quelle touche du clavier. Seules ces positions sont acceptées.
+    function toucheValide(v) {
+      return typeof v === "string" &&
+        /^(F([1-9]|1[0-2])|Backquote|Backslash|Bracket(Left|Right)|Semicolon|Quote|Comma|Period|Slash|Minus|Equal|Insert|Home|End|PageUp|PageDown)$/.test(v);
+    }
+    if (toucheValide(c.toggleKey)) TOUCHE = c.toggleKey;
+    if (toucheValide(c.modeKey)) MODE_TOUCHE = c.modeKey;
+    if (c.altKey === "") TOUCHE_BIS = null;
+    else if (toucheValide(c.altKey)) TOUCHE_BIS = c.altKey;
     // deux fois la même touche rendrait l'un des gestes inatteignable
     if (TOUCHE_BIS === TOUCHE) TOUCHE_BIS = null;
     if (MODE_TOUCHE === TOUCHE || MODE_TOUCHE === TOUCHE_BIS) MODE_TOUCHE = null;
@@ -220,16 +227,28 @@
   // Structure de fr.json attendue par cette version du script.
   // 2 : chaque entrée porte son domaine (d), pour choisir la bonne rune.
   var SCHEMA = 2;
-  function utilisable(d) { return d && d.byCode && (d.schema || 0) >= SCHEMA; }
+  function utilisable(d) {
+    return !!d && typeof d === "object" &&
+           d.byCode && typeof d.byCode === "object" &&
+           d.byName && typeof d.byName === "object" &&
+           (d.schema || 0) >= SCHEMA &&
+           Object.keys(d.byCode).length > 100;
+  }
 
   async function load() {
     // La copie embarquée suit forcément la structure de ce script : elle sert
     // de base tant qu'une copie distante plus récente n'a pas été validée.
+    var cached = await fromCache();
+    if (utilisable(cached)) {
+      // le cache vaut 24 h : ni relecture de la copie embarquée (1 Mo à
+      // analyser), ni retéléchargement à chaque page visitée
+      DATA = cached;
+      return;
+    }
     var locale = null;
     try { locale = await fetch(chrome.runtime.getURL("fr.json")).then(function (r) { return r.json(); }); }
     catch (e) {}
-    var cached = await fromCache();
-    DATA = utilisable(cached) ? cached : (locale || { byCode: {}, byName: {} });
+    DATA = locale || { byCode: {}, byName: {} };
     fetch(REMOTE, { cache: "no-cache" })
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (fresh) {
@@ -260,7 +279,7 @@
       var base = code.replace(/[A-Za-z]$/, "").toUpperCase();   // OGN-004A → OGN-004
       if (DATA.byCode[base]) return DATA.byCode[base];
     }
-    if (name && DATA.byName[name.toLowerCase()]) return DATA.byName[name.toLowerCase()];
+    if (name && DATA.byName && DATA.byName[name.toLowerCase()]) return DATA.byName[name.toLowerCase()];
     return null;
   }
 
@@ -327,7 +346,8 @@
 
   function esc(s) {
     return String(s == null ? "" : s)
-      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
   }
 
   /* ---------------- mise en forme du texte -------------------
@@ -619,6 +639,7 @@
 
   function refreshMarks() {
     if (!DATA || !ACTIF) return;
+    if (document.hidden) return;   // onglet en arrière-plan : rien à marquer
     document.querySelectorAll('a[href*="/card/"]').forEach(function (a) {
       var has = !!lookup(codeFromHref(a.getAttribute("href")), (a.querySelector("img") || {}).alt);
       a.classList.toggle("rbfr-has", has);
@@ -652,6 +673,8 @@
     if (!ACTIF || FIGE) return;
     var card = cardAt(e.target, e.clientX, e.clientY);
     if (!card || !card.code) {
+      // sans ça, un panneau demandé puis quitté s'ouvre quand même, tout seul
+      if (timer) { clearTimeout(timer); timer = null; }
       if (panel && panel.style.display !== "none") hide();
       return;
     }
@@ -660,9 +683,9 @@
     if (timer) clearTimeout(timer);
     if (!DELAY) { show(card, x, y); return; }
     timer = setTimeout(function () { show(card, x, y); }, DELAY);
-  }, true);
+  }, { capture: true, passive: true });
 
-  document.addEventListener("scroll", hide, true);
+  document.addEventListener("scroll", hide, { capture: true, passive: true });
   document.addEventListener("mouseleave", hide);
   window.addEventListener("blur", hide);
 
