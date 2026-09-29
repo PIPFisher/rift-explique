@@ -21,7 +21,8 @@ window.RB = (function(){
   };
   var SET_FR = {
     "Origins":"Origins", "Proving Grounds":"Proving Grounds",
-    "Spiritforged":"Spiritforged", "Unleashed":"Unleashed", "Vendetta":"Vendetta"
+    "Spiritforged":"Spiritforged", "Unleashed":"Unleashed", "Vendetta":"Vendetta",
+    "Radiance":"Radiance"
   };
 
   /* ---------- lexique des mots-clés ----------
@@ -35,19 +36,19 @@ window.RB = (function(){
     "Deflect":     {fr:"Protection",    txt:"L'adversaire doit payer 1 Essence runique de plus, de n'importe quel domaine, pour la choisir avec un sort ou une capacité."},
     "Ganking":     {fr:"Gank",          txt:"Peut se déplacer d'un champ de bataille à un autre."},
     "Assault":     {fr:"Assaut",        txt:"+1 Puissance (ou plus) tant qu'elle est attaquante."},
-    "Shield":      {fr:"Bouclier",      txt:"+2 Puissance (ou plus) tant qu'elle est défenseuse."},
+    "Shield":      {fr:"Bouclier",      txt:"+1 Puissance (ou plus) tant qu'elle est défenseuse."},
     "Accelerate":  {fr:"Accélération",  txt:"Tu peux payer un coût additionnel pour qu'elle arrive prête au lieu d'épuisée."},
-    "Empower":     {fr:"Amplification",  txt:"Paie le coût indiqué pour l'amplifier. Utilisable seulement si elle ne l'est pas déjà. L'état est permanent."},
+    "Empower":     {fr:"Amplification",  txt:"Paie le coût indiqué pour l'amplifier. Utilisable seulement si elle ne l'est pas déjà. Certaines cartes peuvent retirer l'amplification."},
     "Empowered":   {fr:"Amplifié",       txt:"Effet actif uniquement tant que l'unité est amplifiée."},
     "Equip":       {fr:"Équiper",       txt:"Coût à payer pour attacher un Équipement à une unité que tu contrôles."},
     "Weaponmaster":{fr:"Expert en armes",txt:"Quand tu la joues, tu peux lui attacher un de tes Équipements pour 1 Essence runique de moins, même s'il est déjà attaché ailleurs."},
-    "Deathknell":  {fr:"Agonie",         txt:"Effet qui se déclenche quand l\'unité meurt ; certaines cartes exigent en plus qu\'elle soit amplifiée."},
+    "Deathknell":  {fr:"Agonie",         txt:"Effet qui se déclenche quand la carte meurt. Présent sur les unités comme sur les équipements."},
     "Temporary":   {fr:"Temporaire",    txt:"Meurt au début de la phase initiale de son contrôleur, avant le score."},
     "Legion":      {fr:"Légion",        txt:"Effet obtenu si tu as déjà joué une autre carte ce tour-ci."},
     "Vision":      {fr:"Vision",        txt:"Regarde la première carte de ton deck principal. Tu peux la recycler."},
     "Predict":     {fr:"Prédiction",    txt:"Regarde la première carte de ton deck principal. Tu peux la recycler."},
-    "Hunt":        {fr:"Chasse",        txt:"Quand elle conquiert ou tient un champ de bataille, gagne 2 XP."},
-    "Repeat":      {fr:"Répétition",    txt:"Tu peux payer le coût additionnel pour répéter l'effet du sort. Les choix se font au lancement."},
+    "Hunt":        {fr:"Chasse",        txt:"Quand elle conquiert ou tient un champ de bataille, gagne 1 XP (ou plus)."},
+    "Repeat":      {fr:"Répétition",    txt:"Tu peux payer le coût additionnel pour répéter l'effet du sort. Les choix de la seconde exécution se font à la résolution et peuvent être différents."},
     "Ambush":      {fr:"Embuscade",     txt:"Peut être jouée en Réaction sur un champ de bataille où tu as des unités."},
     "Stun":        {fr:"Étourdissement",txt:"L'unité n'inflige pas de dégâts de combat ce tour-ci."},
     "Flow":        {fr:"Flux",          txt:"Tu peux la jouer depuis ta défausse pour son coût de Flux. Elle est ensuite bannie."},
@@ -56,7 +57,6 @@ window.RB = (function(){
     "Quick-Draw":  {fr:"Dégainer",      txt:"L'Équipement a Réaction ; quand tu le joues, attache-le à une unité que tu contrôles."},
     "Level":       {fr:"Niveau",        txt:"Effet obtenu tant que tu as assez d'XP (le nombre indiqué)."},
     "Add":         {fr:"Ajouter",       txt:"Ajoute la ressource indiquée à ta réserve. Ces capacités ne peuvent pas être contrées par une réaction."},
-    "Vengeance":   {fr:"Vengeance",     txt:"Effet lié à la mort d'une de tes unités."},
     "Burn":        {fr:"Brûler",        txt:"Met le nombre indiqué de cartes du dessus de ton deck principal dans ta défausse."},
     "Unique":      {fr:"Unique",        txt:"Exception à la règle des 3 exemplaires : ton deck ne peut en contenir qu'un seul."},
     "Recycle":     {fr:"Recycler",      txt:"Remet la carte sous ton deck principal. Recycler une rune donne de l'Essence runique de son domaine."}
@@ -180,7 +180,7 @@ window.RB = (function(){
   //   n  gris        #787878  Vision, Amplification
   var KW_FAM = [
     ["t", ["Accélération", "Répétition", "Embuscade", "Réaction", "Dégainer", "Action", "Légion", "Caché", "Flux"]],
-    ["e", ["Amplifiées", "Amplifiés", "Amplifiée", "Amplifié", "Temporaire", "Protection", "Vengeance", "Agonie", "Chasse", "Niveau", "Vision", "Gank"]],
+    ["e", ["Amplifiées", "Amplifiés", "Amplifiée", "Amplifié", "Temporaire", "Protection", "Agonie", "Chasse", "Niveau", "Vision", "Gank"]],
     ["c", ["Arrière-ligne", "Bouclier", "Assaut", "Tank"]],
     ["n", ["Expert en armes", "Amplification", "Prédiction", "Puissantes", "Puissante", "Équiper", "Brûler", "Unique"]]
   ];

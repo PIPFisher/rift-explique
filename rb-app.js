@@ -4,6 +4,9 @@
 (function(){
   "use strict";
 
+  // permet à la CSS de distinguer « JavaScript actif » de « page nue »
+  document.documentElement.classList.add("js");
+
   /* Un tour, La chaîne, Simulateur, Mon deck et Les cartes sont mis de côté :
      leurs fichiers restent dans le dépôt, ils reviendront retravaillés. */
   var VIEWS = {
@@ -155,7 +158,8 @@
     if(!h) return;
     var vue = h.split("/")[0];
     if(vue !== current){ show(vue); return; }
-    // même vue, ancre différente : on se contente de faire défiler
+    // même vue, ancre différente : la vue des règles sait ouvrir la rubrique
+    if(vue === "regles" && window.Regles && Regles.allerA && Regles.allerA(h)) return;
     var cible = document.getElementById(h);
     if(cible) cible.scrollIntoView({block:"start"});
   });

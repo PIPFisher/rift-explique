@@ -13,9 +13,10 @@ window.Extension = (function(){
     { t:"Les 1197 cartes",
       s:"Nom, texte de règles et, sur les cartes qui le méritent, une note qui explique le piège. " +
         "Tout le jeu est couvert : Origins, Proving Grounds, Spiritforged, Unleashed, Vendetta et Radiance." },
-    { t:"La terminologie officielle",
-      s:"Essence runique, Puissance, Agonie, Amplification, Protection… les termes retenus sont ceux " +
-        "de la version française du jeu, pas une traduction maison." },
+    { t:"Une terminologie tenue",
+      s:"Essence runique, Puissance, Agonie, Amplification, Protection… Riot ne publie pas encore " +
+        "Riftbound en français : ces termes sont un choix assumé, appliqué de la même façon sur les " +
+        "1197 cartes et dans les règles, pour qu'un mot veuille toujours dire la même chose." },
     { t:"Les pictogrammes du jeu",
       s:"Énergie, runes de chaque domaine, Puissance et épuisement s'affichent avec les symboles " +
         "officiels de Riot, servis depuis leurs serveurs. L'œil retrouve les mêmes repères que sur la carte." },

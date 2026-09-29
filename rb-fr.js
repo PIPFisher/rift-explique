@@ -6,9 +6,10 @@
    tx   : texte de règles traduit
    note : précision facultative, affichée en petit
 
-   Les mots-clés suivent la terminologie officielle de la VF
-   (sortie le 29 mai 2026) : Agonie, Protection, Amplification,
-   Caché, Expert en armes, Dégainer, Arrière-ligne, Brûler…
+   Riot ne publie pas encore Riftbound en français. La terminologie
+   retenue ici — Agonie, Protection, Amplification, Caché, Expert en
+   armes, Dégainer, Arrière-ligne, Brûler… — est un choix de l'auteur,
+   tenu cohérent sur l'ensemble du corpus, pas une traduction officielle.
    ============================================================ */
 window.RB_FR = {
 
@@ -23,7 +24,7 @@ window.RB_FR = {
   "OGN-003/298": {
     n: "Brute techno-chimique",
     tx: "Assaut 2. (+2 Puissance tant que je suis attaquante.)\nQuand tu me joues, défausse 1 carte.",
-    note: "Le défaussement fait partie du coût : il faut une carte en main pour la jouer."
+    note: "La défausse est un effet, pas un coût : tu peux la jouer main vide, et rien ne se défausse alors."
   },
   "OGN-004/298": {
     n: "Fendoir",
@@ -78,7 +79,7 @@ window.RB_FR = {
   "OGN-014/298": {
     n: "Foudroiement",
     tx: "Action. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nLe coût en Énergie de ce sort est réduit de la plus haute Puissance parmi tes unités.\nInflige 5 dégâts à une unité présente sur un champ de bataille.",
-    note: "Avec une unité à 8 Puissance, il ne coûte plus que le Essence runique indiqué."
+    note: "Avec une unité à 8 Puissance, il ne coûte plus que l'Essence runique indiqué."
   },
   "OGN-015/298": {
     n: "Capitaine Farron",
@@ -592,7 +593,7 @@ window.RB_FR = {
   "OGN-113/298": {
     n: "Malzahar",
     tx: "Tuer une unité ou un Équipement allié, épuiser : Action — ajoute 2 Essences runiques, de n'importe quel domaine. (Se joue pendant ton tour ou dans un affrontement. Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)",
-    note: "Il convertit une unité sacrifiée en ressource : idéal avec des jetons ou des unités à effet de Agonie."
+    note: "Il convertit une unité sacrifiée en ressource : idéal avec des jetons ou des unités à effet d'Agonie."
   },
   "OGN-114/298": {
     n: "Jour du Progrès",
@@ -783,7 +784,7 @@ window.RB_FR = {
   "OGN-150/298": {
     n: "Chasseur de kraken",
     tx: "Accélération. (Tu peux payer 1 Énergie + 1 Essence runique en coût additionnel pour que j'arrive prêt.)\nAssaut. (+1 Puissance tant que je suis attaquant.)\nEn me jouant, tu peux dépenser autant d'améliorations que tu veux en coût additionnel. Mon coût est réduit de 1 Essence runique par amélioration dépensée.",
-    note: "La réduction porte sur le Essence runique, pas sur l'Énergie : elle libère surtout tes runes recyclées."
+    note: "La réduction porte sur l'Essence runique, pas sur l'Énergie : elle libère surtout tes runes recyclées."
   },
   "OGN-151/298": {
     n: "Lee Sin",
@@ -1022,7 +1023,7 @@ window.RB_FR = {
   "OGN-194/298": {
     n: "Nocturne",
     tx: "Gank. (Je peux me déplacer d'un champ de bataille à un autre.)\nQuand tu regardes des cartes du dessus de ton deck sans les piocher et que tu m'y vois, tu peux me jouer pour 1 Essence runique, de n'importe quel domaine.",
-    note: "Se combine avec Vision et Prédiction : une unité à 4 Énergie posée pour une seule Essence runique."
+    note: "Se combine avec Vision et Prédiction : une unité à 4 Énergie posée pour une seul'Essence runique."
   },
   "OGN-195/298": {
     n: "Rhasa le Pourfendeur",
@@ -1050,7 +1051,7 @@ window.RB_FR = {
   "OGN-199/298": {
     n: "Maître des marées",
     tx: "Caché. (Me cacher maintenant pour 1 Essence runique, de n'importe quel domaine, afin de me révéler plus tard pour 0. Je gagne Réaction.)\nQuand tu me joues, tu peux choisir une unité alliée : je prends sa place et elle prend la mienne.",
-    note: "L'échange n'est pas un déplacement : il n'épuise pas et ne déclenche pas les effets de mouvement."
+    note: "La carte dit « je prends sa place » au sens propre : c'est un déplacement, qui déclenche donc les effets liés au mouvement."
   },
   "OGN-200/298": {
     n: "Twisted Fate",
@@ -1391,7 +1392,7 @@ window.RB_FR = {
   },
   "OGN-263/298": {
     n: "L'Éclaireur rapide",
-    tx: "Tu peux payer 1 Énergie pour cacher une carte avec Caché, au lieu de 1 Puissance.\n1 Énergie, épuiser : reprends en main une unité Teemo que tu possèdes, depuis ta Zone de Champion ou depuis le plateau.",
+    tx: "Tu peux payer 1 Énergie pour cacher une carte avec Caché, au lieu de 1 Essence runique.\n1 Énergie, épuiser : reprends en main une unité Teemo que tu possèdes, depuis ta Zone de Champion ou depuis le plateau.",
     note: "Légende de Teemo : elle rend les embuscades moins chères en Essence runique, et permet de rejouer Teemo pour relancer ses effets."
   },
   "OGN-264/298": {
@@ -2556,7 +2557,7 @@ window.RB_FR = {
   },
   "SFD-143/221": {
     n: "Sivir",
-    tx: "Accélération. (Tu peux payer 1 Énergie + 1 Essence runique en coût additionnel pour que j'arrive prête.)\nSi tu as dépensé au moins 2 Puissance ce tour-ci, j'ai +2 Puissance et Gank. (Je peux me déplacer d'un champ de bataille à un autre.)",
+    tx: "Accélération. (Tu peux payer 1 Énergie + 1 Essence runique en coût additionnel pour que j'arrive prête.)\nSi tu as dépensé au moins 2 Essences runiques, de n'importe quel domaine, ce tour-ci, j'ai +2 Puissance et Gank. (Je peux me déplacer d'un champ de bataille à un autre.)",
     note: "La condition se mesure sur tout le tour : payer son Accélération suffit déjà à la remplir en partie."
   },
   "SFD-143a/221": {
@@ -2748,7 +2749,7 @@ window.RB_FR = {
   "SFD-178/221": {
     n: "Lame du Roi déchu",
     tx: "Équiper — 1 Essence runique et tuer une unité alliée. (Coût à payer : attacher cet équipement à une unité que tu contrôles.)",
-    note: "4 Puissance d'un coup, mais il faut sacrifier une unité : à combiner avec un jeton ou un effet de Agonie."
+    note: "4 Puissance d'un coup, mais il faut sacrifier une unité : à combiner avec un jeton ou un effet d'Agonie."
   },
   "SFD-179/221": {
     n: "Corinna Veraza",
@@ -3638,12 +3639,12 @@ window.RB_FR = {
   "UNL-089/219": {
     n: "Jhin",
     tx: "Vision. (Quand tu me joues, regarde la première carte de ton deck principal. Tu peux la recycler.)\nSi tu as dépensé 4 Énergie ou plus pour jouer un sort ce tour-ci, tu peux me jouer pour 1 Essence runique.",
-    note: "Une unité de 4 Puissance posée pour une seule Essence runique, à condition d'avoir lancé un gros sort avant."
+    note: "Une unité de 4 Puissance posée pour une seul'Essence runique, à condition d'avoir lancé un gros sort avant."
   },
   "UNL-089a/219": {
     n: "Jhin",
     tx: "Vision. (Quand tu me joues, regarde la première carte de ton deck principal. Tu peux la recycler.)\nSi tu as dépensé 4 Énergie ou plus pour jouer un sort ce tour-ci, tu peux me jouer pour 1 Essence runique.",
-    note: "Une unité de 4 Puissance posée pour une seule Essence runique, à condition d'avoir lancé un gros sort avant."
+    note: "Une unité de 4 Puissance posée pour une seul'Essence runique, à condition d'avoir lancé un gros sort avant."
   },
   "UNL-090/219": {
     n: "LeBlanc",
@@ -4124,12 +4125,12 @@ window.RB_FR = {
   "UNL-179/219": {
     n: "Héraut de la Faille",
     tx: "Quand je me déplace sur un champ de bataille, regarde les 3 premières cartes de ton deck principal. Tu peux y révéler une unité et la piocher. Recycle les autres.\nAgonie : joue une unité de ta main dans ta base, sans payer son coût en Énergie. (Effet obtenu quand je meurs.)",
-    note: "Le coût en Essence runique de l'unité jouée par le Agonie reste dû."
+    note: "Le coût en Essence runique de l'unité jouée par l'Agonie reste dû."
   },
   "UNL-179a/219": {
     n: "Héraut de la Faille",
     tx: "Quand je me déplace sur un champ de bataille, regarde les 3 premières cartes de ton deck principal. Tu peux y révéler une unité et la piocher. Recycle les autres.\nAgonie : joue une unité de ta main dans ta base, sans payer son coût en Énergie. (Effet obtenu quand je meurs.)",
-    note: "Le coût en Essence runique de l'unité jouée par le Agonie reste dû."
+    note: "Le coût en Essence runique de l'unité jouée par l'Agonie reste dû."
   },
   "UNL-180/219": {
     n: "La Ruination",
@@ -4207,7 +4208,7 @@ window.RB_FR = {
   },
   "UNL-195/219": {
     n: "Le Père vert",
-    tx: "Quand tu conquiers ou que tu tiens un champ de bataille, tu peux m'épuiser pour remplacer ce champ de bataille par un jeton de champ de bataille Fourré. (Dans un Fourré, tes unités Oiseau, Chat, Chien, Poro et Ivern ont +1 Puissance. Le champ de bataille d'origine revient quand tu marques.)",
+    tx: "Quand tu conquiers ou que tu tiens un champ de bataille, tu peux m'épuiser pour remplacer ce champ de bataille par un jeton de champ de bataille Fourré. (Dans un Fourré, les unités Oiseau, Chat, Chien, Poro et Ivern ont +1 Puissance. Le champ de bataille d'origine revient quand tu marques.)",
     note: "Légende d'Ivern : échanger un champ de bataille gênant contre un Fourré neutre peut couper net une stratégie adverse."
   },
   "UNL-196/219": {
@@ -4623,7 +4624,7 @@ window.RB_FR = {
   "VEN-022/166": {
     n: "Richesses sans fin",
     tx: "Quand tu joues cet équipement, bannis ta main et ta défausse, puis subis Brûler 7. (Mets les 7 premières cartes de ton deck principal dans ta défausse.)\nTu sautes désormais ta phase de Pioche.\nEn revanche, tu peux jouer tes cartes directement depuis ta défausse.\nSi une carte devait aller dans ta défausse depuis un endroit autre que ton deck principal, bannis-la à la place.",
-    note: "Elle change complètement ta façon de jouer : ta défausse devient ta main, et tu ne piochais plus. Les 7 cartes brûlées forment ta nouvelle réserve."
+    note: "Elle change complètement ta façon de jouer : ta défausse devient ta main, et tu ne pioches plus. Les 7 cartes brûlées forment ta nouvelle réserve."
   },
   "VEN-023/166": {
     n: "Zed",
@@ -5092,7 +5093,7 @@ window.RB_FR = {
   "VEN-112/166": {
     n: "Zed",
     tx: "Quand je conquiers, crée un jeton d'unité Clone d'ombre de 0 Puissance dans ta base.\nAction → 1 Énergie + 1 Essence runique : échange ma position avec celle d'un Clone d'ombre que tu contrôles. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)",
-    note: "L'échange n'est pas un déplacement : il n'épuise pas et ne déclenche pas d'affrontement."
+    note: "La carte déplace les deux unités : les effets liés au mouvement se déclenchent."
   },
   "VEN-112a/166": {
     n: "Zed",
@@ -5176,7 +5177,7 @@ window.RB_FR = {
   "VEN-128/166": {
     n: "Émissaire noxien",
     tx: "Amplification 1 Énergie + 1 Essence runique. (Coût à payer pour m'amplifier. Utilisable seulement si je ne le suis pas déjà.)\nAmplifié — Agonie : crée deux jetons d'unité Recrue de 1 Puissance dans ta base. (Effet obtenu quand je meurs en étant Amplifié.)",
-    note: "L'amplification doit être payée avant sa mort, sinon le Agonie ne se déclenche pas."
+    note: "L'amplification doit être payée avant sa mort, sinon l'Agonie ne se déclenche pas."
   },
   "VEN-129/166": {
     n: "Protectrice sacrée",
@@ -5361,7 +5362,7 @@ window.RB_FR = {
   },
   "VEN-163/166": {
     n: "Autel exhumé",
-    tx: "Les coûts d'Amplification de tes unités présentes ici sont réduits de 1 Énergie ou de 1 Puissance."
+    tx: "Les coûts d'Amplification de tes unités présentes ici sont réduits de 1 Énergie ou de 1 Essence runique, de n'importe quel domaine."
   },
   "VEN-164/166": {
     n: "Tombe balayée par les sables",

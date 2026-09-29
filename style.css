@@ -89,7 +89,10 @@ a{color:var(--gold-soft)}
 .tab:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 
 main{max-width:1180px;margin:0 auto;padding:22px 16px 40px}
-.loading{text-align:center;color:var(--text-faint);padding:60px 0;font-style:italic}
+.loading{display:none;text-align:center;color:var(--text-faint);padding:60px 0;font-style:italic}
+html.js .loading{display:block}
+noscript .panel h2{font-family:var(--serif);font-size:22px;letter-spacing:normal;
+  text-transform:none;color:var(--text)}
 
 /* ---------- éléments communs ---------- */
 .view-head{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
@@ -647,8 +650,8 @@ label.field span{font-family:var(--cond);font-size:12px;letter-spacing:.12em;tex
   padding:10px 12px;border-radius:6px;color:var(--text);
   background:var(--ground-2);border:1px solid var(--line)}
 .rg-search input::placeholder{color:var(--text-faint)}
-.rg-search input:focus{outline:none;border-color:var(--gold-soft);
-  box-shadow:0 0 0 3px rgba(240,206,134,.14)}
+.rg-search input:focus-visible{outline:2px solid var(--gold);outline-offset:2px;
+  border-color:var(--gold-soft)}
 .rg-count{display:block;margin-top:6px;font-size:12.5px;color:var(--gold-soft)}
 
 .rg-toc-ch{margin-bottom:16px}
@@ -681,7 +684,7 @@ label.field span{font-family:var(--cond);font-size:12px;letter-spacing:.12em;tex
 .rg-chips{display:flex;flex-wrap:wrap;gap:7px}
 .rg-chip{font-family:var(--sans);font-size:13.5px;font-weight:500;letter-spacing:normal;
   text-transform:none;padding:5px 11px;border-radius:999px;
-  color:var(--text-dim);background:transparent;border:1px solid var(--line)}
+  color:var(--text-dim);background:transparent;border:1px solid #4E92AD}
 .rg-chip:hover:not(:disabled){color:#0F1D26;background:var(--acc);border-color:var(--acc)}
 .rg-chip:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
 
