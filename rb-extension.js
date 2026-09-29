@@ -25,6 +25,11 @@ window.Extension = (function(){
     { t:"Une touche pour tout couper",
       s:"La touche « ² » éteint et rallume les traductions en pleine partie. Panneau, pastilles et " +
         "liserés disparaissent d'un coup. L'état est retenu d'une partie à l'autre." },
+    { t:"Débutant ou habitué, au choix",
+      s:"Par défaut, le panneau explique : chaque mot-clé est suivi de son rappel de règles, et " +
+        "les cartes retorses reçoivent une note. Quand tu connais tes cartes, « Maj&nbsp;+&nbsp;² » " +
+        "range tout ça et ne laisse que le texte de la carte, traduit. Une seule ligne par effet, " +
+        "rien à survoler en trop." },
     { t:"Mise à jour automatique",
       s:"Les traductions sont relues depuis ce site une fois par jour. Une correction publiée ici " +
         "arrive chez toi sans rien réinstaller." }

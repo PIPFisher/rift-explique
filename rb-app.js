@@ -4,14 +4,11 @@
 (function(){
   "use strict";
 
+  /* Un tour, La chaîne, Simulateur, Mon deck et Les cartes sont mis de côté :
+     leurs fichiers restent dans le dépôt, ils reviendront retravaillés. */
   var VIEWS = {
-    regles:   { mod:function(){ return window.Regles; },   title:"Les règles" },
-    rules:    { mod:function(){ return window.Rules; },    title:"Bien démarrer" },
-    turn:     { mod:function(){ return window.Turn; },     title:"Un tour de jeu" },
-    chain:    { mod:function(){ return window.Chain; },    title:"La chaîne" },
-    sim:      { mod:function(){ return window.Sim; },      title:"Simulateur" },
-    deck:     { mod:function(){ return window.Deck; },     title:"Mon deck" },
-    explorer: { mod:function(){ return window.Explorer; }, title:"Les cartes" },
+    regles:   { mod:function(){ return window.Regles; },    title:"Les règles" },
+    rules:    { mod:function(){ return window.Rules; },     title:"Bien démarrer" },
     extension:{ mod:function(){ return window.Extension; }, title:"L'extension Chrome" }
   };
 
@@ -22,7 +19,7 @@
   var current = null;
 
   function show(name){
-    if(!VIEWS[name]) name = "rules";
+    if(!VIEWS[name]) name = "regles";
     if(current && VIEWS[current] && VIEWS[current].mod().unmount) VIEWS[current].mod().unmount();
     current = name;
 
