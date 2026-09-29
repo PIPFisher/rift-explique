@@ -11,7 +11,7 @@
   "use strict";
 
   var REMOTE = "https://pipfisher.github.io/rift-explique/fr.json";
-  var VERSION = "1.13.0";
+  var VERSION = "1.14.0";
 
   // Reprise après un rechargement de l'extension. Chrome laisse l'ancien
   // script tourner dans les onglets déjà ouverts : le service worker nous
@@ -39,6 +39,12 @@
   // Modifiable via config.toggleKey dans fr.json (code clavier, ex. "KeyT").
   var TOUCHE = "Backquote";
   var ACTIF = true;
+  // Deuxième touche : bascule entre le panneau complet (rappels de règles
+  // entre parenthèses + note explicative) et le panneau sobre, qui ne montre
+  // que ce qui est écrit sur la carte. « * » sur un clavier français, à droite
+  // d'Entrée ; Maj + ² fait la même chose. Modifiable via config.modeKey.
+  var MODE_TOUCHE = "Backslash";
+  var SOBRE = false;
 
   DELAY = INGAME ? INGAME_DELAY : GRID_DELAY;
 
@@ -54,6 +60,9 @@
     // collé à ce bord de l'écran, comme avant.
     if (c.side === "auto" || c.side === "left" || c.side === "right") SIDE = c.side;
     if (typeof c.toggleKey === "string" && c.toggleKey) TOUCHE = c.toggleKey;
+    if (typeof c.modeKey === "string" && c.modeKey) MODE_TOUCHE = c.modeKey;
+    // deux fois la même touche rendrait l'interrupteur inatteignable
+    if (MODE_TOUCHE === TOUCHE) MODE_TOUCHE = null;
   }
 
   /* ---------------- interrupteur clavier ---------------- */
@@ -63,9 +72,25 @@
   function litEtat() {
     return new Promise(function (resolve) {
       try {
-        chrome.storage.local.get(["actif"], function (r) { resolve(!(r && r.actif === false)); });
-      } catch (e) { resolve(true); }
+        chrome.storage.local.get(["actif", "sobre"], function (r) {
+          resolve({ actif: !(r && r.actif === false), sobre: !!(r && r.sobre) });
+        });
+      } catch (e) { resolve({ actif: true, sobre: false }); }
     });
+  }
+
+  // Le mode sobre se joue entièrement en CSS : les rappels de règles et la
+  // note portent déjà leur propre classe, il suffit de les masquer. Rien
+  // n'est recalculé, la bascule est donc instantanée même panneau ouvert.
+  function appliqueMode() {
+    document.documentElement.classList.toggle("rbfr-sobre", SOBRE);
+  }
+
+  function basculeMode() {
+    SOBRE = !SOBRE;
+    try { chrome.storage.local.set({ sobre: SOBRE }); } catch (e) {}
+    appliqueMode();
+    annonce(SOBRE ? "Texte de la carte seul" : "Explications affichées");
   }
 
   function annonce(texte, eteint) {
@@ -108,13 +133,16 @@
   }
 
   document.addEventListener("keydown", function (e) {
-    if (e.code !== TOUCHE) return;
+    var surToggle = (e.code === TOUCHE);
+    // Maj + ² sert d'alias au changement de mode : une seule touche à retenir
+    var surMode = (MODE_TOUCHE && e.code === MODE_TOUCHE) || (surToggle && e.shiftKey);
+    if (!surToggle && !surMode) return;
     // on ne vole pas la touche pendant qu'on écrit (le chat du simulateur),
     // ni quand elle sert de raccourci au navigateur
     if (saisieEnCours(e.target) || saisieEnCours(document.activeElement)) return;
     if (e.ctrlKey || e.altKey || e.metaKey) return;
     e.preventDefault();
-    bascule();
+    if (surMode) basculeMode(); else bascule();
   }, true);
 
   var DATA = null;
@@ -394,7 +422,10 @@
         markResources(esc(line.slice(open + 1, close)), doms, etat) + "</span>";
       i = close + 1;
     }
-    out = out.replace(/\.(\s*)(<span class="rbfr-rem)/g, "$1$2");
+    // Le point qui précède un rappel est de trop quand le rappel s'affiche…
+    // mais indispensable quand il est masqué en mode sobre. On le garde donc
+    // dans le balisage, caché par défaut, rendu visible par le mode sobre.
+    out = out.replace(/\.(\s*)(<span class="rbfr-rem)/g, '<span class="rbfr-dot">.</span>$1$2');
     out = out.replace(/(<\/(?:b|span)>)\.\s*$/, "$1");
     return out;
   }
@@ -571,8 +602,11 @@
   }).observe(document.documentElement, { subtree: true, childList: true });
 
   load().then(async function () {
-    ACTIF = await litEtat();
+    var etat = await litEtat();
+    ACTIF = etat.actif;
+    SOBRE = etat.sobre;
     applyConfig();
+    appliqueMode();
     refreshMarks();
     injectDetail();
     setInterval(refreshMarks, 2000);
@@ -582,7 +616,9 @@
     try {
       console.log("[Riftbound FR] " + VERSION +
         " · placement : " + (SIDE === "auto" ? "à gauche de la carte" : "ancré à " + SIDE) +
-        " · " + Object.keys((DATA && DATA.byCode) || {}).length + " entrées · touche " + TOUCHE + (ACTIF ? "" : " (éteint)"));
+        " · " + Object.keys((DATA && DATA.byCode) || {}).length + " entrées" +
+        " · " + TOUCHE + " : afficher/masquer" + (ACTIF ? "" : " (éteint)") +
+        " · " + (MODE_TOUCHE || "Maj+" + TOUCHE) + " : complet/sobre" + (SOBRE ? " (sobre)" : ""));
     } catch (e) {}
   });
 })();

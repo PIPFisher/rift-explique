@@ -58,18 +58,32 @@ la même hauteur de pile et passe devant, plutôt que de disparaître derrière.
 Il laisse passer les clics : même posé sur le plateau, il n'empêche pas de
 jouer.
 
-## Couper et rallumer
+## Les deux touches
 
-La touche **`²`** (au-dessus de Tab) coupe et rallume les traductions. Tout
-disparaît alors : le panneau, les pastilles FR et les liserés dorés. Un bref
-message confirme l'état, qui est retenu d'une partie à l'autre.
+| Touche | Effet |
+|---|---|
+| **`²`** (au-dessus de Tab) | Coupe et rallume les traductions |
+| **`*`** (à droite d'Entrée) ou **`Maj`+`²`** | Bascule entre panneau complet et texte de la carte seul |
 
-La touche est ignorée pendant que tu écris, donc elle ne gêne pas le chat du
-simulateur.
+**`²`** fait tout disparaître : le panneau, les pastilles FR et les liserés
+dorés.
 
-Pour en changer, modifier `config.toggleKey` dans `fr.json` avec un code de
-touche (`"KeyT"`, `"F2"`, `"Backslash"`…). C'est un code de **position**, pas
-de caractère : il vaut pour toutes les dispositions de clavier.
+**`Maj`+`²`** ne coupe rien, il allège. Par défaut le panneau explique : chaque
+mot-clé est suivi de son rappel de règles entre parenthèses, et les cartes
+difficiles portent une note. En mode sobre, ces deux choses disparaissent et il
+ne reste que le texte de la carte, traduit — ce que lit quelqu'un qui connaît
+déjà ses cartes et veut juste aller vite.
+
+Un bref message confirme l'état à chaque fois. Les deux réglages sont retenus
+d'une partie à l'autre, séparément.
+
+Les touches sont ignorées pendant que tu écris, donc elles ne gênent pas le
+chat du simulateur.
+
+Pour en changer, modifier `config.toggleKey` et `config.modeKey` dans
+`fr.json` avec un code de touche (`"KeyT"`, `"F2"`, `"Backslash"`…). C'est un
+code de **position**, pas de caractère : il vaut pour toutes les dispositions
+de clavier. `Maj`+`²` reste toujours valable comme raccourci de mode.
 
 Pour le fixer à un bord de l'écran plutôt qu'à côté de la carte, changer
 `config.side` dans `fr.json` : `"auto"` (par défaut), `"left"` ou `"right"`.

@@ -233,3 +233,13 @@ img.rbfr-img-has{
   letter-spacing: .04em;
   color: #5F7D8A;
 }
+
+/* ---------------- mode sobre ----------------
+   « Maj + ² » (ou « * ») ne montre plus que ce qui est écrit sur la carte :
+   les rappels de règles entre parenthèses et la note explicative
+   disparaissent. Le point de fin de phrase, retiré du flux quand un rappel
+   le suit, revient à ce moment-là. */
+.rbfr-dot{ display: none; }
+.rbfr-sobre .rbfr-rem,
+.rbfr-sobre .rbfr-note{ display: none !important; }
+.rbfr-sobre .rbfr-dot{ display: inline; }
