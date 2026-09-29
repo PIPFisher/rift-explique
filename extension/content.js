@@ -11,20 +11,27 @@
   "use strict";
 
   var REMOTE = "https://pipfisher.github.io/rift-explique/fr.json";
-  var VERSION = "1.17.0";
+  var VERSION = "1.18.0";
 
   // Reprise après un rechargement de l'extension. Chrome laisse l'ancien
   // script tourner dans les onglets déjà ouverts : le service worker nous
   // réinjecte par-dessus, et on doit alors neutraliser ses restes.
   // Le garde-fou de version évite de s'installer deux fois pour rien.
-  if (window.__rbfrVersion === VERSION) return;
+  try { if (typeof window.__rbfrTeardown === "function") window.__rbfrTeardown(); } catch (e) {}
   window.__rbfrVersion = VERSION;
-  try {
-    document.querySelectorAll(".rbfr-panel, .rbfr-toast, .rbfr-inline")
-      .forEach(function (n) { n.remove(); });
-  } catch (e) {}
+
+  // Tout ce qu'on installe est consigné ici : sans ça, une version plus
+  // récente injectée par-dessus laisse l'ancienne écouter le clavier et la
+  // souris en parallèle, et les deux panneaux se disputent l'écran.
+  var ECOUTEURS = [], MINUTEURS = [];
+  function ecoute(cible, type, fn, opts) {
+    cible.addEventListener(type, fn, opts);
+    ECOUTEURS.push([cible, type, fn, opts]);
+  }
+  function periodique(fn, ms) { var id = setInterval(fn, ms); MINUTEURS.push(id); return id; }
 
   var SITE = "https://pipfisher.github.io/rift-explique/";
+  var LARGEUR = null;            // largeur du panneau, éventuellement imposée par fr.json
   var TTL = 24 * 60 * 60 * 1000;
   var INGAME_DELAY = 0;    // en jeu : affichage immédiat
   var GRID_DELAY = 110;    // sur la base de cartes : petite attente anti-clignotement
@@ -63,9 +70,13 @@
   function applyConfig() {
     var c = DATA && DATA.config;
     if (!c) return;
-    if (typeof c.ingameDelay === "number" && INGAME) DELAY = c.ingameDelay;
-    if (typeof c.gridDelay === "number" && !INGAME) DELAY = c.gridDelay;
-    if (typeof c.panelWidth === "number" && panel) panel.style.width = c.panelWidth + "px";
+    function borne(v, mini, maxi) {
+      return (typeof v === "number" && isFinite(v)) ? Math.min(maxi, Math.max(mini, v)) : null;
+    }
+    var d = borne(INGAME ? c.ingameDelay : c.gridDelay, 0, 2000);
+    if (d !== null) DELAY = d;
+    var w = borne(c.panelWidth, 240, 720);
+    if (w !== null) { LARGEUR = w; if (panel) panel.style.width = w + "px"; }
     // "auto" : le panneau suit la carte survolée. "left"/"right" : il reste
     // collé à ce bord de l'écran, comme avant.
     if (c.side === "auto" || c.side === "left" || c.side === "right") SIDE = c.side;
@@ -179,7 +190,7 @@
     return t === "INPUT" || t === "TEXTAREA" || t === "SELECT" || el.isContentEditable;
   }
 
-  document.addEventListener("keydown", function (e) {
+  ecoute(document, "keydown", function (e) {
     // on ne vole pas les touches pendant qu'on écrit (le chat du simulateur)
     if (saisieEnCours(e.target) || saisieEnCours(document.activeElement)) return;
 
@@ -564,6 +575,7 @@
     // en jeu, le panneau est plus grand et plus lisible, où qu'il se place
     panel.className = "rbfr-panel" + (INGAME ? " rbfr-ingame" : "");
     panel.style.display = "none";
+    if (LARGEUR) panel.style.width = LARGEUR + "px";
     document.documentElement.appendChild(panel);
     return panel;
   }
@@ -622,6 +634,8 @@
     // fois, brièvement, au cas où il dépasserait.
     if (recalc) clearTimeout(recalc);
     recalc = setTimeout(function () {
+      // la carte a pu disparaître du plateau entre-temps
+      if (card.el && card.el.isConnected === false) { hide(); return; }
       if (panel && panel.style.display !== "none" && panelCode === card.code) place(x, y, card.el);
     }, 150);
   }
@@ -637,19 +651,40 @@
 
   /* ---------------- pastille FR ---------------- */
 
+  // Témoin de détection. Rift Atlas peut changer son HTML du jour au
+  // lendemain : sans ça, l'extension se tairait et personne ne saurait si
+  // c'est « pas de carte ici » ou « je ne sais plus lire ce site ».
+  var candidatsVus = 0, resolusVus = 0, temoinDit = false;
+  function temoin() {
+    if (temoinDit || !ACTIF) return;
+    if (candidatsVus >= 5 && resolusVus === 0) {
+      temoinDit = true;
+      annonce("Les cartes ne sont plus reconnues — l'extension a besoin d'une mise à jour", true);
+      try { console.warn("[Riftbound FR] " + candidatsVus + " cartes vues, aucune reconnue. " +
+        "La structure du site a probablement changé : " + SITE); } catch (e) {}
+    }
+  }
+
   function refreshMarks() {
     if (!DATA || !ACTIF) return;
     if (document.hidden) return;   // onglet en arrière-plan : rien à marquer
+    var candidats = 0, resolus = 0;
     document.querySelectorAll('a[href*="/card/"]').forEach(function (a) {
+      candidats++;
       var has = !!lookup(codeFromHref(a.getAttribute("href")), (a.querySelector("img") || {}).alt);
+      if (has) resolus++;
       a.classList.toggle("rbfr-has", has);
     });
     if (INGAME) {
       document.querySelectorAll('img[src*="/cards/"]').forEach(function (img) {
+        candidats++;
         var has = !!lookup(codeFromImg(img), img.alt);
+        if (has) resolus++;
         img.classList.toggle("rbfr-img-has", has);
       });
     }
+    candidatsVus = Math.max(candidatsVus, candidats);
+    resolusVus = Math.max(resolusVus, resolus);
   }
 
   /* ---------------- fiche détaillée (base de cartes) ---------------- */
@@ -660,8 +695,13 @@
     if (!h1) return;
     var code = codeFromHref(location.pathname);
     var old = document.querySelector(".rbfr-inline");
+    // idempotent : déjà en place pour cette carte, il n'y a rien à refaire.
+    // C'est ce qui permet de le rappeler en boucle pour rattraper une page
+    // lente, sans reconstruire le panneau à chaque passage.
+    if (old && old.dataset.code === code) return;
     if (old) old.remove();
     var box = document.createElement("section");
+    box.dataset.code = code || "";
     box.className = "rbfr-inline";
     box.innerHTML = panelHTML(lookup(code, h1.innerText), code, h1.innerText);
     h1.parentElement.insertBefore(box, h1.nextSibling);
@@ -669,43 +709,95 @@
 
   /* ---------------- événements ---------------- */
 
-  document.addEventListener("mousemove", function (e) {
+  // Le simulateur est une application temps réel : on ne travaille qu'une
+  // fois par image, et pas du tout tant que le curseur n'a pas vraiment bougé.
+  var posCourante = null, imageDemandee = false;
+  var derniereCible = null, dernierBloc = "", derniereCarte = null;
+
+  function surMouvement(e) {
     if (!ACTIF || FIGE) return;
-    var card = cardAt(e.target, e.clientX, e.clientY);
+    posCourante = { x: e.clientX, y: e.clientY, cible: e.target };
+    if (imageDemandee) return;
+    imageDemandee = true;
+    requestAnimationFrame(traiteMouvement);
+  }
+
+  function traiteMouvement() {
+    imageDemandee = false;
+    var p = posCourante;
+    if (!p || !ACTIF || FIGE) return;
+
+    // Court-circuit : tant que le curseur reste sur le même élément et dans
+    // le même carré de 8 px, la réponse ne peut pas avoir changé. C'est ce
+    // qui évite elementsFromPoint, et donc le recalcul de mise en page.
+    var bloc = ((p.x / 8) | 0) + ":" + ((p.y / 8) | 0);
+    var card;
+    if (p.cible === derniereCible && bloc === dernierBloc) {
+      card = derniereCarte;
+    } else {
+      card = cardAt(p.cible, p.x, p.y);
+      derniereCible = p.cible; dernierBloc = bloc; derniereCarte = card;
+    }
+
     if (!card || !card.code) {
       // sans ça, un panneau demandé puis quitté s'ouvre quand même, tout seul
       if (timer) { clearTimeout(timer); timer = null; }
       if (panel && panel.style.display !== "none") hide();
       return;
     }
-    var x = e.clientX, y = e.clientY;
+    var x = p.x, y = p.y;
     if (panel && panel.style.display !== "none" && panelCode === card.code) { place(x, y, card.el); return; }
     if (timer) clearTimeout(timer);
     if (!DELAY) { show(card, x, y); return; }
     timer = setTimeout(function () { show(card, x, y); }, DELAY);
-  }, { capture: true, passive: true });
+  }
 
-  document.addEventListener("scroll", hide, { capture: true, passive: true });
-  document.addEventListener("mouseleave", hide);
-  window.addEventListener("blur", hide);
+  ecoute(document, "mousemove", surMouvement, { capture: true, passive: true });
+
+  // La fenêtre de réglages écrit dans le stockage : on s'aligne aussitôt,
+  // sans faire recharger la page à l'utilisateur.
+  try {
+    chrome.storage.onChanged.addListener(function (ch, zone) {
+      if (zone !== "local") return;
+      if (ch.actif && ch.actif.newValue !== undefined) {
+        var veut = ch.actif.newValue !== false;
+        if (veut !== ACTIF) bascule();
+      }
+      if (ch.sobre && ch.sobre.newValue !== undefined) {
+        var veutSobre = !!ch.sobre.newValue;
+        if (veutSobre !== SOBRE) { SOBRE = veutSobre; appliqueMode(); }
+      }
+    });
+  } catch (e) {}
+
+  ecoute(document, "scroll", hide, { capture: true, passive: true });
+  ecoute(document, "mouseleave", hide);
+  ecoute(window, "blur", hide);
 
   // Un clic hors du panneau le libère : on ne peut pas rester bloqué avec un
   // panneau qui mange les clics du plateau. Un clic dedans (le lien) le libère
   // aussi, mais après coup, pour laisser la navigation se faire.
-  document.addEventListener("click", function (e) {
+  ecoute(document, "click", function (e) {
     if (!FIGE) return;
     if (panel && panel.contains(e.target)) { setTimeout(libere, 0); return; }
     libere();
   }, true);
 
-  var lastPath = location.pathname;
-  new MutationObserver(function () {
-    if (location.pathname !== lastPath) {
-      lastPath = location.pathname;
+  // Un observateur de mutations posé sur tout le document pour surveiller
+  // une simple URL revenait à être réveillé à chaque frame du simulateur.
+  // Une comparaison toutes les demi-secondes suffit et ne coûte rien.
+  var cheminCourant = location.pathname, tic = 0;
+  periodique(function () {
+    if (document.hidden) return;
+    if (location.pathname !== cheminCourant) {
+      cheminCourant = location.pathname;
       hide();
       setTimeout(function () { injectDetail(); refreshMarks(); }, 400);
+      return;
     }
-  }).observe(document.documentElement, { subtree: true, childList: true });
+    if (++tic % 4 === 0) refreshMarks();   // balayage complet, toutes les 2 s
+    else injectDetail();                   // idempotent : rattrape une page lente
+  }, 500);
 
   load().then(async function () {
     var etat = await litEtat();
@@ -715,7 +807,8 @@
     appliqueMode();
     refreshMarks();
     injectDetail();
-    setInterval(refreshMarks, 2000);
+    // le témoin se prononce une fois la page vraiment posée
+    setTimeout(temoin, 6000);
     // repère de version : permet de voir d'un coup d'œil, dans la console,
     // si Chrome tourne bien sur les fichiers du dossier et non sur une copie
     // gardée en mémoire depuis le dernier chargement.
@@ -729,4 +822,22 @@
         " · Ctrl+" + TOUCHE + " : figer");
     } catch (e) {}
   });
+
+  // Retirer tout ce que cette instance a installé. Appelé par la version
+  // suivante quand le service worker la réinjecte par-dessus celle-ci.
+  window.__rbfrTeardown = function () {
+    try {
+      ECOUTEURS.forEach(function (e) { e[0].removeEventListener(e[1], e[2], e[3]); });
+      MINUTEURS.forEach(clearInterval);
+      ECOUTEURS = []; MINUTEURS = [];
+      if (timer) { clearTimeout(timer); timer = null; }
+      if (recalc) { clearTimeout(recalc); recalc = null; }
+      document.querySelectorAll(".rbfr-panel, .rbfr-toast, .rbfr-inline")
+        .forEach(function (n) { n.remove(); });
+      document.querySelectorAll(".rbfr-has, .rbfr-img-has")
+        .forEach(function (n) { n.classList.remove("rbfr-has", "rbfr-img-has"); });
+      document.documentElement.classList.remove("rbfr-sobre");
+      panel = null; panelCode = null;
+    } catch (e) {}
+  };
 })();

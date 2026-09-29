@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Riftbound en français",
-  "version": "1.17.0",
+  "version": "1.18.0",
   "description": "Traduction francaise des cartes Riftbound au survol, sur Rift Atlas et dans le simulateur. Terminologie officielle VF, mots-cles au code couleur du jeu.",
   "content_scripts": [
     {
@@ -42,9 +42,22 @@
     "scripting"
   ],
   "action": {
-    "default_title": "Riftbound en français"
+    "default_title": "Riftbound en français",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "32": "icon32.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
   },
   "background": {
     "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
   }
 }

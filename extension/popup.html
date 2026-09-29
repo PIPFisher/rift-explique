@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<style>
+  :root{ color-scheme: dark; }
+  /* la fenêtre de Chrome ne dépasse pas 300 px : la bordure est comprise dans la largeur */
+  *, *::before, *::after{ box-sizing: border-box; }
+  body{ width: 300px; max-width: 300px; overflow-x: hidden; overflow-wrap: break-word;
+    margin: 0; padding: 14px 16px 16px;
+    background: linear-gradient(180deg,#1A303B 0%,#101E27 100%); color:#EFF6F9;
+    font-family:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif; font-size:14px; line-height:1.5; }
+  h1{ margin:0 0 2px; font-size:16px; font-weight:600; letter-spacing:.01em; }
+  .v{ font-size:11.5px; color:#85A2AF; margin-bottom:13px; }
+  .ligne{ display:flex; align-items:center; justify-content:space-between; gap:10px;
+    padding:9px 0; border-top:1px solid #254656; }
+  .ligne p{ margin:0; }
+  .ligne small{ display:block; font-size:11.5px; color:#85A2AF; line-height:1.4; }
+  button.bascule{ flex:0 0 auto; min-width:82px; font:inherit; font-size:13px; cursor:pointer;
+    padding:5px 11px; border-radius:999px; border:1px solid #2E5666;
+    background:transparent; color:#AEC7D1; transition:all .15s; }
+  button.bascule[aria-pressed="true"]{ background:#D9A94A; border-color:#D9A94A; color:#101E27; font-weight:600; }
+  button.bascule:focus-visible{ outline:2px solid #D9A94A; outline-offset:2px; }
+  .touches{ margin:13px 0 0; padding-top:11px; border-top:1px solid #254656; }
+  .touches h2{ margin:0 0 7px; font-size:12px; font-weight:600; color:#85A2AF;
+    text-transform:uppercase; letter-spacing:.09em; }
+  .t{ display:flex; align-items:baseline; gap:9px; margin-bottom:5px; font-size:13px; }
+  kbd{ flex:0 0 auto; font-family:inherit; font-size:11.5px; padding:2px 7px; border-radius:4px;
+    background:#204251; border:1px solid #2E5666; color:#EFF6F9; white-space:nowrap; }
+  .t span{ color:#AEC7D1; }
+  footer{ margin-top:13px; padding-top:11px; border-top:1px solid #254656;
+    display:flex; align-items:center; justify-content:space-between; gap:8px; }
+  a{ color:#46B4C4; font-size:12.5px; text-decoration:none; }
+  a:hover{ text-decoration:underline; }
+  button.lien{ font:inherit; font-size:12.5px; color:#85A2AF; background:none; border:none;
+    padding:0; cursor:pointer; text-decoration:underline; }
+  button.lien:hover{ color:#F0CE86; }
+  #etat{ margin-top:9px; font-size:11.5px; color:#7ECB6A; min-height:1.2em; }
+</style>
+</head>
+<body>
+  <h1>Riftbound en français</h1>
+  <p class="v">version <span id="version">—</span> · <span id="cartes">—</span></p>
+
+  <div class="ligne">
+    <p>Traductions<small>Afficher le panneau au survol</small></p>
+    <button class="bascule" id="bActif" aria-pressed="true">Activées</button>
+  </div>
+  <div class="ligne">
+    <p>Explications<small>Rappels de règles et notes</small></p>
+    <button class="bascule" id="bMode" aria-pressed="true">Affichées</button>
+  </div>
+
+  <div class="touches">
+    <h2>Raccourcis</h2>
+    <div class="t"><kbd>²</kbd><kbd>F2</kbd><span>afficher / masquer</span></div>
+    <div class="t"><kbd>Maj + ²</kbd><span>texte de la carte seul</span></div>
+    <div class="t"><kbd>Ctrl + ²</kbd><span>figer le panneau, pour cliquer dedans</span></div>
+  </div>
+
+  <div id="etat"></div>
+
+  <footer>
+    <a href="https://pipfisher.github.io/rift-explique/" target="_blank" rel="noopener">Le Rift Expliqué ↗</a>
+    <button class="lien" id="bMaj">Forcer la mise à jour</button>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -115,6 +115,17 @@ Pour le fixer à un bord de l'écran plutôt qu'à côté de la carte, changer
 
 Une pastille **FR** marque les cartes déjà traduites dans les grilles, et un liseré doré les entoure en partie.
 
+## La fenêtre de réglages
+
+Un clic sur l'icône de l'extension, à droite de la barre d'adresse, ouvre une
+petite fenêtre : la version installée, le nombre de cartes chargées, les deux
+mêmes bascules que les raccourcis (traductions, explications), le rappel des
+trois gestes et un bouton **Forcer la mise à jour** qui vide le cache et va
+rechercher les traductions tout de suite.
+
+Les bascules et les raccourcis agissent sur le même réglage : changer l'un
+met l'autre à jour immédiatement, sans recharger la page.
+
 ---
 
 ## Mise à jour des traductions
@@ -127,7 +138,7 @@ https://pipfisher.github.io/rift-explique/fr.json
 
 Elle les garde en cache 24 heures, puis les rafraîchit toute seule. La copie embarquée dans le dossier ne sert que de secours, si le site est injoignable.
 
-Pour forcer une mise à jour immédiate : `chrome://extensions` → recharger l'extension (l'icône ↻ sur sa tuile).
+Pour forcer une mise à jour immédiate : icône de l'extension → **Forcer la mise à jour**.
 
 ---
 
@@ -135,9 +146,13 @@ Pour forcer une mise à jour immédiate : `chrome://extensions` → recharger l'
 
 ```
 manifest.json   déclaration de l'extension (Manifest V3)
-content.js      détection des cartes, panneau, cache
+content.js      détection des cartes, panneau, cache, raccourcis
 panel.css       habillage du panneau et de la pastille FR
+popup.html      fenêtre de réglages ouverte par l'icône
+popup.js        ses bascules et le bouton de mise à jour
+background.js   réinjection du script après une mise à jour
 fr.json         copie de secours des traductions
+icon*.png       icône de l'extension, en quatre tailles
 ```
 
 ## Comment une carte est reconnue
