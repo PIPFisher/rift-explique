@@ -247,3 +247,29 @@ img.rbfr-img-has{
 .rbfr-sobre .rbfr-rem-seul{ display: inline !important;
   color: inherit; font-size: inherit; line-height: inherit; }
 .rbfr-sobre .rbfr-dot{ display: inline; }
+
+/* ---------------- panneau figé ----------------
+   « Ctrl + ² » le cloue sur place et lui rend les clics, le temps d'aller
+   chercher le lien. L'état est visible : liseré plus vif, et un rappel de
+   la touche de sortie sous le panneau. */
+.rbfr-panel.rbfr-fige{
+  pointer-events: auto;
+  border-color: #F0CE86;
+  box-shadow: 0 0 0 3px rgba(240,206,134,.22), 0 24px 50px -20px rgba(0,0,0,.85);
+}
+.rbfr-panel.rbfr-fige::after{
+  content: "Échap ou Ctrl + ² pour libérer";
+  display: block;
+  margin-top: 9px;
+  padding-top: 7px;
+  border-top: 1px solid rgba(217,169,74,.28);
+  font-size: 10.5px;
+  letter-spacing: .04em;
+  color: #F0CE86;
+}
+.rbfr-panel.rbfr-fige .rbfr-link{
+  font-size: 13.5px;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}

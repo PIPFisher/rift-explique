@@ -58,12 +58,13 @@ la même hauteur de pile et passe devant, plutôt que de disparaître derrière.
 Il laisse passer les clics : même posé sur le plateau, il n'empêche pas de
 jouer.
 
-## Les deux touches
+## Les trois gestes
 
 | Touche | Effet |
 |---|---|
 | **`²`** (au-dessus de Tab) | Coupe et rallume les traductions |
 | **`*`** (à droite d'Entrée) ou **`Maj`+`²`** | Bascule entre panneau complet et texte de la carte seul |
+| **`Ctrl`+`²`** | Fige le panneau sur place et le rend cliquable |
 
 **`²`** fait tout disparaître : le panneau, les pastilles FR et les liserés
 dorés.
@@ -74,8 +75,19 @@ difficiles portent une note. En mode sobre, ces deux choses disparaissent et il
 ne reste que le texte de la carte, traduit — ce que lit quelqu'un qui connaît
 déjà ses cartes et veut juste aller vite.
 
-Un bref message confirme l'état à chaque fois. Les deux réglages sont retenus
-d'une partie à l'autre, séparément.
+**`Ctrl`+`²`** cloue le panneau où il est. Normalement il suit la souris et
+disparaît dès qu'on quitte la carte, ce qui rend le lien vers le site
+inatteignable : le panneau laisse passer les clics, pour ne jamais bloquer le
+plateau. Figé, il reste en place, reprend les clics et son lien devient
+cliquable. Un liseré doré et un rappel sous le panneau signalent l'état.
+
+On en sort par **`Échap`**, par **`Ctrl`+`²`** à nouveau, ou simplement en
+cliquant ailleurs — ce clic-là atteint quand même ce qu'il visait, donc rien
+n'est jamais bloqué. Le panneau se libère aussi tout seul dès qu'on clique sur
+son lien, et l'état n'est jamais retenu d'une session à l'autre.
+
+Un bref message confirme l'état à chaque fois. L'affichage et le mode sont
+retenus d'une partie à l'autre, séparément.
 
 Les touches sont ignorées pendant que tu écris, donc elles ne gênent pas le
 chat du simulateur.

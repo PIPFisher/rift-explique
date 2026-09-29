@@ -11,7 +11,7 @@
   "use strict";
 
   var REMOTE = "https://pipfisher.github.io/rift-explique/fr.json";
-  var VERSION = "1.14.0";
+  var VERSION = "1.15.0";
 
   // Reprise après un rechargement de l'extension. Chrome laisse l'ancien
   // script tourner dans les onglets déjà ouverts : le service worker nous
@@ -45,6 +45,11 @@
   // d'Entrée ; Maj + ² fait la même chose. Modifiable via config.modeKey.
   var MODE_TOUCHE = "Backslash";
   var SOBRE = false;
+  // Troisième geste : « Ctrl + ² » fige le panneau sur place et le rend
+  // cliquable, le temps d'aller chercher le lien vers le site. Volontairement
+  // non retenu d'une session à l'autre : c'est un geste ponctuel, et un
+  // panneau figé qu'on aurait oublié bloquerait le plateau.
+  var FIGE = false;
 
   DELAY = INGAME ? INGAME_DELAY : GRID_DELAY;
 
@@ -93,6 +98,27 @@
     annonce(SOBRE ? "Texte de la carte seul" : "Explications affichées");
   }
 
+  /* ---------------- épingler le panneau ---------------- */
+
+  function libere() {
+    if (!FIGE) return;
+    FIGE = false;
+    if (panel) panel.classList.remove("rbfr-fige");
+    hide();
+  }
+
+  function basculeFige() {
+    if (FIGE) { libere(); annonce("Panneau libéré"); return; }
+    // rien à figer si aucun panneau n'est ouvert
+    if (!panel || panel.style.display === "none") {
+      annonce("Survole une carte d'abord", true);
+      return;
+    }
+    FIGE = true;
+    panel.classList.add("rbfr-fige");
+    annonce("Panneau figé — tu peux cliquer dedans");
+  }
+
   function annonce(texte, eteint) {
     var t = document.querySelector(".rbfr-toast");
     if (!t) {
@@ -108,6 +134,8 @@
   }
 
   function bascule() {
+    // couper les traductions libère aussi un panneau resté figé
+    if (FIGE) { FIGE = false; if (panel) panel.classList.remove("rbfr-fige"); }
     ACTIF = !ACTIF;
     try { chrome.storage.local.set({ actif: ACTIF }); } catch (e) {}
     if (!ACTIF) {
@@ -133,16 +161,26 @@
   }
 
   document.addEventListener("keydown", function (e) {
-    var surToggle = (e.code === TOUCHE);
-    // Maj + ² sert d'alias au changement de mode : une seule touche à retenir
-    var surMode = (MODE_TOUCHE && e.code === MODE_TOUCHE) || (surToggle && e.shiftKey);
-    if (!surToggle && !surMode) return;
-    // on ne vole pas la touche pendant qu'on écrit (le chat du simulateur),
-    // ni quand elle sert de raccourci au navigateur
+    // on ne vole pas les touches pendant qu'on écrit (le chat du simulateur)
     if (saisieEnCours(e.target) || saisieEnCours(document.activeElement)) return;
-    if (e.ctrlKey || e.altKey || e.metaKey) return;
+
+    if (e.key === "Escape" && FIGE) { e.preventDefault(); libere(); return; }
+
+    var nu      = !e.ctrlKey && !e.altKey && !e.metaKey && !e.shiftKey;
+    var majSeul = e.shiftKey && !e.ctrlKey && !e.altKey && !e.metaKey;
+    var ctrlSeul= e.ctrlKey && !e.shiftKey && !e.altKey && !e.metaKey;
+
+    var surToggle = (e.code === TOUCHE && nu);
+    // Maj + ² sert d'alias au changement de mode : une seule touche à retenir
+    var surMode   = (MODE_TOUCHE && e.code === MODE_TOUCHE && nu) ||
+                    (e.code === TOUCHE && majSeul);
+    var surFige   = (e.code === TOUCHE && ctrlSeul);
+
+    if (!surToggle && !surMode && !surFige) return;
     e.preventDefault();
-    if (surMode) basculeMode(); else bascule();
+    if (surFige) basculeFige();
+    else if (surMode) basculeMode();
+    else bascule();
   }, true);
 
   var DATA = null;
@@ -554,6 +592,8 @@
   }
 
   function hide() {
+    // un panneau figé ne se referme que sur demande explicite
+    if (FIGE) return;
     if (timer) { clearTimeout(timer); timer = null; }
     if (recalc) { clearTimeout(recalc); recalc = null; }
     if (panel) panel.style.display = "none";
@@ -594,7 +634,7 @@
   /* ---------------- événements ---------------- */
 
   document.addEventListener("mousemove", function (e) {
-    if (!ACTIF) return;
+    if (!ACTIF || FIGE) return;
     var card = cardAt(e.target, e.clientX, e.clientY);
     if (!card || !card.code) {
       if (panel && panel.style.display !== "none") hide();
@@ -610,6 +650,15 @@
   document.addEventListener("scroll", hide, true);
   document.addEventListener("mouseleave", hide);
   window.addEventListener("blur", hide);
+
+  // Un clic hors du panneau le libère : on ne peut pas rester bloqué avec un
+  // panneau qui mange les clics du plateau. Un clic dedans (le lien) le libère
+  // aussi, mais après coup, pour laisser la navigation se faire.
+  document.addEventListener("click", function (e) {
+    if (!FIGE) return;
+    if (panel && panel.contains(e.target)) { setTimeout(libere, 0); return; }
+    libere();
+  }, true);
 
   var lastPath = location.pathname;
   new MutationObserver(function () {
