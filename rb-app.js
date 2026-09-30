@@ -10,10 +10,12 @@
   /* Un tour, La chaîne, Simulateur, Mon deck et Les cartes sont mis de côté :
      leurs fichiers restent dans le dépôt, ils reviendront retravaillés. */
   var VIEWS = {
+    extension:{ mod:function(){ return window.Extension; }, title:"L'extension Chrome" },
     regles:   { mod:function(){ return window.Regles; },    title:"Les règles" },
-    rules:    { mod:function(){ return window.Rules; },     title:"Bien démarrer" },
-    extension:{ mod:function(){ return window.Extension; }, title:"L'extension Chrome" }
+    rules:    { mod:function(){ return window.Rules; },     title:"Bien démarrer" }
   };
+  // la vue d'arrivée : on vient d'abord chercher l'extension
+  var ACCUEIL = "extension";
 
   var main = document.getElementById("main");
   var tabs = document.getElementById("tabs");
@@ -22,7 +24,7 @@
   var current = null;
 
   function show(name){
-    if(!VIEWS[name]) name = "regles";
+    if(!VIEWS[name]) name = ACCUEIL;
     if(current && VIEWS[current] && VIEWS[current].mod().unmount) VIEWS[current].mod().unmount();
     current = name;
 
@@ -165,7 +167,7 @@
   });
 
   RB.load().then(function(){
-    show((decodeURIComponent(location.hash.slice(1))||"regles").split("/")[0]);
+    show((decodeURIComponent(location.hash.slice(1))||ACCUEIL).split("/")[0]);
   }).catch(function(err){
     main.innerHTML = '<div class="panel"><h2>Chargement impossible</h2>' +
       '<p class="lede" style="margin-top:8px">Les données des cartes n\'ont pas pu être lues (' +
