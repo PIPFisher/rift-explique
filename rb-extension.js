@@ -93,7 +93,7 @@ window.Extension = (function(){
       '<section class="panel xt-hero">' +
         '<div class="xt-hero-main">' +
           '<a class="xt-dl" href="' + ZIP + '">Télécharger l\'extension</a>' +
-          '<p class="xt-dl-sub">Archive du projet · installation en 5 minutes, une seule fois</p>' +
+          '<p class="xt-dl-sub">Archive du projet · les cinq étapes sont juste en dessous</p>' +
         '</div>' +
         '<ul class="xt-facts">' +
           '<li><b>1197</b> cartes traduites</li>' +
@@ -101,6 +101,16 @@ window.Extension = (function(){
           '<li><b>834</b> notes explicatives</li>' +
           '<li><b>0</b> donnée envoyée</li>' +
         '</ul>' +
+      '</section>' +
+
+      '<section class="panel">' +
+        '<h2 style="margin-bottom:4px">Installation</h2>' +
+        '<p class="lede" style="margin-bottom:12px">Cinq étapes, une seule fois. ' +
+        'Rien de risqué : l\'extension ne lit que les pages de Rift Atlas.</p>' +
+        '<div class="steps-list">' + etapes + '</div>' +
+        '<p class="xt-warn">Chrome affiche un bandeau « Désactiver les extensions en mode ' +
+        'développeur » à chaque démarrage. C\'est normal pour une extension installée ainsi : ' +
+        'ferme-le, ne clique pas sur « Désactiver ».</p>' +
       '</section>' +
 
       '<section class="panel">' +
@@ -115,7 +125,7 @@ window.Extension = (function(){
         'tiens avec. <b>Alt&nbsp;+&nbsp;²</b> affiche ce rappel en pleine partie, ' +
         'donc il n\'y a rien à retenir&nbsp;:</p>' +
         '<figure class="xt-shot">' +
-          '<img src="raccourcis.png?v=33" width="916" height="1024" loading="lazy" ' +
+          '<img src="raccourcis.png?v=34" width="916" height="1024" loading="lazy" ' +
             'alt="Le rappel des raccourcis affiché par l\'extension : ² coupe ou rallume ' +
             'les traductions, Maj + ² ne laisse que le texte de la carte, Ctrl + ² fige le ' +
             'panneau et le rend cliquable, Alt + ² ouvre ce rappel, Échap libère le panneau ' +
@@ -138,16 +148,6 @@ window.Extension = (function(){
           'pas le chat du simulateur. Et sur un clavier sans «&nbsp;²&nbsp;» — un QWERTY, ' +
           'par exemple — <b>F2</b> la remplace dans les quatre.</p>' +
         '</div>' +
-      '</section>' +
-
-      '<section class="panel">' +
-        '<h2 style="margin-bottom:4px">Installation</h2>' +
-        '<p class="lede" style="margin-bottom:12px">Cinq étapes, une seule fois. ' +
-        'Rien de risqué : l\'extension ne lit que les pages de Rift Atlas.</p>' +
-        '<div class="steps-list">' + etapes + '</div>' +
-        '<p class="xt-warn">Chrome affiche un bandeau « Désactiver les extensions en mode ' +
-        'développeur » à chaque démarrage. C\'est normal pour une extension installée ainsi : ' +
-        'ferme-le, ne clique pas sur « Désactiver ».</p>' +
       '</section>' +
 
       '<section class="panel">' +
