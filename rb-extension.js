@@ -109,6 +109,38 @@ window.Extension = (function(){
       '</section>' +
 
       '<section class="panel">' +
+        '<h2 style="margin-bottom:4px">Les raccourcis</h2>' +
+        '<p class="lede xt-lede-court" style="margin-bottom:16px">Tout part d\'une seule touche, ' +
+        '<b>«&nbsp;²&nbsp;»</b>, celle au-dessus de Tab. Ce qui change, c\'est ce que tu ' +
+        'tiens avec. <b>Alt&nbsp;+&nbsp;²</b> affiche ce rappel en pleine partie, ' +
+        'donc il n\'y a rien à retenir&nbsp;:</p>' +
+        '<figure class="xt-shot">' +
+          '<img src="raccourcis.png?v=33" width="916" height="1024" loading="lazy" ' +
+            'alt="Le rappel des raccourcis affiché par l\'extension : ² coupe ou rallume ' +
+            'les traductions, Maj + ² ne laisse que le texte de la carte, Ctrl + ² fige le ' +
+            'panneau et le rend cliquable, Alt + ² ouvre ce rappel, Échap libère le panneau ' +
+            'ou ferme le rappel.">' +
+        '</figure>' +
+        '<div class="xt-raccourcis">' +
+          '<p><b>«&nbsp;²&nbsp;» seule</b> coupe tout : le panneau, les pastilles FR et les ' +
+          'liserés dorés disparaissent d\'un coup, et reviennent pareil. L\'état est retenu ' +
+          'd\'une partie à l\'autre, donc tu peux jouer une soirée entière sans elle et la ' +
+          'retrouver le lendemain.</p>' +
+          '<p><b>Maj&nbsp;+&nbsp;²</b> n\'éteint rien, ça allège. Par défaut chaque mot-clé ' +
+          'est suivi de son rappel de règles et les cartes difficiles portent une note. ' +
+          'Ce raccourci range tout ça et ne laisse que le texte de la carte, traduit — ' +
+          'ce que lit quelqu\'un qui connaît déjà ses cartes.</p>' +
+          '<p><b>Ctrl&nbsp;+&nbsp;²</b> cloue le panneau où il est. Normalement il suit la ' +
+          'souris et laisse passer les clics, pour ne jamais bloquer le plateau ; l\'inconvénient, ' +
+          'c\'est que son lien est alors inatteignable. Figé, il reprend les clics le temps ' +
+          'd\'ouvrir ce site. On en sort par Échap, ou en cliquant ailleurs.</p>' +
+          '<p class="hint">Les touches sont ignorées pendant que tu écris : elles ne gênent ' +
+          'pas le chat du simulateur. Et sur un clavier sans «&nbsp;²&nbsp;» — un QWERTY, ' +
+          'par exemple — <b>F2</b> la remplace dans les quatre.</p>' +
+        '</div>' +
+      '</section>' +
+
+      '<section class="panel">' +
         '<h2 style="margin-bottom:4px">Installation</h2>' +
         '<p class="lede" style="margin-bottom:12px">Cinq étapes, une seule fois. ' +
         'Rien de risqué : l\'extension ne lit que les pages de Rift Atlas.</p>' +

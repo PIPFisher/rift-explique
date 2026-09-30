@@ -773,3 +773,17 @@ label.field span{font-family:var(--cond);font-size:12px;letter-spacing:.12em;tex
   .rg-more > span{display:none}
   .rg-body{margin:0 15px}
 }
+
+/* la capture du rappel des raccourcis, sur la page Extension */
+.xt-shot{ margin:0 0 20px }
+.xt-shot img{
+  width:100%;
+  max-width:420px;
+  height:auto;
+  border-radius:10px;
+  border:1px solid var(--line-soft);
+  box-shadow:0 22px 46px -24px rgba(0,0,0,.8);
+}
+.xt-raccourcis p{ margin:0 0 11px; max-width:70ch }
+.xt-lede-court{ max-width:70ch }
+.xt-raccourcis p:last-child{ margin-bottom:0 }
