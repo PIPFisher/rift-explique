@@ -19,10 +19,10 @@ window.Extension = (function(){
         "1197 cartes et dans les règles, pour qu'un mot veuille toujours dire la même chose." },
     { t:"Les pictogrammes du jeu",
       s:"Énergie, runes de chaque domaine, Puissance et épuisement s'affichent avec les symboles " +
-        "officiels de Riot, servis depuis leurs serveurs. L'œil retrouve les mêmes repères que sur la carte." },
+        "officiels de Riot, servis depuis leurs serveurs. Ce sont exactement les symboles que tu as sous les yeux sur la carte." },
     { t:"Le code couleur des cartes",
       s:"Sarcelle pour la façon de jouer la carte, vert pour ses capacités, rose pour son rôle au combat. " +
-        "Les rappels de règles passent en petit et en retrait : le regard va d'abord à l'effet." },
+        "Les rappels de règles sont écrits plus petit et décalés vers la droite, pour qu'on lise l'effet avant eux." },
     { t:"Une touche pour tout couper",
       s:"La touche « ² » — ou « F2 », pour les claviers qui n'ont pas de « ² » — éteint et rallume " +
         "les traductions en pleine partie. Panneau, pastilles et liserés disparaissent d'un coup. " +
@@ -81,7 +81,7 @@ window.Extension = (function(){
         '<h1>Riftbound en français, au survol de la souris</h1>' +
         '<p class="lede">Sur Rift Atlas et dans son simulateur, la traduction de la carte ' +
         's\'affiche à côté d\'elle pendant que tu joues. Pas de copier-coller, pas d\'onglet à ' +
-        'ouvrir : tu survoles, tu lis, tu joues.</p>' +
+        'ouvrir, rien à retenir. Tu passes la souris dessus et c\'est lu.</p>' +
       '</div>' +
 
       '<section class="panel xt-hero">' +

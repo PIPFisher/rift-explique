@@ -19,7 +19,7 @@ window.REGLES_DATA = {
     id: "vocabulaire",
     titre: "Le vocabulaire du jeu",
     couleur: "ardoise",
-    eyebrow: "Quand c'est le mot qui bloque, pas la règle",
+    eyebrow: "Avant tout le reste",
     indexTitre: "Les %n mots du jeu, par ordre alphabétique",
     lede: "Épuiser, recycler, rappeler, marquer, prédire… Les règles emploient ces mots " +
       "comme si tout le monde les connaissait. Les voici, une ligne chacun. " +
@@ -63,7 +63,7 @@ window.REGLES_DATA = {
         titre: "Les ressources",
         q: "Énergie, Essence runique, Puissance : je confonds tout.",
         rep: "Deux ressources et une valeur de combat. L'<b>Énergie</b> vient d'une rune épuisée, l'<b>Essence runique</b> d'une rune recyclée — et la <b>Puissance</b> n'est pas une ressource du tout.",
-        intro: "La confusion la plus coûteuse, parce qu'elle fait rater des paiements au mauvais moment.",
+        intro: "Se tromper ici coûte cher, parce qu'on s'en aperçoit au moment de payer, quand il est trop tard pour changer d'avis.",
         mots: [
           { m: "Une rune", id: "voc-rune",
             r: "<b>Une carte d'un type à part, qui ne se bat pas</b> : elle ne sert qu'à produire ce avec quoi tu paies. Chaque rune appartient à un domaine.",
@@ -104,7 +104,7 @@ window.REGLES_DATA = {
           { m: "Prête ou épuisée", id: "voc-prete",
             r: "<b>Une unité prête peut agir ; une unité épuisée, non.</b>",
             p: ["Les unités arrivent <b>épuisées</b> : celle que tu viens de jouer ne peut pas bouger ce tour-ci.",
-                "Sauf avec le mot-clé <b>Accélération</b> (<i>Accelerate</i>), qui la fait arriver prête. Les équipements, eux, arrivent toujours prêts."] },
+                "Sauf avec le mot-clé <b>Accélération</b> (<i>Accelerate</i>), qui la fait arriver prête. Un équipement, en revanche, arrive toujours prêt."] },
           { m: "Un permanent", id: "voc-permanent",
             r: "<b>Toute carte qui reste sur le plateau</b> : une unité, un équipement, une rune, une carte cachée.",
             p: ["Par opposition à un sort, qui part à la défausse dès qu'il s'est résolu."] },
@@ -120,7 +120,7 @@ window.REGLES_DATA = {
                 "Si un rappel remplace une mort, l'unité n'allant pas à la défausse, son <b>Agonie</b> (<i>Deathknell</i>) ne se déclenche pas."] },
           { m: "Une amélioration", id: "voc-amelioration",
             r: "<b>Un bonus de +1 Puissance posé sur une unité.</b>",
-            p: ["Une unité ne peut en porter qu'une seule à la fois. <b>Assaut</b> (<i>Assault</i>), <b>Bouclier</b> (<i>Shield</i>) et <b>Protection</b> (<i>Deflect</i>), eux, se cumulent."] }
+            p: ["Une unité ne peut en porter qu'une seule à la fois. <b>Assaut</b> (<i>Assault</i>), <b>Bouclier</b> (<i>Shield</i>) et <b>Protection</b> (<i>Deflect</i>) se cumulent, en revanche."] }
         ]
       },
       {
@@ -191,7 +191,7 @@ window.REGLES_DATA = {
         id: "ch-prio",
         titre: "Priorité et focus",
         q: "J'ai le focus, je fais ce que je veux ?",
-        rep: "Non. Le focus est le droit de <b>rouvrir</b> la chaîne, la priorité celui d'<b>agir</b> : il faut les deux. Mais passer la priorité ne fait pas perdre le focus.",
+        rep: "Pas tout à fait. Le focus donne le droit de <b>rouvrir</b> la chaîne, la priorité celui d'<b>agir</b>, et il te faut les deux. En revanche, passer la priorité ne te fait pas perdre le focus.",
         ref: "311 à 313",
         intro: "La priorité est le droit d'agir. Le focus est une permission supplémentaire, " +
           "propre aux affrontements.",
@@ -203,7 +203,7 @@ window.REGLES_DATA = {
           { ref: "313.2", t: "Qui gagne le focus gagne aussi la priorité.",
             d: "Les deux arrivent ensemble." },
           { ref: "313.3", t: "Passer la priorité ne fait pas perdre le focus.",
-            d: "C'est la distinction la plus utile du jeu : tu peux laisser l'adversaire répondre tout en conservant le droit de rouvrir ensuite." },
+            d: "Tu peux laisser l'adversaire répondre tout en gardant le droit de rouvrir derrière lui. Beaucoup de joueurs passent leur tour sans le savoir." },
           { ref: "313.4", t: "Le focus seul ne suffit pas pour agir.",
             d: "Il faut détenir la priorité en même temps." },
           { ref: "313.5", t: "Hors affrontement, personne n'a le focus.",
@@ -220,7 +220,7 @@ window.REGLES_DATA = {
         q: "À partir de quand ma carte est-elle vraiment jouée ?",
         rep: "Une fois <b>finalisée</b>. Avant, elle est en attente et tout peut encore être annulé — et on ne peut pas répondre à une unité qui arrive, elle saute l'attente.",
         ref: "332 à 340",
-        intro: "Une chaîne se vide toujours selon la même boucle. La connaître évite la moitié des disputes de table.",
+        intro: "Une chaîne se vide toujours selon la même boucle. C'est court, et ça clôt la plupart des débats.",
         regles: [
           { ref: "337", t: "1 · Finaliser.",
             d: "Le contrôleur de l'élément en attente le plus ancien termine de le jouer. Finaliser ne passe pas la priorité." },
@@ -250,8 +250,8 @@ window.REGLES_DATA = {
     id: "affrontement",
     titre: "L'affrontement",
     couleur: "rouge",
-    eyebrow: "Quand on se dispute un champ de bataille",
-    lede: "Le chapitre le plus dense du jeu, et celui qui bloque le plus de parties. " +
+    eyebrow: "Se battre pour un champ de bataille",
+    lede: "C'est le morceau le plus lourd, et celui qui arrête les parties. " +
       "Un affrontement est une <b>fenêtre</b> où les deux joueurs posent des sorts à tour de rôle ; " +
       "un combat est ce qui arrive ensuite, si les deux camps ont encore des unités sur place.",
     sections: [
@@ -261,8 +261,9 @@ window.REGLES_DATA = {
         q: "On se bat dès qu'on arrive sur un champ de bataille ?",
         rep: "Non. L'affrontement est la fenêtre où l'on joue des sorts ; le combat n'arrive qu'après, et seulement si <b>deux joueurs</b> ont des unités sur place.",
         ref: "341 à 344, 460",
-        intro: "La confusion la plus fréquente. L'affrontement est une phase de discussion ; " +
-          "le combat est la résolution des dégâts. On peut avoir l'un sans l'autre.",
+        intro: "On emploie les deux mots l'un pour l'autre sans arrêt, alors qu'ils ne désignent " +
+          "pas la même chose. L'affrontement est le moment où l'on joue des sorts ; le combat, " +
+          "celui où les dégâts tombent, et il n'arrive pas toujours.",
         regles: [
           { ref: "342", t: "Un affrontement est une fenêtre où les joueurs jouent des sorts en alternance.",
             d: "Chaque sort ainsi joué crée une chaîne normale." },
@@ -286,7 +287,7 @@ window.REGLES_DATA = {
             d: "Un champ de bataille où un combat est en attente ou en cours devient une destination interdite pour les autres joueurs (462.1), et on ne peut pas y jouer d'unité (462.2). Une unité qui devait y arriver part dans la base de son contrôleur à la place." }
         ],
         erreurs: [
-          { t: "Croire qu'arriver sur un champ vide déclenche un combat.",
+          { t: "Arriver sur un champ vide et attendre un combat.",
             d: "Non. Sans unité adverse, il n'y a pas de combat : pas de dégâts, et les capacités « quand j'attaque » ne se déclenchent pas." }
         ]
       },
@@ -355,10 +356,10 @@ window.REGLES_DATA = {
         id: "af-assignation",
         titre: "Répartir les dégâts : la règle du létal",
         q: "Je peux étaler mes dégâts comme je veux ?",
-        rep: "Non. L'attaquant répartit en premier, et il faut tuer une unité <b>complètement</b> avant de passer à la suivante — sans jamais mettre plus que le minimum nécessaire.",
+        rep: "La répartition est contrainte des deux côtés. L'attaquant commence, il doit tuer une unité <b>complètement</b> avant de passer à la suivante, et il ne peut jamais mettre plus que le minimum qui suffit.",
         ref: "465.2.c",
-        intro: "C'est ici que se jouent les litiges les plus techniques. La répartition n'est pas libre : " +
-          "elle est contrainte dans les deux sens.",
+        intro: "La répartition n'est pas libre, et elle est contrainte dans les deux sens à la fois : " +
+          "un minimum à mettre, un maximum à ne pas dépasser.",
         regles: [
           { ref: "465.2.c", t: "L'attaquant répartit en premier.",
             d: "Chaque joueur répartit un total égal à la somme des Puissances de ses unités." },
@@ -388,7 +389,7 @@ window.REGLES_DATA = {
     id: "score",
     titre: "Marquer des points",
     couleur: "or",
-    eyebrow: "Quand il faut compter les points",
+    eyebrow: "Gagner la partie",
     lede: "On gagne en marquant, pas en tuant. Deux façons de marquer, une limite stricte par " +
       "champ de bataille et par tour, et une condition particulière pour le tout dernier point.",
     sections: [
@@ -431,7 +432,7 @@ window.REGLES_DATA = {
             d: "Un point gagné par un effet qui dit explicitement de gagner un point y échappe." }
         ],
         erreurs: [
-          { t: "Croire qu'on gagne dès qu'on atteint le score.",
+          { t: "Annoncer la victoire dès qu'on atteint le score.",
             d: "Pas par conquête. Si tu n'as pas marqué partout ce tour-ci, la conquête te donne une carte, pas la victoire." }
         ]
       }
@@ -443,7 +444,7 @@ window.REGLES_DATA = {
     id: "mots-cles",
     titre: "Les mots-clés",
     couleur: "vert",
-    eyebrow: "Quand un mot surligné pose question",
+    eyebrow: "Les mots surlignés sur les cartes",
     lede: "Les vingt-cinq mots surlignés qu'on trouve sur les cartes. Chacun est un raccourci " +
       "pour une phrase de règles complète : ce chapitre donne cette phrase, puis ce qui " +
       "coince en pratique.<br>Comme les cartes sont imprimées en anglais, chaque mot porte ici " +
@@ -457,8 +458,8 @@ window.REGLES_DATA = {
         q: "J'ai deux fois le même mot-clé : ça cumule ?",
         rep: "Ça dépend du mot. Certains sont redondants, d'autres additionnent leurs valeurs, d'autres se déclenchent séparément — le classement des trois familles est ci-dessous.",
         ref: "801 à 803",
-        intro: "Quatre règles générales, à connaître avant les mots eux-mêmes. Elles règlent " +
-          "la plupart des « et si j'en ai deux ? ».",
+        intro: "Avant les mots eux-mêmes, ce qui vaut pour tous. C'est là que se règle " +
+          "la question qui revient le plus souvent à une table : et si j'en ai deux ?",
         regles: [
           { ref: "801.2", t: "Le surlignage coloré n'a aucun effet.",
             d: "Il sert à repérer le mot, rien de plus. La couleur ne change pas le fonctionnement." },
@@ -486,9 +487,9 @@ window.REGLES_DATA = {
         q: "Est-ce que j'ai le droit de jouer ça maintenant ?",
         rep: "Action, Réaction, Embuscade, Caché et Flux ne changent pas ce que fait la carte : ils changent le <b>moment</b> où tu peux la poser, ou l'endroit d'où tu la sors.",
         ref: "806, 811, 813, 822, 829",
-        intro: "Ces mots-clés ne changent pas ce que fait la carte : ils changent le moment " +
-          "où tu peux la poser, ou l'endroit d'où tu peux la sortir. C'est de la permission, " +
-          "rien d'autre.",
+        intro: "Aucun de ces cinq mots ne touche à l'effet de la carte. Ils déverrouillent " +
+          "un moment, ou un endroit d'où partir. Si la question que tu te poses commence par " +
+          "« est-ce que j'ai le droit, là, maintenant », la réponse est ici.",
         mots: [
           { m: "Action", vo: "Action", ref: "806",
             r: "<b>Se joue aussi dans un affrontement, sur le tour de n'importe qui</b>, à condition que la chaîne soit vide.",
@@ -533,8 +534,9 @@ window.REGLES_DATA = {
         q: "Quels mots-clés comptent pendant un combat ?",
         rep: "Assaut et Bouclier donnent de la Puissance selon le rôle tenu ; Tank et Arrière-ligne imposent l'ordre des dégâts ; Gank ouvre les déplacements.",
         ref: "807, 810, 814, 815, 826",
-        intro: "Deux mots donnent de la Puissance selon le rôle tenu, deux autres imposent " +
-          "l'ordre dans lequel les dégâts sont assignés, et un dernier ouvre les déplacements.",
+        intro: "Un combat se joue sur deux tableaux : la Puissance que chaque camp apporte, " +
+          "et l'ordre dans lequel les dégâts tombent. Ces cinq mots agissent sur l'un ou sur l'autre, " +
+          "jamais sur les deux.",
         mots: [
           { m: "Assaut", vo: "Assault", ref: "807",
             r: "<b>+X Puissance tant que je suis attaquante.</b> Si le X n'est pas écrit, il vaut 1.",
@@ -578,8 +580,8 @@ window.REGLES_DATA = {
         q: "Ce coût en plus, je le paie à quel moment ?",
         rep: "Accélération et Répétition se paient <b>en jouant la carte</b>, jamais après. Protection, elle, fait payer l'adversaire quand il te choisit.",
         ref: "805, 809, 820",
-        intro: "Trois mots-clés qui touchent au prix d'une carte : deux que tu paies toi, " +
-          "un que tu fais payer à l'adversaire.",
+        intro: "Ici, tout se joue au moment du paiement. Un coût additionnel oublié ne se " +
+          "rattrape pas une fois la carte posée.",
         mots: [
           { m: "Accélération", vo: "Accelerate", ref: "805",
             r: "<b>Tu peux payer 1 Énergie + 1 Essence runique en coût additionnel pour que j'arrive prête.</b>",
@@ -604,7 +606,7 @@ window.REGLES_DATA = {
         erreurs: [
           { t: "Payer l'Accélération d'une unité déjà en jeu.",
             d: "Impossible. C'est un coût additionnel qui fait partie des étapes de mise en jeu, pas une capacité activable." },
-          { t: "Croire que Protection gêne ses propres sorts.",
+          { t: "Se croire gêné par sa propre Protection.",
             d: "Non : seulement ceux d'un adversaire." }
         ]
       },
@@ -615,8 +617,9 @@ window.REGLES_DATA = {
         q: "Quand est-ce que ça se déclenche, exactement ?",
         rep: "Agonie à la mort, Vision à l'arrivée, Temporaire au début de ta phase initiale (avant le score), Chasse quand tu conquiers ou que tu tiens.",
         ref: "808, 816, 817, 823",
-        intro: "Quatre mots-clés qui posent une capacité déclenchée sur la chaîne quand " +
-          "l'événement arrive.",
+        intro: "Chacun pose une capacité sur la chaîne au moment où son événement arrive. " +
+          "Toute la difficulté est de savoir quel est cet événement, exactement — et une unité " +
+          "qui meurt ne meurt pas toujours de la façon qu'on croit.",
         mots: [
           { m: "Agonie", vo: "Deathknell", ref: "808",
             r: "<b>Quand je meurs, [effet].</b>",
@@ -653,8 +656,8 @@ window.REGLES_DATA = {
         q: "Comment j'attache un équipement, et quand ?",
         rep: "Équiper est une capacité à activer ; Dégainer permet de le poser et de l'attacher en plein affrontement ; Expert en armes le fait à moindre coût quand l'unité arrive.",
         ref: "818, 819, 821",
-        intro: "Trois mots-clés propres aux Équipements : celui qui attache, celui qui " +
-          "attache vite, et celui qui attache gratuitement.",
+        intro: "Les Équipements ont leurs mots à eux. La question n'est jamais ce qu'ils font, " +
+          "mais quand l'attachement a lieu, et à quel prix.",
         mots: [
           { m: "Équiper", vo: "Equip", ref: "818",
             r: "<b>[Coût] : attache cet équipement à une unité que tu contrôles.</b>",
@@ -692,9 +695,8 @@ window.REGLES_DATA = {
         q: "Pourquoi ce texte ne s'applique pas ?",
         rep: "Une partie du texte de la carte ne s'applique que si une condition est remplie : une autre carte jouée pour <b>Légion</b> (<i>Legion</i>), assez d'XP pour <b>Niveau</b> (<i>Level</i>), le statut amplifié pour <b>Amplifié</b> (<i>Empowered</i>). Dès que la condition tombe, cette partie cesse de s'appliquer.",
         ref: "812, 824, 827, 828",
-        intro: "Ces mots-clés ne font rien par eux-mêmes. Ils posent une condition devant " +
-          "un bout du texte de la carte : tant qu'elle est remplie, ce texte compte ; " +
-          "dès qu'elle ne l'est plus, il cesse de compter, sans qu'on ait rien à faire.",
+        intro: "Le piège est toujours le même. On lit le texte de la carte sans voir la " +
+          "condition écrite devant, et on compte sur un effet qu'on n'a pas.",
         mots: [
           { m: "Légion", vo: "Legion", ref: "812",
             r: "<b>Si tu as déjà joué une autre carte ce tour-ci, je gagne [texte].</b>",
@@ -730,7 +732,7 @@ window.REGLES_DATA = {
         q: "Je peux en mettre plusieurs dans mon deck ?",
         rep: "Pas si la carte est <b>Unique</b> (<i>Unique</i>) : un seul exemplaire, et ça ne change rien pendant la partie.",
         ref: "825",
-        intro: "Un seul mot-clé ne fait rien pendant la partie et tout avant elle.",
+        intro: "Unique est le seul mot-clé qui ne serve qu'au moment de construire son deck. En partie, il n'a aucun effet.",
         mots: [
           { m: "Unique", vo: "Unique", ref: "825",
             r: "<b>Ton deck ne peut contenir qu'un seul exemplaire de cette carte.</b>",

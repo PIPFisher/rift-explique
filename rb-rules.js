@@ -7,14 +7,14 @@ window.Rules = (function(){
   var SECTIONS = [
     {
       title:"L'affrontement",
-      lede:"Un affrontement s'ouvre dès qu'un champ de bataille est contesté — que l'adversaire y ait des unités ou non. Le combat, lui, n'arrive que si les deux camps en ont sur place.",
+      lede:"Un affrontement s'ouvre dès qu'un champ de bataille est contesté — que l'adversaire y ait des unités ou non. Le combat n'arrive que si les deux camps en ont sur place.",
       steps:[
         {t:"Attaquant et défenseur", s:"Celui qui <b>bouge</b> ses unités est l'attaquant. Celui qui était déjà là est le défenseur. Ça ne dépend pas de qui joue son tour."},
         {t:"Champ de bataille vide", s:"Arriver sur un endroit sans unité adverse donne un affrontement <b>sans combat</b> : pas de dégâts, et les déclenchements « quand j'attaque » ne partent pas. S'il ne reste que tes unités, tu prends le contrôle du champ de bataille."},
         {t:"Les dégâts sont mis en commun", s:"Chaque camp <b>additionne la Puissance de toutes ses unités présentes</b> et répartit ce total sur les unités adverses. Les deux camps le font en même temps : il n'y a pas de premier frappeur, on ne peut pas taper sans être tapé, sauf effet qui retire l'unité du combat avant."},
         {t:"L'assignation", s:"Il faut assigner des dégâts <b>létaux</b> à une unité avant de passer à la suivante. <b>Tank</b> encaisse en premier, <b>Arrière-ligne</b> en dernier."},
-        {t:"Les trois issues", s:"Seuls les attaquants survivent → ils <b>conquièrent</b>. Les deux camps survivent → les attaquants sont <b>renvoyés à la base</b>. Tout le monde meurt → le champ de bataille reste <b>non contrôlé</b>."},
-        {t:"Le soin d'après combat", s:"Juste après les dégâts, <b>toutes</b> les unités du plateau sont soignées, pas seulement celles qui ont combattu. Rien ne se reporte au tour suivant."}
+        {t:"Les trois issues", s:"S'il ne reste que les attaquants, ils <b>conquièrent</b> le champ de bataille. Si les deux camps ont encore des unités, les attaquants sont <b>renvoyés à leur base</b> et personne ne gagne rien. Et si tout le monde est mort, le champ de bataille n'appartient plus à personne."},
+        {t:"Le soin d'après combat", s:"Juste après les dégâts, <b>toutes</b> les unités du plateau sont soignées, pas seulement celles qui ont combattu. Une unité blessée qui survit repart donc à zéro."}
       ]
     },
     {
@@ -42,7 +42,7 @@ window.Rules = (function(){
       title:"Les pièges de débutant",
       lede:"Les erreurs qu'on fait tous les premières parties.",
       steps:[
-        {t:"Les unités arrivent épuisées", s:"Sauf mention contraire ou <b>Accélération</b>. Une unité jouée ce tour-ci ne peut donc pas bouger. Les équipements, eux, arrivent prêts."},
+        {t:"Les unités arrivent épuisées", s:"Sauf mention contraire ou <b>Accélération</b>. Une unité jouée ce tour-ci ne peut donc pas bouger. Un équipement arrive prêt."},
         {t:"Énergie et Essence runique", s:"Épuiser une rune donne de l'<b>Énergie</b>, la recycler donne de l'<b>Essence runique</b> de son domaine. La même rune peut faire les deux, mais pas en même temps."},
         {t:"Essence runique et Puissance", s:"Deux notions que l'anglais distingue par <i>Power</i> et <i>Might</i>, et que ce site rend ainsi pour éviter la collision entre « Power » et « Puissance ». L'<b>essence runique</b> est une ressource : elle vient des runes recyclées et sert à payer les coûts colorés. La <b>Puissance</b> est la valeur de combat imprimée sur l'unité. Dans les traductions, les coûts sont écrits en pictogrammes comme sur les cartes : un <b>rond</b> pour l'Énergie, un <b>losange</b> pour l'essence runique (violet quand le domaine est libre), un <b>écusson</b> pour la Puissance. Survole-les pour la lecture en toutes lettres."},
         {t:"La réserve se vide", s:"Ce qui n'est pas dépensé est perdu à la fin de la phase de pioche et à la fin du tour."},
