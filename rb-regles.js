@@ -58,12 +58,15 @@ window.Regles = (function(){
   function motHTML(m){
     var cherchable = plat(m.m + " " + (m.vo || "") + " " + (m.r || "") +
                           " " + (m.p || []).join(" ")).toLowerCase();
-    return '<div class="rg-m" id="mot-' + esc(m.ref) + '" data-t="' + esc(cherchable) + '">' +
+    // le chapitre de vocabulaire n'a pas de numéro d'article : il porte un id à lui
+    return '<div class="rg-m" id="mot-' + esc(m.id || m.ref) + '" data-t="' + esc(cherchable) + '">' +
       '<div class="rg-m-head">' +
         '<h4>' + esc(m.m) + '</h4>' +
         (m.vo ? '<span class="rg-m-vo">' + esc(m.vo) + '</span>' : '') +
-        '<a class="rg-ref" href="' + D.source + '" target="_blank" rel="noopener" ' +
-          'title="Article ' + esc(m.ref) + ' des règles officielles">' + esc(m.ref) + '</a>' +
+        (m.ref
+          ? '<a class="rg-ref" href="' + D.source + '" target="_blank" rel="noopener" ' +
+              'title="Article ' + esc(m.ref) + ' des règles officielles">' + esc(m.ref) + '</a>'
+          : '') +
       '</div>' +
       (m.r ? '<p class="rg-m-r">' + m.r + '</p>' : '') +
       ((m.p && m.p.length)
@@ -118,13 +121,17 @@ window.Regles = (function(){
       (s.mots || []).forEach(function(m){ tous.push({ m: m, s: s.id }); });
     });
     if(!tous.length) return "";
-    tous.sort(function(a, b){ return a.m.m.localeCompare(b.m.m, "fr"); });
+    // on classe sur le mot, pas sur son article : « La base » se cherche à B
+    function cle(s){ return s.replace(/^(l'|la |le |les |un |une )/i, ""); }
+    tous.sort(function(a, b){ return cle(a.m.m).localeCompare(cle(b.m.m), "fr"); });
+    var titre = c.indexTitre
+      ? c.indexTitre.replace("%n", tous.length)
+      : "Les " + tous.length + " mots-clés, par ordre alphabétique";
     return '<div class="rg-index">' +
-      '<p class="rg-index-t">Les ' + tous.length + ' mots-clés, par ordre alphabétique — ' +
-      'clique pour ouvrir&nbsp;:</p>' +
+      '<p class="rg-index-t">' + esc(titre) + ' — clique pour ouvrir&nbsp;:</p>' +
       '<div class="rg-chips">' + tous.map(function(x){
         return '<button type="button" class="rg-chip" data-sec="' + esc(x.s) + '" ' +
-          'data-mot="mot-' + esc(x.m.ref) + '">' + esc(x.m.m) + '</button>';
+          'data-mot="mot-' + esc(x.m.id || x.m.ref) + '">' + esc(x.m.m) + '</button>';
       }).join("") + '</div></div>';
   }
 

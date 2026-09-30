@@ -10,6 +10,136 @@ window.REGLES_DATA = {
 
   chapitres: [
 
+  /* ================= LE VOCABULAIRE =================
+     Les chapitres suivants emploient une vingtaine de mots précis sans
+     jamais s'arrêter pour les définir. C'est le premier obstacle pour
+     quelqu'un qui découvre le jeu : il comprend chaque phrase sauf les
+     trois mots qui comptent. Ce chapitre les donne, et rien d'autre. */
+  {
+    id: "vocabulaire",
+    titre: "Le vocabulaire du jeu",
+    couleur: "ardoise",
+    eyebrow: "Quand c'est le mot qui bloque, pas la règle",
+    indexTitre: "Les %n mots du jeu, par ordre alphabétique",
+    lede: "Épuiser, recycler, rappeler, marquer, prédire… Les règles emploient ces mots " +
+      "comme si tout le monde les connaissait. Les voici, une ligne chacun. " +
+      "Si un mot te bloque dans les chapitres suivants, il est ici.",
+    sections: [
+      {
+        id: "voc-lieux",
+        titre: "Les endroits",
+        q: "Base, champ de bataille, défausse, bannissement : c'est quoi tout ça ?",
+        rep: "Les six endroits où une carte peut se trouver. Un seul rapporte des points : le <b>champ de bataille</b>.",
+        intro: "Savoir d'où part une carte et où elle finit règle la moitié des questions.",
+        mots: [
+          { m: "La base", id: "voc-base",
+            r: "<b>Ton camp, en dehors des champs de bataille.</b> Tes unités y arrivent quand tu les joues, et y reviennent quand elles sont rappelées.",
+            p: ["Chaque joueur a la sienne. On ne s'y bat pas : il n'y a pas de combat dans une base."] },
+          { m: "Un champ de bataille", id: "voc-champ",
+            r: "<b>Un des lieux qu'on se dispute.</b> C'est le seul endroit qui rapporte des points, donc le seul véritable enjeu de la partie.",
+            p: ["Tu le <b>contrôles</b> quand, après un affrontement, tu es le seul à y avoir des unités.",
+                "Un champ de bataille où plus personne n'a d'unité est <b>non contrôlé</b> : il n'appartient à personne."] },
+          { m: "Le deck principal", id: "voc-deck",
+            r: "<b>La pile dans laquelle tu pioches.</b> Les runes, elles, forment une pile à part.",
+            p: ["« Recycler » et « prédire » agissent tous les deux sur le dessus de cette pile."] },
+          { m: "La défausse", id: "voc-defausse",
+            r: "<b>Où vont les cartes une fois utilisées, et les unités tuées.</b>",
+            p: ["Rien n'y est perdu définitivement : le mot-clé <b>Flux</b> permet de rejouer un sort depuis la défausse."] },
+          { m: "Le bannissement", id: "voc-bannissement",
+            r: "<b>Hors jeu, définitivement.</b> Une carte bannie ne revient pas.",
+            p: ["C'est toute la différence avec la défausse, où une carte reste accessible."] },
+          { m: "La réserve", id: "voc-reserve",
+            r: "<b>Ce que tu as sous la main pour payer en ce moment</b> : ton Énergie et tes Essences runiques disponibles.",
+            p: ["Elle ne se garde pas : ce que tu n'as pas dépensé est perdu à la fin de la phase de pioche, puis à la fin du tour."] }
+        ]
+      },
+      {
+        id: "voc-payer",
+        titre: "Les ressources",
+        q: "Énergie, Essence runique, Puissance : je confonds tout.",
+        rep: "Deux ressources et une valeur de combat. L'<b>Énergie</b> vient d'une rune épuisée, l'<b>Essence runique</b> d'une rune recyclée — et la <b>Puissance</b> n'est pas une ressource du tout.",
+        intro: "La confusion la plus coûteuse, parce qu'elle fait rater des paiements au mauvais moment.",
+        mots: [
+          { m: "L'Énergie", id: "voc-energie",
+            r: "<b>La ressource neutre.</b> Tu l'obtiens en <b>épuisant</b> une rune.",
+            p: ["Elle paie les coûts écrits dans un <b>rond</b>, sans condition de couleur."] },
+          { m: "L'Essence runique", id: "voc-essence",
+            r: "<b>La ressource colorée.</b> Tu l'obtiens en <b>recyclant</b> une rune, et elle prend le domaine de cette rune.",
+            p: ["Elle paie les coûts écrits dans un <b>losange</b>. Un losange violet accepte n'importe quel domaine.",
+                "L'anglais l'appelle <i>Power</i> — d'où le choix de ne pas la nommer « Puissance » ici, pour ne pas la confondre avec la valeur de combat."] },
+          { m: "Le domaine", id: "voc-domaine",
+            r: "<b>La couleur d'une carte.</b> Il décide quelle Essence runique peut payer ses coûts colorés.",
+            p: ["Une même carte peut appartenir à plusieurs domaines."] },
+          { m: "Épuiser", id: "voc-epuiser",
+            r: "<b>Tourner une carte de côté pour s'en servir.</b> Une rune épuisée donne de l'Énergie ; une unité épuisée a fini d'agir.",
+            p: ["L'inverse, c'est être <b>prête</b>. Remettre une carte droite s'appelle la <b>redresser</b>."] },
+          { m: "Recycler", id: "voc-recycler",
+            r: "<b>Remettre une carte sous ton deck principal.</b> Recycler une rune donne en plus une Essence runique de son domaine.",
+            p: ["Une même rune peut donc servir aux deux usages — mais pas en même temps : soit tu l'épuises, soit tu la recycles."] },
+          { m: "La Puissance", id: "voc-puissance",
+            r: "<b>La valeur de combat d'une unité.</b> Elle sert deux fois : elle dit combien de dégâts l'unité inflige, et combien elle en encaisse avant de mourir.",
+            p: ["Elle est écrite dans un <b>écusson</b> sur la carte.",
+                "L'anglais la note <i>Might</i>. Ne pas la confondre avec <i>Power</i>, qui est l'Essence runique."] }
+        ]
+      },
+      {
+        id: "voc-unite",
+        titre: "L'état d'une unité",
+        q: "Mon unité est « épuisée », « marquée », « rappelée » : elle est morte ?",
+        rep: "Non, aucune des trois. Épuisée, elle a déjà agi. Marquée, elle a encaissé des dégâts. Rappelée, elle est rentrée à la base — intacte.",
+        intro: "Quatre mots qu'on prend pour des synonymes de « morte » et qui ne le sont pas.",
+        mots: [
+          { m: "Prête ou épuisée", id: "voc-prete",
+            r: "<b>Une unité prête peut agir ; une unité épuisée, non.</b>",
+            p: ["Les unités arrivent <b>épuisées</b> : celle que tu viens de jouer ne peut pas bouger ce tour-ci.",
+                "Sauf avec le mot-clé <b>Accélération</b>, qui la fait arriver prête. Les équipements, eux, arrivent toujours prêts."] },
+          { m: "Un permanent", id: "voc-permanent",
+            r: "<b>Toute carte qui reste sur le plateau</b> : une unité, un équipement, une rune, une carte cachée.",
+            p: ["Par opposition à un sort, qui part à la défausse dès qu'il s'est résolu."] },
+          { m: "Les dégâts marqués", id: "voc-marques",
+            r: "<b>Les dégâts encaissés restent inscrits sur l'unité</b> jusqu'au prochain soin. Elle meurt quand ils atteignent sa Puissance.",
+            p: ["C'est ce qui explique qu'une unité déjà blessée demande moins de dégâts pour être tuée."] },
+          { m: "Soigner", id: "voc-soigner",
+            r: "<b>Effacer les dégâts marqués.</b>",
+            p: ["Après chaque combat, <b>toutes</b> les unités du plateau sont soignées — pas seulement celles qui se sont battues. Rien ne se reporte au tour suivant."] },
+          { m: "Rappeler", id: "voc-rappeler",
+            r: "<b>Renvoyer une unité à sa base.</b> Elle n'est ni tuée ni défaussée : elle quitte simplement le champ de bataille.",
+            p: ["C'est ce qui arrive aux attaquants quand des défenseurs tiennent encore après un combat.",
+                "Si un rappel remplace une mort, l'unité n'allant pas à la défausse, son <b>Agonie</b> ne se déclenche pas."] },
+          { m: "Une amélioration", id: "voc-amelioration",
+            r: "<b>Un bonus de +1 Puissance posé sur une unité.</b>",
+            p: ["Une unité ne peut en porter qu'une seule à la fois. Assaut, Bouclier et Protection, eux, se cumulent."] }
+        ]
+      },
+      {
+        id: "voc-tour",
+        titre: "Les moments du tour",
+        q: "« Phase initiale », « étape de score », « vérification de légalité » : c'est quand ?",
+        rep: "Trois moments que les règles citent sans les expliquer. Le premier ouvre ton tour, le deuxième y distribue les points, le troisième valide ou annule la carte que tu viens de jouer.",
+        mots: [
+          { m: "La phase initiale", id: "voc-initiale",
+            r: "<b>Le début de ton tour.</b> C'est là qu'on regarde les champs de bataille que tu tiens, et là que meurent les unités <b>Temporaire</b>.",
+            p: ["Une unité qui meurt à ce moment-là meurt <i>avant</i> qu'on compte les points : elle ne tient rien."] },
+          { m: "L'étape de score", id: "voc-score",
+            r: "<b>Le moment de la phase initiale où les champs de bataille que tu tiens rapportent leur point.</b>" },
+          { m: "Marquer", id: "voc-marquer",
+            r: "<b>Gagner un point sur un champ de bataille</b>, soit en le prenant (<b>conquérir</b>), soit en le gardant jusqu'à ta phase initiale (<b>tenir</b>).",
+            p: ["Un même champ de bataille ne rapporte qu'une fois par tour et par joueur."] },
+          { m: "L'XP", id: "voc-xp",
+            r: "<b>De l'expérience, qui s'accumule au fil de la partie.</b>",
+            p: ["Le mot-clé <b>Chasse</b> en donne quand tu conquiers ou que tu tiens ; le mot-clé <b>Niveau</b> allume du texte sur tes cartes quand tu en as assez."] },
+          { m: "La vérification de légalité", id: "voc-legalite",
+            r: "<b>Le contrôle qui suit immédiatement le fait de jouer une carte.</b>",
+            p: ["S'il révèle qu'une condition obligatoire n'a pas pu être remplie, tout est annulé et la carte retourne d'où elle vient.",
+                "C'est aussi le moment où une carte posée sur la chaîne cesse d'être « en attente » pour être <b>finalisée</b>."] },
+          { m: "Prédire", id: "voc-predire",
+            r: "<b>Regarder la première carte de ton deck principal</b>, puis choisir de la laisser ou de la recycler.",
+            p: ["C'est ce que fait le mot-clé <b>Vision</b> quand ton permanent arrive."] }
+        ]
+      }
+    ]
+  },
+
   /* ================= LA CHAÎNE ================= */
   {
     id: "chaine",
@@ -220,7 +350,7 @@ window.REGLES_DATA = {
           { ref: "465.2.c", t: "L'attaquant répartit en premier.",
             d: "Chaque joueur répartit un total égal à la somme des Puissances de ses unités." },
           { ref: "465.2.c.3", t: "Une unité doit recevoir des dégâts létaux complets avant de passer à la suivante.",
-            d: "Létal veut dire : un montant non nul égal ou supérieur à la Puissance de l'unité." },
+            d: "Létal veut dire : un montant non nul suffisant pour la tuer — c'est-à-dire égal ou supérieur à ce qu'il lui reste de Puissance, dégâts déjà marqués déduits. Une unité déjà blessée demande donc moins." },
           { ref: "465.2.c.4", t: "On ne peut pas surcharger une unité.",
             d: "Pas plus que le minimum nécessaire pour la tuer, sauf s'il ne reste plus aucune autre unité à qui assigner." }
         ],
@@ -281,7 +411,7 @@ window.REGLES_DATA = {
         intro: "La règle qui surprend tout le monde en fin de partie, et qui décide des victoires serrées.",
         regles: [
           { ref: "471.1.b", t: "À un point de la victoire, la conquête change de nature.",
-            d: "Si tu es à un point du score de victoire ou au-delà, la conquête ne rapporte plus automatiquement." },
+            d: "Dès qu'un point de plus suffirait à te faire gagner, la conquête cesse de rapporter automatiquement." },
           { ref: "471.1.b.1", t: "Il faut avoir marqué sur tous les champs de bataille ce tour-ci.",
             d: "Si c'est le cas, tu gagnes le point final. Sinon, tu pioches une carte à la place." },
           { ref: "471.1.a.1", t: "Cette restriction ne vaut que pour la conquête.",

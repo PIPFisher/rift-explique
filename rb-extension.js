@@ -35,8 +35,12 @@ window.Extension = (function(){
     { t:"Débutant ou habitué, au choix",
       s:"Par défaut, le panneau explique : chaque mot-clé est suivi de son rappel de règles, et " +
         "les cartes retorses reçoivent une note. Quand tu connais tes cartes, « Maj&nbsp;+&nbsp;² » " +
-        "(ou « Maj&nbsp;+&nbsp;F2 ») range tout ça et ne laisse que le texte de la carte, traduit. " +
-        "Une seule ligne par effet, rien à survoler en trop." },
+        "— ou « Maj&nbsp;+&nbsp;F2 », ou la touche « * » à droite d'Entrée — range tout ça et ne " +
+        "laisse que le texte de la carte, traduit. Une seule ligne par effet, rien à survoler en trop." },
+    { t:"Une fenêtre de réglages",
+      s:"Un clic sur l'icône de l'extension ouvre les réglages : la version installée, le nombre " +
+        "de cartes chargées, les mêmes bascules que les raccourcis, et un bouton pour forcer la " +
+        "mise à jour des traductions. Les bascules et les touches agissent sur le même réglage." },
     { t:"Mise à jour automatique",
       s:"Les traductions sont relues depuis ce site une fois par jour. Une correction publiée ici " +
         "arrive chez toi sans rien réinstaller." }
@@ -86,7 +90,7 @@ window.Extension = (function(){
         '</div>' +
         '<ul class="xt-facts">' +
           '<li><b>1197</b> cartes traduites</li>' +
-          '<li><b>969</b> rappels de règles</li>' +
+          '<li><b>967</b> rappels de règles</li>' +
           '<li><b>834</b> notes explicatives</li>' +
           '<li><b>0</b> donnée envoyée</li>' +
         '</ul>' +
@@ -109,10 +113,16 @@ window.Extension = (function(){
 
       '<section class="panel">' +
         '<h2>Vie privée</h2>' +
-        '<p class="lede">L\'extension <b>n\'envoie aucune donnée</b> et ne modifie pas le contenu ' +
-        'des sites : elle ajoute seulement un panneau de lecture par-dessus. Sa seule requête ' +
-        'sortante va chercher le fichier de traductions sur ce site. Elle ne fonctionne que sur ' +
-        'riftatlas.com et play.riftatlas.com, et nulle part ailleurs.</p>' +
+        '<p class="lede">L\'extension <b>ne collecte rien, ne mesure rien, n\'envoie nulle part ce ' +
+        'que tu fais</b> : pas de compte, pas de statistiques, pas de suivi. Elle ne modifie pas non ' +
+        'plus le contenu des sites, elle ajoute un panneau de lecture par-dessus. Elle ne ' +
+        's\'active que sur riftatlas.com et play.riftatlas.com, et nulle part ailleurs.</p>' +
+        '<p class="lede">Elle fait <b>deux requêtes sortantes</b>, autant le dire honnêtement : ' +
+        'le fichier de traductions, sur ce site, une fois par jour ; et les pictogrammes officiels ' +
+        'd\'énergie, de runes et de puissance, servis par le serveur de Riot au moment où un ' +
+        'panneau s\'affiche. Comme toute requête web, elles font connaître ton adresse IP à GitHub ' +
+        'et à Riot. Rien d\'autre n\'est transmis, et rien ne dit à ces serveurs quelle carte tu ' +
+        'consultes.</p>' +
       '</section>' +
 
       '<section class="panel xt-licence">' +

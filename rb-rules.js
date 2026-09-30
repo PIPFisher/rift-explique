@@ -7,14 +7,14 @@ window.Rules = (function(){
   var SECTIONS = [
     {
       title:"L'affrontement",
-      lede:"Un affrontement se déclenche dès qu'une unité arrive sur un champ de bataille occupé par l'adversaire.",
+      lede:"Un affrontement s'ouvre dès qu'un champ de bataille est contesté — que l'adversaire y ait des unités ou non. Le combat, lui, n'arrive que si les deux camps en ont sur place.",
       steps:[
         {t:"Attaquant et défenseur", s:"Celui qui <b>bouge</b> ses unités est l'attaquant. Celui qui était déjà là est le défenseur. Ça ne dépend pas de qui joue son tour."},
-        {t:"Champ de bataille vide", s:"Arriver sur un endroit sans défenseur donne un affrontement <b>sans combat</b> : pas de dégâts, et les déclenchements « quand j'attaque » ne partent pas."},
+        {t:"Champ de bataille vide", s:"Arriver sur un endroit sans unité adverse donne un affrontement <b>sans combat</b> : pas de dégâts, et les déclenchements « quand j'attaque » ne partent pas. S'il ne reste que tes unités, tu prends le contrôle du champ de bataille."},
         {t:"Les dégâts sont simultanés", s:"Chaque unité inflige des dégâts égaux à sa puissance, en même temps. Il n'y a pas de premier frappeur : on ne peut pas taper sans être tapé, sauf effet qui retire l'unité du combat avant."},
         {t:"L'assignation", s:"Il faut assigner des dégâts <b>létaux</b> à une unité avant de passer à la suivante. <b>Tank</b> encaisse en premier, <b>Arrière-ligne</b> en dernier."},
         {t:"Les trois issues", s:"Seuls les attaquants survivent → ils <b>conquièrent</b>. Les deux camps survivent → les attaquants sont <b>renvoyés à la base</b>. Tout le monde meurt → le champ de bataille reste <b>non contrôlé</b>."},
-        {t:"Le nettoyage", s:"Juste après les dégâts, <b>toutes</b> les unités du plateau sont soignées, pas seulement celles qui ont combattu. Rien ne se reporte au tour suivant."}
+        {t:"Le soin d'après combat", s:"Juste après les dégâts, <b>toutes</b> les unités du plateau sont soignées, pas seulement celles qui ont combattu. Rien ne se reporte au tour suivant."}
       ]
     },
     {
@@ -22,9 +22,9 @@ window.Rules = (function(){
       lede:"La partie la plus déroutante du jeu. Trois notions qu'on confond tout le temps.",
       steps:[
         {t:"La chaîne", s:"Tout ce qu'on joue s'empile dessus au lieu de se résoudre tout de suite. Le <b>dernier posé se résout en premier</b>."},
-        {t:"Le focus", s:"Le droit d'<b>ouvrir</b> une chaîne. En affrontement, l'attaquant l'a en premier. Il passe à l'autre joueur quand tu passes sur une chaîne vide, ou quand le dernier élément d'une chaîne s'est résolu."},
-        {t:"La priorité", s:"Le droit de <b>répondre</b>. Elle circule à chaque fois qu'une carte est posée. Poser une carte ne t'enferme pas : l'adversaire peut toujours empiler par-dessus."},
-        {t:"Action ou Réaction", s:"Une <b>Action</b> ne se joue que si la chaîne est <b>vide</b> et que tu as le focus. Une <b>Réaction</b> se joue à tout moment où tu as la priorité. Chaîne ouverte = réactions uniquement."},
+        {t:"Le focus", s:"Le droit d'<b>ouvrir</b> une chaîne, pendant un affrontement. Celui qui a contesté le champ de bataille l'a en premier ; il passe à l'autre joueur quand le dernier élément d'une chaîne s'est résolu. Hors affrontement, le focus n'existe pas."},
+        {t:"La priorité", s:"Le droit d'<b>agir</b> : personne ne fait rien de son propre chef sans elle. Elle circule à chaque fois qu'une carte est posée, donc poser une carte ne t'enferme pas — l'adversaire peut toujours empiler par-dessus. Avoir le focus sans avoir la priorité ne permet rien."},
+        {t:"Action ou Réaction", s:"Une <b>Action</b> se joue aussi pendant un affrontement, sur le tour de n'importe qui, à condition que la chaîne soit <b>vide</b>. Une <b>Réaction</b> fait tout cela <i>et</i> se joue chaîne non vide, donc en réponse à une carte adverse. Chaîne ouverte = réactions uniquement."},
         {t:"Garder la priorité", s:"Tu peux empiler plusieurs cartes d'affilée avant de passer. Utile pour protéger un sort ou enchaîner deux effets."},
         {t:"Quand c'est trop tard", s:"L'affrontement se termine quand les deux joueurs passent <b>d'affilée sur une chaîne vide</b>. Avoir joué plus tôt ne donne aucun crédit : si tu passes et qu'il passe, les dégâts tombent."}
       ]
@@ -35,14 +35,14 @@ window.Rules = (function(){
       steps:[
         {t:"Conquérir", s:"Prendre un champ de bataille à l'adversaire rapporte un point immédiatement."},
         {t:"Tenir", s:"Garder un champ de bataille jusqu'à ta phase initiale suivante rapporte un point, avant le reste du tour."},
-        {t:"Le dernier point", s:"Le point de la victoire par conquête n'est accordé que si tu as marqué sur <b>tous les autres</b> champs de bataille ce tour-ci. Les effets qui disent explicitement « marque un point » échappent à cette restriction."}
+        {t:"Le dernier point", s:"Dès qu'un point de plus te ferait gagner, la conquête cesse de rapporter automatiquement : elle ne donne le point final que si tu as marqué sur <b>tous</b> les champs de bataille ce tour-ci. Sinon, tu pioches une carte à la place. Les effets qui disent explicitement « gagne un point » échappent à cette restriction."}
       ]
     },
     {
       title:"Les pièges de débutant",
       lede:"Les erreurs qu'on fait tous les premières parties.",
       steps:[
-        {t:"Les unités arrivent épuisées", s:"Sauf mention contraire ou <b>Accélération</b>. Une unité jouée ce tour-ci ne peut donc pas bouger. Le matériel, lui, arrive prêt."},
+        {t:"Les unités arrivent épuisées", s:"Sauf mention contraire ou <b>Accélération</b>. Une unité jouée ce tour-ci ne peut donc pas bouger. Les équipements, eux, arrivent prêts."},
         {t:"Énergie et Essence runique", s:"Épuiser une rune donne de l'<b>Énergie</b>, la recycler donne de l'<b>Essence runique</b> de son domaine. La même rune peut faire les deux, mais pas en même temps."},
         {t:"Essence runique et Puissance", s:"Deux notions que l'anglais distingue par <i>Power</i> et <i>Might</i>, et que ce site rend ainsi pour éviter la collision entre « Power » et « Puissance ». L'<b>essence runique</b> est une ressource : elle vient des runes recyclées et sert à payer les coûts colorés. La <b>Puissance</b> est la valeur de combat imprimée sur l'unité. Dans les traductions, les coûts sont écrits en pictogrammes comme sur les cartes : un <b>rond</b> pour l'Énergie, un <b>losange</b> pour l'essence runique (violet quand le domaine est libre), un <b>écusson</b> pour la Puissance. Survole-les pour la lecture en toutes lettres."},
         {t:"La réserve se vide", s:"Ce qui n'est pas dépensé est perdu à la fin de la phase de pioche et à la fin du tour."},

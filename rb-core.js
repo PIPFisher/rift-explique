@@ -28,9 +28,9 @@ window.RB = (function(){
   /* ---------- lexique des mots-clés ----------
      Texte de rappel officiel (VO) traduit en français. */
   var KEYWORDS = {
-    "Action":      {fr:"Action",        txt:"Se joue pendant ton tour ou dans un affrontement, uniquement quand la chaîne est vide."},
-    "Reaction":    {fr:"Réaction",      txt:"Se joue à tout moment, même avant qu'un sort ou une capacité ne se résolve."},
-    "Hidden":      {fr:"Caché",          txt:"Se cacher maintenant pour 1 Essence runique (de n'importe quel domaine), afin de la révéler plus tard pour 0. Elle gagne Réaction."},
+    "Action":      {fr:"Action",        txt:"Se joue aussi dans un affrontement, sur le tour de n'importe qui, à condition que la chaîne soit vide."},
+    "Reaction":    {fr:"Réaction",      txt:"Tout ce que permet Action, plus le droit de jouer chaîne non vide — donc en réponse à une carte adverse."},
+    "Hidden":      {fr:"Caché",          txt:"Se cacher maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux la révéler pour 0, et elle gagne Réaction."},
     "Tank":        {fr:"Tank",          txt:"Les dégâts de combat doivent lui être assignés en premier."},
     "Backline":    {fr:"Arrière-ligne", txt:"Les dégâts de combat doivent lui être assignés en dernier."},
     "Deflect":     {fr:"Protection",    txt:"L'adversaire doit payer 1 Essence runique de plus, de n'importe quel domaine, pour la choisir avec un sort ou une capacité."},
