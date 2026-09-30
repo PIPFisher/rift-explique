@@ -29,9 +29,14 @@ window.REGLES_DATA = {
         id: "voc-lieux",
         titre: "Les endroits",
         q: "Base, champ de bataille, défausse, bannissement : c'est quoi tout ça ?",
-        rep: "Les six endroits où une carte peut se trouver. Un seul rapporte des points : le <b>champ de bataille</b>.",
-        intro: "Savoir d'où part une carte et où elle finit règle la moitié des questions.",
+        rep: "Les endroits où une carte peut se trouver. Un seul rapporte des points : le <b>champ de bataille</b>.",
+        intro: "Savoir d'où part une carte et où elle finit règle la moitié des questions. " +
+          "Il existe un septième endroit, la <b>chaîne</b>, où les cartes jouées attendent de se " +
+          "résoudre : c'est le sujet du chapitre suivant.",
         mots: [
+          { m: "La main", id: "voc-main",
+            r: "<b>Les cartes que tu as en main</b>, que tu es seul à voir.",
+            p: ["C'est de là que partent la plupart des cartes que tu joues."] },
           { m: "La base", id: "voc-base",
             r: "<b>Ton camp, en dehors des champs de bataille.</b> Tes unités y arrivent quand tu les joues, et y reviennent quand elles sont rappelées.",
             p: ["Chaque joueur a la sienne. On ne s'y bat pas : il n'y a pas de combat dans une base."] },
@@ -40,17 +45,17 @@ window.REGLES_DATA = {
             p: ["Tu le <b>contrôles</b> quand, après un affrontement, tu es le seul à y avoir des unités.",
                 "Un champ de bataille où plus personne n'a d'unité est <b>non contrôlé</b> : il n'appartient à personne."] },
           { m: "Le deck principal", id: "voc-deck",
-            r: "<b>La pile dans laquelle tu pioches.</b> Les runes, elles, forment une pile à part.",
+            r: "<b>La pile dans laquelle tu pioches.</b>",
             p: ["« Recycler » et « prédire » agissent tous les deux sur le dessus de cette pile."] },
+          { m: "Le deck de runes", id: "voc-deckrunes",
+            r: "<b>Une seconde pile, de douze runes</b>, tenue à part du deck principal.",
+            p: ["C'est de là que vient ce que tu dépenses : sans runes, rien ne se paie."] },
           { m: "La défausse", id: "voc-defausse",
             r: "<b>Où vont les cartes une fois utilisées, et les unités tuées.</b>",
-            p: ["Rien n'y est perdu définitivement : le mot-clé <b>Flux</b> permet de rejouer un sort depuis la défausse."] },
+            p: ["Rien n'y est perdu définitivement : le mot-clé <b>Flux</b> (<i>Flow</i>) permet de rejouer un sort depuis la défausse."] },
           { m: "Le bannissement", id: "voc-bannissement",
             r: "<b>Hors jeu, définitivement.</b> Une carte bannie ne revient pas.",
-            p: ["C'est toute la différence avec la défausse, où une carte reste accessible."] },
-          { m: "La réserve", id: "voc-reserve",
-            r: "<b>Ce que tu as sous la main pour payer en ce moment</b> : ton Énergie et tes Essences runiques disponibles.",
-            p: ["Elle ne se garde pas : ce que tu n'as pas dépensé est perdu à la fin de la phase de pioche, puis à la fin du tour."] }
+            p: ["C'est toute la différence avec la défausse, où une carte reste accessible."] }
         ]
       },
       {
@@ -60,6 +65,13 @@ window.REGLES_DATA = {
         rep: "Deux ressources et une valeur de combat. L'<b>Énergie</b> vient d'une rune épuisée, l'<b>Essence runique</b> d'une rune recyclée — et la <b>Puissance</b> n'est pas une ressource du tout.",
         intro: "La confusion la plus coûteuse, parce qu'elle fait rater des paiements au mauvais moment.",
         mots: [
+          { m: "Une rune", id: "voc-rune",
+            r: "<b>Une carte d'un type à part, qui ne se bat pas</b> : elle ne sert qu'à produire ce avec quoi tu paies. Chaque rune appartient à un domaine.",
+            p: ["Tu l'<b>épuises</b> pour obtenir de l'Énergie, ou tu la <b>recycles</b> pour obtenir une Essence runique de son domaine. La même rune peut faire l'un ou l'autre, jamais les deux en même temps.",
+                "Les runes sont tenues à part, dans un deck de douze."] },
+          { m: "La réserve", id: "voc-reserve",
+            r: "<b>Ce que tu as sous la main pour payer en ce moment</b> : ton Énergie et tes Essences runiques disponibles.",
+            p: ["Elle ne se garde pas d'un moment du tour à l'autre : ce que tu n'as pas dépensé disparaît."] },
           { m: "L'Énergie", id: "voc-energie",
             r: "<b>La ressource neutre.</b> Tu l'obtiens en <b>épuisant</b> une rune.",
             p: ["Elle paie les coûts écrits dans un <b>rond</b>, sans condition de couleur."] },
@@ -92,7 +104,7 @@ window.REGLES_DATA = {
           { m: "Prête ou épuisée", id: "voc-prete",
             r: "<b>Une unité prête peut agir ; une unité épuisée, non.</b>",
             p: ["Les unités arrivent <b>épuisées</b> : celle que tu viens de jouer ne peut pas bouger ce tour-ci.",
-                "Sauf avec le mot-clé <b>Accélération</b>, qui la fait arriver prête. Les équipements, eux, arrivent toujours prêts."] },
+                "Sauf avec le mot-clé <b>Accélération</b> (<i>Accelerate</i>), qui la fait arriver prête. Les équipements, eux, arrivent toujours prêts."] },
           { m: "Un permanent", id: "voc-permanent",
             r: "<b>Toute carte qui reste sur le plateau</b> : une unité, un équipement, une rune, une carte cachée.",
             p: ["Par opposition à un sort, qui part à la défausse dès qu'il s'est résolu."] },
@@ -105,10 +117,10 @@ window.REGLES_DATA = {
           { m: "Rappeler", id: "voc-rappeler",
             r: "<b>Renvoyer une unité à sa base.</b> Elle n'est ni tuée ni défaussée : elle quitte simplement le champ de bataille.",
             p: ["C'est ce qui arrive aux attaquants quand des défenseurs tiennent encore après un combat.",
-                "Si un rappel remplace une mort, l'unité n'allant pas à la défausse, son <b>Agonie</b> ne se déclenche pas."] },
+                "Si un rappel remplace une mort, l'unité n'allant pas à la défausse, son <b>Agonie</b> (<i>Deathknell</i>) ne se déclenche pas."] },
           { m: "Une amélioration", id: "voc-amelioration",
             r: "<b>Un bonus de +1 Puissance posé sur une unité.</b>",
-            p: ["Une unité ne peut en porter qu'une seule à la fois. Assaut, Bouclier et Protection, eux, se cumulent."] }
+            p: ["Une unité ne peut en porter qu'une seule à la fois. <b>Assaut</b> (<i>Assault</i>), <b>Bouclier</b> (<i>Shield</i>) et <b>Protection</b> (<i>Deflect</i>), eux, se cumulent."] }
         ]
       },
       {
@@ -118,7 +130,7 @@ window.REGLES_DATA = {
         rep: "Trois moments que les règles citent sans les expliquer. Le premier ouvre ton tour, le deuxième y distribue les points, le troisième valide ou annule la carte que tu viens de jouer.",
         mots: [
           { m: "La phase initiale", id: "voc-initiale",
-            r: "<b>Le début de ton tour.</b> C'est là qu'on regarde les champs de bataille que tu tiens, et là que meurent les unités <b>Temporaire</b>.",
+            r: "<b>Le début de ton tour.</b> C'est là qu'on regarde les champs de bataille que tu tiens, et là que meurent les unités <b>Temporaire</b> (<i>Temporary</i>).",
             p: ["Une unité qui meurt à ce moment-là meurt <i>avant</i> qu'on compte les points : elle ne tient rien."] },
           { m: "L'étape de score", id: "voc-score",
             r: "<b>Le moment de la phase initiale où les champs de bataille que tu tiens rapportent leur point.</b>" },
@@ -126,15 +138,16 @@ window.REGLES_DATA = {
             r: "<b>Gagner un point sur un champ de bataille</b>, soit en le prenant (<b>conquérir</b>), soit en le gardant jusqu'à ta phase initiale (<b>tenir</b>).",
             p: ["Un même champ de bataille ne rapporte qu'une fois par tour et par joueur."] },
           { m: "L'XP", id: "voc-xp",
-            r: "<b>De l'expérience, qui s'accumule au fil de la partie.</b>",
-            p: ["Le mot-clé <b>Chasse</b> en donne quand tu conquiers ou que tu tiens ; le mot-clé <b>Niveau</b> allume du texte sur tes cartes quand tu en as assez."] },
+            r: "<b>De l'expérience, qui s'accumule au fil de la partie.</b> Elle appartient au joueur, pas à une carte en particulier.",
+            p: ["Le mot-clé <b>Chasse</b> (<i>Hunt</i> sur la carte) t'en fait gagner quand tu conquiers ou que tu tiens un champ de bataille.",
+                "Le mot-clé <b>Niveau</b> (<i>Level</i>) s'en sert comme d'un seuil : une partie du texte de la carte ne s'applique que si tu as atteint le nombre d'XP indiqué. Si ton XP redescend en dessous, cette partie cesse de s'appliquer."] },
           { m: "La vérification de légalité", id: "voc-legalite",
             r: "<b>Le contrôle qui suit immédiatement le fait de jouer une carte.</b>",
             p: ["S'il révèle qu'une condition obligatoire n'a pas pu être remplie, tout est annulé et la carte retourne d'où elle vient.",
                 "C'est aussi le moment où une carte posée sur la chaîne cesse d'être « en attente » pour être <b>finalisée</b>."] },
           { m: "Prédire", id: "voc-predire",
             r: "<b>Regarder la première carte de ton deck principal</b>, puis choisir de la laisser ou de la recycler.",
-            p: ["C'est ce que fait le mot-clé <b>Vision</b> quand ton permanent arrive."] }
+            p: ["C'est ce que fait le mot-clé <b>Vision</b> quand ton permanent arrive — le mot est le même en anglais."] }
         ]
       }
     ]
@@ -214,9 +227,9 @@ window.REGLES_DATA = {
           { ref: "337.2", t: "Unités, équipements et capacités qui ajoutent des ressources se résolvent aussitôt.",
             d: "Ils sautent l'attente : on passe directement à l'étape 4. On ne peut donc pas répondre à une unité qui arrive." },
           { ref: "338", t: "2 · Exécuter.",
-            d: "Le joueur qui a la priorité peut poser une carte correctement chronométrée, ou passer." },
-          { ref: "338.1.a.1", t: "En état fermé, seules les Réactions se jouent.",
-            d: "Une chaîne ouverte n'accepte plus les Actions." },
+            d: "Le joueur qui a la priorité peut poser une carte, si le moment s'y prête, ou passer." },
+          { ref: "338.1.a.1", t: "Dès qu'une carte est posée sur la chaîne, seules les Réactions peuvent encore être jouées.",
+            d: "Les Actions demandent une chaîne vide : une fois quelque chose posé dessus, elles ne passent plus." },
           { ref: "339.1", t: "3 · Passer.",
             d: "Quand tous les joueurs ont passé d'affilée sans rien ajouter, on résout." },
           { ref: "340.1", t: "4 · Résoudre.",
@@ -261,8 +274,8 @@ window.REGLES_DATA = {
             d: "S'il n'y a pas d'unités de deux joueurs différents, l'affrontement s'ouvre au prochain nettoyage, sans combat." },
           { ref: "461", t: "Un combat est « en attente » tant que ses étapes n'ont pas démarré.",
             d: "Deux joueurs ont des unités au même endroit, mais rien n'est encore résolu." },
-          { ref: "461.2", t: "Un combat en attente qui cesse de l'être n'a jamais lieu.",
-            d: "Si les unités partent ou meurent avant le démarrage, il ne se passe rien." },
+          { ref: "461.2", t: "Un combat mis en attente n'est pas un combat garanti.",
+            d: "Si les unités partent ou meurent avant que les étapes ne démarrent, le combat n'a tout simplement jamais lieu." },
           { ref: "462", t: "Un combat n'oppose jamais plus de deux joueurs.",
             d: "Exactement deux, pas trois." }
         ],
@@ -293,7 +306,7 @@ window.REGLES_DATA = {
           { ref: "346.1", t: "Le focus ne passe pas si la chaîne venait d'un déclenchement.",
             d: "Ni d'une capacité qui ajoute des ressources. La chaîne de combat s'ouvre ainsi : le focus reste donc au même joueur." },
           { ref: "347", t: "Le joueur qui a le focus fait l'un des deux : jouer, ou passer.",
-            d: "Jouer une carte ou une capacité correctement chronométrée ouvre une chaîne ; quand elle se referme, le focus passe." },
+            d: "Jouer une carte ou une capacité que le moment autorise ouvre une chaîne ; quand elle se referme, le focus passe." },
           { ref: "347.2.a", t: "Quand tous les joueurs ont passé une fois d'affilée, l'affrontement se termine.",
             d: "C'est le seul moyen de le clore." },
           { ref: "348.1", t: "Si c'était un affrontement de combat, on enchaîne sur les étapes du combat.",
@@ -350,7 +363,7 @@ window.REGLES_DATA = {
           { ref: "465.2.c", t: "L'attaquant répartit en premier.",
             d: "Chaque joueur répartit un total égal à la somme des Puissances de ses unités." },
           { ref: "465.2.c.3", t: "Une unité doit recevoir des dégâts létaux complets avant de passer à la suivante.",
-            d: "Létal veut dire : un montant non nul suffisant pour la tuer — c'est-à-dire égal ou supérieur à ce qu'il lui reste de Puissance, dégâts déjà marqués déduits. Une unité déjà blessée demande donc moins." },
+            d: "Létal veut dire : une quantité de dégâts, forcément supérieure à zéro, suffisante pour la tuer — c'est-à-dire égal ou supérieur à ce qu'il lui reste de Puissance, dégâts déjà marqués déduits. Une unité déjà blessée demande donc moins." },
           { ref: "465.2.c.4", t: "On ne peut pas surcharger une unité.",
             d: "Pas plus que le minimum nécessaire pour la tuer, sauf s'il ne reste plus aucune autre unité à qui assigner." }
         ],
@@ -387,7 +400,7 @@ window.REGLES_DATA = {
         ref: "467 à 470",
         regles: [
           { ref: "468", t: "Marquer, c'est gagner un point en prenant ou en gardant un champ de bataille.",
-            d: "Toute instance de marquage est aussi une instance de gain de point." },
+            d: "Chaque fois que tu marques, tu gagnes un point : les cartes qui parlent de l'un parlent aussi de l'autre." },
           { ref: "469.1", t: "Conquérir : prendre le contrôle d'un champ de bataille non encore marqué ce tour-ci.",
             d: "Le point tombe dès que le contrôle est établi." },
           { ref: "469.2", t: "Tenir : conserver le contrôle pendant sa phase initiale.",
@@ -399,7 +412,7 @@ window.REGLES_DATA = {
         ],
         cas: [
           { t: "En équipe, le champ d'un coéquipier ne se conquiert pas.",
-            d: "Un champ de bataille contrôlé par un coéquipier pendant l'étape de score de la phase initiale est disqualifié de la conquête pour toute l'équipe — article 469.1.a." }
+            d: "Un champ de bataille que ton coéquipier contrôle au moment de l'étape de score ne peut plus être conquis par personne de ton équipe ce tour-ci — article 469.1.a." }
         ]
       },
       {
@@ -433,8 +446,9 @@ window.REGLES_DATA = {
     eyebrow: "Quand un mot surligné pose question",
     lede: "Les vingt-cinq mots surlignés qu'on trouve sur les cartes. Chacun est un raccourci " +
       "pour une phrase de règles complète : ce chapitre donne cette phrase, puis ce qui " +
-      "coince en pratique. Le rappel entre parenthèses est celui qu'affiche la traduction " +
-      "française du projet.",
+      "coince en pratique.<br>Comme les cartes sont imprimées en anglais, chaque mot porte ici " +
+      "<b>son nom anglais à côté du nom français</b> — et la recherche, en haut à gauche, " +
+      "accepte les deux : tape <i>Level</i> ou Niveau, tu tombes au même endroit.",
     sections: [
 
       {
@@ -451,15 +465,18 @@ window.REGLES_DATA = {
           { ref: "803", t: "L'ordre de lecture est l'ordre d'exécution.",
             d: "Les effets des mots-clés s'appliquent dans l'ordre où ils apparaissent, de haut en bas du texte de règles." },
           { ref: "801.3.a.3", t: "Un mot-clé donné sans durée précisée dure tant que la carte reste où elle est.",
-            d: "Si l'effet qui l'accorde ne dit rien, le mot-clé s'éteint dès que l'objet change de zone." },
+            d: "Si l'effet qui l'accorde ne précise pas de durée, la carte perd le mot-clé dès qu'elle change d'endroit — en partant à la défausse, par exemple." },
           { ref: "802", t: "Une carte peut porter autant de mots-clés qu'elle veut.",
             d: "Il n'y a pas de limite, et un même mot-clé peut être accordé plusieurs fois — ce qui se comporte différemment selon le mot." }
         ],
         cas: [
           { t: "Deux fois le même mot-clé ?",
-            d: "Trois comportements existent. <b>Redondant</b> (rien de plus) : Gank, Tank, Arrière-ligne, Embuscade, Caché, Temporaire, Dégainer. " +
-              "<b>Les valeurs s'additionnent</b> : Assaut, Bouclier, Protection, Chasse. " +
-              "<b>Chaque instance compte séparément</b> : Agonie, Vision, Répétition, Équiper, Amplification, Expert en armes." }
+            d: "Trois cas, selon le mot. <b>Le second n'ajoute rien</b> — Gank (<i>Ganking</i>), Tank, Arrière-ligne (<i>Backline</i>), " +
+              "Embuscade (<i>Ambush</i>), Caché (<i>Hidden</i>), Temporaire (<i>Temporary</i>), Dégainer (<i>Quick-Draw</i>). " +
+              "<b>Les chiffres s'additionnent</b> — Assaut (<i>Assault</i>), Bouclier (<i>Shield</i>), Protection (<i>Deflect</i>), Chasse (<i>Hunt</i>) : " +
+              "deux fois Assaut 2 font +4 Puissance. " +
+              "<b>Chacun agit de son côté</b> — Agonie (<i>Deathknell</i>), Vision, Répétition (<i>Repeat</i>), Équiper (<i>Equip</i>), " +
+              "Amplification (<i>Empower</i>), Expert en armes (<i>Weaponmaster</i>) : écrit deux fois, il se déclenche ou s'active deux fois." }
         ]
       },
 
@@ -500,7 +517,7 @@ window.REGLES_DATA = {
             p: ["Le coût de Flux <b>remplace</b> le coût de base ; ce n'est pas un supplément.",
                 "Ne change pas le moment où le sort peut être joué : seulement la zone d'où il part.",
                 "Si le sort a plusieurs coûts de Flux différents, tu choisis lequel appliquer au moment de le jouer.",
-                "Le bannissement est un effet de remplacement retardé : le sort part en bannissement au lieu d'aller à la défausse."] }
+                "Le bannissement n'est pas une étape de plus : une fois résolu, le sort part en bannissement au lieu de partir à la défausse."] }
         ],
         erreurs: [
           { t: "« Il a Action, donc je peux répondre à son sort. »",
@@ -521,7 +538,7 @@ window.REGLES_DATA = {
         mots: [
           { m: "Assaut", vo: "Assault", ref: "807",
             r: "<b>+X Puissance tant que je suis attaquante.</b> Si le X n'est pas écrit, il vaut 1.",
-            p: ["Vaut tant que l'unité garde la désignation d'attaquante, pour toute la durée du combat.",
+            p: ["Vaut tant que l'unité est considérée comme attaquante, c'est-à-dire pendant tout le combat.",
                 "Plusieurs sources d'Assaut : <b>les valeurs s'additionnent</b>."] },
           { m: "Bouclier", vo: "Shield", ref: "814",
             r: "<b>+X Puissance tant que je suis défenseuse.</b> Si le X n'est pas écrit, il vaut 1.",
@@ -530,22 +547,22 @@ window.REGLES_DATA = {
           { m: "Tank", vo: "Tank", ref: "815",
             r: "<b>Les dégâts de combat doivent m'être assignés en premier</b>, avant toute unité alliée qui n'a pas Tank.",
             p: ["L'adversaire doit toujours assigner des dégâts létaux à une unité avant de passer à la suivante.",
-                "Plusieurs unités avec Tank du même camp : il choisit librement entre elles, mais ne peut pas toucher les autres tant qu'elles n'ont pas toutes reçu de quoi mourir.",
-                "Plusieurs instances sur la même unité : redondant."] },
+                "Si tu as plusieurs unités avec Tank, l'attaquant choisit dans quel ordre il les tue — mais il doit les avoir toutes tuées avant de pouvoir toucher tes autres unités.",
+                "Le même mot-clé écrit deux fois sur la même unité n'ajoute rien."] },
           { m: "Arrière-ligne", vo: "Backline", ref: "826",
             r: "<b>Les dégâts de combat doivent m'être assignés en dernier</b>, après toute unité alliée qui n'a pas Arrière-ligne.",
             p: ["Le miroir exact de Tank.",
                 "Tant qu'une unité sans Arrière-ligne peut encore recevoir des dégâts létaux, l'unité d'arrière-ligne est une cible invalide.",
-                "Plusieurs instances : redondant."] },
+                "Le même mot-clé écrit deux fois n'ajoute rien."] },
           { m: "Gank", vo: "Ganking", ref: "810",
             r: "<b>Je peux me déplacer d'un champ de bataille à un autre</b> avec un déplacement standard.",
-            p: ["C'est une permission ajoutée au déplacement standard : pas un coût, pas un déplacement supplémentaire.",
-                "Ne donne aucune activation de plus — juste de nouvelles destinations possibles.",
-                "Plusieurs instances : redondant."] }
+            p: ["Normalement une unité part de ta base. Gank ajoute une destination : elle peut aussi aller d'un champ de bataille à un autre.",
+                "C'est une permission, pas un déplacement en plus : l'unité n'en obtient pas le droit de bouger une fois de plus dans le tour.",
+                "Le même mot-clé écrit deux fois n'ajoute rien."] }
         ],
         cas: [
           { t: "Tank et Arrière-ligne sur la même unité",
-            d: "Les deux contraintes s'appliquent, et deviennent contradictoires dès qu'il existe une autre unité alliée. En pratique, l'assignation suit ce que les deux règles autorisent encore ; s'il n'y a pas d'autre unité, aucune des deux ne contraint quoi que ce soit." }
+            d: "L'unité devrait alors être servie en premier <b>et</b> en dernier, ce qui est impossible dès qu'une autre unité alliée est présente : les deux contraintes se neutralisent. Seule elle sur le champ de bataille, aucune des deux ne contraint quoi que ce soit. Entre les deux, les règles ne tranchent pas explicitement — en tournoi, demande à l'arbitre plutôt que de discuter." }
         ],
         erreurs: [
           { t: "Croire que Tank force l'adversaire à attaquer cette unité.",
@@ -570,7 +587,7 @@ window.REGLES_DATA = {
                 "Se paie <b>uniquement en jouant la carte</b>, jamais une fois l'unité sur le plateau.",
                 "Une fois le coût payé, l'unité arrive prête même si elle perd Accélération entre-temps.",
                 "Elle n'arrive pas épuisée puis redressée : elle arrive prête. Les capacités qui se déclenchent quand une unité <b>est redressée</b> ne se déclenchent donc pas.",
-                "Plusieurs instances : redondant."] },
+                "Le même mot-clé écrit deux fois n'ajoute rien."] },
           { m: "Répétition", vo: "Repeat", ref: "820",
             r: "<b>Tu peux payer ce coût additionnel pour exécuter l'effet une seconde fois</b> à la résolution.",
             p: ["Chaque coût de Répétition ne peut être payé qu'une fois, mais une carte peut en porter plusieurs, payables séparément.",
@@ -616,7 +633,7 @@ window.REGLES_DATA = {
             r: "<b>Je meurs au début de la phase Initiale de mon contrôleur, avant le score.</b>",
             p: ["Le déclencheur est le début de la phase Initiale du contrôleur du permanent.",
                 "« Avant le score » compte : l'unité n'est plus là pour tenir un champ de bataille à ce moment-là.",
-                "Plusieurs instances : redondant, et la capacité ne se déclenche <b>qu'une fois</b>."] },
+                "Le mot-clé écrit deux fois n'ajoute rien, et la capacité ne se déclenche <b>qu'une fois</b>."] },
           { m: "Chasse", vo: "Hunt", ref: "823",
             r: "<b>Quand je conquiers ou que je tiens un champ de bataille, gagne X XP.</b> Si le X n'est pas écrit, il vaut 1.",
             p: ["C'est à la fois un effet de conquête et un effet de tenue : les deux situations déclenchent.",
@@ -650,7 +667,7 @@ window.REGLES_DATA = {
             r: "<b>J'ai Réaction, et quand tu me joues, attache-moi à une unité que tu contrôles.</b>",
             p: ["C'est à la fois une permission (Réaction) et un déclenchement (l'attachement).",
                 "Permet donc de poser l'équipement <b>et</b> de l'attacher au milieu d'un affrontement.",
-                "Plusieurs instances : sans effet au-delà de la première."] },
+                "Le même mot-clé écrit deux fois n'ajoute rien."] },
           { m: "Expert en armes", vo: "Weaponmaster", ref: "821",
             r: "<b>Quand tu me joues, tu peux choisir un de tes Équipements et payer son coût d'Équiper réduit d'une Essence runique pour me l'attacher</b>, quel que soit le moment habituel.",
             p: ["Fonctionne même si l'équipement est <b>déjà attaché ailleurs</b> : il change d'unité.",
@@ -658,7 +675,7 @@ window.REGLES_DATA = {
                 "Si son coût ne contient pas d'Essence runique, il se paie quand même, sans réduction.",
                 "Si l'équipement n'a pas de coût d'Équiper, ou si le coût ne peut pas être payé, ou si le détachement ou l'attachement est impossible, l'équipement <b>ne bouge pas</b>.",
                 "La capacité Équiper n'est pas activée pour autant, et l'unité avec Expert en armes n'est pas ciblée par elle.",
-                "Plusieurs instances se déclenchent séparément et peuvent viser des équipements différents.",
+                "Écrit deux fois, il se déclenche deux fois, et chaque déclenchement peut viser un équipement différent.",
                 "N'a plus aucune fonction une fois l'unité en jeu."] }
         ],
         erreurs: [
@@ -673,10 +690,11 @@ window.REGLES_DATA = {
         id: "mc-condition",
         titre: "Les effets sous condition",
         q: "Pourquoi ce texte ne s'applique pas ?",
-        rep: "Légion, Niveau et Amplifié n'allument leur texte que si la condition est remplie — une autre carte jouée, assez d'XP, le statut amplifié — et l'éteignent dès qu'elle tombe.",
+        rep: "Une partie du texte de la carte ne s'applique que si une condition est remplie : une autre carte jouée pour <b>Légion</b> (<i>Legion</i>), assez d'XP pour <b>Niveau</b> (<i>Level</i>), le statut amplifié pour <b>Amplifié</b> (<i>Empowered</i>). Dès que la condition tombe, cette partie cesse de s'appliquer.",
         ref: "812, 824, 827, 828",
-        intro: "Ces mots-clés n'agissent pas seuls : ils allument un bout de texte quand " +
-          "une condition est remplie, et l'éteignent dès qu'elle ne l'est plus.",
+        intro: "Ces mots-clés ne font rien par eux-mêmes. Ils posent une condition devant " +
+          "un bout du texte de la carte : tant qu'elle est remplie, ce texte compte ; " +
+          "dès qu'elle ne l'est plus, il cesse de compter, sans qu'on ait rien à faire.",
         mots: [
           { m: "Légion", vo: "Legion", ref: "812",
             r: "<b>Si tu as déjà joué une autre carte ce tour-ci, je gagne [texte].</b>",
@@ -691,10 +709,11 @@ window.REGLES_DATA = {
             p: ["C'est une capacité activée. La source n'est pas une cible d'elle-même.",
                 "Le coût peut mêler ressources et autres contraintes ; le texte de la carte peut le modifier, ou changer le moment d'activation.",
                 "Plusieurs Amplification sur la même carte s'activent séparément, chacune pour son coût.",
-                "Le fait de devenir amplifié est un événement que d'autres cartes peuvent référencer."] },
+                "Le fait de devenir amplifiée est un événement : une carte qui dit « quand une unité devient amplifiée… » se déclenche à ce moment-là."] },
           { m: "Amplifié", vo: "Empowered", ref: "828",
             r: "<b>Tant que j'ai le statut amplifié, je gagne [texte].</b>",
-            p: ["C'est le pendant conditionnel d'Amplification : l'un donne le statut, l'autre l'exploite.",
+            p: ["Être amplifié ne fait rien par soi-même : c'est un marqueur posé sur la carte, rien de plus. Il sert d'interrupteur pour le texte écrit après <b>Amplifié</b>, qui ne compte que tant que le marqueur est là.",
+                "C'est le pendant d'Amplification : l'un pose le marqueur, l'autre s'en sert.",
                 "Si le texte dépendant est une capacité déclenchée du type « quand je deviens amplifié », elle se déclenche bien au moment où la source est amplifiée."] }
         ],
         erreurs: [
@@ -709,7 +728,7 @@ window.REGLES_DATA = {
         id: "mc-deck",
         titre: "À la construction du deck",
         q: "Je peux en mettre plusieurs dans mon deck ?",
-        rep: "Pas si la carte est <b>Unique</b> : un seul exemplaire, et ça ne change rien pendant la partie.",
+        rep: "Pas si la carte est <b>Unique</b> (<i>Unique</i>) : un seul exemplaire, et ça ne change rien pendant la partie.",
         ref: "825",
         intro: "Un seul mot-clé ne fait rien pendant la partie et tout avant elle.",
         mots: [

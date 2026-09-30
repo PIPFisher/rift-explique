@@ -28,10 +28,11 @@ window.Extension = (function(){
         "les traductions en pleine partie. Panneau, pastilles et liserés disparaissent d'un coup. " +
         "L'état est retenu d'une partie à l'autre." },
     { t:"Attraper le panneau au vol",
-      s:"Le panneau suit la souris et laisse passer les clics, pour ne jamais gêner le plateau. " +
-        "« Ctrl&nbsp;+&nbsp;² » — ou « Ctrl&nbsp;+&nbsp;F2 » — le fige où il est et lui rend les clics, le temps d'ouvrir le lien " +
-        "vers ce site. On en sort par Échap, ou en cliquant ailleurs — et ce clic-là atteint quand " +
-        "même ce qu'il visait." },
+      s:"Par défaut, le panneau est <b>transparent aux clics</b> : tu cliques à travers lui comme " +
+        "s'il n'était pas là, donc il ne gêne jamais le plateau. Mais du coup son lien n'est pas " +
+        "cliquable non plus. « Ctrl&nbsp;+&nbsp;² » — ou « Ctrl&nbsp;+&nbsp;F2 » — le fige où il est " +
+        "et le rend cliquable, le temps d'ouvrir le lien vers ce site. Échap, ou un clic ailleurs, " +
+        "le remet comme avant — et ce clic-là fonctionne normalement." },
     { t:"Débutant ou habitué, au choix",
       s:"Par défaut, le panneau explique : chaque mot-clé est suivi de son rappel de règles, et " +
         "les cartes retorses reçoivent une note. Quand tu connais tes cartes, « Maj&nbsp;+&nbsp;² » " +
