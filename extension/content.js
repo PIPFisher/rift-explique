@@ -11,7 +11,7 @@
   "use strict";
 
   var REMOTE = "https://pipfisher.github.io/rift-explique/fr.json";
-  var VERSION = "1.18.1";
+  var VERSION = "1.19.2";
 
   // Reprise après un rechargement de l'extension. Chrome laisse l'ancien
   // script tourner dans les onglets déjà ouverts : le service worker nous
@@ -190,19 +190,113 @@
     return t === "INPUT" || t === "TEXTAREA" || t === "SELECT" || el.isContentEditable;
   }
 
+  /* ---------------- le rappel des raccourcis ---------------- */
+
+  // « ? » plutôt qu'une touche de position : c'est un caractère, donc il
+  // existe sur tous les claviers, et c'est ce qu'emploient déjà GitHub,
+  // Gmail ou Slack pour la même chose. Tab était exclu d'office : c'est la
+  // touche qui déplace le focus, et la voler casse la navigation au clavier.
+  var NOMS = {
+    Backquote: "²", Backslash: "*", Quote: "'", Semicolon: ";",
+    BracketLeft: "^", BracketRight: "$", Comma: ",", Period: ".",
+    Slash: "/", Minus: "-", Equal: "=", Insert: "Inser", Home: "Début",
+    End: "Fin", PageUp: "Page ↑", PageDown: "Page ↓"
+  };
+  function nomTouche(code) { return NOMS[code] || code; }
+
+  var aide = null;
+
+  function fermeAide() {
+    if (!aide) return;
+    aide.remove();
+    aide = null;
+  }
+
+  function basculeAide() {
+    if (aide) { fermeAide(); return; }
+    if (panel && panel.style.display !== "none") hide();
+
+    var t = nomTouche(TOUCHE);
+    var bis = TOUCHE_BIS ? nomTouche(TOUCHE_BIS) : null;
+    var mode = MODE_TOUCHE ? nomTouche(MODE_TOUCHE) : null;
+
+    function touches() {
+      var s = "<kbd>" + esc(t) + "</kbd>";
+      if (bis) s += '<span class="rbfr-ou">ou</span><kbd>' + esc(bis) + "</kbd>";
+      return s;
+    }
+    function avec(mod) {
+      var s = "<kbd>" + esc(mod + " + " + t) + "</kbd>";
+      if (bis) s += '<span class="rbfr-ou">ou</span><kbd>' + esc(mod + " + " + bis) + "</kbd>";
+      return s;
+    }
+
+    aide = document.createElement("div");
+    aide.className = "rbfr-aide";
+    aide.innerHTML =
+      '<div class="rbfr-aide-boite" role="dialog" aria-label="Raccourcis clavier">' +
+        '<h2>Raccourcis</h2>' +
+        '<dl>' +
+          '<dt>' + touches() + '</dt>' +
+          '<dd>Couper ou rallumer les traductions' +
+            (ACTIF ? "" : " — elles sont coupées en ce moment") + '</dd>' +
+          '<dt>' + avec("Maj") +
+            (mode ? '<span class="rbfr-ou">ou</span><kbd>' + esc(mode) + "</kbd>" : "") + '</dt>' +
+          '<dd>Texte de la carte seul, sans les explications' +
+            (SOBRE ? " — c'est le mode actuel" : "") + '</dd>' +
+          '<dt>' + avec("Ctrl") + '</dt>' +
+          '<dd>Figer le panneau sur place et le rendre cliquable</dd>' +
+          '<dt>' + avec("Alt") + '<span class="rbfr-ou">ou</span><kbd>?</kbd></dt>' +
+          '<dd>Ce rappel</dd>' +
+          '<dt><kbd>Échap</kbd></dt>' +
+          '<dd>Libérer le panneau figé, ou fermer ce rappel</dd>' +
+        '</dl>' +
+        '<p class="rbfr-aide-pied">Les réglages sont aussi dans la fenêtre de l\'extension, ' +
+          'en cliquant sur son icône. ' +
+          '<a class="rbfr-link" href="' + SITE + '" target="_blank" rel="noopener">Le Rift Expliqué ↗</a></p>' +
+        '<p class="rbfr-aide-sortie">Appuie sur <kbd>?</kbd> ou clique pour fermer</p>' +
+      '</div>';
+    document.documentElement.appendChild(aide);
+    // pas d'enregistrement global : retirer le nœud emporte son écouteur
+    aide.addEventListener("click", fermeAide);
+  }
+
   ecoute(document, "keydown", function (e) {
     // on ne vole pas les touches pendant qu'on écrit (le chat du simulateur)
     if (saisieEnCours(e.target) || saisieEnCours(document.activeElement)) return;
 
-    if ((e.key === "Escape" || e.code === "Escape") && FIGE) {
-      e.preventDefault(); libere(); return;
+    if ((e.key === "Escape" || e.code === "Escape")) {
+      if (aide) { e.preventDefault(); fermeAide(); return; }
+      if (FIGE) { e.preventDefault(); libere(); return; }
     }
+
+    // Le rappel des raccourcis s'ouvre de deux façons, parce que le caractère
+    // « ? » ne remonte pas toujours tel quel selon la disposition et l'état
+    // de Verr Maj : soit le caractère lui-même, soit la position physique de
+    // la touche qui le porte — Comma sur un AZERTY, Slash sur un QWERTY. Le
+    // garde-fou « e.key !== "<" » évite de voler le chevron aux QWERTY, où
+    // Maj+Comma produit « < » et pas « ? ».
+    var positionPoint = (e.code === "Comma" || e.code === "Slash") &&
+                        e.shiftKey && e.key !== "<";
 
     var nu      = !e.ctrlKey && !e.altKey && !e.metaKey && !e.shiftKey;
     var majSeul = e.shiftKey && !e.ctrlKey && !e.altKey && !e.metaKey;
     var ctrlSeul= e.ctrlKey && !e.shiftKey && !e.altKey && !e.metaKey;
+    var altSeul = e.altKey && !e.ctrlKey && !e.shiftKey && !e.metaKey;
 
     var principale = estPrincipale(e.code);
+
+    // Les deux chemins vers le rappel, réunis avant tout le reste : sans ça,
+    // la frappe qui doit le refermer le referme puis le rouvre aussitôt.
+    var surAide = (principale && altSeul) ||
+                  ((e.key === "?" || positionPoint) && !e.ctrlKey && !e.altKey && !e.metaKey);
+    if (surAide) { e.preventDefault(); basculeAide(); return; }
+
+    // n'importe quelle autre touche referme le rappel — sauf les modificateurs
+    // eux-mêmes, dont le keydown précède la touche et refermerait ce qu'on
+    // vient tout juste d'ouvrir.
+    if (aide && !/^(Shift|Control|Alt|Meta|CapsLock|AltGraph)$/.test(e.key)) fermeAide();
+
     var surToggle = (principale && nu);
     // Maj + la touche sert d'alias au changement de mode : une seule à retenir
     var surMode   = (MODE_TOUCHE && e.code === MODE_TOUCHE && nu) ||
@@ -836,7 +930,8 @@
         " · " + TOUCHE + (TOUCHE_BIS ? " ou " + TOUCHE_BIS : "") + " : afficher/masquer" +
         (ACTIF ? "" : " (éteint)") +
         " · " + (MODE_TOUCHE || "Maj+" + TOUCHE) + " : complet/sobre" + (SOBRE ? " (sobre)" : "") +
-        " · Ctrl+" + TOUCHE + " : figer");
+        " · Ctrl+" + TOUCHE + " : figer" +
+        " · ? : rappel des raccourcis");
     } catch (e) {}
   });
 
@@ -849,7 +944,7 @@
       ECOUTEURS = []; MINUTEURS = [];
       if (timer) { clearTimeout(timer); timer = null; }
       if (recalc) { clearTimeout(recalc); recalc = null; }
-      document.querySelectorAll(".rbfr-panel, .rbfr-toast, .rbfr-inline")
+      document.querySelectorAll(".rbfr-panel, .rbfr-toast, .rbfr-inline, .rbfr-aide")
         .forEach(function (n) { n.remove(); });
       document.querySelectorAll(".rbfr-has, .rbfr-img-has")
         .forEach(function (n) { n.classList.remove("rbfr-has", "rbfr-img-has"); });

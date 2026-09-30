@@ -273,3 +273,81 @@ img.rbfr-img-has{
   text-decoration: underline;
   cursor: pointer;
 }
+
+/* rappel des raccourcis, appelé par « ? » ——————————————————————— */
+.rbfr-aide{
+  position: fixed;
+  inset: 0;
+  z-index: 2147483647;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(6, 14, 20, .72);
+  backdrop-filter: blur(2px);
+  font-family: "Barlow", system-ui, -apple-system, "Segoe UI", sans-serif;
+  animation: rbfrAide .14s ease both;
+}
+@keyframes rbfrAide{ from{ opacity: 0 } to{ opacity: 1 } }
+
+.rbfr-aide-boite{
+  width: 430px;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 20px 22px 16px;
+  border: 1px solid #D9A94A;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #13252F 0%, #0A141C 100%);
+  box-shadow: 0 28px 60px -22px rgba(0,0,0,.9);
+  color: #E4EEF2;
+}
+.rbfr-aide-boite h2{
+  margin: 0 0 14px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: #D9A94A;
+}
+.rbfr-aide-boite dl{ margin: 0; }
+.rbfr-aide-boite dt{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+.rbfr-aide-boite dt:first-child{ margin-top: 0; }
+.rbfr-aide-boite dd{
+  margin: 3px 0 0;
+  font-size: 14px;
+  line-height: 1.45;
+  color: #AEC7D1;
+}
+.rbfr-aide-boite kbd{
+  font: inherit;
+  font-size: 12.5px;
+  padding: 3px 9px;
+  border-radius: 5px;
+  background: #204251;
+  border: 1px solid #2E5666;
+  border-bottom-width: 2px;
+  color: #EFF6F9;
+  white-space: nowrap;
+}
+.rbfr-ou{ font-size: 12px; color: #6E8794; }
+.rbfr-aide-pied{
+  margin: 16px 0 0;
+  padding-top: 13px;
+  border-top: 1px solid #254656;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #85A2AF;
+}
+.rbfr-aide-pied .rbfr-link{ pointer-events: auto; }
+.rbfr-aide-sortie{
+  margin: 10px 0 0;
+  font-size: 11.5px;
+  color: #5F7D8A;
+}
+.rbfr-aide-sortie kbd{ font-size: 11px; padding: 1px 6px; border-bottom-width: 1px; }

@@ -51,8 +51,8 @@ Va sur [riftatlas.com/cards](https://riftatlas.com/cards) et passe la souris sur
 
 Le panneau s'ouvre **toujours au même endroit** : collé au bord gauche de la
 carte, aligné sur son haut. Une seule exception, les cartes du bord gauche de
-l'écran, où il passe à droite. Jamais au-dessus ni en dessous : l'œil apprend
-une position et y va sans chercher.
+l'écran, où il passe à droite. Jamais au-dessus ni en dessous, pour qu'on
+finisse par savoir où regarder sans y penser.
 
 Le côté gauche n'est pas un hasard. En partie, Rift Atlas affiche son propre
 agrandissement de la carte survolée, systématiquement à sa droite, dans un
@@ -64,7 +64,15 @@ la même hauteur de pile et passe devant, plutôt que de disparaître derrière.
 Il laisse passer les clics : même posé sur le plateau, il n'empêche pas de
 jouer.
 
-## Les trois gestes
+## Les gestes
+
+Si tu ne devais en retenir qu'un : **`Alt`+`²`** affiche tous les autres,
+par-dessus la page, où que tu sois. Échap ou un clic le referment.
+
+La touche **`?`** fait la même chose — c'est la convention du web, celle que
+GitHub et Gmail emploient. Mais elle demande `Maj` sur un clavier français, et
+certaines dispositions ne rapportent pas le caractère correctement dans ce
+cas ; `Alt`+`²` ne dépend d'aucun caractère et marche partout.
 
 Chaque geste répond à **deux touches** : `²` (au-dessus de Tab) et `F2`. La
 première est la plus rapide sur un clavier français ; la seconde existe et
@@ -72,6 +80,7 @@ porte le même nom sur tous les claviers.
 
 | Touche | Effet |
 |---|---|
+| **`Alt`+`²`** / **`Alt`+`F2`**, ou **`?`** | Affiche le rappel des raccourcis, par-dessus la page |
 | **`²`** ou **`F2`** | Coupe et rallume les traductions |
 | **`Maj`+`²`** / **`Maj`+`F2`**, ou **`*`** (à droite d'Entrée) | Bascule entre panneau complet et texte de la carte seul |
 | **`Ctrl`+`²`** / **`Ctrl`+`F2`** | Fige le panneau sur place et le rend cliquable |
