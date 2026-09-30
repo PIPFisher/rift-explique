@@ -10,8 +10,8 @@
 (function () {
   "use strict";
 
-  var REMOTE = "https://pipfisher.github.io/rift-explique/fr.json";
-  var VERSION = "1.21.1";
+  var REMOTE = "https://rift-explique.github.io/fr.json";
+  var VERSION = "1.22.0";
 
   // Reprise après un rechargement de l'extension. Chrome laisse l'ancien
   // script tourner dans les onglets déjà ouverts : le service worker nous
@@ -30,7 +30,7 @@
   }
   function periodique(fn, ms) { var id = setInterval(fn, ms); MINUTEURS.push(id); return id; }
 
-  var SITE = "https://pipfisher.github.io/rift-explique/";
+  var SITE = "https://rift-explique.github.io/";
   var LARGEUR = null;            // largeur du panneau, éventuellement imposée par fr.json
   var TTL = 24 * 60 * 60 * 1000;
   var INGAME_DELAY = 0;    // en jeu : affichage immédiat

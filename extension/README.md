@@ -14,11 +14,11 @@ L'extension n'est pas sur le Chrome Web Store, elle s'installe donc « à la mai
 
 **1. Télécharger le dossier**
 
-Va sur https://github.com/PIPFisher/rift-explique → bouton vert **Code** → **Download ZIP**.
+Va sur https://github.com/rift-explique/rift-explique.github.io → bouton vert **Code** → **Download ZIP**.
 
 **2. Décompresser**
 
-Clic droit sur le fichier téléchargé → *Extraire tout*. Tu obtiens un dossier `rift-explique-main`, qui contient un sous-dossier **`extension`**. C'est celui-là qui nous intéresse.
+Clic droit sur le fichier téléchargé → *Extraire tout*. Tu obtiens un dossier `rift-explique.github.io-main`, qui contient un sous-dossier **`extension`**. C'est celui-là qui nous intéresse.
 
 **3. Charger l'extension dans Chrome**
 
@@ -142,7 +142,7 @@ met l'autre à jour immédiatement, sans recharger la page.
 **Aucune réinstallation nécessaire.** L'extension va chercher les traductions sur le site :
 
 ```
-https://pipfisher.github.io/rift-explique/fr.json
+https://rift-explique.github.io/fr.json
 ```
 
 Elle les garde en cache 24 heures, puis les rafraîchit toute seule. La copie embarquée dans le dossier ne sert que de secours, si le site est injoignable.
@@ -183,7 +183,7 @@ non plus le contenu des sites, elle ajoute un panneau de lecture par-dessus.
 
 Deux requêtes sortantes, à connaître pour que ce soit dit honnêtement :
 
-- le fichier de traductions, sur `pipfisher.github.io` — une fois par jour ;
+- le fichier de traductions, sur `rift-explique.github.io` — une fois par jour ;
 - les pictogrammes officiels (énergie, runes, puissance), servis par le serveur
   de Riot `assetcdn.rgpub.io` au moment où un panneau s'affiche.
 

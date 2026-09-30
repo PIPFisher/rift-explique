@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Riftbound en français",
-  "version": "1.21.1",
+  "version": "1.22.0",
   "description": "Traduction francaise des cartes Riftbound au survol, sur Rift Atlas et dans le simulateur. Terminologie officielle VF, mots-cles au code couleur du jeu.",
   "content_scripts": [
     {
@@ -32,7 +32,7 @@
     }
   ],
   "host_permissions": [
-    "https://pipfisher.github.io/*",
+    "https://rift-explique.github.io/*",
     "https://riftatlas.com/*",
     "https://www.riftatlas.com/*",
     "https://play.riftatlas.com/*"
