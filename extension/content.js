@@ -11,7 +11,7 @@
   "use strict";
 
   var REMOTE = "https://pipfisher.github.io/rift-explique/fr.json";
-  var VERSION = "1.20.0";
+  var VERSION = "1.21.0";
 
   // Reprise après un rechargement de l'extension. Chrome laisse l'ancien
   // script tourner dans les onglets déjà ouverts : le service worker nous
