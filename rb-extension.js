@@ -23,10 +23,12 @@ window.Extension = (function(){
     { t:"Le code couleur des cartes",
       s:"Sarcelle pour la façon de jouer la carte, vert pour ses capacités, rose pour son rôle au combat. " +
         "Les rappels de règles sont écrits plus petit et décalés vers la droite, pour qu'on lise l'effet avant eux." },
-    { t:"Une touche pour tout couper",
-      s:"La touche « ² » — ou « F2 », pour les claviers qui n'ont pas de « ² » — éteint et rallume " +
-        "les traductions en pleine partie. Panneau, pastilles et liserés disparaissent d'un coup. " +
-        "L'état est retenu d'une partie à l'autre." },
+    { t:"Une seule touche, quatre gestes",
+      s:"Tout part de « ² », celle au-dessus de Tab. Seule, elle éteint et rallume les " +
+        "traductions en pleine partie : panneau, pastilles et liserés disparaissent d'un coup, " +
+        "et l'état est retenu d'une partie à l'autre. Avec Maj elle allège le panneau, avec " +
+        "Ctrl elle le fige, avec Alt elle rappelle les trois autres. Sur un clavier sans " +
+        "« ² », « F2 » la remplace partout." },
     { t:"Attraper le panneau au vol",
       s:"Par défaut, le panneau est <b>transparent aux clics</b> : tu cliques à travers lui comme " +
         "s'il n'était pas là, donc il ne gêne jamais le plateau. Mais du coup son lien n'est pas " +
@@ -39,11 +41,9 @@ window.Extension = (function(){
         "— ou « Maj&nbsp;+&nbsp;F2 », ou la touche « * » à droite d'Entrée — range tout ça et ne " +
         "laisse que le texte de la carte, traduit. Une seule ligne par effet, rien à survoler en trop." },
     { t:"Une touche qui rappelle les autres",
-      s:"« Alt&nbsp;+&nbsp;² » — ou « ?&nbsp;», la convention du web — affiche la liste des " +
-        "raccourcis par-dessus la page, en partie comme ailleurs. Rien à mémoriser, rien à " +
-        "aller chercher. Échap ou un clic la referment. La forme avec Alt existe parce que " +
-        "le point d'interrogation demande Maj sur un clavier français, et que toutes les " +
-        "dispositions ne le rapportent pas de la même façon." },
+      s:"« Alt&nbsp;+&nbsp;² » affiche la liste des raccourcis par-dessus la page, en partie " +
+        "comme ailleurs, avec l'état où tu te trouves. Rien à mémoriser : tout part de la " +
+        "même touche, et le rappel te redonne les trois autres." },
     { t:"Une fenêtre de réglages",
       s:"Un clic sur l'icône de l'extension ouvre les réglages : la version installée, le nombre " +
         "de cartes chargées, les mêmes bascules que les raccourcis, et un bouton pour forcer la " +
