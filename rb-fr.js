@@ -1,5 +1,5 @@
 /* ============================================================
-   rb-fr.js — traductions françaises des 1189 cartes
+   rb-fr.js — traductions françaises des 1197 cartes
    ------------------------------------------------------------
    Clé = numéro de collection de la carte (champ "code").
    n    : nom français

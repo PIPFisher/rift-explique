@@ -1,68 +1,134 @@
 # Le Rift Expliqué
 
-Un guide français de **Riftbound** (le TCG League of Legends), pensé pour expliquer le jeu à des débutants.
+Riftbound en français : les 1197 cartes traduites à la main, et une extension
+Chrome qui affiche la traduction au survol de la souris pendant la partie.
 
-Quatre onglets :
+**[rift-explique.github.io](https://rift-explique.github.io)**
 
-| Onglet | Ce qu'il fait |
+Riot ne publie pas encore Riftbound en français. Ce projet comble le manque en
+attendant : une traduction complète, une terminologie tenue d'un bout à l'autre,
+et le texte anglais d'origine conservé à côté de chaque carte.
+
+## L'extension
+
+Sur [Rift Atlas](https://riftatlas.com) et dans son simulateur de parties, un
+panneau s'ouvre à côté de la carte survolée : son nom, son texte de règles, et
+sur les cartes retorses une note qui explique le piège. Les pictogrammes de
+Riot — Énergie, runes, Puissance, épuisement — sont affichés depuis les
+serveurs officiels, tels qu'ils apparaissent sur la carte.
+
+Tout se pilote avec une seule touche, `²` :
+
+| Raccourci | Effet |
 |---|---|
-| **Les règles** | Les notions qui coincent : affrontement, focus/priorité/chaîne, score, pièges de débutant, et un lexique VO → FR des mots-clés |
-| **La chaîne** | Une animation en 14 étapes qui déroule un affrontement, avec de vraies cartes |
-| **Simulateur** | Tu montes une situation avec de vraies cartes et tu joues coup par coup ; les coups illégaux sont refusés avec l'explication de la règle |
-| **Les cartes** | Les 1189 cartes des cinq extensions, avec recherche et filtres |
+| `²` | affiche ou masque les traductions |
+| `Maj + ²` | ne laisse que le texte de la carte, sans les rappels de règles |
+| `Ctrl + ²` | fige le panneau et le rend cliquable |
+| `Alt + ²` | rappelle ces raccourcis par-dessus la page |
 
-## Publier sur GitHub Pages
+Sur un clavier sans `²`, `F2` la remplace partout.
 
-1. Crée un dépôt **public** sur GitHub, par exemple `rift-explique`.
-2. Envoie le contenu de ce dossier à la racine du dépôt :
+Par défaut, le panneau est transparent aux clics : il ne gêne jamais le plateau.
 
-```bash
-cd rift-explique
-git init
-git add .
-git commit -m "Le Rift Expliqué"
-git branch -M main
-git remote add origin https://github.com/<ton-pseudo>/rift-explique.git
-git push -u origin main
-```
+## Installation
 
-3. Sur GitHub : **Settings → Pages**, source **Deploy from a branch**, branche `main`, dossier `/ (root)`, puis **Save**.
-4. Une minute plus tard, le site est en ligne sur `https://<ton-pseudo>.github.io/rift-explique/`. C'est ce lien que tu envoies à tes amis.
+L'extension n'est pas distribuée par le Chrome Web Store ; elle s'installe
+depuis son dossier, une seule fois.
 
-## Tester en local
+1. Télécharger l'archive du dépôt (bouton **Code → Download ZIP**) et la
+   décompresser. Le dossier obtenu, `rift-explique.github.io-main`, contient un
+   sous-dossier `extension`.
+2. Ouvrir `chrome://extensions` dans Chrome.
+3. Activer le **mode développeur**, en haut à droite.
+4. Cliquer **Charger l'extension non empaquetée** et sélectionner le
+   sous-dossier `extension` — pas le dossier parent.
+5. Aller sur [riftatlas.com/cards](https://riftatlas.com/cards) et passer la
+   souris sur une carte.
 
-Double-clique `index.html`. Les données sont dans un fichier JavaScript, donc aucun serveur n'est nécessaire.
+Chrome affiche un bandeau « Désactiver les extensions en mode développeur » à
+chaque démarrage : c'est le comportement normal pour une extension installée
+ainsi.
 
-## Mettre à jour les cartes
+## Le site
 
-`cards-data.js` est un instantané de la galerie officielle. Pour le régénérer quand une extension sort, le script du projet communautaire [riftbound-card-db](https://github.com/riccjohn/riftbound-card-db) aspire la galerie et produit le même format ; il suffit ensuite de réappliquer la simplification des champs (`n`, `t`, `d`, `e`, `m`, `tx`…).
+| Onglet | Contenu |
+|---|---|
+| **Extension** | Ce que fait l'extension, son installation, ce qu'elle envoie |
+| **Les règles** | Le vocabulaire du jeu, puis les vingt-cinq mots-clés avec leur nom anglais et le numéro d'article officiel |
+| **Démarrer** | Les questions de la première partie : affrontement, chaîne, score, pièges classiques |
+
+## La traduction
+
+Les 1197 cartes des six extensions — Origins, Proving Grounds, Spiritforged,
+Unleashed, Vendetta et Radiance — sont traduites dans `rb-fr.js`, qui est la
+source. `fr.json` en est l'index généré, servi au site et à l'extension.
+
+La terminologie est un choix de l'auteur, appliqué de la même façon sur les
+cartes et dans les règles : Essence runique, Puissance, Agonie, Amplification,
+Protection, Expert en armes, Dégainer, Arrière-ligne. Un mot y veut toujours
+dire la même chose.
+
+La grammaire des pictogrammes de Riot est respectée à la lettre : `[C]` désigne
+une rune du domaine de la carte, `[A]` une rune de n'importe quel domaine, et
+la traduction rend cette distinction visible — c'est elle qui décide du
+pictogramme affiché.
+
+## Ce que l'extension envoie
+
+Rien qui concerne l'utilisateur. Aucune mesure d'audience, aucun identifiant,
+aucune donnée de navigation.
+
+Deux requêtes sortantes, et seulement deux : le fichier de traductions, relu
+une fois par jour depuis ce site, et les pictogrammes du jeu, chargés depuis
+les serveurs de Riot. L'extension ne lit que les pages de Rift Atlas.
 
 ## Structure
 
 ```
-index.html          coquille et navigation
-style.css           thème sombre, composants
-cards-data.js       1189 cartes (données allégées, liens vers les images officielles)
-rb-core.js          chargement, symboles [A] [C] [S] [T], lexique
-rb-rules.js         guide des règles
-rb-chain.js         animation de la chaîne
-rb-sim.js           simulateur d'affrontement
-rb-explorer.js      recherche et filtres
-rb-app.js           navigation entre les onglets
+index.html            coquille et navigation
+style.css             thème sombre, composants
+rb-app.js             navigation entre les onglets
+rb-core.js            chargement, pictogrammes, lexique
+rb-fr.js              traduction des 1197 cartes — la source
+fr.json               index généré depuis rb-fr.js, servi au site et à l'extension
+cards-data.js         données officielles allégées, liens vers les images de Riot
+rb-extension.js       onglet « Extension »
+rb-regles.js          onglet « Les règles »
+rb-regles-data.js     vocabulaire, mots-clés, articles officiels
+rb-rules.js           onglet « Démarrer »
+extension/            l'extension Chrome
 ```
 
-Tous les fichiers sont à la racine : un double-clic sur `index.html` suffit pour tester, aucun serveur n'est nécessaire.
+`rb-chain.js`, `rb-sim.js`, `rb-explorer.js`, `rb-deck.js` et `rb-turn.js`
+restent dans le dépôt : animation de la chaîne, simulateur d'affrontement,
+explorateur de cartes et constructeur de deck sont écrits mais retirés de la
+navigation, le temps d'être repris.
 
-## Ce que le simulateur fait et ne fait pas
+Aucun serveur n'est nécessaire : les données sont dans des fichiers
+JavaScript, et `index.html` s'ouvre directement.
 
-Il applique les règles de **timing** : qui a le focus, qui a la priorité, quand une Action est jouable, l'empilement et la résolution un élément à la fois, la fin sur deux passages consécutifs, les dégâts simultanés et l'assignation létale.
+## Mise à jour des cartes
 
-Il ne calcule **pas** les effets des sorts : quand une carte se résout, le journal le signale sans appliquer son texte. C'est un outil pour comprendre *quand* on peut jouer, pas un moteur de jeu.
+`cards-data.js` est un instantané de la galerie officielle. À la sortie d'une
+extension, le projet communautaire
+[riftbound-card-db](https://github.com/riccjohn/riftbound-card-db) aspire la
+galerie et produit le même format ; il reste à réappliquer la simplification
+des champs (`n`, `t`, `d`, `e`, `m`, `tx`…), puis à régénérer `fr.json` depuis
+`rb-fr.js`.
 
-## Mentions
+Riot fournit par ailleurs une clé d'API sur son
+[portail développeur](https://developer.riotgames.com/docs/riftbound), qui
+donne accès aux visuels et aux traductions officielles là où elles existent.
 
-Projet de fan non officiel, sans lien avec Riot Games. Riftbound et League of Legends sont des marques de Riot Games, Inc. Les données et les illustrations des cartes appartiennent à Riot Games ; les images sont affichées depuis leurs serveurs et ne sont pas redistribuées ici.
+## Licence
 
-Riot ne publie pas encore Riftbound en français. Les 1189 cartes sont traduites à la main dans `rb-fr.js`, avec le texte original anglais conservé à côté, et une note explicative sur les cartes difficiles à comprendre. Le lexique de l'onglet « Les règles » donne l'équivalent français de chaque mot-clé.
+Traduction française, notes explicatives, choix de terminologie et code sont
+l'œuvre de **Fisher**, sous licence
+[CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.fr).
+Le détail figure dans [LICENSE.md](LICENSE.md).
 
-Si tu veux passer à la voie officielle, Riot fournit une clé d'API sur son [portail développeur](https://developer.riotgames.com/docs/riftbound), qui donne accès aux visuels et aux traductions officielles quand elles existent.
+Projet de fan non officiel, sans lien avec Riot Games ni avec Rift Atlas.
+Riftbound et League of Legends sont des marques de Riot Games, Inc. Le texte
+original des cartes, leurs illustrations et leurs pictogrammes appartiennent à
+Riot Games et ne sont pas redistribués ici : ils sont affichés depuis les
+serveurs de Riot.
