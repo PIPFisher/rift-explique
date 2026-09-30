@@ -5,8 +5,8 @@
 window.Extension = (function(){
   "use strict";
 
-  var ZIP  = "https://github.com/PIPFisher/rift-explique/archive/refs/heads/main.zip";
-  var REPO = "https://github.com/PIPFisher/rift-explique";
+  var ZIP  = "https://github.com/rift-explique/rift-explique.github.io/archive/refs/heads/main.zip";
+  var REPO = "https://github.com/rift-explique/rift-explique.github.io";
   var DOSSIER = REPO + "/tree/main/extension";
 
   var ATOUTS = [
@@ -56,7 +56,7 @@ window.Extension = (function(){
   var ETAPES = [
     { t:"Télécharger le dossier",
       s:'Récupère l\'archive avec le bouton ci-dessus, puis décompresse-la — clic droit, ' +
-        '<em>Extraire tout</em>. Tu obtiens un dossier <code>rift-explique-main</code> qui contient ' +
+        '<em>Extraire tout</em>. Tu obtiens un dossier <code>rift-explique.github.io-main</code> qui contient ' +
         'un sous-dossier <code>extension</code>. C\'est celui-là qui compte.' },
     { t:"Ouvrir la page des extensions",
       s:'Dans Chrome, tape <code>chrome://extensions</code> dans la barre d\'adresse.' },
