@@ -70,7 +70,7 @@ window.RB_FR = {
   },
   "OGN-012/298": {
     n: "Fantassin noxien",
-    tx: "Légion — je coûte 2 Énergie de moins. (Effet obtenu si tu as déjà joué une autre carte ce tour-ci.)"
+    tx: "Légion : je coûte 2 Énergie de moins. (Effet obtenu si tu as déjà joué une autre carte ce tour-ci.)"
   },
   "OGN-013/298": {
     n: "Poro ronchon",
@@ -87,7 +87,7 @@ window.RB_FR = {
   },
   "OGN-016/298": {
     n: "Duo dangereux",
-    tx: "Légion — quand tu me joues, donne +2 Puissance à une unité ce tour-ci. (Effet obtenu si tu as déjà joué une autre carte ce tour-ci.)"
+    tx: "Légion : quand tu me joues, donne +2 Puissance à une unité ce tour-ci. (Effet obtenu si tu as déjà joué une autre carte ce tour-ci.)"
   },
   "OGN-017/298": {
     n: "Baliste de fer",
@@ -105,16 +105,16 @@ window.RB_FR = {
   },
   "OGN-020/298": {
     n: "Champion de la casse",
-    tx: "Légion — quand tu me joues, défausse 2 cartes, puis pioche 2 cartes. (Effet obtenu si tu as déjà joué une autre carte ce tour-ci.)",
+    tx: "Légion : quand tu me joues, défausse 2 cartes, puis pioche 2 cartes. (Effet obtenu si tu as déjà joué une autre carte ce tour-ci.)",
     note: "Le cycle n'est pas gratuit en information, mais il alimente les cartes qui veulent être défaussées."
   },
   "OGN-021/298": {
     n: "Disque solaire",
-    tx: "Épuiser : Légion — la prochaine unité que tu joues ce tour-ci arrive prête. (Effet obtenu si tu as déjà joué une autre carte ce tour-ci.)"
+    tx: "Épuiser : Légion : la prochaine unité que tu joues ce tour-ci arrive prête. (Effet obtenu si tu as déjà joué une autre carte ce tour-ci.)"
   },
   "OGN-022/298": {
     n: "Rayon thermique",
-    tx: "Action. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nDétruis tous les équipements.",
+    tx: "Action. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nTue tous les équipements.",
     note: "Tous, y compris les tiens."
   },
   "OGN-023/298": {
@@ -212,7 +212,7 @@ window.RB_FR = {
   },
   "OGN-040/298": {
     n: "Sceau de rage",
-    tx: "Épuiser : Réaction — ajoute 1 Essence runique. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)"
+    tx: "Épuiser : Réaction — ajoute 1 Essence runique. (On ne peut pas réagir aux capacités qui ajoutent des ressources.)"
   },
   "OGN-041/298": {
     n: "Volibear",
@@ -245,7 +245,7 @@ window.RB_FR = {
   },
   "OGN-045/298": {
     n: "Contre-sort",
-    tx: "Réaction. (Se joue à tout moment, même avant qu'un sort ou une capacité ne se résolve.)\nContre un sort dont le coût ne dépasse pas 4 Énergie et 1 Essence runique.",
+    tx: "Réaction. (Se joue à tout moment, même avant qu'un sort ou une capacité ne se résolve.)\nContre un sort dont le coût ne dépasse pas 4 Énergie et 1 Essence runique, de n'importe quel domaine.",
     note: "On regarde le coût imprimé sur la carte, pas ce que l'adversaire a réellement payé."
   },
   "OGN-046/298": {
@@ -277,16 +277,16 @@ window.RB_FR = {
   },
   "OGN-052/298": {
     n: "Poro vaillant",
-    tx: "Bouclier. (+1 Puissance tant que je suis défenseuse.)"
+    tx: "Bouclier. (+1 Puissance tant que je suis défenseur.)"
   },
   "OGN-053/298": {
     n: "Unis face à l'ennemi",
-    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine, afin de la révéler plus tard pour 0.)\nAction. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nAméliore une unité alliée. Ce tour-ci, les améliorations donnent +1 Puissance de plus à tes unités. (Améliorer une unité : lui donner +1 Puissance si elle n'en a pas déjà une.)",
+    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux la révéler pour 0, et elle gagne Réaction.)\nAction. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nAméliore une unité alliée. Ce tour-ci, les améliorations donnent +1 Puissance de plus à tes unités. (Améliorer une unité : lui donner +1 Puissance si elle n'en a pas déjà une.)",
     note: "Le bonus vaut pour toutes tes unités déjà améliorées : sur un plateau large, c'est un gain de plusieurs Puissances d'un coup."
   },
   "OGN-054/298": {
     n: "Gardien ensoleillé",
-    tx: "Bouclier. (+1 Puissance tant que je suis défenseuse.)\nTank. (Les dégâts de combat doivent m'être assignés en premier.)"
+    tx: "Bouclier. (+1 Puissance tant que je suis défenseur.)\nTank. (Les dégâts de combat doivent m'être assignés en premier.)"
   },
   "OGN-055/298": {
     n: "Manieuse d'eau",
@@ -294,12 +294,12 @@ window.RB_FR = {
   },
   "OGN-056/298": {
     n: "Adaptatron",
-    tx: "Quand je conquiers, tu peux tuer un Équipement. Si tu le fais, améliore-moi. (Si je n'ai pas d'amélioration, je reçois +1 Puissance.)",
+    tx: "Quand je conquiers, tu peux tuer un équipement. Si tu le fais, améliore-moi. (Si je n'ai pas d'amélioration, je reçois +1 Puissance.)",
     note: "L'Équipement détruit peut être le tien comme celui de l'adversaire."
   },
   "OGN-057/298": {
     n: "Parade",
-    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine, afin de la révéler plus tard pour 0.)\nAction. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nDonne Bouclier 3 et Tank à une unité ce tour-ci. (+3 Puissance tant qu'elle est défenseuse ; les dégâts de combat doivent lui être assignés en premier.)",
+    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux la révéler pour 0, et elle gagne Réaction.)\nAction. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nDonne Bouclier 3 et Tank à une unité ce tour-ci. (+3 Puissance tant qu'elle est défenseuse ; les dégâts de combat doivent lui être assignés en premier.)",
     note: "Tank force l'adversaire à taper dedans en premier : elle protège tes autres unités autant qu'elle gonfle celle-ci."
   },
   "OGN-058/298": {
@@ -335,7 +335,7 @@ window.RB_FR = {
   },
   "OGN-065/298": {
     n: "Ancien chenu",
-    tx: "Tant que je suis améliorée, j'ai +1 Puissance supplémentaire.",
+    tx: "Tant que je suis amélioré, j'ai +1 Puissance supplémentaire.",
     note: "L'amélioration lui rapporte donc +2 Puissance au total, au lieu de +1."
   },
   "OGN-066/298": {
@@ -365,7 +365,7 @@ window.RB_FR = {
   },
   "OGN-070/298": {
     n: "Gardien des Traque-mages",
-    tx: "Tant que je suis sur un champ de bataille, tes adversaires ne peuvent jouer leurs unités que dans leur base.\nTant que je suis sur un champ de bataille, les sorts et capacités ne peuvent pas redresser les unités et Équipements ennemis.",
+    tx: "Tant que je suis sur un champ de bataille, tes adversaires ne peuvent jouer leurs unités que dans leur base.\nTant que je suis sur un champ de bataille, les sorts et capacités ne peuvent pas redresser les unités et équipements ennemis.",
     note: "Il coupe les renforts en plein combat : l'adversaire ne peut plus poser d'unité directement sur un champ de bataille."
   },
   "OGN-071/298": {
@@ -389,7 +389,7 @@ window.RB_FR = {
   },
   "OGN-075/298": {
     n: "Fée appétissante",
-    tx: "Accélération. (Tu peux payer 1 Énergie + 1 Essence runique en coût additionnel pour que j'arrive prête.)\nAgonie — canalise 2 runes, épuisées, et pioche 1 carte. (Effet obtenu quand je meurs.)"
+    tx: "Accélération. (Tu peux payer 1 Énergie + 1 Essence runique en coût additionnel pour que j'arrive prête.)\nAgonie : canalise 2 runes, épuisées, et pioche 1 carte. (Effet obtenu quand je meurs.)"
   },
   "OGN-076/298": {
     n: "Yasuo",
@@ -403,7 +403,7 @@ window.RB_FR = {
   },
   "OGN-077/298": {
     n: "Sablier de Zhonya",
-    tx: "Caché. (Le cacher maintenant pour 1 Essence runique, de n'importe quel domaine, afin de le révéler plus tard pour 0. Il gagne Réaction.)\nLa prochaine fois qu'une unité alliée devrait mourir, détruis cet équipement à la place. Rappelle cette unité, épuisée. (Elle est renvoyée à sa base ; ce n'est pas un déplacement.)",
+    tx: "Caché. (Cache-le maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux le révéler pour 0, et il gagne Réaction.)\nLa prochaine fois qu'une unité alliée devrait mourir, tue cet équipement à la place. Rappelle cette unité, épuisée. (Elle est renvoyée à sa base ; ce n'est pas un déplacement.)",
     note: "Le déclenchement est obligatoire : il part sur la première unité qui meurt, pas forcément celle que tu voulais sauver."
   },
   "OGN-078/298": {
@@ -433,7 +433,7 @@ window.RB_FR = {
   },
   "OGN-081/298": {
     n: "Sceau de concentration",
-    tx: "Épuiser : Réaction — ajoute 1 Essence runique. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)"
+    tx: "Épuiser : Réaction — ajoute 1 Essence runique. (On ne peut pas réagir aux capacités qui ajoutent des ressources.)"
   },
   "OGN-082/298": {
     n: "Protecteur de flamme blanche",
@@ -442,7 +442,7 @@ window.RB_FR = {
   },
   "OGN-083/298": {
     n: "Consultation du passé",
-    tx: "Caché. (La cacher maintenant pour 1 Essence runique, de n'importe quel domaine, afin de la révéler plus tard pour 0. Elle gagne Réaction.)\nRéaction. (Se joue à tout moment, même avant qu'un sort ou une capacité ne se résolve.)\nPioche 2 cartes."
+    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux la révéler pour 0, et elle gagne Réaction.)\nRéaction. (Se joue à tout moment, même avant qu'un sort ou une capacité ne se résolve.)\nPioche 2 cartes."
   },
   "OGN-084/298": {
     n: "Apprenti impatient",
@@ -455,7 +455,7 @@ window.RB_FR = {
   },
   "OGN-086/298": {
     n: "Colosse gemmé",
-    tx: "Vision. (Quand tu me joues, regarde la première carte de ton deck principal. Tu peux la recycler.)\nBouclier. (+1 Puissance tant que je suis défenseuse.)"
+    tx: "Vision. (Quand tu me joues, regarde la première carte de ton deck principal. Tu peux la recycler.)\nBouclier. (+1 Puissance tant que je suis défenseur.)"
   },
   "OGN-087/298": {
     n: "Yordle donneur de leçons",
@@ -482,7 +482,7 @@ window.RB_FR = {
   },
   "OGN-091/298": {
     n: "Équipe des stands",
-    tx: "Quand tu joues un Équipement, redresse-moi.",
+    tx: "Quand tu joues un équipement, redresse-moi.",
     note: "Se redresse autant de fois qu'il y a d'Équipements joués : elle peut défendre plusieurs affrontements dans un même tour."
   },
   "OGN-092/298": {
@@ -496,7 +496,7 @@ window.RB_FR = {
   },
   "OGN-094/298": {
     n: "Appel des lutins",
-    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine, afin de la révéler plus tard pour 0.)\nAction. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nCrée un jeton d'unité Lutin de 3 Puissance, prêt, avec Temporaire. (Il meurt au début de la phase Initiale de son contrôleur, avant le score.)",
+    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux la révéler pour 0, et elle gagne Réaction.)\nAction. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nCrée un jeton d'unité Lutin de 3 Puissance, prêt, avec Temporaire. (Il meurt au début de la phase Initiale de son contrôleur, avant le score.)",
     note: "Caché puis révélée gratuitement, elle fait surgir un défenseur de 3 Puissance au milieu d'un affrontement."
   },
   "OGN-095/298": {
@@ -505,16 +505,16 @@ window.RB_FR = {
   },
   "OGN-096/298": {
     n: "Sentinelle vigilante",
-    tx: "Agonie — pioche 1 carte. (Effet obtenu quand je meurs.)"
+    tx: "Agonie : pioche 1 carte. (Effet obtenu quand je meurs.)"
   },
   "OGN-097/298": {
     n: "Fée pomme explosive",
-    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine, afin de la révéler plus tard pour 0.)\nQuand tu me joues, donne -2 Puissance à une unité ce tour-ci, sans descendre sous 1 Puissance.",
+    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux la révéler pour 0, et elle gagne Réaction.)\nQuand tu me joues, donne -2 Puissance à une unité ce tour-ci, sans descendre sous 1 Puissance.",
     note: "Le plancher à 1 Puissance l'empêche de tuer seule : elle affaiblit, elle n'exécute pas."
   },
   "OGN-098/298": {
     n: "Conduit d'énergie",
-    tx: "Épuiser : Réaction — ajoute 1 Énergie. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)"
+    tx: "Épuiser : Réaction — ajoute 1 Énergie. (On ne peut pas réagir aux capacités qui ajoutent des ressources.)"
   },
   "OGN-099/298": {
     n: "Ramasse-ordures",
@@ -572,12 +572,12 @@ window.RB_FR = {
   },
   "OGN-110/298": {
     n: "Ekko",
-    tx: "Accélération. (Tu peux payer 1 Énergie + 1 Essence runique en coût additionnel pour que j'arrive prêt.)\nAgonie — recycle-moi pour redresser tes runes. (Effet obtenu quand je meurs.)",
+    tx: "Accélération. (Tu peux payer 1 Énergie + 1 Essence runique en coût additionnel pour que j'arrive prêt.)\nAgonie : recycle-moi pour redresser tes runes. (Effet obtenu quand je meurs.)",
     note: "Mourir lui rend toutes tes runes : un échange de combat peut financer un second tour complet dans le même tour."
   },
   "OGN-111/298": {
     n: "Heimerdinger",
-    tx: "Je possède toutes les capacités à épuisement de tes légendes, unités et Équipements.",
+    tx: "Je possède toutes les capacités à épuisement de tes légendes, unités et équipements.",
     note: "Il ne copie que les capacités dont le coût comprend « épuiser ». Chacune peut être utilisée une fois par tour, puisqu'il faut l'épuiser lui."
   },
   "OGN-112/298": {
@@ -592,7 +592,7 @@ window.RB_FR = {
   },
   "OGN-113/298": {
     n: "Malzahar",
-    tx: "Tuer une unité ou un Équipement allié, épuiser : Action — ajoute 2 Essences runiques, de n'importe quel domaine. (Se joue pendant ton tour ou dans un affrontement. Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)",
+    tx: "Tuer une unité alliée ou un équipement allié, épuiser : Action — ajoute 2 Essences runiques, de n'importe quel domaine. (Se joue pendant ton tour ou dans un affrontement. On ne peut pas réagir aux capacités qui ajoutent des ressources.)",
     note: "Il convertit une unité sacrifiée en ressource : idéal avec des jetons ou des unités à effet d'Agonie."
   },
   "OGN-114/298": {
@@ -634,16 +634,16 @@ window.RB_FR = {
   },
   "OGN-120/298": {
     n: "Sceau de clairvoyance",
-    tx: "Épuiser : Réaction — ajoute 1 Essence runique. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)"
+    tx: "Épuiser : Réaction — ajoute 1 Essence runique. (On ne peut pas réagir aux capacités qui ajoutent des ressources.)"
   },
   "OGN-121/298": {
     n: "Teemo",
-    tx: "Caché. (Cache-moi maintenant pour 1 Essence runique, de n'importe quel domaine, afin de me révéler plus tard pour 0.)\nQuand je défends, ou quand je suis joué depuis ma position face cachée, révèle les 5 premières cartes de ton deck principal. Inflige 1 dégât à une unité ennemie présente ici pour chaque carte avec Caché, puis recycle-les.",
+    tx: "Caché. (Cache-moi maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux me révéler pour 0, et je gagne Réaction.)\nQuand je défends, ou quand je suis joué depuis ma position face cachée, révèle les 5 premières cartes de ton deck principal. Inflige 1 dégât à une unité ennemie présente ici pour chaque carte avec Caché, puis recycle-les.",
     note: "Jusqu'à 5 dégâts si ton deck est bâti sur les cartes avec Caché : c'est une carte de deck thématique, pas une carte isolée."
   },
   "OGN-121a/298": {
     n: "Teemo",
-    tx: "Caché. (Cache-moi maintenant pour 1 Essence runique, de n'importe quel domaine, afin de me révéler plus tard pour 0.)\nQuand je défends, ou quand je suis joué depuis ma position face cachée, révèle les 5 premières cartes de ton deck principal. Inflige 1 dégât à une unité ennemie présente ici pour chaque carte avec Caché, puis recycle-les.",
+    tx: "Caché. (Cache-moi maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux me révéler pour 0, et je gagne Réaction.)\nQuand je défends, ou quand je suis joué depuis ma position face cachée, révèle les 5 premières cartes de ton deck principal. Inflige 1 dégât à une unité ennemie présente ici pour chaque carte avec Caché, puis recycle-les.",
     note: "Jusqu'à 5 dégâts si ton deck est bâti sur les cartes avec Caché : c'est une carte de deck thématique, pas une carte isolée."
   },
   "OGN-122/298": {
@@ -705,7 +705,7 @@ window.RB_FR = {
   },
   "OGN-133/298": {
     n: "Déluge de lames",
-    tx: "Réaction. (Se joue à tout moment, même avant qu'un sort ne se résolve.)\nInflige 1 dégât à toutes les unités présentes sur des champs de bataille.",
+    tx: "Réaction. (Se joue à tout moment, même avant qu'un sort ou une capacité ne se résolve.)\nInflige 1 dégât à toutes les unités présentes sur des champs de bataille.",
     note: "Touche aussi tes propres unités."
   },
   "OGN-134/298": {
@@ -714,7 +714,7 @@ window.RB_FR = {
   },
   "OGN-135/298": {
     n: "Petit pakaa",
-    tx: "Caché. (Cache-la maintenant pour 1 Essence runique (de n'importe quel domaine) afin de la révéler plus tard pour 0.)"
+    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux la révéler pour 0, et elle gagne Réaction.)"
   },
   "OGN-136/298": {
     n: "Novice de la fosse",
@@ -812,7 +812,7 @@ window.RB_FR = {
   },
   "OGN-155/298": {
     n: "Qiyana",
-    tx: "Protection. (L'adversaire doit payer 1 Essence runique de plus, de n'importe quel domaine, pour me choisir avec un sort ou une capacité.)\nQuand je conquiers, pioche 1 carte ou canalise 1 rune épuisée."
+    tx: "Protection. (L'adversaire doit payer 1 Essence runique de plus, de n'importe quel domaine, pour me choisir avec un sort ou une capacité.)\nQuand je conquiers, pioche 1 carte ou canalise 1 rune, épuisée."
   },
   "OGN-156/298": {
     n: "Sabotage",
@@ -860,16 +860,16 @@ window.RB_FR = {
   },
   "OGN-163/298": {
     n: "Sceau de force",
-    tx: "Épuiser : Réaction — ajoute 1 Essence runique. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)"
+    tx: "Épuiser : Réaction — ajoute 1 Essence runique. (On ne peut pas réagir aux capacités qui ajoutent des ressources.)"
   },
   "OGN-164/298": {
     n: "Sett",
-    tx: "Quand je suis joué et quand je conquiers, améliore-moi. (Si je n'ai pas d'amélioration, je reçois +1 Puissance.)\nDépenser mon amélioration : je gagne +4 Puissance ce tour-ci.",
+    tx: "Quand tu me joues ou quand je conquiers, améliore-moi. (Si je n'ai pas d'amélioration, je reçois +1 Puissance.)\nDépenser mon amélioration : je gagne +4 Puissance ce tour-ci.",
     note: "Il se réaméliore à chaque conquête : l'amélioration sert donc de munition renouvelable pour le bonus de +4."
   },
   "OGN-164a/298": {
     n: "Sett",
-    tx: "Quand je suis joué et quand je conquiers, améliore-moi. (Si je n'ai pas d'amélioration, je reçois +1 Puissance.)\nDépenser mon amélioration : je gagne +4 Puissance ce tour-ci.",
+    tx: "Quand tu me joues ou quand je conquiers, améliore-moi. (Si je n'ai pas d'amélioration, je reçois +1 Puissance.)\nDépenser mon amélioration : je gagne +4 Puissance ce tour-ci.",
     note: "Il se réaméliore à chaque conquête : l'amélioration sert donc de munition renouvelable pour le bonus de +4."
   },
   "OGN-165/298": {
@@ -892,7 +892,7 @@ window.RB_FR = {
   },
   "OGN-168/298": {
     n: "Combattre ou fuir",
-    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine, afin de la révéler plus tard pour 0.)\nAction. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nRenvoie une unité d'un champ de bataille vers sa base.",
+    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux la révéler pour 0, et elle gagne Réaction.)\nAction. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nDéplace une unité d'un champ de bataille vers sa base.",
     note: "Vise n'importe quelle unité, alliée ou ennemie : soit tu sauves la tienne, soit tu vides le champ de bataille adverse."
   },
   "OGN-169/298": {
@@ -937,21 +937,21 @@ window.RB_FR = {
   },
   "OGN-178/298": {
     n: "Agent infiltré",
-    tx: "Agonie — défausse 2 cartes, puis pioche 2 cartes. (Effet obtenu quand je meurs.)"
+    tx: "Agonie : défausse 2 cartes, puis pioche 2 cartes. (Effet obtenu quand je meurs.)"
   },
   "OGN-179/298": {
     n: "Dégâts collatéraux",
-    tx: "Action. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nChaque joueur détruit un de ses équipements.",
+    tx: "Action. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nChaque joueur tue un de ses équipements.",
     note: "Effet global : il ne choisit personne, donc il passe outre les protections."
   },
   "OGN-180/298": {
     n: "Souvenirs qui s'effacent",
-    tx: "Donne Temporaire à une unité présente sur un champ de bataille, ou à un Équipement. (Elle meurt au début de la phase Initiale de son contrôleur, avant le score.)",
+    tx: "Donne Temporaire à une unité présente sur un champ de bataille, ou à un équipement. (Elle meurt au début de la phase Initiale de son contrôleur, avant le score.)",
     note: "Voie de suppression indirecte : la cible survit au tour en cours mais disparaît juste avant le score adverse."
   },
   "OGN-181/298": {
     n: "Sac à merveilles",
-    tx: "Épuiser : renvoie un autre Équipement allié, une unité alliée ou une carte Caché dans la main de son propriétaire.",
+    tx: "Épuiser : renvoie un autre équipement allié, une unité alliée ou une carte Caché alliée dans la main de son propriétaire.",
     note: "Sert surtout à récupérer une unité qui allait mourir, ou à rejouer un effet « quand tu me joues »."
   },
   "OGN-182/298": {
@@ -965,7 +965,7 @@ window.RB_FR = {
   },
   "OGN-184/298": {
     n: "La Syren",
-    tx: "1 Énergie, épuiser : renvoie à ta base une unité alliée présente sur un champ de bataille.",
+    tx: "1 Énergie, épuiser : déplace vers ta base une unité alliée présente sur un champ de bataille.",
     note: "Un repli gratuit par tour : sert à sauver une unité ou à relancer un effet « quand tu me joues » ailleurs."
   },
   "OGN-185/298": {
@@ -998,12 +998,12 @@ window.RB_FR = {
   },
   "OGN-190/298": {
     n: "Kog'Maw",
-    tx: "Agonie — inflige 4 dégâts à toutes les unités présentes sur mon champ de bataille. (Effet obtenu quand je meurs.)",
+    tx: "Agonie : inflige 4 dégâts à toutes les unités présentes sur mon champ de bataille. (Effet obtenu quand je meurs.)",
     note: "Il touche aussi tes propres unités. À 1 Puissance, il meurt facilement : c'est justement le but."
   },
   "OGN-191/298": {
     n: "Maraudeur enragé",
-    tx: "Tank. (Les dégâts de combat doivent m'être assignés en premier.)\nQuand tu me joues, renvoie une unité d'un champ de bataille vers sa base."
+    tx: "Tank. (Les dégâts de combat doivent m'être assignés en premier.)\nQuand tu me joues, déplace une unité d'un champ de bataille vers sa base."
   },
   "OGN-192/298": {
     n: "Fend-esprit",
@@ -1036,12 +1036,12 @@ window.RB_FR = {
   },
   "OGN-197/298": {
     n: "Teemo",
-    tx: "Caché. (Cache-moi maintenant pour 1 Essence runique, de n'importe quel domaine, afin de me révéler plus tard pour 0.)\nQuand tu me joues, je gagne +3 Puissance ce tour-ci.",
+    tx: "Caché. (Cache-moi maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux me révéler pour 0, et je gagne Réaction.)\nQuand tu me joues, je gagne +3 Puissance ce tour-ci.",
     note: "Révélé gratuitement en plein affrontement, il frappe à 4 Puissance : un défenseur surprise pour 0."
   },
   "OGN-197a/298": {
     n: "Teemo",
-    tx: "Caché. (Cache-moi maintenant pour 1 Essence runique, de n'importe quel domaine, afin de me révéler plus tard pour 0.)\nQuand tu me joues, je gagne +3 Puissance ce tour-ci.",
+    tx: "Caché. (Cache-moi maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux me révéler pour 0, et je gagne Réaction.)\nQuand tu me joues, je gagne +3 Puissance ce tour-ci.",
     note: "Révélé gratuitement en plein affrontement, il frappe à 4 Puissance : un défenseur surprise pour 0."
   },
   "OGN-198/298": {
@@ -1050,7 +1050,7 @@ window.RB_FR = {
   },
   "OGN-199/298": {
     n: "Maître des marées",
-    tx: "Caché. (Me cacher maintenant pour 1 Essence runique, de n'importe quel domaine, afin de me révéler plus tard pour 0. Je gagne Réaction.)\nQuand tu me joues, tu peux choisir une unité alliée : je prends sa place et elle prend la mienne.",
+    tx: "Caché. (Cache-moi maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux me révéler pour 0, et je gagne Réaction.)\nQuand tu me joues, tu peux choisir une unité alliée : je prends sa place et elle prend la mienne.",
     note: "La carte dit « je prends sa place » au sens propre : c'est un déplacement, qui déclenche donc les effets liés au mouvement."
   },
   "OGN-200/298": {
@@ -1080,7 +1080,7 @@ window.RB_FR = {
   },
   "OGN-204/298": {
     n: "Sceau de discorde",
-    tx: "Épuiser : Réaction — ajoute 1 Essence runique. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)"
+    tx: "Épuiser : Réaction — ajoute 1 Essence runique. (On ne peut pas réagir aux capacités qui ajoutent des ressources.)"
   },
   "OGN-205/298": {
     n: "Yasuo",
@@ -1113,7 +1113,7 @@ window.RB_FR = {
   },
   "OGN-210/298": {
     n: "Poro audacieux",
-    tx: "Assaut. (+1 Puissance tant que je suis attaquante.)"
+    tx: "Assaut. (+1 Puissance tant que je suis attaquant.)"
   },
   "OGN-211/298": {
     n: "Fabricante dévouée",
@@ -1121,11 +1121,11 @@ window.RB_FR = {
   },
   "OGN-212/298": {
     n: "Forge du futur",
-    tx: "Quand tu le joues, crée un jeton d'unité Recrue de 1 Puissance dans ta base.\nDétruis cet équipement : recycle jusqu'à 4 cartes depuis les défausses."
+    tx: "Quand tu joues cet équipement, crée un jeton d'unité Recrue de 1 Puissance dans ta base.\nTue cet équipement : recycle jusqu'à 4 cartes depuis les défausses."
   },
   "OGN-213/298": {
     n: "Lame dissimulée",
-    tx: "Caché. (La cacher maintenant pour 1 Essence runique, de n'importe quel domaine, afin de la révéler plus tard pour 0. Elle gagne Réaction.)\nAction. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nTue une unité présente sur un champ de bataille. Son contrôleur pioche 2 cartes.",
+    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux la révéler pour 0, et elle gagne Réaction.)\nAction. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nTue une unité présente sur un champ de bataille. Son contrôleur pioche 2 cartes.",
     note: "Jouée depuis sa position cachée, elle ne coûte rien et prend l'adversaire en plein affrontement."
   },
   "OGN-214/298": {
@@ -1140,20 +1140,20 @@ window.RB_FR = {
   },
   "OGN-215/298": {
     n: "Officier marinier",
-    tx: "Assaut. (+1 Puissance tant que je suis attaquante.)"
+    tx: "Assaut. (+1 Puissance tant que je suis attaquant.)"
   },
   "OGN-216/298": {
     n: "Éclaireur planant",
-    tx: "Agonie — canalise 1 rune, épuisée. (Effet obtenu quand je meurs.)",
+    tx: "Agonie : canalise 1 rune, épuisée. (Effet obtenu quand je meurs.)",
     note: "La rune canalisée arrive épuisée : elle ne servira qu'au tour suivant."
   },
   "OGN-217/298": {
     n: "Quêteur de gloire trifarien",
-    tx: "Légion — quand tu me joues, améliore-moi. (Si je n'ai pas d'amélioration, je reçois +1 Puissance. Effet obtenu si tu as déjà joué une autre carte ce tour-ci.)"
+    tx: "Légion : quand tu me joues, améliore-moi. (Si je n'ai pas d'amélioration, je reçois +1 Puissance. Effet obtenu si tu as déjà joué une autre carte ce tour-ci.)"
   },
   "OGN-218/298": {
     n: "Capitaine de l'avant-garde",
-    tx: "Légion — quand tu me joues, crée ici deux jetons d'unité Recrue de 1 Puissance. (Effet obtenu si tu as déjà joué une autre carte ce tour-ci.)"
+    tx: "Légion : quand tu me joues, crée ici deux jetons d'unité Recrue de 1 Puissance. (Effet obtenu si tu as déjà joué une autre carte ce tour-ci.)"
   },
   "OGN-219/298": {
     n: "Sergent de l'avant-garde",
@@ -1162,7 +1162,7 @@ window.RB_FR = {
   },
   "OGN-220/298": {
     n: "Brise-mâchoire",
-    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine, afin de la révéler plus tard pour 0.)\nAction. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nÉtourdis une unité alliée et une unité ennemie présentes sur le même champ de bataille. (Elles n'infligent pas de dégâts de combat ce tour-ci.)",
+    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux la révéler pour 0, et elle gagne Réaction.)\nAction. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nÉtourdis une unité alliée et une unité ennemie présentes sur le même champ de bataille. (Elles n'infligent pas de dégâts de combat ce tour-ci.)",
     note: "Il faut étourdir une des tiennes : choisis-en une déjà épuisée, ou une dont les dégâts ne changeraient rien."
   },
   "OGN-221/298": {
@@ -1181,7 +1181,7 @@ window.RB_FR = {
   },
   "OGN-224/298": {
     n: "Récupération",
-    tx: "Action. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nTu peux détruire un équipement. Pioche 1 carte.",
+    tx: "Action. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nTu peux tuer un équipement. Pioche 1 carte.",
     note: "La destruction est facultative : tu peux la jouer uniquement pour piocher."
   },
   "OGN-225/298": {
@@ -1191,7 +1191,7 @@ window.RB_FR = {
   },
   "OGN-226/298": {
     n: "Matrone spectrale",
-    tx: "Quand tu me joues, tu peux jouer depuis ta défausse une unité dont le coût ne dépasse pas 3 Énergie et 1 Essence runique, sans payer son coût."
+    tx: "Quand tu me joues, tu peux jouer depuis ta défausse une unité dont le coût ne dépasse pas 3 Énergie et 1 Essence runique, de n'importe quel domaine, sans payer son coût."
   },
   "OGN-227/298": {
     n: "Symbole des Solari",
@@ -1260,7 +1260,7 @@ window.RB_FR = {
   },
   "OGN-239/298": {
     n: "Évangéliste des machines",
-    tx: "Agonie — crée trois jetons d'unité Recrue de 1 Puissance dans ta base. (Effet obtenu quand je meurs.)"
+    tx: "Agonie : crée trois jetons d'unité Recrue de 1 Puissance dans ta base. (Effet obtenu quand je meurs.)"
   },
   "OGN-240/298": {
     n: "Sett",
@@ -1284,22 +1284,22 @@ window.RB_FR = {
   },
   "OGN-243/298": {
     n: "Darius",
-    tx: "Légion — quand tu me joues, redresse-moi. (Effet obtenu si tu as déjà joué une autre carte ce tour-ci.)\nTes autres unités présentes ici ont +1 Puissance.",
+    tx: "Légion : quand tu me joues, redresse-moi. (Effet obtenu si tu as déjà joué une autre carte ce tour-ci.)\nTes autres unités présentes ici ont +1 Puissance.",
     note: "Posé prêt, il attaque le tour même et fait grossir tout le groupe qui l'accompagne."
   },
   "OGN-243a/298": {
     n: "Darius",
-    tx: "Légion — quand tu me joues, redresse-moi. (Effet obtenu si tu as déjà joué une autre carte ce tour-ci.)\nTes autres unités présentes ici ont +1 Puissance.",
+    tx: "Légion : quand tu me joues, redresse-moi. (Effet obtenu si tu as déjà joué une autre carte ce tour-ci.)\nTes autres unités présentes ici ont +1 Puissance.",
     note: "Posé prêt, il attaque le tour même et fait grossir tout le groupe qui l'accompagne."
   },
   "OGN-244/298": {
     n: "Jugement divin",
-    tx: "Chaque joueur choisit 2 unités, 2 Équipements, 2 runes et 2 cartes de sa main. Tout le reste est recyclé.",
+    tx: "Chaque joueur choisit 2 unités, 2 équipements, 2 runes et 2 cartes de sa main. Tout le reste est recyclé.",
     note: "Remise à zéro générale, la tienne comprise : à jouer quand ton plateau est bien plus maigre que celui d'en face."
   },
   "OGN-245/298": {
     n: "Sceau d'unité",
-    tx: "Épuiser : Réaction — ajoute 1 Essence runique. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)"
+    tx: "Épuiser : Réaction — ajoute 1 Essence runique. (On ne peut pas réagir aux capacités qui ajoutent des ressources.)"
   },
   "OGN-246/298": {
     n: "Viktor",
@@ -1313,7 +1313,7 @@ window.RB_FR = {
   },
   "OGN-247/298": {
     n: "La Fille du Néant",
-    tx: "Épuiser : Réaction — ajoute 1 Essence runique. Utilisable uniquement pour jouer des sorts. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)",
+    tx: "Épuiser : Réaction — ajoute 1 Essence runique. Utilisable uniquement pour jouer des sorts. (On ne peut pas réagir aux capacités qui ajoutent des ressources.)",
     note: "Légende de Kai'Sa : une Essence runique gratuite par tour, mais uniquement pour des sorts, jamais pour des unités."
   },
   "OGN-248/298": {
@@ -1342,12 +1342,12 @@ window.RB_FR = {
   },
   "OGN-253/298": {
     n: "La Main de Noxus",
-    tx: "Épuiser : Réaction, Légion — ajoute 1 Énergie. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées. Effet obtenu si tu as déjà joué une carte ce tour-ci.)",
+    tx: "Épuiser : Réaction, Légion : ajoute 1 Énergie. (On ne peut pas réagir aux capacités qui ajoutent des ressources. Effet obtenu si tu as déjà joué une carte ce tour-ci.)",
     note: "Légende de Darius : il faut avoir joué quelque chose avant, donc elle ne sert jamais en tout début de tour."
   },
   "OGN-254/298": {
     n: "Guillotine noxienne",
-    tx: "Action. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nChoisis une unité : elle meurt la prochaine fois qu'elle subit des dégâts ce tour-ci.\nLégion — tue-la immédiatement à la place. (Effet obtenu si tu as déjà joué une autre carte ce tour-ci.)",
+    tx: "Action. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nChoisis une unité : elle meurt la prochaine fois qu'elle subit des dégâts ce tour-ci.\nLégion : tue-la immédiatement à la place. (Effet obtenu si tu as déjà joué une autre carte ce tour-ci.)",
     note: "Avec Légion, c'est une exécution sans condition. Sans Légion, il faut encore qu'elle prenne un dégât — au combat, par exemple."
   },
   "OGN-255/298": {
@@ -1357,7 +1357,7 @@ window.RB_FR = {
   },
   "OGN-256/298": {
     n: "Feu de renard",
-    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine, afin de la révéler plus tard pour 0.)\nAction. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nTue autant d'unités que tu veux sur un même champ de bataille, à condition que le total de leurs Puissances ne dépasse pas 4.",
+    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux la révéler pour 0, et elle gagne Réaction.)\nAction. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nTue autant d'unités que tu veux sur un même champ de bataille, à condition que le total de leurs Puissances ne dépasse pas 4.",
     note: "Le total compte, pas le nombre : quatre unités à 1 Puissance passent, une seule unité à 5 ne passe pas."
   },
   "OGN-257/298": {
@@ -1497,7 +1497,7 @@ window.RB_FR = {
   },
   "OGN-285/298": {
     n: "Ruelle du Pillard",
-    tx: "Quand tu défends ici, tu peux renvoyer à la base une unité alliée présente ici.",
+    tx: "Quand tu défends ici, tu peux déplacer vers la base une unité alliée présente ici.",
     note: "Permet de sauver une unité du combat après avoir vu l'attaque arriver."
   },
   "OGN-286/298": {
@@ -1560,12 +1560,12 @@ window.RB_FR = {
   },
   "OGN-299*/298": {
     n: "La Fille du Néant",
-    tx: "Épuiser : Réaction — ajoute 1 Essence runique. Utilisable uniquement pour jouer des sorts. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)",
+    tx: "Épuiser : Réaction — ajoute 1 Essence runique. Utilisable uniquement pour jouer des sorts. (On ne peut pas réagir aux capacités qui ajoutent des ressources.)",
     note: "Légende de Kai'Sa : une Essence runique gratuite par tour, mais uniquement pour des sorts, jamais pour des unités."
   },
   "OGN-299/298": {
     n: "La Fille du Néant",
-    tx: "Épuiser : Réaction — ajoute 1 Essence runique. Utilisable uniquement pour jouer des sorts. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)",
+    tx: "Épuiser : Réaction — ajoute 1 Essence runique. Utilisable uniquement pour jouer des sorts. (On ne peut pas réagir aux capacités qui ajoutent des ressources.)",
     note: "Légende de Kai'Sa : une Essence runique gratuite par tour, mais uniquement pour des sorts, jamais pour des unités."
   },
   "OGN-300*/298": {
@@ -1590,12 +1590,12 @@ window.RB_FR = {
   },
   "OGN-302*/298": {
     n: "La Main de Noxus",
-    tx: "Épuiser : Réaction, Légion — ajoute 1 Énergie. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées. Effet obtenu si tu as déjà joué une carte ce tour-ci.)",
+    tx: "Épuiser : Réaction, Légion : ajoute 1 Énergie. (On ne peut pas réagir aux capacités qui ajoutent des ressources. Effet obtenu si tu as déjà joué une carte ce tour-ci.)",
     note: "Légende de Darius : il faut avoir joué quelque chose avant, donc elle ne sert jamais en tout début de tour."
   },
   "OGN-302/298": {
     n: "La Main de Noxus",
-    tx: "Épuiser : Réaction, Légion — ajoute 1 Énergie. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées. Effet obtenu si tu as déjà joué une carte ce tour-ci.)",
+    tx: "Épuiser : Réaction, Légion : ajoute 1 Énergie. (On ne peut pas réagir aux capacités qui ajoutent des ressources. Effet obtenu si tu as déjà joué une carte ce tour-ci.)",
     note: "Légende de Darius : il faut avoir joué quelque chose avant, donc elle ne sert jamais en tout début de tour."
   },
   "OGN-303*/298": {
@@ -1640,12 +1640,12 @@ window.RB_FR = {
   },
   "OGN-307*/298": {
     n: "L'Éclaireur rapide",
-    tx: "Tu peux payer 1 Énergie pour cacher une carte avec Caché, au lieu de 1 Puissance.\n1 Énergie, épuiser : reprends en main une unité Teemo que tu possèdes, depuis ta Zone de Champion ou depuis le plateau.",
+    tx: "Tu peux payer 1 Énergie pour cacher une carte avec Caché, au lieu de 1 Essence runique.\n1 Énergie, épuiser : reprends en main une unité Teemo que tu possèdes, depuis ta Zone de Champion ou depuis le plateau.",
     note: "Légende de Teemo : elle rend les embuscades moins chères en Essence runique, et permet de rejouer Teemo pour relancer ses effets."
   },
   "OGN-307/298": {
     n: "L'Éclaireur rapide",
-    tx: "Tu peux payer 1 Énergie pour cacher une carte avec Caché, au lieu de 1 Puissance.\n1 Énergie, épuiser : reprends en main une unité Teemo que tu possèdes, depuis ta Zone de Champion ou depuis le plateau.",
+    tx: "Tu peux payer 1 Énergie pour cacher une carte avec Caché, au lieu de 1 Essence runique.\n1 Énergie, épuiser : reprends en main une unité Teemo que tu possèdes, depuis ta Zone de Champion ou depuis le plateau.",
     note: "Légende de Teemo : elle rend les embuscades moins chères en Essence runique, et permet de rejouer Teemo pour relancer ses effets."
   },
   "OGN-308*/298": {
@@ -1716,7 +1716,7 @@ window.RB_FR = {
   },
   "OGS-009/024": {
     n: "Master Yi",
-    tx: "Gank. (Je peux me déplacer d'un champ de bataille à un autre.)\nJ'arrive prête."
+    tx: "Gank. (Je peux me déplacer d'un champ de bataille à un autre.)\nJ'arrive prêt."
   },
   "OGS-010/024": {
     n: "Annie",
@@ -1724,7 +1724,7 @@ window.RB_FR = {
   },
   "OGS-011/024": {
     n: "Flash",
-    tx: "Réaction. (Se joue à tout moment, même avant qu'un sort ou une capacité ne se résolve.)\nRenvoie jusqu'à 2 unités alliées à leur base.",
+    tx: "Réaction. (Se joue à tout moment, même avant qu'un sort ou une capacité ne se résolve.)\nDéplace jusqu'à 2 unités alliées vers leur base.",
     note: "Sortie d'urgence : joué avant les dégâts, il sauve les unités engagées."
   },
   "OGS-012/024": {
@@ -1738,7 +1738,7 @@ window.RB_FR = {
   },
   "OGS-014/024": {
     n: "Lux",
-    tx: "Épuiser : Réaction — ajoute 2 Énergie. Utilisable uniquement pour jouer des sorts. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)",
+    tx: "Épuiser : Réaction — ajoute 2 Énergie. Utilisable uniquement pour jouer des sorts. (On ne peut pas réagir aux capacités qui ajoutent des ressources.)",
     note: "2 Énergie par tour réservées aux sorts : elle fait tourner les decks de contrôle."
   },
   "OGS-015/024": {
@@ -1747,7 +1747,7 @@ window.RB_FR = {
   },
   "OGS-016/024": {
     n: "Servant de l'avant-garde",
-    tx: "J'arrive prête."
+    tx: "J'arrive prêt."
   },
   "OGS-017/024": {
     n: "L'Enfant des ténèbres",
@@ -1803,7 +1803,7 @@ window.RB_FR = {
   },
   "RAD-181/167": {
     n: "Yone, maître de lame",
-    tx: "Expert en armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Essence runique de moins, même s'il est déjà attaché ailleurs.)\nQuand je conquiers un champ de bataille que personne ne contrôlait, inflige des dégâts égaux à ma Puissance à une unité ennemie présente dans une base.",
+    tx: "Expert en armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Essence runique de moins, de n'importe quel domaine, même s'il est déjà attaché ailleurs.)\nQuand je conquiers un champ de bataille que personne ne contrôlait, inflige des dégâts égaux à ma Puissance à une unité ennemie présente dans une base.",
     note: "L'effet ne vaut que sur un endroit libre : reprendre un champ de bataille à l'adversaire ne le déclenche pas."
   },
   "RAD-182/167": {
@@ -1833,7 +1833,7 @@ window.RB_FR = {
   },
   "SFD-002/221": {
     n: "Assaillant armé",
-    tx: "Accélération. (Tu peux payer 1 Énergie + 1 Essence runique en coût additionnel pour que j'arrive prête.)\nExpert en armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Essence runique de moins, même s'il est déjà attaché ailleurs.)"
+    tx: "Accélération. (Tu peux payer 1 Énergie + 1 Essence runique en coût additionnel pour que j'arrive prêt.)\nExpert en armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Essence runique de moins, de n'importe quel domaine, même s'il est déjà attaché ailleurs.)"
   },
   "SFD-003/221": {
     n: "Ruée sanglante",
@@ -1841,17 +1841,17 @@ window.RB_FR = {
   },
   "SFD-004/221": {
     n: "Embuscade en règle",
-    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine, afin de la révéler plus tard pour 0.)\nTes unités arrivent prêtes ce tour-ci. Crée un jeton d'équipement Or, épuisé.",
+    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux la révéler pour 0, et elle gagne Réaction.)\nTes unités arrivent prêtes ce tour-ci. Crée un jeton d'équipement Or, épuisé.",
     note: "Toutes les unités que tu poses ce tour-ci peuvent attaquer immédiatement : à révéler avant de vider ta main."
   },
   "SFD-005/221": {
     n: "Détonation",
-    tx: "Tue un Équipement. Son contrôleur pioche 2 cartes.",
+    tx: "Tue un équipement. Son contrôleur pioche 2 cartes.",
     note: "Très bon marché, mais il compense l'adversaire : à réserver aux Équipements réellement gênants."
   },
   "SFD-006/221": {
     n: "Chien-dragon impatient",
-    tx: "J'arrive prête."
+    tx: "J'arrive prêt."
   },
   "SFD-007/221": {
     n: "Brouilleur à gemme",
@@ -1860,7 +1860,7 @@ window.RB_FR = {
   },
   "SFD-008/221": {
     n: "Adepte sentinelle",
-    tx: "Expert en armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Essence runique de moins, même s'il est déjà attaché ailleurs.)"
+    tx: "Expert en armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Essence runique de moins, de n'importe quel domaine, même s'il est déjà attaché ailleurs.)"
   },
   "SFD-009/221": {
     n: "Dague dentelée",
@@ -1901,7 +1901,7 @@ window.RB_FR = {
   },
   "SFD-017/221": {
     n: "Orage soudain",
-    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine, afin de la révéler plus tard pour 0.)\nAction. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nInflige 2 dégâts à une unité présente sur un champ de bataille. Si elle est attaquante, inflige-lui 4 dégâts à la place."
+    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux la révéler pour 0, et elle gagne Réaction.)\nAction. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nInflige 2 dégâts à une unité présente sur un champ de bataille. Si elle est attaquante, inflige-lui 4 dégâts à la place."
   },
   "SFD-018/221": {
     n: "Nouveau-né du Néant",
@@ -1925,7 +1925,7 @@ window.RB_FR = {
   },
   "SFD-021/221": {
     n: "Précurseur ferreux",
-    tx: "Agonie — crée deux jetons d'unité Méca de 3 Puissance dans ta base. (Effet obtenu quand je meurs.)",
+    tx: "Agonie : crée deux jetons d'unité Méca de 3 Puissance dans ta base. (Effet obtenu quand je meurs.)",
     note: "Mourir n'est pas une perte sèche : tu récupères 6 Puissance répartie sur deux corps."
   },
   "SFD-022/221": {
@@ -1993,7 +1993,7 @@ window.RB_FR = {
   },
   "SFD-032/221": {
     n: "Bretteur désarmant",
-    tx: "Quand tu me joues, tu peux tuer un Équipement."
+    tx: "Quand tu me joues, tu peux tuer un équipement."
   },
   "SFD-033/221": {
     n: "Bouclier de Doran",
@@ -2005,11 +2005,11 @@ window.RB_FR = {
   },
   "SFD-035/221": {
     n: "Gardien du passage",
-    tx: "Quand je tiens un champ de bataille, tu peux reprendre en main une unité ou un Équipement de ta défausse."
+    tx: "Quand je tiens un champ de bataille, tu peux reprendre en main une unité ou un équipement de ta défausse."
   },
   "SFD-036/221": {
     n: "Poro solitaire",
-    tx: "Agonie — si je suis morte seule, pioche 1 carte. (Je suis seule s'il n'y a aucune autre unité alliée ici.)"
+    tx: "Agonie : si je suis mort seul, pioche 1 carte. (Effet obtenu quand je meurs. Je suis seul s'il n'y a aucune autre unité alliée ici.)"
   },
   "SFD-037/221": {
     n: "Éclaireur de Navori",
@@ -2017,7 +2017,7 @@ window.RB_FR = {
   },
   "SFD-038/221": {
     n: "Danseuse aux rubans",
-    tx: "Quand j'arrive sur un champ de bataille, donne +1 Puissance à une autre unité alliée ce tour-ci."
+    tx: "Quand je me déplace sur un champ de bataille, donne +1 Puissance à une autre unité alliée ce tour-ci."
   },
   "SFD-039/221": {
     n: "Suite royale",
@@ -2031,7 +2031,7 @@ window.RB_FR = {
   },
   "SFD-041/221": {
     n: "Apprenti forgeron",
-    tx: "Quand je me déplace, révèle la première carte de ton deck principal. Si c'est un Équipement, pioche-la. Sinon, recycle-la."
+    tx: "Quand je me déplace, révèle la première carte de ton deck principal. Si c'est un équipement, pioche-la. Sinon, recycle-la."
   },
   "SFD-042/221": {
     n: "Brutaliseur",
@@ -2039,12 +2039,12 @@ window.RB_FR = {
   },
   "SFD-043/221": {
     n: "Division de l'empereur",
-    tx: "Caché. (La cacher maintenant pour 1 Essence runique, de n'importe quel domaine, afin de la révéler plus tard pour 0. Elle gagne Réaction.)\nAction. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nRenvoie à leur base autant d'unités alliées que tu veux depuis un champ de bataille.",
+    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux la révéler pour 0, et elle gagne Réaction.)\nAction. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nRenvoie à leur base autant d'unités alliées que tu veux depuis un champ de bataille.",
     note: "Sauvetage en masse : joué en plein affrontement, il vide le champ avant les dégâts."
   },
   "SFD-044/221": {
     n: "Quartier-maître de la Légion",
-    tx: "En coût additionnel pour me jouer, renvoie un Équipement allié dans la main de son propriétaire.",
+    tx: "En coût additionnel pour me jouer, renvoie un équipement allié dans la main de son propriétaire.",
     note: "Ce coût est obligatoire : sans Équipement allié sur le plateau, elle est injouable. En échange, un effet « quand tu le joues » d'équipement peut être relancé."
   },
   "SFD-045/221": {
@@ -2122,11 +2122,11 @@ window.RB_FR = {
   },
   "SFD-058/221": {
     n: "Ornn",
-    tx: "Quand tu me joues, ou quand je tiens un champ de bataille, regarde les 4 premières cartes de ton deck principal. Tu peux y révéler un Équipement et le piocher. Puis recycle les autres."
+    tx: "Quand tu me joues, ou quand je tiens un champ de bataille, regarde les 4 premières cartes de ton deck principal. Tu peux y révéler un équipement et le piocher. Puis recycle les autres."
   },
   "SFD-058a/221": {
     n: "Ornn",
-    tx: "Quand tu me joues, ou quand je tiens un champ de bataille, regarde les 4 premières cartes de ton deck principal. Tu peux y révéler un Équipement et le piocher. Puis recycle les autres."
+    tx: "Quand tu me joues, ou quand je tiens un champ de bataille, regarde les 4 premières cartes de ton deck principal. Tu peux y révéler un équipement et le piocher. Puis recycle les autres."
   },
   "SFD-059/221": {
     n: "Svellsongur",
@@ -2140,7 +2140,7 @@ window.RB_FR = {
   },
   "SFD-061/221": {
     n: "Ingénieure débutante",
-    tx: "Quand tu me joues, reprends en main un Équipement de ta défausse."
+    tx: "Quand tu me joues, reprends en main un équipement de ta défausse."
   },
   "SFD-062/221": {
     n: "Robot à bulles",
@@ -2179,15 +2179,15 @@ window.RB_FR = {
   },
   "SFD-070/221": {
     n: "Le prix de la douleur",
-    tx: "Caché. (La cacher maintenant pour 1 Essence runique, de n'importe quel domaine, afin de la révéler plus tard pour 0. Elle gagne Réaction.)\nAction. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nInflige 3 dégâts à une unité présente sur un champ de bataille. Crée un jeton d'équipement Or, épuisé."
+    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux la révéler pour 0, et elle gagne Réaction.)\nAction. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nInflige 3 dégâts à une unité présente sur un champ de bataille. Crée un jeton d'équipement Or, épuisé."
   },
   "SFD-071/221": {
     n: "Méca fracasseur",
-    tx: "Tes Mécas ont Protection et Gank. (L'adversaire doit payer 1 Essence runique de plus pour nous choisir avec un sort ou une capacité ; nous pouvons nous déplacer d'un champ de bataille à un autre.)\nJ'arrive prêt si tu contrôles un autre Méca."
+    tx: "Tes Mécas ont Protection et Gank. (L'adversaire doit payer 1 Essence runique de plus, de n'importe quel domaine, pour nous choisir avec un sort ou une capacité ; nous pouvons nous déplacer d'un champ de bataille à un autre.)\nJ'arrive prêt si tu contrôles un autre Méca."
   },
   "SFD-072/221": {
     n: "Planchiste",
-    tx: "Quand tu me joues, si tu contrôles deux Équipements ou plus, redresse-moi."
+    tx: "Quand tu me joues, si tu contrôles deux équipements ou plus, redresse-moi."
   },
   "SFD-073/221": {
     n: "Plaque hextech expérimentale",
@@ -2195,12 +2195,12 @@ window.RB_FR = {
   },
   "SFD-074/221": {
     n: "Pickpocket",
-    tx: "Quand tu me joues, tu peux détruire un équipement dont le coût en Énergie ne dépasse pas 1. Si tu le fais, crée un jeton d'équipement Or, épuisé.",
+    tx: "Quand tu me joues, tu peux tuer un équipement dont le coût en Énergie ne dépasse pas 1. Si tu le fais, crée un jeton d'équipement Or, épuisé.",
     note: "Le jeton Or se détruit pour donner 1 Essence runique : c'est une ressource, pas une arme."
   },
   "SFD-075/221": {
     n: "Prix du progrès",
-    tx: "Quand tu utilises une capacité activée d'un Équipement, je gagne +1 Puissance ce tour-ci.",
+    tx: "Quand tu utilises une capacité activée d'un équipement, je gagne +1 Puissance ce tour-ci.",
     note: "Sans limite dans le tour : plusieurs Équipements activés le font grimper d'autant."
   },
   "SFD-076/221": {
@@ -2209,7 +2209,7 @@ window.RB_FR = {
   },
   "SFD-077/221": {
     n: "Barrage de roquettes",
-    tx: "Répétition 4 Énergie + 1 Essence runique. (Tu peux payer le coût additionnel pour répéter l'effet du sort, en faisant des choix différents.)\nAu choix :\n— inflige 4 dégâts à une unité restée dans une base ;\n— tue un Équipement.",
+    tx: "Répétition 4 Énergie + 1 Essence runique. (Tu peux payer le coût additionnel pour répéter l'effet du sort, en faisant des choix différents.)\nAu choix :\n— inflige 4 dégâts à une unité restée dans une base ;\n— tue un équipement.",
     note: "Rare : il atteint les unités restées à la base, hors de portée de la plupart des sorts."
   },
   "SFD-078/221": {
@@ -2243,22 +2243,22 @@ window.RB_FR = {
   },
   "SFD-083/221": {
     n: "Anomalie hextech",
-    tx: "Épuiser : Réaction — paie autant d'Essence runique que tu veux, de n'importe quel domaine, pour ajouter autant d'Énergie. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)",
+    tx: "Épuiser : Réaction — paie autant d'Essence runique que tu veux, de n'importe quel domaine, pour ajouter autant d'Énergie. (On ne peut pas réagir aux capacités qui ajoutent des ressources.)",
     note: "Convertit la Puissance en Énergie à volonté : utile quand tes runes sont du mauvais domaine."
   },
   "SFD-084/221": {
     n: "Jayce",
-    tx: "Quand tu me joues, tu peux tuer un Équipement allié. Si tu le fais, tu peux jouer depuis ta main, ce tour-ci, un Équipement dont le coût en Énergie ne dépasse pas 7, sans payer son Énergie. (Son coût en Essence runique reste dû.)",
+    tx: "Quand tu me joues, tu peux tuer un équipement allié. Si tu le fais, tu peux jouer depuis ta main, ce tour-ci, un équipement dont le coût en Énergie ne dépasse pas 7, sans payer son Énergie. (Son coût en Essence runique reste dû.)",
     note: "Sacrifier un jeton Or suffit à débloquer un Équipement à 7 Énergie."
   },
   "SFD-085/221": {
     n: "Ornn",
-    tx: "Protection 2. (L'adversaire doit payer 2 Essences runiques de plus, de n'importe quel domaine, pour me choisir avec un sort ou une capacité.)\nExpert en armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Essence runique de moins, même s'il est déjà attaché ailleurs.)\nJ'ai +1 Puissance pour chaque Équipement allié.",
+    tx: "Protection 2. (L'adversaire doit payer 2 Essences runiques de plus, de n'importe quel domaine, pour me choisir avec un sort ou une capacité.)\nExpert en armes. (Quand tu me joues, tu peux m'attacher un de tes équipements pour 1 Essence runique de moins, de n'importe quel domaine, même s'il est déjà attaché ailleurs.)\nJ'ai +1 Puissance pour chaque équipement allié.",
     note: "Le compte porte sur tous tes Équipements, attachés ou non : les jetons Or comptent aussi."
   },
   "SFD-085a/221": {
     n: "Ornn",
-    tx: "Protection 2. (L'adversaire doit payer 2 Essences runiques de plus, de n'importe quel domaine, pour me choisir avec un sort ou une capacité.)\nExpert en armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Essence runique de moins, même s'il est déjà attaché ailleurs.)\nJ'ai +1 Puissance pour chaque Équipement allié.",
+    tx: "Protection 2. (L'adversaire doit payer 2 Essences runiques de plus, de n'importe quel domaine, pour me choisir avec un sort ou une capacité.)\nExpert en armes. (Quand tu me joues, tu peux m'attacher un de tes équipements pour 1 Essence runique de moins, de n'importe quel domaine, même s'il est déjà attaché ailleurs.)\nJ'ai +1 Puissance pour chaque équipement allié.",
     note: "Le compte porte sur tous tes Équipements, attachés ou non : les jetons Or comptent aussi."
   },
   "SFD-086/221": {
@@ -2300,7 +2300,7 @@ window.RB_FR = {
   },
   "SFD-092/221": {
     n: "Chef cuisinier de combat",
-    tx: "Expert en armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Essence runique de moins, même s'il est déjà attaché ailleurs.)"
+    tx: "Expert en armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Essence runique de moins, de n'importe quel domaine, même s'il est déjà attaché ailleurs.)"
   },
   "SFD-093/221": {
     n: "Avant-garde intrépide",
@@ -2309,7 +2309,7 @@ window.RB_FR = {
   },
   "SFD-094/221": {
     n: "Aile-funeste",
-    tx: "J'arrive prêt si tu contrôles un autre Dragon."
+    tx: "J'arrive prête si tu contrôles un autre Dragon."
   },
   "SFD-095/221": {
     n: "Lame de Doran",
@@ -2331,11 +2331,11 @@ window.RB_FR = {
   },
   "SFD-099/221": {
     n: "Poro vétéran",
-    tx: "Expert en armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Essence runique de moins, même s'il est déjà attaché ailleurs.)"
+    tx: "Expert en armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Essence runique de moins, de n'importe quel domaine, même s'il est déjà attaché ailleurs.)"
   },
   "SFD-100/221": {
     n: "Explorateur yordle",
-    tx: "Quand tu joues une carte dont le coût en Essence runique est de 2 ou plus, pioche 1 carte."
+    tx: "Quand tu joues une carte dont le coût est de 2 Essences runiques ou plus, de n'importe quel domaine, pioche 1 carte."
   },
   "SFD-101/221": {
     n: "Dragon féerique",
@@ -2376,7 +2376,7 @@ window.RB_FR = {
   },
   "SFD-109/221": {
     n: "Akshan",
-    tx: "Expert en armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Essence runique de moins.)\nTu peux payer 2 Essences runiques en coût additionnel pour me jouer.\nQuand tu me joues, si tu as payé ce coût, prends un équipement ennemi et place-le dans ta base. Tu le contrôles tant que je reste sur le plateau. Si c'est un Équipement, attache-le-moi.",
+    tx: "Expert en armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Essence runique de moins, de n'importe quel domaine, même s'il est déjà attaché ailleurs.)\nTu peux payer 2 Essences runiques en coût additionnel pour me jouer.\nQuand tu me joues, si tu as payé ce coût, prends un équipement ennemi et place-le dans ta base. Tu le contrôles tant que je reste sur le plateau. Si c'est un Équipement, attache-le-moi.",
     note: "Le vol s'annule si je quitte le plateau : l'équipement retourne à son propriétaire."
   },
   "SFD-110/221": {
@@ -2391,22 +2391,22 @@ window.RB_FR = {
   },
   "SFD-111/221": {
     n: "Venu prêter main-forte",
-    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine, afin de la révéler plus tard pour 0.)\nAction. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nTu peux jouer une unité de ta main sur un champ de bataille que tu contrôles, en réduisant son coût de 3 Énergie.",
+    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux la révéler pour 0, et elle gagne Réaction.)\nAction. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nTu peux jouer une unité de ta main sur un champ de bataille que tu contrôles, en réduisant son coût de 3 Énergie.",
     note: "Révélée gratuitement en plein affrontement, elle fait arriver un renfort à prix réduit là où il manque."
   },
   "SFD-112/221": {
     n: "Kato le Bras",
-    tx: "Protection. (L'adversaire doit payer 1 Essence runique de plus, de n'importe quel domaine, pour me choisir avec un sort ou une capacité.)\nQuand j'arrive sur un champ de bataille, donne à une unité alliée mes mots-clés et un bonus de Puissance égal à la mienne, ce tour-ci.",
+    tx: "Protection. (L'adversaire doit payer 1 Essence runique de plus, de n'importe quel domaine, pour me choisir avec un sort ou une capacité.)\nQuand je me déplace sur un champ de bataille, donne à une unité alliée mes mots-clés et un bonus de Puissance égal à ma Puissance, ce tour-ci.",
     note: "Il duplique sa propre Puissance et sa Protection sur une autre unité : deux menaces pour le prix d'une."
   },
   "SFD-113/221": {
     n: "Lucian",
-    tx: "Expert en armes. (Quand tu me joues, tu peux attacher un de tes Équipements sur moi pour 1 Essence runique de moins, même s'il est déjà attaché ailleurs.)\nLa première fois que je conquiers à chaque tour, redresse-moi.",
+    tx: "Expert en armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Essence runique de moins, de n'importe quel domaine, même s'il est déjà attaché ailleurs.)\nLa première fois que je conquiers à chaque tour, redresse-moi.",
     note: "Se redresser après une conquête permet de repartir à l'assaut dans le même tour."
   },
   "SFD-113a/221": {
     n: "Lucian",
-    tx: "Expert en armes. (Quand tu me joues, tu peux attacher un de tes Équipements sur moi pour 1 Essence runique de moins, même s'il est déjà attaché ailleurs.)\nLa première fois que je conquiers à chaque tour, redresse-moi.",
+    tx: "Expert en armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Essence runique de moins, de n'importe quel domaine, même s'il est déjà attaché ailleurs.)\nLa première fois que je conquiers à chaque tour, redresse-moi.",
     note: "Se redresser après une conquête permet de repartir à l'assaut dans le même tour."
   },
   "SFD-114/221": {
@@ -2420,12 +2420,12 @@ window.RB_FR = {
   },
   "SFD-116/221": {
     n: "Yone",
-    tx: "Expert en armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Essence runique de moins, même s'il est déjà attaché ailleurs.)\nQuand je conquiers un champ de bataille libre, inflige des dégâts égaux à ma Puissance à une unité ennemie restée dans une base.",
+    tx: "Expert en armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Essence runique de moins, de n'importe quel domaine, même s'il est déjà attaché ailleurs.)\nQuand je conquiers un champ de bataille libre, inflige des dégâts égaux à ma Puissance à une unité ennemie restée dans une base.",
     note: "Rare : il atteint les unités restées à la base, hors de portée de presque tout le reste."
   },
   "SFD-117/221": {
     n: "Cercle de pierres ancien",
-    tx: "Épuiser : Réaction — paie autant d'Énergie que tu veux pour ajouter autant d'Essence runique, de n'importe quel domaine. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)",
+    tx: "Épuiser : Réaction — paie autant d'Énergie que tu veux pour ajouter autant d'Essence runique, de n'importe quel domaine. (On ne peut pas réagir aux capacités qui ajoutent des ressources.)",
     note: "L'inverse de l'Anomalie hextech : ici on convertit l'Énergie en Essence runique."
   },
   "SFD-118/221": {
@@ -2434,11 +2434,11 @@ window.RB_FR = {
   },
   "SFD-119/221": {
     n: "Jax",
-    tx: "Expert en armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Essence runique de moins, même s'il est déjà attaché ailleurs.)\nQuand tu m'attaches un Équipement, tu peux payer 1 Énergie pour piocher 1 carte."
+    tx: "Expert en armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Essence runique de moins, de n'importe quel domaine, même s'il est déjà attaché ailleurs.)\nQuand tu m'attaches un Équipement, tu peux payer 1 Énergie pour piocher 1 carte."
   },
   "SFD-119a/221": {
     n: "Jax",
-    tx: "Expert en armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Essence runique de moins, même s'il est déjà attaché ailleurs.)\nQuand tu m'attaches un Équipement, tu peux payer 1 Énergie pour piocher 1 carte."
+    tx: "Expert en armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Essence runique de moins, de n'importe quel domaine, même s'il est déjà attaché ailleurs.)\nQuand tu m'attaches un Équipement, tu peux payer 1 Énergie pour piocher 1 carte."
   },
   "SFD-120/221": {
     n: "Sivir",
@@ -2461,7 +2461,7 @@ window.RB_FR = {
   },
   "SFD-123/221": {
     n: "Exécuteur corrompu",
-    tx: "Quand j'arrive sur un champ de bataille, défausse 1 carte.\nQuand je remporte un combat, pioche 1 carte.",
+    tx: "Quand je me déplace sur un champ de bataille, défausse 1 carte.\nQuand je remporte un combat, pioche 1 carte.",
     note: "La défausse est obligatoire : il faut gagner le combat pour rentrer dans ses frais."
   },
   "SFD-124/221": {
@@ -2470,7 +2470,7 @@ window.RB_FR = {
   },
   "SFD-125/221": {
     n: "Passeuse féerique",
-    tx: "Quand j'arrive sur un champ de bataille, tu peux payer 1 Essence runique pour amener une autre de tes unités sur ce même champ de bataille."
+    tx: "Quand je me déplace sur un champ de bataille, tu peux payer 1 Essence runique pour amener une de tes unités sur ce même champ de bataille."
   },
   "SFD-126/221": {
     n: "Fidèle toutou",
@@ -2479,11 +2479,11 @@ window.RB_FR = {
   },
   "SFD-127/221": {
     n: "Maître Bingwen",
-    tx: "Expert en armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Essence runique de moins, même s'il est déjà attaché ailleurs.)"
+    tx: "Expert en armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Essence runique de moins, de n'importe quel domaine, même s'il est déjà attaché ailleurs.)"
   },
   "SFD-128/221": {
     n: "Supporter trop zélé",
-    tx: "Quand je défends, tu peux me tuer pour renvoyer une unité attaquante dans sa base.",
+    tx: "Quand je défends, tu peux me tuer pour déplacer une unité attaquante vers sa base.",
     note: "Une unité à 2 Énergie contre n'importe quel attaquant, aussi gros soit-il : l'échange est presque toujours favorable."
   },
   "SFD-129/221": {
@@ -2516,7 +2516,7 @@ window.RB_FR = {
   },
   "SFD-135/221": {
     n: "Rappel en usine",
-    tx: "Action. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nRenvoie un Équipement dans la main de son propriétaire."
+    tx: "Action. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nRenvoie un équipement dans la main de son propriétaire."
   },
   "SFD-136/221": {
     n: "Marché de dupes",
@@ -2530,11 +2530,11 @@ window.RB_FR = {
   },
   "SFD-138/221": {
     n: "Chantevent",
-    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine, afin de la révéler plus tard pour 0.)\nQuand tu me joues, tu peux renvoyer une autre unité présente sur un champ de bataille, ayant 3 Puissance ou moins, dans la main de son propriétaire."
+    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux la révéler pour 0, et elle gagne Réaction.)\nQuand tu me joues, tu peux renvoyer une autre unité présente sur un champ de bataille, ayant 3 Puissance ou moins, dans la main de son propriétaire."
   },
   "SFD-139/221": {
     n: "Lisière de la nuit",
-    tx: "Caché. (Le cacher maintenant pour 1 Essence runique, de n'importe quel domaine, afin de le révéler plus tard pour 0. Il gagne Réaction.)\nQuand tu le joues depuis sa position face cachée, attache-le à une unité que tu contrôles ici.\nÉquiper 1 Essence runique. (1 Essence runique : attacher cet équipement à une unité que tu contrôles.)",
+    tx: "Caché. (Cache-le maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux le révéler pour 0, et il gagne Réaction.)\nQuand tu le joues depuis sa position face cachée, attache-le à une unité que tu contrôles ici.\nÉquiper 1 Essence runique. (1 Essence runique : attacher cet équipement à une unité que tu contrôles.)",
     note: "Révélé, il s'attache gratuitement : c'est un renfort surprise en plein affrontement."
   },
   "SFD-140/221": {
@@ -2544,11 +2544,11 @@ window.RB_FR = {
   },
   "SFD-141/221": {
     n: "Irelia",
-    tx: "Tes sorts qui me choisissent coûtent 1 Énergie ou 1 Essence runique de moins."
+    tx: "Tes sorts qui me choisissent coûtent 1 Énergie ou 1 Essence runique de moins, de n'importe quel domaine."
   },
   "SFD-141a/221": {
     n: "Irelia",
-    tx: "Tes sorts qui me choisissent coûtent 1 Énergie ou 1 Essence runique de moins."
+    tx: "Tes sorts qui me choisissent coûtent 1 Énergie ou 1 Essence runique de moins, de n'importe quel domaine."
   },
   "SFD-142/221": {
     n: "Jae Medarda",
@@ -2562,7 +2562,7 @@ window.RB_FR = {
   },
   "SFD-143a/221": {
     n: "Sivir",
-    tx: "Accélération. (Tu peux payer 1 Énergie + 1 Essence runique en coût additionnel pour que j'arrive prête.)\nSi tu as dépensé au moins 2 Puissance ce tour-ci, j'ai +2 Puissance et Gank. (Je peux me déplacer d'un champ de bataille à un autre.)",
+    tx: "Accélération. (Tu peux payer 1 Énergie + 1 Essence runique en coût additionnel pour que j'arrive prête.)\nSi tu as dépensé au moins 2 Essences runiques, de n'importe quel domaine, ce tour-ci, j'ai +2 Puissance et Gank. (Je peux me déplacer d'un champ de bataille à un autre.)",
     note: "La condition se mesure sur tout le tour : payer son Accélération suffit déjà à la remplir en partie."
   },
   "SFD-144/221": {
@@ -2572,17 +2572,17 @@ window.RB_FR = {
   },
   "SFD-145/221": {
     n: "Permutation",
-    tx: "Caché. (La cacher maintenant pour 1 Essence runique, de n'importe quel domaine, afin de la révéler plus tard pour 0. Elle gagne Réaction.)\nAction. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nÉchange la Puissance de deux unités présentes sur le même champ de bataille, ce tour-ci.",
+    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux la révéler pour 0, et elle gagne Réaction.)\nAction. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nÉchange la Puissance de deux unités présentes sur le même champ de bataille, ce tour-ci.",
     note: "On échange les valeurs au moment de la résolution, bonus et améliorations compris."
   },
   "SFD-146/221": {
     n: "Vex",
-    tx: "Tant que je suis engagée dans un combat, tes sorts coûtent 1 Énergie + 1 Essence runique de moins, sans descendre sous 1 Énergie, et les sorts ennemis coûtent 1 Énergie + 1 Essence runique de plus.",
+    tx: "Tant que je suis engagée dans un combat, tes sorts coûtent 1 Énergie + 1 Essence runique de moins, de n'importe quel domaine, sans descendre sous 1 Énergie, et les sorts ennemis coûtent 1 Énergie + 1 Essence runique de plus, de n'importe quel domaine.",
     note: "L'écart est double : elle rend tes réponses moins chères et celles d'en face plus coûteuses, dans le même affrontement."
   },
   "SFD-147/221": {
     n: "Descente dans le puits",
-    tx: "Renvoie toutes les unités et tous les Équipements dans les mains de leurs propriétaires.",
+    tx: "Renvoie toutes les unités et tous les équipements dans les mains de leurs propriétaires.",
     note: "Remise à zéro totale du plateau, la tienne comprise. Les cartes ne sont pas détruites : elles reviennent en main et devront être rejouées."
   },
   "SFD-148/221": {
@@ -2597,12 +2597,12 @@ window.RB_FR = {
   },
   "SFD-149/221": {
     n: "Ezreal",
-    tx: "Quand tu me joues, défausse 1 carte, puis pioche 2 cartes.\nLes coûts additionnels facultatifs que tu paies coûtent 1 Énergie ou 1 Essence runique de moins.",
+    tx: "Quand tu me joues, défausse 1 carte, puis pioche 2 cartes.\nLes coûts additionnels facultatifs que tu paies coûtent 1 Énergie ou 1 Essence runique de moins, de n'importe quel domaine.",
     note: "La réduction vise les coûts marqués « tu peux payer… » : Accélération, Répétition, Amplification, Caché…"
   },
   "SFD-149a/221": {
     n: "Ezreal",
-    tx: "Quand tu me joues, défausse 1 carte, puis pioche 2 cartes.\nLes coûts additionnels facultatifs que tu paies coûtent 1 Énergie ou 1 Essence runique de moins.",
+    tx: "Quand tu me joues, défausse 1 carte, puis pioche 2 cartes.\nLes coûts additionnels facultatifs que tu paies coûtent 1 Énergie ou 1 Essence runique de moins, de n'importe quel domaine.",
     note: "La réduction vise les coûts marqués « tu peux payer… » : Accélération, Répétition, Amplification, Caché…"
   },
   "SFD-150/221": {
@@ -2624,12 +2624,12 @@ window.RB_FR = {
   },
   "SFD-154/221": {
     n: "Gardes !",
-    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine, afin de la révéler plus tard pour 0.)\nCrée un jeton d'unité Soldat des sables de 2 Puissance. Tu peux payer 1 Essence runique pour le redresser.",
+    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux la révéler pour 0, et elle gagne Réaction.)\nCrée un jeton d'unité Soldat des sables de 2 Puissance. Tu peux payer 1 Essence runique pour le redresser.",
     note: "Révélée en pleine chaîne, elle fait apparaître un défenseur prêt au milieu d'un affrontement."
   },
   "SFD-155/221": {
     n: "Courtier honnête",
-    tx: "Agonie — crée un jeton d'équipement Or, épuisé. (Effet obtenu quand je meurs.)"
+    tx: "Agonie : crée un jeton d'équipement Or, épuisé. (Effet obtenu quand je meurs.)"
   },
   "SFD-156/221": {
     n: "Duelliste Laurent",
@@ -2651,7 +2651,7 @@ window.RB_FR = {
   },
   "SFD-160/221": {
     n: "Punk zaunite",
-    tx: "Tu peux tuer un Équipement allié en coût additionnel pour me jouer.\nQuand tu me joues, si tu as payé ce coût, tue un Équipement.",
+    tx: "Tu peux tuer un équipement allié en coût additionnel pour me jouer.\nQuand tu me joues, si tu as payé ce coût, tue un équipement.",
     note: "Sacrifie un jeton Or — qui se détruit de toute façon à l'usage — pour détruire un Équipement adverse."
   },
   "SFD-161/221": {
@@ -2666,7 +2666,7 @@ window.RB_FR = {
   },
   "SFD-163/221": {
     n: "Poigne de mort",
-    tx: "Réaction. (Se joue à tout moment, même avant qu'un sort ou une capacité ne se résolve.)\nTue une unité alliée pour donner à une autre unité alliée un bonus de Puissance égal à la sienne, ce tour-ci. Pioche 1 carte."
+    tx: "Réaction. (Se joue à tout moment, même avant qu'un sort ou une capacité ne se résolve.)\nTue une unité alliée pour donner à une autre unité alliée un bonus de Puissance égal à la Puissance de l'unité tuée, ce tour-ci. Pioche 1 carte."
   },
   "SFD-164/221": {
     n: "Entraînement vers le fond",
@@ -2674,7 +2674,7 @@ window.RB_FR = {
   },
   "SFD-165/221": {
     n: "Mixologue de Glasc",
-    tx: "Agonie — tu peux jouer depuis ta défausse une unité dont le coût ne dépasse pas 3 Énergie et 1 Essence runique, sans payer son coût. (Effet obtenu quand je meurs.)"
+    tx: "Agonie : tu peux jouer depuis ta défausse une unité dont le coût ne dépasse pas 3 Énergie et 1 Essence runique, de n'importe quel domaine, sans payer son coût. (Effet obtenu quand je meurs.)"
   },
   "SFD-166/221": {
     n: "Rassemblement des troupes",
@@ -2683,7 +2683,7 @@ window.RB_FR = {
   },
   "SFD-167/221": {
     n: "Héros méconnu",
-    tx: "Agonie — si j'étais Puissant, pioche 2 cartes. (Effet obtenu quand je meurs. Je suis Puissant tant que j'ai 5 Puissance ou plus.)",
+    tx: "Agonie : si j'étais Puissant, pioche 2 cartes. (Effet obtenu quand je meurs. Je suis Puissant tant que j'ai 5 Puissance ou plus.)",
     note: "À 2 Puissance de base, il lui faut des bonus pour atteindre 5 : c'est une carte de deck à améliorations."
   },
   "SFD-168/221": {
@@ -2753,7 +2753,7 @@ window.RB_FR = {
   },
   "SFD-179/221": {
     n: "Corinna Veraza",
-    tx: "Accélération. (Tu peux payer 1 Énergie + 1 Essence runique en coût additionnel pour que j'arrive prête.)\nQuand j'arrive sur un champ de bataille, crée ici trois jetons d'unité Recrue de 1 Puissance.",
+    tx: "Accélération. (Tu peux payer 1 Énergie + 1 Essence runique en coût additionnel pour que j'arrive prête.)\nQuand je me déplace sur un champ de bataille, crée ici trois jetons d'unité Recrue de 1 Puissance.",
     note: "Neuf Puissance d'un coup sur une position, et les Recrues arrivent avec elle en plein affrontement."
   },
   "SFD-180/221": {
@@ -2806,7 +2806,7 @@ window.RB_FR = {
   },
   "SFD-189/221": {
     n: "Le Feu sous la montagne",
-    tx: "Épuiser : Réaction — ajoute 1 Essence runique, de n'importe quel domaine. Utilisable uniquement pour jouer des Équipements ou activer leurs capacités. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)",
+    tx: "Épuiser : Réaction — ajoute 1 Essence runique, de n'importe quel domaine. Utilisable uniquement pour jouer des équipements ou activer leurs capacités. (On ne peut pas réagir aux capacités qui ajoutent des ressources.)",
     note: "Légende d'Ornn : la ressource est fléchée sur les Équipements, elle ne sert à rien d'autre."
   },
   "SFD-190/221": {
@@ -2856,7 +2856,7 @@ window.RB_FR = {
   },
   "SFD-199/221": {
     n: "L'Explorateur prodige",
-    tx: "Épuiser : Réaction — pioche 1 carte. Utilisable seulement si tu as déjà choisi des unités ou des Équipements ennemis deux fois ce tour-ci avec des sorts ou des capacités d'unité.",
+    tx: "Épuiser : Réaction — pioche 1 carte. Utilisable seulement si tu as déjà choisi des unités ou des équipements ennemis deux fois ce tour-ci avec des sorts ou des capacités d'unité.",
     note: "Légende d'Ezreal : il faut deux ciblages adverses dans le même tour, donc un deck de sorts qui interagissent avec le plateau d'en face."
   },
   "SFD-200/221": {
@@ -2871,7 +2871,7 @@ window.RB_FR = {
   },
   "SFD-202/221": {
     n: "OPA hostile",
-    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine, afin de la révéler plus tard pour 0.)\nPrends le contrôle d'une unité ennemie présente sur un champ de bataille. Redresse-la. (Déclenche un combat s'il y a d'autres ennemis là ; sinon, tu conquiers.)\nÀ la fin du tour, tu perds le contrôle de cette unité et elle est rappelée. (Renvoyée à la base. Ce n'est pas un déplacement.)",
+    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux la révéler pour 0, et elle gagne Réaction.)\nPrends le contrôle d'une unité ennemie présente sur un champ de bataille. Redresse-la. (Déclenche un combat s'il y a d'autres ennemis là ; sinon, tu conquiers.)\nÀ la fin du tour, tu perds le contrôle de cette unité et elle est rappelée. (Renvoyée à la base. Ce n'est pas un déplacement.)",
     note: "L'unité volée se bat pour toi puis rentre à la base adverse : elle ne défendra donc pas au tour suivant."
   },
   "SFD-203/221": {
@@ -2923,7 +2923,7 @@ window.RB_FR = {
   },
   "SFD-213/221": {
     n: "Forge d'Ornn",
-    tx: "Tant que tu contrôles ce champ de bataille, le premier Équipement non-jeton que tu joues chaque tour coûte 1 Énergie de moins."
+    tx: "Tant que tu contrôles ce champ de bataille, le premier équipement non-jeton que tu joues chaque tour coûte 1 Énergie de moins."
   },
   "SFD-214/221": {
     n: "Nexus de puissance",
@@ -2958,11 +2958,11 @@ window.RB_FR = {
   },
   "SFD-221/221": {
     n: "Temple voilé",
-    tx: "Quand tu conquiers ici, tu peux redresser un Équipement allié. Si c'est un Équipement attaché, tu peux le détacher."
+    tx: "Quand tu conquiers ici, tu peux redresser un équipement allié. Si c'est un Équipement, tu peux le détacher."
   },
   "SFD-222/221": {
     n: "Sceau de rage",
-    tx: "Épuiser : Réaction — ajoute 1 Essence runique. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)"
+    tx: "Épuiser : Réaction — ajoute 1 Essence runique. (On ne peut pas réagir aux capacités qui ajoutent des ressources.)"
   },
   "SFD-223*/221": {
     n: "Vayne",
@@ -2994,7 +2994,7 @@ window.RB_FR = {
   },
   "SFD-226/221": {
     n: "Sceau de concentration",
-    tx: "Épuiser : Réaction — ajoute 1 Essence runique. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)"
+    tx: "Épuiser : Réaction — ajoute 1 Essence runique. (On ne peut pas réagir aux capacités qui ajoutent des ressources.)"
   },
   "SFD-227*/221": {
     n: "Ahri",
@@ -3016,45 +3016,45 @@ window.RB_FR = {
   },
   "SFD-229/221": {
     n: "Sceau de clairvoyance",
-    tx: "Épuiser : Réaction — ajoute 1 Essence runique. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)"
+    tx: "Épuiser : Réaction — ajoute 1 Essence runique. (On ne peut pas réagir aux capacités qui ajoutent des ressources.)"
   },
   "SFD-230*/221": {
     n: "Teemo",
-    tx: "Caché. (Cache-moi maintenant pour 1 Essence runique, de n'importe quel domaine, afin de me révéler plus tard pour 0.)\nQuand je défends, ou quand je suis joué depuis ma position face cachée, révèle les 5 premières cartes de ton deck principal. Inflige 1 dégât à une unité ennemie présente ici pour chaque carte avec Caché, puis recycle-les.",
+    tx: "Caché. (Cache-moi maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux me révéler pour 0, et je gagne Réaction.)\nQuand je défends, ou quand je suis joué depuis ma position face cachée, révèle les 5 premières cartes de ton deck principal. Inflige 1 dégât à une unité ennemie présente ici pour chaque carte avec Caché, puis recycle-les.",
     note: "Jusqu'à 5 dégâts si ton deck est bâti sur les cartes avec Caché : c'est une carte de deck thématique, pas une carte isolée."
   },
   "SFD-230/221": {
     n: "Teemo",
-    tx: "Caché. (Cache-moi maintenant pour 1 Essence runique, de n'importe quel domaine, afin de me révéler plus tard pour 0.)\nQuand je défends, ou quand je suis joué depuis ma position face cachée, révèle les 5 premières cartes de ton deck principal. Inflige 1 dégât à une unité ennemie présente ici pour chaque carte avec Caché, puis recycle-les.",
+    tx: "Caché. (Cache-moi maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux me révéler pour 0, et je gagne Réaction.)\nQuand je défends, ou quand je suis joué depuis ma position face cachée, révèle les 5 premières cartes de ton deck principal. Inflige 1 dégât à une unité ennemie présente ici pour chaque carte avec Caché, puis recycle-les.",
     note: "Jusqu'à 5 dégâts si ton deck est bâti sur les cartes avec Caché : c'est une carte de deck thématique, pas une carte isolée."
   },
   "SFD-231/221": {
     n: "Sceau de force",
-    tx: "Épuiser : Réaction — ajoute 1 Essence runique. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)"
+    tx: "Épuiser : Réaction — ajoute 1 Essence runique. (On ne peut pas réagir aux capacités qui ajoutent des ressources.)"
   },
   "SFD-232*/221": {
     n: "Sett",
-    tx: "Quand je suis joué et quand je conquiers, améliore-moi. (Si je n'ai pas d'amélioration, je reçois +1 Puissance.)\nDépenser mon amélioration : je gagne +4 Puissance ce tour-ci.",
+    tx: "Quand tu me joues ou quand je conquiers, améliore-moi. (Si je n'ai pas d'amélioration, je reçois +1 Puissance.)\nDépenser mon amélioration : je gagne +4 Puissance ce tour-ci.",
     note: "Il se réaméliore à chaque conquête : l'amélioration sert donc de munition renouvelable pour le bonus de +4."
   },
   "SFD-232/221": {
     n: "Sett",
-    tx: "Quand je suis joué et quand je conquiers, améliore-moi. (Si je n'ai pas d'amélioration, je reçois +1 Puissance.)\nDépenser mon amélioration : je gagne +4 Puissance ce tour-ci.",
+    tx: "Quand tu me joues ou quand je conquiers, améliore-moi. (Si je n'ai pas d'amélioration, je reçois +1 Puissance.)\nDépenser mon amélioration : je gagne +4 Puissance ce tour-ci.",
     note: "Il se réaméliore à chaque conquête : l'amélioration sert donc de munition renouvelable pour le bonus de +4."
   },
   "SFD-233*/221": {
     n: "Yone",
-    tx: "Expert en armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Essence runique de moins, même s'il est déjà attaché ailleurs.)\nQuand je conquiers un champ de bataille libre, inflige des dégâts égaux à ma Puissance à une unité ennemie restée dans une base.",
+    tx: "Expert en armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Essence runique de moins, de n'importe quel domaine, même s'il est déjà attaché ailleurs.)\nQuand je conquiers un champ de bataille libre, inflige des dégâts égaux à ma Puissance à une unité ennemie restée dans une base.",
     note: "Rare : il atteint les unités restées à la base, hors de portée de presque tout le reste."
   },
   "SFD-233/221": {
     n: "Yone",
-    tx: "Expert en armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Essence runique de moins, même s'il est déjà attaché ailleurs.)\nQuand je conquiers un champ de bataille libre, inflige des dégâts égaux à ma Puissance à une unité ennemie restée dans une base.",
+    tx: "Expert en armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Essence runique de moins, de n'importe quel domaine, même s'il est déjà attaché ailleurs.)\nQuand je conquiers un champ de bataille libre, inflige des dégâts égaux à ma Puissance à une unité ennemie restée dans une base.",
     note: "Rare : il atteint les unités restées à la base, hors de portée de presque tout le reste."
   },
   "SFD-234/221": {
     n: "Sceau de discorde",
-    tx: "Épuiser : Réaction — ajoute 1 Essence runique. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)"
+    tx: "Épuiser : Réaction — ajoute 1 Essence runique. (On ne peut pas réagir aux capacités qui ajoutent des ressources.)"
   },
   "SFD-235*/221": {
     n: "Yasuo",
@@ -3068,12 +3068,12 @@ window.RB_FR = {
   },
   "SFD-236*/221": {
     n: "Darius",
-    tx: "Légion — quand tu me joues, redresse-moi. (Effet obtenu si tu as déjà joué une autre carte ce tour-ci.)\nTes autres unités présentes ici ont +1 Puissance.",
+    tx: "Légion : quand tu me joues, redresse-moi. (Effet obtenu si tu as déjà joué une autre carte ce tour-ci.)\nTes autres unités présentes ici ont +1 Puissance.",
     note: "Posé prêt, il attaque le tour même et fait grossir tout le groupe qui l'accompagne."
   },
   "SFD-236/221": {
     n: "Darius",
-    tx: "Légion — quand tu me joues, redresse-moi. (Effet obtenu si tu as déjà joué une autre carte ce tour-ci.)\nTes autres unités présentes ici ont +1 Puissance.",
+    tx: "Légion : quand tu me joues, redresse-moi. (Effet obtenu si tu as déjà joué une autre carte ce tour-ci.)\nTes autres unités présentes ici ont +1 Puissance.",
     note: "Posé prêt, il attaque le tour même et fait grossir tout le groupe qui l'accompagne."
   },
   "SFD-237*/221": {
@@ -3088,7 +3088,7 @@ window.RB_FR = {
   },
   "SFD-238/221": {
     n: "Sceau d'unité",
-    tx: "Épuiser : Réaction — ajoute 1 Essence runique. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)"
+    tx: "Épuiser : Réaction — ajoute 1 Essence runique. (On ne peut pas réagir aux capacités qui ajoutent des ressources.)"
   },
   "SFD-239*/221": {
     n: "Soraka",
@@ -3122,7 +3122,7 @@ window.RB_FR = {
   },
   "SFD-244/221": {
     n: "Le Feu sous la montagne",
-    tx: "Épuiser : Réaction — ajoute 1 Essence runique, de n'importe quel domaine. Utilisable uniquement pour jouer des Équipements ou activer leurs capacités. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)",
+    tx: "Épuiser : Réaction — ajoute 1 Essence runique, de n'importe quel domaine. Utilisable uniquement pour jouer des équipements ou activer leurs capacités. (On ne peut pas réagir aux capacités qui ajoutent des ressources.)",
     note: "Légende d'Ornn : la ressource est fléchée sur les Équipements, elle ne sert à rien d'autre."
   },
   "SFD-245/221": {
@@ -3137,12 +3137,12 @@ window.RB_FR = {
   },
   "SFD-247/221": {
     n: "L'Empereur des sables",
-    tx: "Les Soldats des sables que tu joues ont Expert en armes. (Quand ils arrivent, tu peux leur attacher un de tes Équipements pour 1 Essence runique de moins.)\n1 Énergie, épuiser : crée un jeton d'unité Soldat des sables de 2 Puissance dans ta base. Utilisable seulement si tu as joué un Équipement ce tour-ci.",
+    tx: "Les Soldats des sables que tu joues ont Expert en armes. (Quand tu les joues, tu peux leur attacher un de tes Équipements pour 1 Essence runique de moins, de n'importe quel domaine.)\n1 Énergie, épuiser : crée un jeton d'unité Soldat des sables de 2 Puissance dans ta base. Utilisable seulement si tu as joué un Équipement ce tour-ci.",
     note: "Légende d'Azir : chaque Équipement joué débloque un jeton, et Expert en armes permet d'équiper ce jeton à prix réduit."
   },
   "SFD-248/221": {
     n: "L'Explorateur prodige",
-    tx: "Épuiser : Réaction — pioche 1 carte. Utilisable seulement si tu as déjà choisi des unités ou des Équipements ennemis deux fois ce tour-ci avec des sorts ou des capacités d'unité.",
+    tx: "Épuiser : Réaction — pioche 1 carte. Utilisable seulement si tu as déjà choisi des unités ou des équipements ennemis deux fois ce tour-ci avec des sorts ou des capacités d'unité.",
     note: "Légende d'Ezreal : il faut deux ciblages adverses dans le même tour, donc un deck de sorts qui interagissent avec le plateau d'en face."
   },
   "SFD-249/221": {
@@ -3162,7 +3162,7 @@ window.RB_FR = {
   },
   "SFD-T03": {
     n: "Or",
-    tx: "Tuer ce jeton et l'épuiser : Réaction — ajoute 1 Essence runique, de n'importe quel domaine. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)",
+    tx: "Tuer ce jeton et l'épuiser : Réaction — ajoute 1 Essence runique, de n'importe quel domaine. (On ne peut pas réagir aux capacités qui ajoutent des ressources.)",
     note: "Jeton à usage unique : il donne une Essence runique de n'importe quel domaine, ce qui débloque les coûts hors-couleur."
   },
   "UNL-001/219": {
@@ -3176,7 +3176,7 @@ window.RB_FR = {
   },
   "UNL-003/219": {
     n: "Marai espiègle",
-    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine, afin de la révéler plus tard pour 0.)\nQuand tu me joues sur un champ de bataille, inflige 2 dégâts à une unité ennemie présente ici.",
+    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux la révéler pour 0, et elle gagne Réaction.)\nQuand tu me joues sur un champ de bataille, inflige 2 dégâts à une unité ennemie présente ici.",
     note: "Posée face cachée, elle se révèle en Réaction : les 2 dégâts peuvent tomber en pleine chaîne, pendant l'affrontement."
   },
   "UNL-004/219": {
@@ -3191,7 +3191,7 @@ window.RB_FR = {
   },
   "UNL-006/219": {
     n: "Requineau",
-    tx: "Accélération. (Tu peux payer 1 Énergie + 1 Essence runique en coût additionnel pour que j'arrive prête.)\nAssaut 4. (+4 Puissance tant que je suis attaquante.)",
+    tx: "Accélération. (Tu peux payer 1 Énergie + 1 Essence runique en coût additionnel pour que j'arrive prêt.)\nAssaut 4. (+4 Puissance tant que je suis attaquant.)",
     note: "1 Puissance en défense, 5 en attaque : à jouer offensivement, jamais pour tenir un champ de bataille."
   },
   "UNL-007/219": {
@@ -3224,12 +3224,12 @@ window.RB_FR = {
   },
   "UNL-013/219": {
     n: "Piège du lotus",
-    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine, afin de la révéler plus tard pour 0.)\nRéaction. (Se joue à tout moment, même avant qu'un sort ou une capacité ne se résolve.)\nChoisis une unité : tous les dégâts qui lui seraient infligés ce tour-ci sont doublés.",
+    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux la révéler pour 0, et elle gagne Réaction.)\nRéaction. (Se joue à tout moment, même avant qu'un sort ou une capacité ne se résolve.)\nChoisis une unité : tous les dégâts qui lui seraient infligés ce tour-ci sont doublés.",
     note: "Elle ne fait rien seule : il faut un sort de dégâts ou un combat derrière pour que le doublement serve."
   },
   "UNL-014/219": {
     n: "Harpon à monstres",
-    tx: "Action. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nInflige 2 dégâts à une unité présente sur un champ de bataille. Si tu contrôles une carte face cachée, inflige-lui 4 dégâts à la place."
+    tx: "Action. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nInflige 2 dégâts à une unité présente sur un champ de bataille. Si tu contrôles une carte face cachée, inflige plutôt 4 dégâts à cette unité."
   },
   "UNL-015/219": {
     n: "Droit de conquête",
@@ -3238,7 +3238,7 @@ window.RB_FR = {
   },
   "UNL-016/219": {
     n: "Griffe-de-braise",
-    tx: "Chasse 2. (Quand je conquiers ou que je tiens un champ de bataille, gagne 2 XP.)\nNiveau 3 : j'ai +1 Puissance et j'arrive prêt. (Effet actif tant que tu as 3 XP ou plus.)"
+    tx: "Chasse 2. (Quand je conquiers ou que je tiens un champ de bataille, gagne 2 XP.)\nNiveau 3 : j'ai +1 Puissance et j'arrive prête. (Effet actif tant que tu as 3 XP ou plus.)"
   },
   "UNL-017/219": {
     n: "En garde",
@@ -3256,7 +3256,7 @@ window.RB_FR = {
   },
   "UNL-020/219": {
     n: "Grenade dansante",
-    tx: "Inflige 2 dégâts à une unité. Son contrôleur peut rejouer ce sort pour 1 Essence runique. S'il le fait, le sort inflige 1 dégât bonus par fois où il a déjà infligé des dégâts ce tour-ci.",
+    tx: "Inflige 2 dégâts à une unité. Son contrôleur peut rejouer ce sort pour 1 Essence runique, de n'importe quel domaine. S'il le fait, le sort inflige 1 dégât bonus par fois où il a déjà infligé des dégâts ce tour-ci.",
     note: "La grenade rebondit d'un camp à l'autre et grossit à chaque passage : c'est l'adversaire qui décide de la relancer, à ses risques."
   },
   "UNL-021/219": {
@@ -3266,12 +3266,12 @@ window.RB_FR = {
   },
   "UNL-022/219": {
     n: "Jhin",
-    tx: "Protection. (L'adversaire doit payer 1 Essence runique de plus, de n'importe quel domaine, pour me choisir avec un sort ou une capacité.)\nGank. (Je peux me déplacer d'un champ de bataille à un autre.)\nQuand je me déplace, ajoute 1 Énergie + 1 Essence runique. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)",
+    tx: "Protection. (L'adversaire doit payer 1 Essence runique de plus, de n'importe quel domaine, pour me choisir avec un sort ou une capacité.)\nGank. (Je peux me déplacer d'un champ de bataille à un autre.)\nQuand je me déplace, ajoute 1 Énergie + 1 Essence runique, de n'importe quel domaine. (On ne peut pas réagir aux capacités qui ajoutent des ressources.)",
     note: "Son déplacement se finance tout seul : bouger lui rapporte plus que cela ne coûte."
   },
   "UNL-022a/219": {
     n: "Jhin",
-    tx: "Protection. (L'adversaire doit payer 1 Essence runique de plus, de n'importe quel domaine, pour me choisir avec un sort ou une capacité.)\nGank. (Je peux me déplacer d'un champ de bataille à un autre.)\nQuand je me déplace, ajoute 1 Énergie + 1 Essence runique. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)",
+    tx: "Protection. (L'adversaire doit payer 1 Essence runique de plus, de n'importe quel domaine, pour me choisir avec un sort ou une capacité.)\nGank. (Je peux me déplacer d'un champ de bataille à un autre.)\nQuand je me déplace, ajoute 1 Énergie + 1 Essence runique, de n'importe quel domaine. (On ne peut pas réagir aux capacités qui ajoutent des ressources.)",
     note: "Son déplacement se finance tout seul : bouger lui rapporte plus que cela ne coûte."
   },
   "UNL-023/219": {
@@ -3281,11 +3281,11 @@ window.RB_FR = {
   },
   "UNL-024/219": {
     n: "Rengar",
-    tx: "Accélération. (Tu peux payer 1 Énergie + 1 Essence runique en coût additionnel pour que j'arrive prête.)\nAssaut 2. (+2 Puissance tant que je suis attaquante.)\nProtection. (L'adversaire doit payer 1 Essence runique de plus, de n'importe quel domaine, pour me choisir avec un sort ou une capacité.)\nGank. (Je peux me déplacer d'un champ de bataille à un autre.)"
+    tx: "Accélération. (Tu peux payer 1 Énergie + 1 Essence runique en coût additionnel pour que j'arrive prêt.)\nAssaut 2. (+2 Puissance tant que je suis attaquant.)\nProtection. (L'adversaire doit payer 1 Essence runique de plus, de n'importe quel domaine, pour me choisir avec un sort ou une capacité.)\nGank. (Je peux me déplacer d'un champ de bataille à un autre.)"
   },
   "UNL-024a/219": {
     n: "Rengar",
-    tx: "Accélération. (Tu peux payer 1 Énergie + 1 Essence runique en coût additionnel pour que j'arrive prête.)\nAssaut 2. (+2 Puissance tant que je suis attaquante.)\nProtection. (L'adversaire doit payer 1 Essence runique de plus, de n'importe quel domaine, pour me choisir avec un sort ou une capacité.)\nGank. (Je peux me déplacer d'un champ de bataille à un autre.)"
+    tx: "Accélération. (Tu peux payer 1 Énergie + 1 Essence runique en coût additionnel pour que j'arrive prêt.)\nAssaut 2. (+2 Puissance tant que je suis attaquant.)\nProtection. (L'adversaire doit payer 1 Essence runique de plus, de n'importe quel domaine, pour me choisir avec un sort ou une capacité.)\nGank. (Je peux me déplacer d'un champ de bataille à un autre.)"
   },
   "UNL-025/219": {
     n: "Légion immortelle",
@@ -3304,12 +3304,12 @@ window.RB_FR = {
   },
   "UNL-028/219": {
     n: "Pyke",
-    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine, afin de la révéler plus tard pour 0.)\nGank. (Je peux me déplacer d'un champ de bataille à un autre.)\nTu peux payer 1 Essence runique en coût additionnel pour me jouer.\nQuand tu me joues, si tu as payé ce coût, redresse-moi et donne-moi +2 Puissance ce tour-ci.",
+    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux la révéler pour 0, et elle gagne Réaction.)\nGank. (Je peux me déplacer d'un champ de bataille à un autre.)\nTu peux payer 1 Essence runique en coût additionnel pour me jouer.\nQuand tu me joues, si tu as payé ce coût, redresse-moi et donne-moi +2 Puissance ce tour-ci.",
     note: "Révélé depuis sa position cachée en pleine chaîne, prêt et à 4 Puissance : l'embuscade type."
   },
   "UNL-028a/219": {
     n: "Pyke",
-    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine, afin de la révéler plus tard pour 0.)\nGank. (Je peux me déplacer d'un champ de bataille à un autre.)\nTu peux payer 1 Essence runique en coût additionnel pour me jouer.\nQuand tu me joues, si tu as payé ce coût, redresse-moi et donne-moi +2 Puissance ce tour-ci.",
+    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux la révéler pour 0, et elle gagne Réaction.)\nGank. (Je peux me déplacer d'un champ de bataille à un autre.)\nTu peux payer 1 Essence runique en coût additionnel pour me jouer.\nQuand tu me joues, si tu as payé ce coût, redresse-moi et donne-moi +2 Puissance ce tour-ci.",
     note: "Révélé depuis sa position cachée en pleine chaîne, prêt et à 4 Puissance : l'embuscade type."
   },
   "UNL-029/219": {
@@ -3356,7 +3356,7 @@ window.RB_FR = {
   },
   "UNL-036/219": {
     n: "Chasseur de souris muté",
-    tx: "Bouclier 2. (+2 Puissance tant que je suis défenseuse.)\nTank. (Les dégâts de combat doivent m'être assignés en premier.)"
+    tx: "Bouclier 2. (+2 Puissance tant que je suis défenseur.)\nTank. (Les dégâts de combat doivent m'être assignés en premier.)"
   },
   "UNL-037/219": {
     n: "Guetteur des ombres",
@@ -3382,7 +3382,7 @@ window.RB_FR = {
   },
   "UNL-042/219": {
     n: "Recule !",
-    tx: "Caché. (La cacher maintenant pour 1 Essence runique, de n'importe quel domaine, afin de la révéler plus tard pour 0. Elle gagne Réaction.)\nAction. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nÉtourdis une unité. (Elle n'inflige pas de dégâts de combat ce tour-ci.)\nSi tu l'as jouée depuis ta main, pioche 1 carte.",
+    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux la révéler pour 0, et elle gagne Réaction.)\nAction. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nÉtourdis une unité. (Elle n'inflige pas de dégâts de combat ce tour-ci.)\nSi tu l'as jouée depuis ta main, pioche 1 carte.",
     note: "La pioche est perdue si tu la révèles depuis sa position cachée : c'est le prix de la gratuité."
   },
   "UNL-043/219": {
@@ -3392,7 +3392,7 @@ window.RB_FR = {
   },
   "UNL-044/219": {
     n: "Envol de plumes",
-    tx: "Réaction. (Se joue à tout moment, même avant qu'un sort ou une capacité ne se résolve.)\nAu choix :\n— contre un sort ;\n— crée quatre jetons d'unité Oiseau de 1 Puissance avec Protection. (L'adversaire doit payer 1 Essence runique de plus pour les choisir avec un sort ou une capacité.)",
+    tx: "Réaction. (Se joue à tout moment, même avant qu'un sort ou une capacité ne se résolve.)\nAu choix :\n— contre un sort ;\n— crée quatre jetons d'unité Oiseau de 1 Puissance avec Protection. (L'adversaire doit payer 1 Essence runique de plus, de n'importe quel domaine, pour les choisir avec un sort ou une capacité.)",
     note: "Le choix se fait à la résolution : l'adversaire ne sait pas, en te voyant la jouer, si c'est un contre ou une vague de défenseurs."
   },
   "UNL-045/219": {
@@ -3406,7 +3406,7 @@ window.RB_FR = {
   },
   "UNL-047/219": {
     n: "Piétine-mousse",
-    tx: "Chasse 2. (Quand je conquiers ou que je tiens un champ de bataille, gagne 2 XP.)\nNiveau 3 : j'ai +1 Puissance et Protection. (Effet actif tant que tu as 3 XP ou plus. L'adversaire doit payer 1 Essence runique de plus pour choisir une unité avec Protection.)"
+    tx: "Chasse 2. (Quand je conquiers ou que je tiens un champ de bataille, gagne 2 XP.)\nNiveau 3 : j'ai +1 Puissance et Protection. (Effet actif tant que tu as 3 XP ou plus. L'adversaire doit payer 1 Essence runique de plus, de n'importe quel domaine, pour choisir une unité ayant Protection avec un sort ou une capacité.)"
   },
   "UNL-048/219": {
     n: "Trevor Snoozebottom",
@@ -3414,7 +3414,7 @@ window.RB_FR = {
   },
   "UNL-049/219": {
     n: "Fruit de miel",
-    tx: "Cet équipement arrive épuisé.\nRéaction : épuiser — ajoute 1 Essence runique, de n'importe quel domaine. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)\nNiveau 6 : la même capacité ajoute 1 Énergie + 1 Essence runique à la place. (Utilisable seulement tant que tu as 6 XP ou plus.)"
+    tx: "Cet équipement arrive épuisé.\nRéaction : épuiser — ajoute 1 Essence runique, de n'importe quel domaine. (On ne peut pas réagir aux capacités qui ajoutent des ressources.)\nNiveau 6 : la même capacité ajoute 1 Énergie + 1 Essence runique, de n'importe quel domaine, à la place. (Utilisable seulement tant que tu as 6 XP ou plus.)"
   },
   "UNL-050/219": {
     n: "Iascylla",
@@ -3431,11 +3431,11 @@ window.RB_FR = {
   },
   "UNL-052/219": {
     n: "Nami",
-    tx: "Tu peux payer 1 Essence runique en coût additionnel pour me jouer.\nQuand tu me joues, si tu as payé ce coût, étourdis une unité ennemie. (Elle n'inflige pas de dégâts de combat ce tour-ci.)\nQuand je tiens un champ de bataille, la prochaine unité que tu joues ce tour-ci arrive prête et améliorée."
+    tx: "Tu peux payer 1 Essence runique en coût additionnel pour me jouer.\nQuand tu me joues, si tu as payé ce coût, étourdis une unité ennemie. (Elle n'inflige pas de dégâts de combat ce tour-ci.)\nQuand je tiens un champ de bataille, la prochaine fois que tu joues une unité ce tour-ci, redresse-la et améliore-la."
   },
   "UNL-053/219": {
     n: "Écumeur de la Faille",
-    tx: "(Les unités à 0 Puissance peuvent conquérir et tenir un champ de bataille.)\nQuand tu me joues, pioche 1 carte.\nAgonie → choisis un adversaire : il révèle sa main, tu peux voir ses cartes face cachée ce tour-ci, et tu gagnes 1 XP. (Effet obtenu quand je meurs.)",
+    tx: "(Les unités à 0 Puissance peuvent conquérir et tenir un champ de bataille.)\nQuand tu me joues, pioche 1 carte.\nAgonie : choisis un adversaire : il révèle sa main, tu peux voir ses cartes face cachée ce tour-ci, et tu gagnes 1 XP. (Effet obtenu quand je meurs.)",
     note: "Une unité à 0 Puissance meurt dès le premier dégât, mais elle suffit à tenir un champ de bataille."
   },
   "UNL-054/219": {
@@ -3499,7 +3499,7 @@ window.RB_FR = {
   },
   "UNL-062/219": {
     n: "Visionnaire dramatique",
-    tx: "Agonie — Prédiction 2. (Quand je meurs, regarde les 2 premières cartes de ton deck principal, recycle celles que tu veux et remets les autres sur le dessus dans l'ordre de ton choix.)"
+    tx: "Agonie : Prédiction 2. (Quand je meurs, regarde les 2 premières cartes de ton deck principal, recycle celles que tu veux et remets les autres sur le dessus dans l'ordre de ton choix.)"
   },
   "UNL-063/219": {
     n: "Éclipse",
@@ -3571,7 +3571,7 @@ window.RB_FR = {
   },
   "UNL-078/219": {
     n: "Fontaine aux lutins",
-    tx: "Temporaire. (Je meurs au début de la phase Initiale de mon contrôleur, avant le score.)\nQuand tu le joues, crée dans ta base un jeton d'unité Lutin de 3 Puissance, prêt et Temporaire.\nAgonie → répète l'effet de mise en jeu de cet équipement. (Effet obtenu quand je meurs.)"
+    tx: "Temporaire. (Je meurs au début de la phase Initiale de mon contrôleur, avant le score.)\nQuand tu le joues, crée dans ta base un jeton d'unité Lutin de 3 Puissance, prêt et Temporaire.\nAgonie : répète l'effet de mise en jeu de cet équipement. (Effet obtenu quand je meurs.)"
   },
   "UNL-079/219": {
     n: "Diana",
@@ -3585,12 +3585,12 @@ window.RB_FR = {
   },
   "UNL-080/219": {
     n: "Hwei",
-    tx: "Quand je me déplace, pioche 1 carte puis défausse 1 carte. Ensuite, selon le type de la carte défaussée :\n— Sort : pioche 1 carte.\n— Équipement : redresse jusqu'à 2 runes.\n— Unité : je gagne +3 Puissance ce tour-ci.",
+    tx: "Quand je me déplace, pioche 1 carte puis défausse 1 carte. Ensuite, selon le type de la carte défaussée :\n— Sort : pioche 1 carte.\n— équipement : redresse jusqu'à 2 runes.\n— Unité : je gagne +3 Puissance ce tour-ci.",
     note: "Avec Gank ou un effet de déplacement, il rejoue son effet à chaque mouvement."
   },
   "UNL-081/219": {
     n: "Gardien des masques",
-    tx: "Caché. (Cache-moi maintenant pour 1 Essence runique, de n'importe quel domaine, afin de me révéler plus tard pour 0.)\nTemporaire. (Je meurs au début de la phase Initiale de mon contrôleur, avant le score.)\nQuand tu me joues, crée ici deux jetons d'unité Reflet : ils deviennent des copies de moi.",
+    tx: "Caché. (Cache-moi maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux me révéler pour 0, et je gagne Réaction.)\nTemporaire. (Je meurs au début de la phase Initiale de mon contrôleur, avant le score.)\nQuand tu me joues, crée ici deux jetons d'unité Reflet : ils deviennent des copies de moi.",
     note: "Trois corps surgissent d'un coup en pleine chaîne, mais tous les trois meurent au début de ta phase Initiale."
   },
   "UNL-082/219": {
@@ -3605,12 +3605,12 @@ window.RB_FR = {
   },
   "UNL-083/219": {
     n: "Poudre aux yeux",
-    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine, afin de la révéler plus tard pour 0.)\nAction. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nChoisis une unité que tu contrôles et une autre unité que tu contrôles située ailleurs. Si au moins l'une des deux a Temporaire, échange leurs positions. Pioche 1 carte.",
+    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux la révéler pour 0, et elle gagne Réaction.)\nAction. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nChoisis une unité que tu contrôles et une autre unité que tu contrôles située ailleurs. Si au moins l'une des deux a Temporaire, échange leurs positions. Pioche 1 carte.",
     note: "Sert à sauver une unité importante en la remplaçant par un jeton condamné."
   },
   "UNL-084/219": {
     n: "Reine des lutins",
-    tx: "Quand tu me joues, et au début de ta phase Initiale, crée dans ta base un jeton d'unité Lutin de 3 Puissance, prêt, avec Temporaire. (Ils meurent au début de la prochaine phase Initiale de leur contrôleur, avant le score.)",
+    tx: "Quand tu me joues ou au début de ta phase Initiale, crée dans ta base un jeton d'unité Lutin de 3 Puissance, prêt, avec Temporaire. (Ils meurent au début de la prochaine phase Initiale de leur contrôleur, avant le score.)",
     note: "Un Lutin par tour, prêt à se battre immédiatement : elle alimente à elle seule un plateau de jetons."
   },
   "UNL-085/219": {
@@ -3625,11 +3625,11 @@ window.RB_FR = {
   },
   "UNL-087/219": {
     n: "Sentinelle bleue",
-    tx: "Bouclier 2. (+2 Puissance tant que je suis défenseuse.)\nTes effets déclenchés par le fait de tenir ce champ de bataille se déclenchent une fois de plus.\nQuand je tiens un champ de bataille, ajoute 1 Essence runique, de n'importe quel domaine, au début de ta prochaine phase Principale. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)"
+    tx: "Bouclier 2. (+2 Puissance tant que je suis défenseuse.)\nTes effets déclenchés par le fait de tenir ce champ de bataille se déclenchent une fois de plus.\nQuand je tiens un champ de bataille, ajoute 1 Essence runique, de n'importe quel domaine, au début de ta prochaine phase Principale. (On ne peut pas réagir aux capacités qui ajoutent des ressources.)"
   },
   "UNL-087a/219": {
     n: "Sentinelle bleue",
-    tx: "Bouclier 2. (+2 Puissance tant que je suis défenseuse.)\nTes effets déclenchés par le fait de tenir ce champ de bataille se déclenchent une fois de plus.\nQuand je tiens un champ de bataille, ajoute 1 Essence runique, de n'importe quel domaine, au début de ta prochaine phase Principale. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)"
+    tx: "Bouclier 2. (+2 Puissance tant que je suis défenseuse.)\nTes effets déclenchés par le fait de tenir ce champ de bataille se déclenchent une fois de plus.\nQuand je tiens un champ de bataille, ajoute 1 Essence runique, de n'importe quel domaine, au début de ta prochaine phase Principale. (On ne peut pas réagir aux capacités qui ajoutent des ressources.)"
   },
   "UNL-088/219": {
     n: "Palais du caniveau",
@@ -3666,7 +3666,7 @@ window.RB_FR = {
   },
   "UNL-093/219": {
     n: "Sage de l'Âme du Dragon",
-    tx: "Réaction : épuiser — ajoute 1 Énergie. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)",
+    tx: "Réaction : épuiser — ajoute 1 Énergie. (On ne peut pas réagir aux capacités qui ajoutent des ressources.)",
     note: "Une rune vivante : elle donne de l'Énergie même en pleine chaîne adverse."
   },
   "UNL-094/219": {
@@ -3691,7 +3691,7 @@ window.RB_FR = {
   },
   "UNL-099/219": {
     n: "Combattant colossal",
-    tx: "Bouclier 2. (+2 Puissance tant que je suis défenseuse.)\nTank. (Les dégâts de combat doivent m'être assignés en premier.)"
+    tx: "Bouclier 2. (+2 Puissance tant que je suis défenseur.)\nTank. (Les dégâts de combat doivent m'être assignés en premier.)"
   },
   "UNL-100/219": {
     n: "Gromp vorace",
@@ -3717,7 +3717,7 @@ window.RB_FR = {
   },
   "UNL-105/219": {
     n: "Challenger imposant",
-    tx: "Quand je me déplace, tu peux chasser vers un autre champ de bataille une unité ennemie présente ici ayant moins de Puissance que moi.",
+    tx: "Quand je me déplace, tu peux déplacer vers un autre champ de bataille une unité ennemie présente ici ayant moins de Puissance que moi.",
     note: "Il écarte le défenseur au lieu de le combattre : la position tombe sans échange."
   },
   "UNL-106/219": {
@@ -3755,11 +3755,11 @@ window.RB_FR = {
   },
   "UNL-113/219": {
     n: "Master Yi",
-    tx: "Chasse 2. (Quand je conquiers ou que je tiens un champ de bataille, gagne 2 XP.)\nNiveau 6 → j'ai Protection et Gank. (Tant que tu as 6 XP ou plus.)"
+    tx: "Chasse 2. (Quand je conquiers ou que je tiens un champ de bataille, gagne 2 XP.)\nNiveau 6 : j'ai Protection et Gank. (Effet actif tant que tu as 6 XP ou plus. L'adversaire doit payer 1 Essence runique de plus, de n'importe quel domaine, pour me choisir avec un sort ou une capacité ; je peux me déplacer d'un champ de bataille à un autre.)"
   },
   "UNL-113a/219": {
     n: "Master Yi",
-    tx: "Chasse 2. (Quand je conquiers ou que je tiens un champ de bataille, gagne 2 XP.)\nNiveau 6 → j'ai Protection et Gank. (Tant que tu as 6 XP ou plus.)"
+    tx: "Chasse 2. (Quand je conquiers ou que je tiens un champ de bataille, gagne 2 XP.)\nNiveau 6 : j'ai Protection et Gank. (Effet actif tant que tu as 6 XP ou plus. L'adversaire doit payer 1 Essence runique de plus, de n'importe quel domaine, pour me choisir avec un sort ou une capacité ; je peux me déplacer d'un champ de bataille à un autre.)"
   },
   "UNL-114/219": {
     n: "Nidalee",
@@ -3787,12 +3787,12 @@ window.RB_FR = {
   },
   "UNL-118/219": {
     n: "Dragon ancestral",
-    tx: "N'importe quelle quantité de mes dégâts suffit à tuer une unité ennemie.\nQuand tu me joues, choisis jusqu'à une unité ennemie à chaque endroit et inflige-lui 1 dégât.",
+    tx: "N'importe quelle quantité de tes dégâts suffit à tuer les unités ennemies.\nQuand tu me joues, choisis jusqu'à une unité ennemie à chaque endroit et inflige-leur 1 dégât.",
     note: "1 dégât suffit à tuer : l'effet d'arrivée peut donc nettoyer une unité par endroit, quelle que soit sa Puissance."
   },
   "UNL-118a/219": {
     n: "Dragon ancestral",
-    tx: "N'importe quelle quantité de mes dégâts suffit à tuer une unité ennemie.\nQuand tu me joues, choisis jusqu'à une unité ennemie à chaque endroit et inflige-lui 1 dégât.",
+    tx: "N'importe quelle quantité de tes dégâts suffit à tuer les unités ennemies.\nQuand tu me joues, choisis jusqu'à une unité ennemie à chaque endroit et inflige-leur 1 dégât.",
     note: "1 dégât suffit à tuer : l'effet d'arrivée peut donc nettoyer une unité par endroit, quelle que soit sa Puissance."
   },
   "UNL-119/219": {
@@ -3829,7 +3829,7 @@ window.RB_FR = {
   },
   "UNL-124/219": {
     n: "Isoler",
-    tx: "Renvoie une unité ennemie d'un champ de bataille vers sa base. Puis, s'il reste une unité ennemie seule sur ce champ de bataille, pioche 1 carte."
+    tx: "Déplace une unité ennemie d'un champ de bataille vers sa base. Puis, s'il reste une unité ennemie seule sur ce champ de bataille, pioche 1 carte."
   },
   "UNL-125/219": {
     n: "Bienfait lunaire",
@@ -3842,7 +3842,7 @@ window.RB_FR = {
   },
   "UNL-127/219": {
     n: "Monsieur Racine",
-    tx: "Accélération. (Tu peux payer 1 Énergie + 1 Essence runique en coût additionnel pour que j'arrive prêt.)\nQuand j'arrive sur un champ de bataille, gagne 2 XP."
+    tx: "Accélération. (Tu peux payer 1 Énergie + 1 Essence runique en coût additionnel pour que j'arrive prêt.)\nQuand je me déplace sur un champ de bataille, gagne 2 XP."
   },
   "UNL-128/219": {
     n: "Sous une mauvaise étoile",
@@ -3888,7 +3888,7 @@ window.RB_FR = {
   },
   "UNL-137/219": {
     n: "Poro sinistre",
-    tx: "Quand j'attaque, tu peux payer 1 Énergie pour renvoyer une unité ennemie présente ici dans sa base.",
+    tx: "Quand j'attaque, tu peux payer 1 Énergie pour déplacer une unité ennemie présente ici vers sa base.",
     note: "Il écarte le défenseur au lieu de l'affronter : pour 1 Énergie, la position tombe sans combat."
   },
   "UNL-138/219": {
@@ -3898,7 +3898,7 @@ window.RB_FR = {
   },
   "UNL-139/219": {
     n: "Embroche-os",
-    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine, afin de la révéler plus tard pour 0.)\nChoisis un champ de bataille. Un adversaire révèle sa main : tu peux y choisir une unité. Il la joue sur ce champ de bataille sans payer aucun coût, et elle est étourdie. (Elle n'inflige pas de dégâts de combat ce tour-ci.)",
+    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux la révéler pour 0, et elle gagne Réaction.)\nChoisis un champ de bataille. Un adversaire révèle sa main : tu peux y choisir une unité. Il la joue sur ce champ de bataille sans payer aucun coût, et elle est étourdie. (Elle n'inflige pas de dégâts de combat ce tour-ci.)",
     note: "Tu sors sa meilleure unité de sa main pour la poser étourdie devant les tiennes : elle ne se défend pas, et il ne la jouera plus jamais."
   },
   "UNL-140/219": {
@@ -3908,7 +3908,7 @@ window.RB_FR = {
   },
   "UNL-141/219": {
     n: "Evelynn",
-    tx: "Caché. (Me cacher maintenant pour 1 Essence runique, de n'importe quel domaine, afin de me révéler plus tard pour 0. Je gagne Réaction.)\nArrière-ligne. (Les dégâts de combat doivent m'être assignés en dernier.)\nQuand tu me joues depuis ma position face cachée pendant ton tour, tu peux amener sur mon champ de bataille une unité ennemie située ailleurs."
+    tx: "Caché. (Cache-moi maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux me révéler pour 0, et je gagne Réaction.)\nArrière-ligne. (Les dégâts de combat doivent m'être assignés en dernier.)\nQuand tu me joues depuis ma position face cachée pendant ton tour, tu peux amener sur mon champ de bataille une unité ennemie située ailleurs."
   },
   "UNL-142/219": {
     n: "Résurrection imprudente",
@@ -3930,11 +3930,11 @@ window.RB_FR = {
   },
   "UNL-145/219": {
     n: "Pyke",
-    tx: "Caché. (Me cacher maintenant pour 1 Essence runique, de n'importe quel domaine, afin de me révéler plus tard pour 0. Je gagne Réaction.)\nArrière-ligne. (Les dégâts de combat doivent m'être assignés en dernier.)\nUne fois par tour, quand une unité ennemie meurt alors que je suis sur un champ de bataille, crée un jeton d'équipement Or, épuisé. (Ce jeton a « Réaction — le tuer et l'épuiser : ajoute 1 Essence runique, de n'importe quel domaine. »)"
+    tx: "Caché. (Cache-moi maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux me révéler pour 0, et je gagne Réaction.)\nArrière-ligne. (Les dégâts de combat doivent m'être assignés en dernier.)\nUne fois par tour, quand une unité ennemie meurt alors que je suis sur un champ de bataille, crée un jeton d'équipement Or, épuisé. (Ce jeton a « Réaction — le tuer et l'épuiser : ajoute 1 Essence runique, de n'importe quel domaine. »)"
   },
   "UNL-145a/219": {
     n: "Pyke",
-    tx: "Caché. (Me cacher maintenant pour 1 Essence runique, de n'importe quel domaine, afin de me révéler plus tard pour 0. Je gagne Réaction.)\nArrière-ligne. (Les dégâts de combat doivent m'être assignés en dernier.)\nUne fois par tour, quand une unité ennemie meurt alors que je suis sur un champ de bataille, crée un jeton d'équipement Or, épuisé. (Ce jeton a « Réaction — le tuer et l'épuiser : ajoute 1 Essence runique, de n'importe quel domaine. »)"
+    tx: "Caché. (Cache-moi maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux me révéler pour 0, et je gagne Réaction.)\nArrière-ligne. (Les dégâts de combat doivent m'être assignés en dernier.)\nUne fois par tour, quand une unité ennemie meurt alors que je suis sur un champ de bataille, crée un jeton d'équipement Or, épuisé. (Ce jeton a « Réaction — le tuer et l'épuiser : ajoute 1 Essence runique, de n'importe quel domaine. »)"
   },
   "UNL-146/219": {
     n: "Syndra",
@@ -3984,7 +3984,7 @@ window.RB_FR = {
   },
   "UNL-153/219": {
     n: "Charognard des profondeurs",
-    tx: "Agonie → crée dans ta base un jeton d'unité Oiseau de 1 Puissance avec Protection. (Effet obtenu quand je meurs.)"
+    tx: "Agonie : crée dans ta base un jeton d'unité Oiseau de 1 Puissance avec Protection. (Effet obtenu quand je meurs. L'adversaire doit payer 1 Essence runique de plus, de n'importe quel domaine, pour choisir une unité ayant Protection avec un sort ou une capacité.)"
   },
   "UNL-154/219": {
     n: "Pigeons cramoisis",
@@ -4014,7 +4014,7 @@ window.RB_FR = {
   },
   "UNL-160/219": {
     n: "Poro ultra-doux",
-    tx: "Épuiser : crée deux jetons d'unité Oiseau de 1 Puissance avec Protection. Utilisable seulement tant que je suis sur un champ de bataille. (L'adversaire doit payer 1 Essence runique de plus pour choisir une unité avec Protection avec un sort ou une capacité.)",
+    tx: "Épuiser : crée deux jetons d'unité Oiseau de 1 Puissance avec Protection. Utilisable seulement tant que je suis sur un champ de bataille. (L'adversaire doit payer 1 Essence runique de plus, de n'importe quel domaine, pour choisir une unité ayant Protection avec un sort ou une capacité.)",
     note: "Deux corps par tour sans dépenser de carte, mais s'épuiser le retire du combat en cours."
   },
   "UNL-161/219": {
@@ -4027,7 +4027,7 @@ window.RB_FR = {
   },
   "UNL-163/219": {
     n: "Enquêteur des Traque-mages",
-    tx: "Tes adversaires doivent payer 1 Essence runique par unité au-delà de la première lorsqu'ils déplacent plusieurs unités en même temps vers mon champ de bataille.",
+    tx: "Tes adversaires doivent payer 1 Essence runique, de n'importe quel domaine, par unité au-delà de la première lorsqu'ils déplacent plusieurs unités en même temps vers mon champ de bataille.",
     note: "Il taxe les attaques groupées : une charge à trois unités coûte 2 Essences runiques de plus à l'adversaire."
   },
   "UNL-164/219": {
@@ -4051,7 +4051,7 @@ window.RB_FR = {
   },
   "UNL-168/219": {
     n: "Loyauté sans faille",
-    tx: "Je coûte 2 Énergie de moins si tu choisis un Oiseau, un Chat, un Chien ou un Poro.\nJoue depuis ta défausse une unité dont le coût ne dépasse pas 2 Énergie et 1 Essence runique, sans payer son coût."
+    tx: "Je coûte 2 Énergie de moins si tu choisis un Oiseau, un Chat, un Chien ou un Poro.\nJoue depuis ta défausse une unité dont le coût ne dépasse pas 2 Énergie et 1 Essence runique, de n'importe quel domaine, sans payer son coût."
   },
   "UNL-169/219": {
     n: "Ashe",
@@ -4124,12 +4124,12 @@ window.RB_FR = {
   },
   "UNL-179/219": {
     n: "Héraut de la Faille",
-    tx: "Quand je me déplace sur un champ de bataille, regarde les 3 premières cartes de ton deck principal. Tu peux y révéler une unité et la piocher. Recycle les autres.\nAgonie : joue une unité de ta main dans ta base, sans payer son coût en Énergie. (Effet obtenu quand je meurs.)",
+    tx: "Quand je me déplace sur un champ de bataille, regarde les 3 premières cartes de ton deck principal. Tu peux y révéler une unité et la piocher. Recycle les autres.\nAgonie : joue une unité de ta main dans ta base, sans payer son coût en Énergie. (Effet obtenu quand je meurs. Tu dois quand même payer son coût en Essence runique.)",
     note: "Le coût en Essence runique de l'unité jouée par l'Agonie reste dû."
   },
   "UNL-179a/219": {
     n: "Héraut de la Faille",
-    tx: "Quand je me déplace sur un champ de bataille, regarde les 3 premières cartes de ton deck principal. Tu peux y révéler une unité et la piocher. Recycle les autres.\nAgonie : joue une unité de ta main dans ta base, sans payer son coût en Énergie. (Effet obtenu quand je meurs.)",
+    tx: "Quand je me déplace sur un champ de bataille, regarde les 3 premières cartes de ton deck principal. Tu peux y révéler une unité et la piocher. Recycle les autres.\nAgonie : joue une unité de ta main dans ta base, sans payer son coût en Énergie. (Effet obtenu quand je meurs. Tu dois quand même payer son coût en Essence runique.)",
     note: "Le coût en Essence runique de l'unité jouée par l'Agonie reste dû."
   },
   "UNL-180/219": {
@@ -4144,7 +4144,7 @@ window.RB_FR = {
   },
   "UNL-182/219": {
     n: "Lever de rideau",
-    tx: "Répétition — 1 Énergie, ou 1 Essence runique, ou 1 Énergie + 1 Essence runique. (Tu peux payer chacun de ces coûts additionnels pour répéter l'effet du sort.)\nChoisis un effet que tu n'as pas déjà choisi :\n— pioche 1 carte ;\n— inflige 2 dégâts à une unité présente sur un champ de bataille ;\n— inflige 3 dégâts à une unité restée dans une base ;\n— donne -4 Puissance à une unité présente sur un champ de bataille, ce tour-ci.",
+    tx: "Répétition — 1 Énergie, ou 1 Essence runique de n'importe quel domaine, ou 1 Énergie + 1 Essence runique de n'importe quel domaine. (Tu peux payer chacun de ces coûts additionnels pour répéter l'effet du sort.)\nChoisis un effet que tu n'as pas déjà choisi :\n— pioche 1 carte ;\n— inflige 2 dégâts à une unité présente sur un champ de bataille ;\n— inflige 3 dégâts à une unité restée dans une base ;\n— donne -4 Puissance à une unité présente sur un champ de bataille, ce tour-ci.",
     note: "Les trois coûts de Répétition se cumulent : en payant tout, le sort produit les quatre effets d'un coup."
   },
   "UNL-183/219": {
@@ -4164,7 +4164,7 @@ window.RB_FR = {
   },
   "UNL-186/219": {
     n: "La Mort venue d'en bas",
-    tx: "Tue une unité présente sur un champ de bataille. Puis, si elle avait 3 Puissance ou moins, tu peux rejouer ce sort depuis ta défausse pour 1 Essence runique.",
+    tx: "Tue une unité présente sur un champ de bataille. Puis, si elle avait 3 Puissance ou moins, tu peux rejouer ce sort depuis ta défausse pour 1 Essence runique, de n'importe quel domaine.",
     note: "Enchaîné sur de petites cibles, il nettoie plusieurs unités dans le même tour pour presque rien."
   },
   "UNL-187/219": {
@@ -4204,11 +4204,11 @@ window.RB_FR = {
   },
   "UNL-194/219": {
     n: "Ombre",
-    tx: "Si tu me joues sur un champ de bataille, j'arrive prête.\nAction : 1 Énergie + 1 Essence runique, épuiser — étourdis une unité ennemie qui attaque ici. (Elle n'inflige pas de dégâts de combat ce tour-ci.)"
+    tx: "Si tu me joues sur un champ de bataille, j'arrive prête.\nAction : 1 Énergie + 1 Essence runique de n'importe quel domaine, épuiser — étourdis une unité ennemie qui attaque ici. (Elle n'inflige pas de dégâts de combat ce tour-ci.)"
   },
   "UNL-195/219": {
     n: "Le Père vert",
-    tx: "Quand tu conquiers ou que tu tiens un champ de bataille, tu peux m'épuiser pour remplacer ce champ de bataille par un jeton de champ de bataille Fourré. (Dans un Fourré, les unités Oiseau, Chat, Chien, Poro et Ivern ont +1 Puissance. Le champ de bataille d'origine revient quand tu marques.)",
+    tx: "Quand tu conquiers ou que tu tiens un champ de bataille, tu peux m'épuiser pour remplacer ce champ de bataille par un jeton de champ de bataille Fourré. (Dans un Fourré, les unités Oiseau, Chat, Chien, Poro et Ivern ont +1 Puissance. Le champ de bataille d'origine peut revenir quand ce champ de bataille est marqué.)",
     note: "Légende d'Ivern : échanger un champ de bataille gênant contre un Fourré neutre peut couper net une stratégie adverse."
   },
   "UNL-196/219": {
@@ -4218,7 +4218,7 @@ window.RB_FR = {
   },
   "UNL-197/219": {
     n: "Le Courroux de la Lune",
-    tx: "Réaction : épuiser — ajoute 1 Énergie. Cette Énergie ne peut être dépensée que pendant un affrontement. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)",
+    tx: "Réaction : épuiser — ajoute 1 Énergie. Cette Énergie ne peut être dépensée que pendant un affrontement. (On ne peut pas réagir aux capacités qui ajoutent des ressources.)",
     note: "Légende de Diana : une Énergie gratuite par tour, mais réservée aux sorts joués en plein combat."
   },
   "UNL-198/219": {
@@ -4268,7 +4268,7 @@ window.RB_FR = {
   },
   "UNL-207/219": {
     n: "Récital amateur",
-    tx: "Quand tu tiens ce champ de bataille, tu peux renvoyer à sa base une unité présente sur un champ de bataille."
+    tx: "Quand tu tiens ce champ de bataille, tu peux déplacer vers sa base une unité présente sur un champ de bataille."
   },
   "UNL-208/219": {
     n: "Autel de flamme noire",
@@ -4304,7 +4304,7 @@ window.RB_FR = {
   },
   "UNL-215/219": {
     n: "Source stellaire",
-    tx: "La première fois qu'un joueur joue ici une unité qui n'est pas un jeton, chaque tour, il peut renvoyer à sa base une autre unité qu'il contrôle ici."
+    tx: "Chaque tour, la première fois qu'un joueur joue ici une unité qui n'est pas un jeton, il peut déplacer vers sa base une autre unité qu'il contrôle ici."
   },
   "UNL-216/219": {
     n: "L'Académie",
@@ -4332,7 +4332,7 @@ window.RB_FR = {
   },
   "UNL-221/219": {
     n: "Poro solitaire",
-    tx: "Agonie — si je suis mort seul, pioche 1 carte. (Effet obtenu quand je meurs, à condition qu'aucune autre unité alliée n'ait été présente ici.)",
+    tx: "Agonie : si je suis mort seul, pioche 1 carte. (Effet obtenu quand je meurs, à condition qu'aucune autre unité alliée n'ait été présente ici.)",
     note: "L'exact opposé du Poro loyal, qui veut mourir entouré."
   },
   "UNL-222/219": {
@@ -4341,7 +4341,7 @@ window.RB_FR = {
   },
   "UNL-223/219": {
     n: "Poro vétéran",
-    tx: "Expert en armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Essence runique de moins, même s'il est déjà attaché ailleurs.)"
+    tx: "Expert en armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Essence runique de moins, de n'importe quel domaine, même s'il est déjà attaché ailleurs.)"
   },
   "UNL-224/219": {
     n: "Poro mystique",
@@ -4349,7 +4349,7 @@ window.RB_FR = {
   },
   "UNL-225/219": {
     n: "Poro audacieux",
-    tx: "Assaut. (+1 Puissance tant que je suis attaquante.)"
+    tx: "Assaut. (+1 Puissance tant que je suis attaquant.)"
   },
   "UNL-226*/219": {
     n: "Le Virtuose",
@@ -4433,12 +4433,12 @@ window.RB_FR = {
   },
   "UNL-234*/219": {
     n: "Le Courroux de la Lune",
-    tx: "Réaction : épuiser — ajoute 1 Énergie. Cette Énergie ne peut être dépensée que pendant un affrontement. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)",
+    tx: "Réaction : épuiser — ajoute 1 Énergie. Cette Énergie ne peut être dépensée que pendant un affrontement. (On ne peut pas réagir aux capacités qui ajoutent des ressources.)",
     note: "Légende de Diana : une Énergie gratuite par tour, mais réservée aux sorts joués en plein combat."
   },
   "UNL-234/219": {
     n: "Le Courroux de la Lune",
-    tx: "Réaction : épuiser — ajoute 1 Énergie. Cette Énergie ne peut être dépensée que pendant un affrontement. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)",
+    tx: "Réaction : épuiser — ajoute 1 Énergie. Cette Énergie ne peut être dépensée que pendant un affrontement. (On ne peut pas réagir aux capacités qui ajoutent des ressources.)",
     note: "Légende de Diana : une Énergie gratuite par tour, mais réservée aux sorts joués en plein combat."
   },
   "UNL-235*/219": {
@@ -4497,7 +4497,7 @@ window.RB_FR = {
   },
   "UNL-T05": {
     n: "Or",
-    tx: "Réaction : tuer ce jeton et l'épuiser — ajoute 1 Essence runique, de n'importe quel domaine. (Les capacités qui ajoutent des ressources ne peuvent pas être contrées.)",
+    tx: "Réaction : tuer ce jeton et l'épuiser — ajoute 1 Essence runique, de n'importe quel domaine. (On ne peut pas réagir aux capacités qui ajoutent des ressources.)",
     note: "Jeton à usage unique : il donne une Essence runique de n'importe quel domaine, ce qui débloque les coûts hors-couleur."
   },
   "UNL-T06": {
@@ -4517,7 +4517,7 @@ window.RB_FR = {
   },
   "VEN-001/166": {
     n: "Fileur de sable baccai",
-    tx: "Amplification 5 Énergie. Ce coût est réduit de 3 Énergie si tu contrôles 4 runes ou moins. (Coût à payer pour m'amplifier. Utilisable seulement si je ne le suis pas déjà.)\nAmplifié : j'ai Protection et Assaut 2. (L'adversaire doit payer 1 Essence runique de plus pour me choisir avec un sort ou une capacité ; +2 Puissance tant que je suis attaquant.)",
+    tx: "Amplification 5 Énergie. Ce coût est réduit de 3 Énergie si tu contrôles 4 runes ou moins. (Coût à payer pour m'amplifier. Utilisable seulement si je ne le suis pas déjà.)\nAmplifié : j'ai Protection et Assaut 2. (L'adversaire doit payer 1 Essence runique de plus, de n'importe quel domaine, pour me choisir avec un sort ou une capacité ; +2 Puissance tant que je suis attaquant.)",
     note: "Conçu pour les débuts de partie : à 4 runes ou moins, l'amplification ne coûte que 2 Énergie."
   },
   "VEN-002/166": {
@@ -4527,7 +4527,7 @@ window.RB_FR = {
   },
   "VEN-003/166": {
     n: "Acier cassant",
-    tx: "Détruis un équipement.\nFlux 4 Énergie + 1 Essence runique. (Tu peux la jouer depuis ta défausse pour son coût de Flux. Elle est ensuite bannie.)"
+    tx: "Tue un équipement.\nFlux 4 Énergie + 1 Essence runique. (Tu peux me jouer depuis ta défausse pour ce coût de Flux. Je suis ensuite banni.)"
   },
   "VEN-004/166": {
     n: "Surfeur des dunes",
@@ -4566,7 +4566,7 @@ window.RB_FR = {
   },
   "VEN-012/166": {
     n: "Exécution parfaite",
-    tx: "Redresse une unité et donne-lui Assaut 3 ce tour-ci. (+3 Puissance tant qu'elle attaque.)\nFlux 3 Énergie + 1 Essence runique. (Tu peux la jouer depuis ta défausse pour son coût de Flux. Elle est ensuite bannie.)"
+    tx: "Redresse une unité et donne-lui Assaut 3 ce tour-ci. (+3 Puissance tant qu'elle attaque.)\nFlux 3 Énergie + 1 Essence runique. (Tu peux me jouer depuis ta défausse pour ce coût de Flux. Je suis ensuite bannie.)"
   },
   "VEN-013/166": {
     n: "Assassin des ombres",
@@ -4656,7 +4656,7 @@ window.RB_FR = {
   },
   "VEN-028/166": {
     n: "Témoin éploré",
-    tx: "Quand un combat auquel j'ai participé se termine, amplifie-moi. (Je deviens Amplifiée si je ne le suis pas déjà.)\nAmplifiée → j'ai +2 Puissance."
+    tx: "Quand un combat auquel j'ai participé se termine, amplifie-moi. (Je deviens Amplifié si je ne le suis pas déjà.)\nAmplifié : j'ai +2 Puissance."
   },
   "VEN-029/166": {
     n: "Vieux Poro",
@@ -4665,11 +4665,11 @@ window.RB_FR = {
   },
   "VEN-030/166": {
     n: "Ascète serein",
-    tx: "Amplification 3 Énergie. (3 Énergie : m'amplifier. Utilisable seulement si je ne le suis pas déjà.)\nAmplifié : j'ai Protection et Bouclier 3. (L'adversaire doit payer 1 Essence runique de plus pour me choisir avec un sort ou une capacité ; +3 Puissance tant que je suis défenseur.)"
+    tx: "Amplification 3 Énergie. (Coût à payer pour m'amplifier. Utilisable seulement si je ne le suis pas déjà.)\nAmplifié : j'ai Protection et Bouclier 3. (L'adversaire doit payer 1 Essence runique de plus, de n'importe quel domaine, pour me choisir avec un sort ou une capacité ; +3 Puissance tant que je suis défenseur.)"
   },
   "VEN-031/166": {
     n: "Voile du crépuscule",
-    tx: "Donne +1 Puissance à une unité alliée ce tour-ci. Elle ne peut pas être choisie par les sorts et capacités ennemis ce tour-ci.\nFlux 2 Énergie. (Tu peux me jouer depuis ta défausse pour ce coût de Flux. Je suis ensuite bannie.)",
+    tx: "Donne +1 Puissance à une unité alliée ce tour-ci. Elle ne peut pas être choisie par les sorts et capacités ennemis ce tour-ci.\nFlux 2 Énergie. (Tu peux me jouer depuis ta défausse pour ce coût de Flux. Je suis ensuite banni.)",
     note: "Protection totale contre le ciblage, mais pas contre les dégâts de combat ni contre les effets qui ne choisissent pas."
   },
   "VEN-032/166": {
@@ -4684,7 +4684,7 @@ window.RB_FR = {
   },
   "VEN-034/166": {
     n: "Frappe résonnante",
-    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine, afin de la révéler plus tard pour 0.)\nRéaction. (Se joue pendant ton tour ou dans un affrontement.)\nChoisis un champ de bataille que tu contrôles et une de tes unités située ailleurs : déplace cette unité vers ce champ de bataille et donne-lui +2 Puissance ce tour-ci.",
+    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux la révéler pour 0, et elle gagne Réaction.)\nRéaction. (Se joue pendant ton tour ou dans un affrontement.)\nChoisis un champ de bataille que tu contrôles et une de tes unités située ailleurs : déplace cette unité vers ce champ de bataille et donne-lui +2 Puissance ce tour-ci.",
     note: "Un renfort surprise en pleine chaîne : l'unité arrive après que l'adversaire a décidé d'attaquer."
   },
   "VEN-035/166": {
@@ -4699,7 +4699,7 @@ window.RB_FR = {
   },
   "VEN-037/166": {
     n: "Barbara la pilleuse de tombes",
-    tx: "Quand tu me joues, si tu contrôles 7 runes ou plus, choisis un équipement ennemi : s'il est amplifié, retire-lui son amplification ; sinon, détruis-le."
+    tx: "Quand tu me joues, si tu contrôles 7 runes ou plus, choisis un équipement ennemi : s'il est amplifié, retire-lui son amplification ; sinon, tue-le."
   },
   "VEN-038/166": {
     n: "Akali",
@@ -4722,7 +4722,7 @@ window.RB_FR = {
   },
   "VEN-041/166": {
     n: "Riven",
-    tx: "Expert en armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Essence runique de moins, même s'il est déjà attaché ailleurs.)\nQuand j'attaque, choisis une unité ennemie présente ici : inflige-lui 2 dégâts par Équipement qui m'est attaché.",
+    tx: "Expert en armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Essence runique de moins, de n'importe quel domaine, même s'il est déjà attaché ailleurs.)\nQuand j'attaque, choisis une unité ennemie présente ici : inflige-lui 2 dégâts par Équipement qui m'est attaché.",
     note: "Les dégâts partent avant l'échange : avec trois Équipements, elle tue un défenseur de 6 Puissance sans se battre."
   },
   "VEN-042/166": {
@@ -4742,11 +4742,11 @@ window.RB_FR = {
   },
   "VEN-044/166": {
     n: "Héron astral",
-    tx: "Quand tu joues ta première carte du tour, si je suis sur un champ de bataille, ta carte suivante de ce tour coûte 2 Énergie et 2 Essences runiques de moins."
+    tx: "Quand tu joues ta première carte du tour, si je suis sur un champ de bataille, ta carte suivante de ce tour coûte 2 Énergie et 2 Essences runiques de moins, de n'importe quel domaine."
   },
   "VEN-045/166": {
     n: "Heaume de répression",
-    tx: "Amplification 4 Énergie + 1 Essence runique. (Coût à payer pour amplifier cet équipement. Utilisable seulement s'il ne l'est pas déjà.)\nLes sorts de tes adversaires coûtent 1 Énergie de plus. S'il est Amplifié, ils coûtent 1 Énergie + 1 Essence runique de plus à la place."
+    tx: "Amplification 4 Énergie + 1 Essence runique. (Coût à payer pour amplifier cet équipement. Utilisable seulement s'il ne l'est pas déjà.)\nLes sorts de tes adversaires coûtent 1 Énergie de plus. S'il est Amplifié, ils coûtent 1 Énergie + 1 Essence runique de plus, de n'importe quel domaine, à la place."
   },
   "VEN-046/166": {
     n: "Nasus",
@@ -4768,11 +4768,11 @@ window.RB_FR = {
   },
   "VEN-049/166": {
     n: "Remonter des profondeurs",
-    tx: "Pioche 1 carte.\nFlux 2 Énergie. (Tu peux la jouer depuis ta défausse pour son coût de Flux. Elle est ensuite bannie.)"
+    tx: "Pioche 1 carte.\nFlux 2 Énergie. (Tu peux me jouer depuis ta défausse pour ce coût de Flux. Je suis ensuite banni.)"
   },
   "VEN-050/166": {
     n: "Ours de pierre grognon",
-    tx: "Amplification 12 Énergie. Ce coût est réduit de 1 Énergie pour chaque rune que tu contrôles. (Coût à payer pour m'amplifier. Utilisable seulement si je ne le suis pas déjà.)\nAmplifié : j'ai Protection et Bouclier 3. (L'adversaire doit payer 1 Essence runique de plus pour me choisir avec un sort ou une capacité ; +3 Puissance tant que je suis défenseur.)",
+    tx: "Amplification 12 Énergie. Ce coût est réduit de 1 Énergie pour chaque rune que tu contrôles. (Coût à payer pour m'amplifier. Utilisable seulement si je ne le suis pas déjà.)\nAmplifié : j'ai Protection et Bouclier 3. (L'adversaire doit payer 1 Essence runique de plus, de n'importe quel domaine, pour me choisir avec un sort ou une capacité ; +3 Puissance tant que je suis défenseur.)",
     note: "Avec 9 runes, l'amplification ne coûte plus que 3 Énergie."
   },
   "VEN-051/166": {
@@ -4797,7 +4797,7 @@ window.RB_FR = {
   },
   "VEN-055/166": {
     n: "Chercheurs appliqués",
-    tx: "Amplification 3 Énergie. (Coût à payer pour m'amplifier. Utilisable seulement si je ne le suis pas déjà.)\nAmplifiés : tes sorts coûtent 1 Énergie + 1 Essence runique de moins, sans descendre sous 1 Énergie."
+    tx: "Amplification 3 Énergie. (Coût à payer pour m'amplifier. Utilisable seulement si je ne le suis pas déjà.)\nAmplifiés : tes sorts coûtent 1 Énergie + 1 Essence runique de moins, de n'importe quel domaine, sans descendre sous 1 Énergie."
   },
   "VEN-056/166": {
     n: "Clairvoyance",
@@ -4809,7 +4809,7 @@ window.RB_FR = {
   },
   "VEN-058/166": {
     n: "Porobot rafistolé",
-    tx: "(J'arrive épuisée.)\nQuand tu me joues, si tu contrôles 3 autres équipements ou plus, pioche 1 carte."
+    tx: "(J'arrive épuisé.)\nQuand tu me joues, si tu contrôles 3 autres équipements ou plus, pioche 1 carte."
   },
   "VEN-059/166": {
     n: "Décharge électrique",
@@ -4817,7 +4817,7 @@ window.RB_FR = {
   },
   "VEN-060/166": {
     n: "Croiseur du ciel",
-    tx: "Défausser un Équipement, 1 Énergie, épuiser : inflige 4 dégâts à une unité présente sur un champ de bataille.",
+    tx: "Défausser un équipement, 1 Énergie, épuiser : inflige 4 dégâts à une unité présente sur un champ de bataille.",
     note: "Il faut un Équipement en main, pas sur le plateau : c'est une façon de convertir des Équipements inutiles en dégâts."
   },
   "VEN-061/166": {
@@ -4827,7 +4827,7 @@ window.RB_FR = {
   },
   "VEN-062/166": {
     n: "Formule hextech",
-    tx: "Cet équipement arrive épuisé.\nÉpuiser : amplifie un autre Équipement. (Il devient Amplifié s'il ne l'est pas déjà.)",
+    tx: "Cet équipement arrive épuisé.\nÉpuiser : amplifie un autre équipement. (Il devient Amplifié s'il ne l'est pas déjà.)",
     note: "Évite de payer les coûts d'Amplification des autres Équipements."
   },
   "VEN-063/166": {
@@ -4840,32 +4840,32 @@ window.RB_FR = {
   },
   "VEN-064/166": {
     n: "Gardien de la place",
-    tx: "Je coûte 1 Énergie de moins pour chaque Équipement que tu contrôles.\nProtection. (L'adversaire doit payer 1 Essence runique de plus, de n'importe quel domaine, pour me choisir avec un sort ou une capacité.)",
+    tx: "Je coûte 1 Énergie de moins pour chaque équipement que tu contrôles.\nProtection. (L'adversaire doit payer 1 Essence runique de plus, de n'importe quel domaine, pour me choisir avec un sort ou une capacité.)",
     note: "Affiché à 10 Énergie : avec six Équipements, dont des jetons Or, il tombe à 4."
   },
   "VEN-065/166": {
     n: "Swain",
-    tx: "Vision. (Quand tu me joues, regarde la première carte de ton deck principal. Tu peux la recycler.)\nQuand je conquiers, si tu as joué ce tour-ci une unité non-jeton, un Équipement non-jeton et un sort, tu marques 1 point.",
+    tx: "Vision. (Quand tu me joues, regarde la première carte de ton deck principal. Tu peux la recycler.)\nQuand je conquiers, si tu as joué ce tour-ci une unité non-jeton, un équipement non-jeton et un sort, tu marques 1 point.",
     note: "Les trois types dans le même tour : c'est une condition exigeante, qui demande un deck équilibré et beaucoup de ressources."
   },
   "VEN-066/166": {
     n: "Brèche temporelle",
-    tx: "Caché. (La cacher maintenant pour 1 Essence runique, de n'importe quel domaine, afin de la révéler plus tard pour 0. Elle gagne Réaction.)\nBannis une unité, puis son propriétaire la rejoue au même endroit sans payer son coût.",
+    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux la révéler pour 0, et elle gagne Réaction.)\nBannis une unité, puis son propriétaire la rejoue au même endroit sans payer son coût.",
     note: "Sur une unité ennemie, ça annule ses améliorations et ses équipements. Sur la tienne, ça relance ses effets d'arrivée."
   },
   "VEN-067/166": {
     n: "Constellation en bouteille",
-    tx: "Au début de ta phase Principale, tu peux tuer 3 autres unités et/ou Équipements alliés pour marquer 1 point.",
+    tx: "Au début de ta phase Principale, tu peux tuer 3 autres unités et/ou équipements alliés pour marquer 1 point.",
     note: "Voie de victoire alternative : elle transforme un plateau large en points, sans passer par les champs de bataille."
   },
   "VEN-068/166": {
     n: "Jayce",
-    tx: "Quand tu me joues, ou la première fois que tu joues un Équipement non-jeton à chaque tour, tu peux redresser une carte épuisée autre que moi.",
+    tx: "Quand tu me joues, ou la première fois que tu joues un équipement non-jeton à chaque tour, tu peux redresser une carte épuisée autre que moi.",
     note: "Redresser une rune revient à rendre l'Énergie dépensée : posé tôt, il finance tous tes tours suivants."
   },
   "VEN-068a/166": {
     n: "Jayce",
-    tx: "Quand tu me joues, ou la première fois que tu joues un Équipement non-jeton à chaque tour, tu peux redresser une carte épuisée autre que moi.",
+    tx: "Quand tu me joues, ou la première fois que tu joues un équipement non-jeton à chaque tour, tu peux redresser une carte épuisée autre que moi.",
     note: "Redresser une rune revient à rendre l'Énergie dépensée : posé tôt, il finance tous tes tours suivants."
   },
   "VEN-069/166": {
@@ -4907,7 +4907,7 @@ window.RB_FR = {
   },
   "VEN-076/166": {
     n: "Spécialiste des réparations",
-    tx: "J'ai Assaut à hauteur du nombre d'Équipements que tu contrôles. (+1 Puissance tant que je suis attaquant, par point d'Assaut.)",
+    tx: "J'ai Assaut à hauteur du nombre d'équipements que tu contrôles. (+1 Puissance tant que je suis attaquant, par point d'Assaut.)",
     note: "Les jetons Or comptent : ils gonflent son attaque avant même d'être dépensés."
   },
   "VEN-077/166": {
@@ -4916,7 +4916,7 @@ window.RB_FR = {
   },
   "VEN-078/166": {
     n: "Griffe-flétrissure baccai",
-    tx: "Amplification 1 Énergie + 2 Essences runiques, de n'importe quel domaine. (Coût à payer pour m'amplifier. Utilisable seulement si je ne le suis pas déjà.)\nAmplifié : j'ai +2 Puissance.\nAmplifié — Agonie : canalise 2 runes, épuisées. (Effet obtenu quand je meurs en étant Amplifié.)"
+    tx: "Amplification 1 Énergie + 2 Essences runiques, de n'importe quel domaine. (Coût à payer pour m'amplifier. Utilisable seulement si je ne le suis pas déjà.)\nAmplifiée : j'ai +2 Puissance.\nAmplifiée : Agonie : canalise 2 runes, épuisées. (Effet obtenu quand je meurs en étant Amplifiée.)"
   },
   "VEN-079/166": {
     n: "Dame la Spoliatrice",
@@ -4925,16 +4925,16 @@ window.RB_FR = {
   },
   "VEN-080/166": {
     n: "Démolisseur noxien",
-    tx: "Quand je conquiers, tu peux tuer un Équipement dont le coût en Énergie ne dépasse pas ma Puissance."
+    tx: "Quand je conquiers, tu peux tuer un équipement dont le coût en Énergie ne dépasse pas ma Puissance."
   },
   "VEN-081/166": {
     n: "Déferlement",
-    tx: "Donne +6 Puissance à une unité ce tour-ci.\nFlux 4 Énergie. (Tu peux me jouer depuis ta défausse pour ce coût de Flux. Je suis ensuite bannie.)",
+    tx: "Donne +6 Puissance à une unité ce tour-ci.\nFlux 4 Énergie. (Tu peux me jouer depuis ta défausse pour ce coût de Flux. Je suis ensuite banni.)",
     note: "Deux usages dans la partie : une fois depuis la main, une fois depuis la défausse."
   },
   "VEN-082/166": {
     n: "Profiteur",
-    tx: "Quand tu me joues, tu peux retirer son amplification à quelque chose que tu contrôles pour amplifier une légende, une unité ou un Équipement.",
+    tx: "Quand tu me joues, tu peux retirer son amplification à quelque chose que tu contrôles pour amplifier une légende, une unité ou un équipement.",
     note: "Il déplace une amplification d'une carte à une autre : utile pour transférer un gros investissement sur une meilleure cible."
   },
   "VEN-083/166": {
@@ -4944,11 +4944,11 @@ window.RB_FR = {
   },
   "VEN-084/166": {
     n: "Ambessa",
-    tx: "Amplification 3 Énergie + 1 Essence runique. (Coût à payer pour m'amplifier. Utilisable seulement si je ne le suis pas déjà.)\nAmplifiée → j'ai +3 Puissance et je ne peux pas subir de dégâts, sauf en combat."
+    tx: "Amplification 3 Énergie + 1 Essence runique. (Coût à payer pour m'amplifier. Utilisable seulement si je ne le suis pas déjà.)\nAmplifiée : j'ai +3 Puissance et je ne peux pas subir de dégâts, sauf en combat."
   },
   "VEN-084a/166": {
     n: "Ambessa",
-    tx: "Amplification 3 Énergie + 1 Essence runique. (Coût à payer pour m'amplifier. Utilisable seulement si je ne le suis pas déjà.)\nAmplifiée → j'ai +3 Puissance et je ne peux pas subir de dégâts, sauf en combat."
+    tx: "Amplification 3 Énergie + 1 Essence runique. (Coût à payer pour m'amplifier. Utilisable seulement si je ne le suis pas déjà.)\nAmplifiée : j'ai +3 Puissance et je ne peux pas subir de dégâts, sauf en combat."
   },
   "VEN-085/166": {
     n: "Décret de force",
@@ -4966,17 +4966,17 @@ window.RB_FR = {
   },
   "VEN-088/166": {
     n: "Jayce",
-    tx: "Quand je deviens prêt, choisis un effet à me donner ce tour-ci :\n— Assaut 2 (+2 Puissance tant que je suis attaquant) ;\n— Protection 2 (l'adversaire doit payer 2 Essences runiques de plus pour me choisir) ;\n— Gank (je peux me déplacer d'un champ de bataille à un autre).",
+    tx: "Quand je deviens prêt, choisis un effet à me donner ce tour-ci :\n— Assaut 2 (+2 Puissance tant que je suis attaquant) ;\n— Protection 2 (l'adversaire doit payer 2 Essences runiques de plus, de n'importe quel domaine, pour me choisir avec un sort ou une capacité) ;\n— Gank (je peux me déplacer d'un champ de bataille à un autre).",
     note: "Le choix se refait à chaque fois qu'il se redresse, donc au minimum une fois par tour lors de ta phase de réveil."
   },
   "VEN-088a/166": {
     n: "Jayce",
-    tx: "Quand je deviens prêt, choisis un effet à me donner ce tour-ci :\n— Assaut 2 (+2 Puissance tant que je suis attaquant) ;\n— Protection 2 (l'adversaire doit payer 2 Essences runiques de plus pour me choisir) ;\n— Gank (je peux me déplacer d'un champ de bataille à un autre).",
+    tx: "Quand je deviens prêt, choisis un effet à me donner ce tour-ci :\n— Assaut 2 (+2 Puissance tant que je suis attaquant) ;\n— Protection 2 (l'adversaire doit payer 2 Essences runiques de plus, de n'importe quel domaine, pour me choisir avec un sort ou une capacité) ;\n— Gank (je peux me déplacer d'un champ de bataille à un autre).",
     note: "Le choix se refait à chaque fois qu'il se redresse, donc au minimum une fois par tour lors de ta phase de réveil."
   },
   "VEN-089/166": {
     n: "Griffe sauvage",
-    tx: "Regarde les 5 premières cartes de ton deck principal. Tu peux y bannir une unité ou un Équipement et le jouer en réduisant son coût en Énergie de 5. Recycle les autres. Puis tu peux l'amplifier. (Il devient Amplifié s'il ne l'est pas déjà.)",
+    tx: "Regarde les 5 premières cartes de ton deck principal. Tu peux y bannir une unité ou un équipement et le jouer en réduisant son coût en Énergie de 5. Recycle les autres. Puis tu peux l'amplifier. (Il devient Amplifié s'il ne l'est pas déjà.)",
     note: "L'amplification offerte est le vrai gain : elle économise un coût souvent bien plus élevé que le sort lui-même."
   },
   "VEN-090/166": {
@@ -4991,12 +4991,12 @@ window.RB_FR = {
   },
   "VEN-092/166": {
     n: "Renekton",
-    tx: "1 Énergie : je gagne +1 Puissance ce tour-ci.\nQuand ma Puissance atteint 10 ou plus, amplifie-moi. (Je deviens Amplifié si je ne le suis pas déjà.)\nAmplifié : j'ai Protection et Gank. (L'adversaire doit payer 1 Essence runique de plus pour me choisir avec un sort ou une capacité ; je peux me déplacer d'un champ de bataille à un autre.)",
+    tx: "1 Énergie : je gagne +1 Puissance ce tour-ci.\nQuand ma Puissance atteint 10 ou plus, amplifie-moi. (Je deviens Amplifié si je ne le suis pas déjà.)\nAmplifié : j'ai Protection et Gank. (L'adversaire doit payer 1 Essence runique de plus, de n'importe quel domaine, pour me choisir avec un sort ou une capacité ; je peux me déplacer d'un champ de bataille à un autre.)",
     note: "L'amplification est définitive : une fois atteinte, il garde Protection et Gank même quand son bonus de Puissance retombe."
   },
   "VEN-092a/166": {
     n: "Renekton",
-    tx: "1 Énergie : je gagne +1 Puissance ce tour-ci.\nQuand ma Puissance atteint 10 ou plus, amplifie-moi. (Je deviens Amplifié si je ne le suis pas déjà.)\nAmplifié : j'ai Protection et Gank. (L'adversaire doit payer 1 Essence runique de plus pour me choisir avec un sort ou une capacité ; je peux me déplacer d'un champ de bataille à un autre.)",
+    tx: "1 Énergie : je gagne +1 Puissance ce tour-ci.\nQuand ma Puissance atteint 10 ou plus, amplifie-moi. (Je deviens Amplifié si je ne le suis pas déjà.)\nAmplifié : j'ai Protection et Gank. (L'adversaire doit payer 1 Essence runique de plus, de n'importe quel domaine, pour me choisir avec un sort ou une capacité ; je peux me déplacer d'un champ de bataille à un autre.)",
     note: "L'amplification est définitive : une fois atteinte, il garde Protection et Gank même quand son bonus de Puissance retombe."
   },
   "VEN-093/166": {
@@ -5018,7 +5018,7 @@ window.RB_FR = {
   },
   "VEN-097/166": {
     n: "Araignéon",
-    tx: "Caché. (Cache-moi maintenant pour 1 Essence runique, de n'importe quel domaine, afin de me révéler plus tard pour 0.)\nJ'ai +1 Puissance pour chaque autre unité portant mon nom que tu contrôles ici.\nTon deck peut contenir autant d'exemplaires d'Araignéon que tu veux.",
+    tx: "Caché. (Cache-moi maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux me révéler pour 0, et je gagne Réaction.)\nJ'ai +1 Puissance pour chaque autre unité portant mon nom que tu contrôles ici.\nTon deck peut contenir autant d'exemplaires d'Araignéon que tu veux.",
     note: "Exception à la règle des 3 exemplaires. Quatre Araignéons réunis valent 4 Puissance chacun."
   },
   "VEN-098/166": {
@@ -5027,12 +5027,12 @@ window.RB_FR = {
   },
   "VEN-099/166": {
     n: "Guerrier de la tornade",
-    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine, afin de la révéler plus tard pour 0.)\nQuand tu me joues depuis ma position face cachée, tu peux amplifier une carte présente ici. Elle perd son amplification à la fin du tour.",
+    tx: "Caché. (Cache-la maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux la révéler pour 0, et elle gagne Réaction.)\nQuand tu me joues depuis ma position face cachée, tu peux amplifier une carte présente ici. Elle perd son amplification à la fin du tour.",
     note: "Amplification temporaire : de quoi débloquer un effet « Amplifié » le temps d'un affrontement, sans payer son coût."
   },
   "VEN-100/166": {
     n: "Surgi des profondeurs",
-    tx: "Crée deux jetons d'unité Tentacule de 1 Puissance à Bilgewater.\nFlux 3 Énergie. (Tu peux la jouer depuis ta défausse pour son coût de Flux. Elle est ensuite bannie.)"
+    tx: "Crée deux jetons d'unité Tentacule de Bilgewater, de 1 Puissance chacun.\nFlux 3 Énergie. (Tu peux me jouer depuis ta défausse pour ce coût de Flux. Je suis ensuite banni.)"
   },
   "VEN-101/166": {
     n: "Moine des bourrasques",
@@ -5044,16 +5044,16 @@ window.RB_FR = {
   },
   "VEN-103/166": {
     n: "Ombres du passé",
-    tx: "Reprends en main jusqu'à 2 unités depuis les défausses.",
+    tx: "Renvoie jusqu'à 2 unités depuis les défausses dans la main de leur propriétaire.",
     note: "« Les défausses » au pluriel : tu peux récupérer des unités adverses."
   },
   "VEN-104/166": {
     n: "Matriarche à la queue-manteau",
-    tx: "Amplification 2 Énergie + 1 Essence runique. (Coût à payer pour m'amplifier. Utilisable seulement si je ne le suis pas déjà.)\nQuand je deviens Amplifiée, tu peux choisir dans ta défausse une unité dont le coût ne dépasse pas 3 Énergie et 1 Essence runique, et la jouer dans ta base sans payer son coût."
+    tx: "Amplification 2 Énergie + 1 Essence runique. (Coût à payer pour m'amplifier. Utilisable seulement si je ne le suis pas déjà.)\nQuand je deviens Amplifiée, tu peux choisir dans ta défausse une unité dont le coût ne dépasse pas 3 Énergie et 1 Essence runique, de n'importe quel domaine, et la jouer dans ta base sans payer son coût."
   },
   "VEN-105/166": {
     n: "Pas crépusculaire",
-    tx: "Déplace une unité ayant 3 Puissance ou moins.\nFlux 4 Énergie + 1 Essence runique. (Tu peux me jouer depuis ta défausse pour ce coût de Flux. Je suis ensuite bannie.)"
+    tx: "Déplace une unité ayant 3 Puissance ou moins.\nFlux 4 Énergie + 1 Essence runique. (Tu peux me jouer depuis ta défausse pour ce coût de Flux. Je suis ensuite banni.)"
   },
   "VEN-106/166": {
     n: "Vent et fantômes",
@@ -5072,32 +5072,32 @@ window.RB_FR = {
   },
   "VEN-109/166": {
     n: "Illaoi",
-    tx: "Quand tu me joues, ou quand je marque un point, crée un jeton d'unité Tentacule de 1 Puissance de Bilgewater.\nJ'ai +1 Puissance pour chaque unité-jeton que tu contrôles.",
+    tx: "Quand tu me joues, ou quand je marque un point, crée un jeton d'unité Tentacule de Bilgewater, de 1 Puissance.\nJ'ai +1 Puissance pour chaque unité-jeton que tu contrôles.",
     note: "Elle grossit avec tous tes jetons, pas seulement ses Tentacules : les Recrues et les Lutins comptent aussi."
   },
   "VEN-110/166": {
     n: "Mel",
-    tx: "Amplification — défausse un sort. (Coût à payer pour m'amplifier. Utilisable seulement si je ne le suis pas déjà.)\nQuand je deviens Amplifiée, bannis une unité ennemie présente sur un champ de bataille ayant 3 Puissance ou moins.",
+    tx: "Amplification — défausse un sort. (Coût à payer pour m'amplifier. Utilisable seulement si je ne le suis pas déjà.)\nQuand je deviens Amplifiée, bannis une unité ennemie de 3 Puissance ou moins présente sur un champ de bataille.",
     note: "Bannir, et non tuer : l'unité ne va pas à la défausse et échappe donc aux effets de résurrection."
   },
   "VEN-110a/166": {
     n: "Mel",
-    tx: "Amplification — défausse un sort. (Coût à payer pour m'amplifier. Utilisable seulement si je ne le suis pas déjà.)\nQuand je deviens Amplifiée, bannis une unité ennemie présente sur un champ de bataille ayant 3 Puissance ou moins.",
+    tx: "Amplification — défausse un sort. (Coût à payer pour m'amplifier. Utilisable seulement si je ne le suis pas déjà.)\nQuand je deviens Amplifiée, bannis une unité ennemie de 3 Puissance ou moins présente sur un champ de bataille.",
     note: "Bannir, et non tuer : l'unité ne va pas à la défausse et échappe donc aux effets de résurrection."
   },
   "VEN-111/166": {
     n: "Minah Pied-leste",
-    tx: "Quand j'arrive sur un champ de bataille, choisis un effet :\n— chaque joueur défausse 1 carte ;\n— chaque joueur pioche 1 carte.",
+    tx: "Quand je me déplace sur un champ de bataille, choisis un effet :\n— chaque joueur défausse 1 carte ;\n— chaque joueur pioche 1 carte.",
     note: "Les deux effets touchent tout le monde : choisis selon qui a le plus à perdre, main pleine ou main vide."
   },
   "VEN-112/166": {
     n: "Zed",
-    tx: "Quand je conquiers, crée un jeton d'unité Clone d'ombre de 0 Puissance dans ta base.\nAction → 1 Énergie + 1 Essence runique : échange ma position avec celle d'un Clone d'ombre que tu contrôles. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)",
+    tx: "Quand je conquiers, crée un jeton d'unité Clone d'ombre de 0 Puissance dans ta base. (Il a « Quand j'attaque, tu peux bannir une unité de ta défausse. Si tu le fais, donne-moi Assaut 4 ce tour-ci ».)\nAction → 1 Énergie + 1 Essence runique : échange ma position avec celle d'un Clone d'ombre que tu contrôles. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)",
     note: "La carte déplace les deux unités : les effets liés au mouvement se déclenchent."
   },
   "VEN-112a/166": {
     n: "Zed",
-    tx: "Quand je conquiers, crée un jeton d'unité Clone d'ombre de 0 Puissance dans ta base.\nAction → 1 Énergie + 1 Essence runique : échange ma position avec celle d'un Clone d'ombre que tu contrôles. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)",
+    tx: "Quand je conquiers, crée un jeton d'unité Clone d'ombre de 0 Puissance dans ta base. (Il a « Quand j'attaque, tu peux bannir une unité de ta défausse. Si tu le fais, donne-moi Assaut 4 ce tour-ci ».)\nAction → 1 Énergie + 1 Essence runique : échange ma position avec celle d'un Clone d'ombre que tu contrôles. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)",
     note: "L'échange n'est pas un déplacement : il n'épuise pas et ne déclenche pas d'affrontement."
   },
   "VEN-113/166": {
@@ -5126,7 +5126,7 @@ window.RB_FR = {
   },
   "VEN-117/166": {
     n: "Disciple de Shen",
-    tx: "Caché. (Cache-moi maintenant pour 1 Essence runique, de n'importe quel domaine, afin de me révéler plus tard pour 0.)\nJ'ai Bouclier 3 tant que je suis sur un champ de bataille où tu contrôles exactement une autre unité. (+3 Puissance tant que je suis défenseur.)",
+    tx: "Caché. (Cache-moi maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux me révéler pour 0, et je gagne Réaction.)\nJ'ai Bouclier 3 tant que je suis sur un champ de bataille où tu contrôles exactement une autre unité. (+3 Puissance tant que je suis défenseur.)",
     note: "Exactement une autre unité : à trois, l'effet s'éteint."
   },
   "VEN-118/166": {
@@ -5176,7 +5176,7 @@ window.RB_FR = {
   },
   "VEN-128/166": {
     n: "Émissaire noxien",
-    tx: "Amplification 1 Énergie + 1 Essence runique. (Coût à payer pour m'amplifier. Utilisable seulement si je ne le suis pas déjà.)\nAmplifié — Agonie : crée deux jetons d'unité Recrue de 1 Puissance dans ta base. (Effet obtenu quand je meurs en étant Amplifié.)",
+    tx: "Amplification 1 Énergie + 1 Essence runique. (Coût à payer pour m'amplifier. Utilisable seulement si je ne le suis pas déjà.)\nAmplifié : Agonie : crée deux jetons d'unité Recrue de 1 Puissance dans ta base. (Effet obtenu quand je meurs en étant Amplifié.)",
     note: "L'amplification doit être payée avant sa mort, sinon l'Agonie ne se déclenche pas."
   },
   "VEN-129/166": {
@@ -5191,7 +5191,7 @@ window.RB_FR = {
   },
   "VEN-131/166": {
     n: "Décret d'unité",
-    tx: "Tue une unité ennemie du domaine Chaos, ou détruis un équipement ennemi du domaine Chaos.",
+    tx: "Tue une unité ou un équipement ennemi du domaine Chaos.",
     note: "Un des « Décrets » : chaque domaine a le sien, et chacun frappe un domaine précis."
   },
   "VEN-132/166": {
@@ -5206,17 +5206,17 @@ window.RB_FR = {
   },
   "VEN-134/166": {
     n: "Kayle",
-    tx: "Amplification 3 Énergie. (Coût à payer pour m'amplifier. Utilisable seulement si je ne le suis pas déjà.)\nJe peux être Amplifiée jusqu'à trois fois.\nJ'ai +2 Puissance pour chaque amplification.\nQuand je suis Amplifiée trois fois, j'ai Protection 3 et Gank.",
+    tx: "Amplification 3 Énergie. (Coût à payer pour m'amplifier.)\nJe peux être Amplifiée jusqu'à trois fois.\nJ'ai +2 Puissance pour chaque amplification.\nTant que je suis Amplifiée trois fois, j'ai Protection 3 et Gank.",
     note: "Exception à la règle : elle est la seule à pouvoir cumuler plusieurs amplifications. Pleinement amplifiée, elle passe à 9 Puissance."
   },
   "VEN-135/166": {
     n: "Kennen",
-    tx: "Caché. (Me cacher maintenant pour 1 Essence runique, de n'importe quel domaine, afin de me révéler plus tard pour 0. Je gagne Réaction.)\nQuand tu me joues ou que j'attaque, tu peux payer 2 Énergie pour étourdir une unité. (Elle n'inflige pas de dégâts de combat ce tour-ci.)\nTant qu'une unité ennemie étourdie est présente ici, j'ai +2 Puissance.",
+    tx: "Caché. (Cache-moi maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux me révéler pour 0, et je gagne Réaction.)\nQuand tu me joues ou que j'attaque, tu peux payer 2 Énergie pour étourdir une unité. (Elle n'inflige pas de dégâts de combat ce tour-ci.)\nTant qu'une unité ennemie étourdie est présente ici, j'ai +2 Puissance.",
     note: "L'unité étourdie encaisse quand même les dégâts : elle n'en inflige simplement aucun."
   },
   "VEN-135a/166": {
     n: "Kennen",
-    tx: "Caché. (Me cacher maintenant pour 1 Essence runique, de n'importe quel domaine, afin de me révéler plus tard pour 0. Je gagne Réaction.)\nQuand tu me joues ou que j'attaque, tu peux payer 2 Énergie pour étourdir une unité. (Elle n'inflige pas de dégâts de combat ce tour-ci.)\nTant qu'une unité ennemie étourdie est présente ici, j'ai +2 Puissance.",
+    tx: "Caché. (Cache-moi maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux me révéler pour 0, et je gagne Réaction.)\nQuand tu me joues ou que j'attaque, tu peux payer 2 Énergie pour étourdir une unité. (Elle n'inflige pas de dégâts de combat ce tour-ci.)\nTant qu'une unité ennemie étourdie est présente ici, j'ai +2 Puissance.",
     note: "L'unité étourdie encaisse quand même les dégâts : elle n'en inflige simplement aucun."
   },
   "VEN-136/166": {
@@ -5246,12 +5246,12 @@ window.RB_FR = {
   },
   "VEN-139/166": {
     n: "L'Assassin rebelle",
-    tx: "Amplification 3 Énergie + 1 Essence runique, de n'importe quel domaine. (Coût à payer pour m'amplifier. Utilisable seulement si je ne le suis pas déjà.)\nAction — épuiser : si c'est ton tour, renvoie à sa base une unité alliée engagée dans un affrontement ; si je suis Amplifiée, redresse-la en plus. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)",
+    tx: "Amplification 3 Énergie + 1 Essence runique, de n'importe quel domaine. (Coût à payer pour m'amplifier. Utilisable seulement si je ne le suis pas déjà.)\nAction — épuiser : si c'est ton tour, renvoie à sa base une unité alliée engagée dans un affrontement ; si je suis Amplifié, redresse-la en plus. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)",
     note: "Légende d'Akali : le repli retire l'unité du combat avant les dégâts. Amplifiée, elle peut ressortir et frapper ailleurs dans le même tour."
   },
   "VEN-140/166": {
     n: "Lancer de shuriken",
-    tx: "Inflige 2 dégâts à une unité ennemie au maximum, présente sur un champ de bataille, puis déplace une unité alliée.\nFlux 3 Énergie + 1 Essence runique de n'importe quel domaine. (Tu peux me jouer depuis ta défausse pour ce coût de Flux. Je suis ensuite bannie.)",
+    tx: "Inflige 2 dégâts à au plus une unité ennemie présente sur un champ de bataille, puis déplace une unité alliée.\nFlux 3 Énergie + 1 Essence runique de n'importe quel domaine. (Tu peux me jouer depuis ta défausse pour ce coût de Flux. Je suis ensuite banni.)",
     note: "Le déplacement est obligatoire une fois le sort lancé, même si tu n'as infligé aucun dégât."
   },
   "VEN-141/166": {
@@ -5276,7 +5276,7 @@ window.RB_FR = {
   },
   "VEN-145/166": {
     n: "Le Conservateur des sables",
-    tx: "Quand tu joues une unité, un Équipement ou une capacité activée dont le coût en Énergie est de 7 ou plus, tu peux m'épuiser pour redresser jusqu'à 2 runes.",
+    tx: "Quand tu joues une unité, un équipement ou une capacité activée dont le coût en Énergie est de 7 ou plus, tu peux m'épuiser pour redresser jusqu'à 2 runes.",
     note: "Légende de Nasus : elle rembourse une partie des très gros coûts, donc elle ne sert que dans un deck bâti autour d'eux."
   },
   "VEN-146/166": {
@@ -5295,12 +5295,12 @@ window.RB_FR = {
   },
   "VEN-149/166": {
     n: "Le Défenseur de demain",
-    tx: "Amplification 2 Énergie + 2 Essences runiques, de n'importe quel domaine. (Coût à payer pour m'amplifier. Utilisable seulement si je ne le suis pas déjà.)\n1 Énergie, épuiser : redresse un Équipement.\nAmplifié : 1 Énergie, épuiser — redresse 2 Équipements.",
+    tx: "Amplification 2 Énergie + 2 Essences runiques, de n'importe quel domaine. (Coût à payer pour m'amplifier. Utilisable seulement si je ne le suis pas déjà.)\n1 Énergie, épuiser : redresse un équipement.\nAmplifié : 1 Énergie, épuiser — redresse 2 équipements.",
     note: "Légende de Jayce, pensée pour les decks à Équipements qui s'épuisent pour produire un effet."
   },
   "VEN-150/166": {
     n: "Portail d'accélération",
-    tx: "Redresse jusqu'à 4 unités, Équipements et/ou runes, dans la combinaison de ton choix.",
+    tx: "Redresse jusqu'à 4 unités, équipements et/ou runes, dans la combinaison de ton choix.",
     note: "Redresser des runes rend l'Énergie dépensée : le sort peut se rembourser en partie tout seul."
   },
   "VEN-151/166": {
@@ -5315,7 +5315,7 @@ window.RB_FR = {
   },
   "VEN-153/166": {
     n: "La Matriarche de guerre",
-    tx: "Quand tu amplifies autre chose, amplifie-moi. (Je deviens Amplifié si je ne le suis pas déjà.)\nRetire-moi mon amplification, 1 Essence runique de n'importe quel domaine, épuise-moi : redresse une unité.",
+    tx: "Quand tu amplifies autre chose, amplifie-moi. (Je deviens Amplifiée si je ne le suis pas déjà.)\nRetire-moi mon amplification, 1 Essence runique, de n'importe quel domaine, épuise-moi : redresse une unité.",
     note: "Légende d'Ambessa : redresser une unité déjà engagée permet de la faire défendre après l'avoir fait attaquer."
   },
   "VEN-154/166": {
@@ -5335,7 +5335,7 @@ window.RB_FR = {
   },
   "VEN-157/166": {
     n: "Perchoir des dragons",
-    tx: "N'importe quel joueur peut payer 2 Essences runiques en coût additionnel pour jouer un Dragon. S'il le fait, il le joue sur ce champ de bataille."
+    tx: "N'importe quel joueur peut payer 2 Essences runiques, de n'importe quel domaine, en coût additionnel pour jouer un Dragon. S'il le fait, il le joue sur ce champ de bataille."
   },
   "VEN-158/166": {
     n: "Heisho, Carapace du monde",
@@ -5353,7 +5353,7 @@ window.RB_FR = {
   },
   "VEN-161/166": {
     n: "Forge piltovienne",
-    tx: "Tant que tu contrôles ce champ de bataille, la première capacité activée d'Équipement allié utilisée à chaque tour coûte 1 Énergie de moins."
+    tx: "Tant que tu contrôles ce champ de bataille, la première capacité activée d'équipement allié utilisée à chaque tour coûte 1 Énergie de moins."
   },
   "VEN-162/166": {
     n: "Sables protecteurs",
@@ -5366,7 +5366,7 @@ window.RB_FR = {
   },
   "VEN-164/166": {
     n: "Tombe balayée par les sables",
-    tx: "Chaque sort qui choisit une ou plusieurs unités alliées présentes ici coûte 1 Essence runique de moins."
+    tx: "Chaque sort qui choisit une ou plusieurs unités alliées présentes ici coûte 1 Essence runique de moins, de n'importe quel domaine."
   },
   "VEN-165/166": {
     n: "Temple des ombres",
@@ -5399,7 +5399,7 @@ window.RB_FR = {
   },
   "VEN-171/166": {
     n: "Riven",
-    tx: "Expert en armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Essence runique de moins, même s'il est déjà attaché ailleurs.)\nQuand j'attaque, choisis une unité ennemie présente ici : inflige-lui 2 dégâts par Équipement qui m'est attaché.",
+    tx: "Expert en armes. (Quand tu me joues, tu peux m'attacher un de tes Équipements pour 1 Essence runique de moins, de n'importe quel domaine, même s'il est déjà attaché ailleurs.)\nQuand j'attaque, choisis une unité ennemie présente ici : inflige-lui 2 dégâts par Équipement qui m'est attaché.",
     note: "Les dégâts partent avant l'échange : avec trois Équipements, elle tue un défenseur de 6 Puissance sans se battre."
   },
   "VEN-172/166": {
@@ -5409,7 +5409,7 @@ window.RB_FR = {
   },
   "VEN-173/166": {
     n: "Swain",
-    tx: "Vision. (Quand tu me joues, regarde la première carte de ton deck principal. Tu peux la recycler.)\nQuand je conquiers, si tu as joué ce tour-ci une unité non-jeton, un Équipement non-jeton et un sort, tu marques 1 point.",
+    tx: "Vision. (Quand tu me joues, regarde la première carte de ton deck principal. Tu peux la recycler.)\nQuand je conquiers, si tu as joué ce tour-ci une unité non-jeton, un équipement non-jeton et un sort, tu marques 1 point.",
     note: "Les trois types dans le même tour : c'est une condition exigeante, qui demande un deck équilibré et beaucoup de ressources."
   },
   "VEN-174/166": {
@@ -5418,7 +5418,7 @@ window.RB_FR = {
   },
   "VEN-175/166": {
     n: "Jayce",
-    tx: "Quand tu me joues, tu peux tuer un Équipement allié. Si tu le fais, tu peux jouer depuis ta main, ce tour-ci, un Équipement dont le coût en Énergie ne dépasse pas 7, sans payer son Énergie. (Son coût en Essence runique reste dû.)",
+    tx: "Quand tu me joues, tu peux tuer un équipement allié. Si tu le fais, tu peux jouer depuis ta main, ce tour-ci, un équipement dont le coût en Énergie ne dépasse pas 7, sans payer son Énergie. (Son coût en Essence runique reste dû.)",
     note: "Sacrifier un jeton Or suffit à débloquer un Équipement à 7 Énergie."
   },
   "VEN-176/166": {
@@ -5428,7 +5428,7 @@ window.RB_FR = {
   },
   "VEN-177/166": {
     n: "Renekton",
-    tx: "1 Énergie : je gagne +1 Puissance ce tour-ci.\nQuand ma Puissance atteint 10 ou plus, amplifie-moi. (Je deviens Amplifié si je ne le suis pas déjà.)\nAmplifié : j'ai Gank et Protection. (Je peux me déplacer d'un champ de bataille à un autre ; l'adversaire doit payer 1 Essence runique de plus pour me choisir avec un sort ou une capacité.)",
+    tx: "1 Énergie : je gagne +1 Puissance ce tour-ci.\nQuand ma Puissance atteint 10 ou plus, amplifie-moi. (Je deviens Amplifié si je ne le suis pas déjà.)\nAmplifié : j'ai Gank et Protection. (Je peux me déplacer d'un champ de bataille à un autre ; l'adversaire doit payer 1 Essence runique de plus, de n'importe quel domaine, pour me choisir avec un sort ou une capacité.)",
     note: "L'amplification est définitive : une fois atteinte, il garde Gank et Protection même quand son bonus de Puissance retombe."
   },
   "VEN-178/166": {
@@ -5452,7 +5452,7 @@ window.RB_FR = {
   },
   "VEN-182/166": {
     n: "Illaoi",
-    tx: "Quand tu me joues, ou quand je marque un point, crée un jeton d'unité Tentacule de 1 Puissance de Bilgewater.\nJ'ai +1 Puissance pour chaque unité-jeton que tu contrôles.",
+    tx: "Quand tu me joues, ou quand je marque un point, crée un jeton d'unité Tentacule de Bilgewater, de 1 Puissance.\nJ'ai +1 Puissance pour chaque unité-jeton que tu contrôles.",
     note: "Elle grossit avec tous tes jetons, pas seulement ses Tentacules : les Recrues et les Lutins comptent aussi."
   },
   "VEN-183/166": {
@@ -5467,7 +5467,7 @@ window.RB_FR = {
   },
   "VEN-185/166": {
     n: "Kayle",
-    tx: "Amplification 3 Énergie. (Coût à payer pour m'amplifier. Utilisable seulement si je ne le suis pas déjà.)\nJe peux être Amplifiée jusqu'à trois fois.\nJ'ai +2 Puissance pour chaque amplification.\nQuand je suis Amplifiée trois fois, j'ai Protection 3 et Gank.",
+    tx: "Amplification 3 Énergie. (Coût à payer pour m'amplifier.)\nJe peux être Amplifiée jusqu'à trois fois.\nJ'ai +2 Puissance pour chaque amplification.\nTant que je suis Amplifiée trois fois, j'ai Protection 3 et Gank.",
     note: "Exception à la règle : elle est la seule à pouvoir cumuler plusieurs amplifications. Pleinement amplifiée, elle passe à 9 Puissance et devient très difficile à cibler."
   },
   "VEN-186/166": {
@@ -5482,17 +5482,17 @@ window.RB_FR = {
   },
   "VEN-188/166": {
     n: "Mel",
-    tx: "Amplification — défausse un sort. (Coût à payer pour m'amplifier. Utilisable seulement si je ne le suis pas déjà.)\nQuand je deviens Amplifiée, bannis une unité ennemie présente sur un champ de bataille ayant 3 Puissance ou moins.",
+    tx: "Amplification — défausse un sort. (Coût à payer pour m'amplifier. Utilisable seulement si je ne le suis pas déjà.)\nQuand je deviens Amplifiée, bannis une unité ennemie de 3 Puissance ou moins présente sur un champ de bataille.",
     note: "Bannir, et non tuer : l'unité ne va pas à la défausse et échappe donc aux effets de résurrection."
   },
   "VEN-189*/166": {
     n: "L'Assassin rebelle",
-    tx: "Amplification 3 Énergie + 1 Essence runique, de n'importe quel domaine. (Coût à payer pour m'amplifier. Utilisable seulement si je ne le suis pas déjà.)\nAction — épuiser : si c'est ton tour, renvoie à sa base une unité alliée engagée dans un affrontement ; si je suis Amplifiée, redresse-la en plus. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)",
+    tx: "Amplification 3 Énergie + 1 Essence runique, de n'importe quel domaine. (Coût à payer pour m'amplifier. Utilisable seulement si je ne le suis pas déjà.)\nAction — épuiser : si c'est ton tour, renvoie à sa base une unité alliée engagée dans un affrontement ; si je suis Amplifié, redresse-la en plus. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)",
     note: "Légende d'Akali : le repli retire l'unité du combat avant les dégâts. Amplifiée, elle peut ressortir et frapper ailleurs dans le même tour."
   },
   "VEN-189/166": {
     n: "L'Assassin rebelle",
-    tx: "Amplification 3 Énergie + 1 Essence runique, de n'importe quel domaine. (Coût à payer pour m'amplifier. Utilisable seulement si je ne le suis pas déjà.)\nAction — épuiser : si c'est ton tour, renvoie à sa base une unité alliée engagée dans un affrontement ; si je suis Amplifiée, redresse-la en plus. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)",
+    tx: "Amplification 3 Énergie + 1 Essence runique, de n'importe quel domaine. (Coût à payer pour m'amplifier. Utilisable seulement si je ne le suis pas déjà.)\nAction — épuiser : si c'est ton tour, renvoie à sa base une unité alliée engagée dans un affrontement ; si je suis Amplifié, redresse-la en plus. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)",
     note: "Légende d'Akali : le repli retire l'unité du combat avant les dégâts. Amplifiée, elle peut ressortir et frapper ailleurs dans le même tour."
   },
   "VEN-190*/166": {
@@ -5517,12 +5517,12 @@ window.RB_FR = {
   },
   "VEN-192*/166": {
     n: "Le Conservateur des sables",
-    tx: "Quand tu joues une unité, un Équipement ou une capacité activée dont le coût en Énergie est de 7 ou plus, tu peux m'épuiser pour redresser jusqu'à 2 runes.",
+    tx: "Quand tu joues une unité, un équipement ou une capacité activée dont le coût en Énergie est de 7 ou plus, tu peux m'épuiser pour redresser jusqu'à 2 runes.",
     note: "Légende de Nasus : elle rembourse une partie des très gros coûts, donc elle ne sert que dans un deck bâti autour d'eux."
   },
   "VEN-192/166": {
     n: "Le Conservateur des sables",
-    tx: "Quand tu joues une unité, un Équipement ou une capacité activée dont le coût en Énergie est de 7 ou plus, tu peux m'épuiser pour redresser jusqu'à 2 runes.",
+    tx: "Quand tu joues une unité, un équipement ou une capacité activée dont le coût en Énergie est de 7 ou plus, tu peux m'épuiser pour redresser jusqu'à 2 runes.",
     note: "Légende de Nasus : elle rembourse une partie des très gros coûts, donc elle ne sert que dans un deck bâti autour d'eux."
   },
   "VEN-193*/166": {
@@ -5537,12 +5537,12 @@ window.RB_FR = {
   },
   "VEN-194*/166": {
     n: "Le Défenseur de demain",
-    tx: "Amplification 2 Énergie + 2 Essences runiques, de n'importe quel domaine. (Coût à payer pour m'amplifier. Utilisable seulement si je ne le suis pas déjà.)\n1 Énergie, épuiser : redresse un Équipement.\nAmplifié : 1 Énergie, épuiser — redresse 2 Équipements.",
+    tx: "Amplification 2 Énergie + 2 Essences runiques, de n'importe quel domaine. (Coût à payer pour m'amplifier. Utilisable seulement si je ne le suis pas déjà.)\n1 Énergie, épuiser : redresse un équipement.\nAmplifié : 1 Énergie, épuiser — redresse 2 équipements.",
     note: "Légende de Jayce, pensée pour les decks à Équipements qui s'épuisent pour produire un effet."
   },
   "VEN-194/166": {
     n: "Le Défenseur de demain",
-    tx: "Amplification 2 Énergie + 2 Essences runiques, de n'importe quel domaine. (Coût à payer pour m'amplifier. Utilisable seulement si je ne le suis pas déjà.)\n1 Énergie, épuiser : redresse un Équipement.\nAmplifié : 1 Énergie, épuiser — redresse 2 Équipements.",
+    tx: "Amplification 2 Énergie + 2 Essences runiques, de n'importe quel domaine. (Coût à payer pour m'amplifier. Utilisable seulement si je ne le suis pas déjà.)\n1 Énergie, épuiser : redresse un équipement.\nAmplifié : 1 Énergie, épuiser — redresse 2 équipements.",
     note: "Légende de Jayce, pensée pour les decks à Équipements qui s'épuisent pour produire un effet."
   },
   "VEN-195*/166": {
@@ -5557,12 +5557,12 @@ window.RB_FR = {
   },
   "VEN-196*/166": {
     n: "La Matriarche de guerre",
-    tx: "Quand tu amplifies autre chose, amplifie-moi.\nRetire-moi mon amplification, 1 Essence runique de n'importe quel domaine, épuise-moi : redresse une unité.",
+    tx: "Quand tu amplifies autre chose, amplifie-moi.\nRetire-moi mon amplification, 1 Essence runique, de n'importe quel domaine, épuise-moi : redresse une unité.",
     note: "Légende d'Ambessa : redresser une unité déjà engagée permet de la faire défendre après l'avoir fait attaquer."
   },
   "VEN-196/166": {
     n: "La Matriarche de guerre",
-    tx: "Quand tu amplifies autre chose, amplifie-moi.\nRetire-moi mon amplification, 1 Essence runique de n'importe quel domaine, épuise-moi : redresse une unité.",
+    tx: "Quand tu amplifies autre chose, amplifie-moi.\nRetire-moi mon amplification, 1 Essence runique, de n'importe quel domaine, épuise-moi : redresse une unité.",
     note: "Légende d'Ambessa : redresser une unité déjà engagée permet de la faire défendre après l'avoir fait attaquer."
   },
   "VEN-197*/166": {
@@ -5607,7 +5607,7 @@ window.RB_FR = {
   },
   "VEN-SP1/006": {
     n: "Kai'Sa",
-    tx: "Accélération. (Tu peux payer un coût additionnel pour que j'arrive prête.)\nQuand je conquiers, pioche 1 carte."
+    tx: "Accélération. (Tu peux payer 1 Énergie + 1 Essence runique en coût additionnel pour que j'arrive prête.)\nQuand je conquiers, pioche 1 carte."
   },
   "VEN-SP2/006": {
     n: "Sona",
@@ -5620,12 +5620,12 @@ window.RB_FR = {
   },
   "VEN-SP4/006": {
     n: "Sett",
-    tx: "Quand je suis joué et quand je conquiers, améliore-moi. (Si je n'ai pas d'amélioration, je reçois +1 Puissance.)\nDépenser mon amélioration : je gagne +4 Puissance ce tour-ci.",
+    tx: "Quand tu me joues ou quand je conquiers, améliore-moi. (Si je n'ai pas d'amélioration, je reçois +1 Puissance.)\nDépenser mon amélioration : je gagne +4 Puissance ce tour-ci.",
     note: "Il se réaméliore à chaque conquête : l'amélioration sert donc de munition renouvelable pour le bonus de +4."
   },
   "VEN-SP5/006": {
     n: "Ezreal",
-    tx: "Quand tu me joues, défausse 1 carte, puis pioche 2 cartes.\nLes coûts additionnels facultatifs que tu paies coûtent 1 Énergie ou 1 Essence runique de moins.",
+    tx: "Quand tu me joues, défausse 1 carte, puis pioche 2 cartes.\nLes coûts additionnels facultatifs que tu paies coûtent 1 Énergie ou 1 Essence runique de moins, de n'importe quel domaine.",
     note: "La réduction vise les coûts marqués « tu peux payer… » : Accélération, Répétition, Amplification, Caché…"
   },
   "VEN-SP6/006": {

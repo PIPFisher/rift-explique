@@ -232,7 +232,7 @@ window.REGLES_DATA = {
         erreurs: [
           { t: "« Il a répondu, je ne peux plus rien faire. »",
             d: "Si : la priorité revient après chaque ajout. Tant que les deux joueurs n'ont pas passé d'affilée, la chaîne reste ouverte." },
-          { t: "Vouloir contrer une unité.",
+          { t: "Vouloir réagir à une unité.",
             d: "Impossible par la voie normale : une unité se résout dès sa finalisation, sans fenêtre de réponse (337.2)." }
         ]
       }
