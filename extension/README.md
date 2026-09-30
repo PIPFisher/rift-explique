@@ -66,13 +66,13 @@ jouer.
 
 ## Les gestes
 
-Si tu ne devais en retenir qu'un : **`Alt`+`²`** affiche tous les autres,
+Il n'y en a qu'un à retenir : **`Alt`+`²`** affiche tous les autres,
 par-dessus la page, où que tu sois. Échap ou un clic le referment.
 
-La touche **`?`** fait la même chose — c'est la convention du web, celle que
-GitHub et Gmail emploient. Mais elle demande `Maj` sur un clavier français, et
-certaines dispositions ne rapportent pas le caractère correctement dans ce
-cas ; `Alt`+`²` ne dépend d'aucun caractère et marche partout.
+Tout part de la même touche, `²`, celle au-dessus de Tab : seule elle coupe,
+avec `Maj` elle change de mode, avec `Ctrl` elle fige, avec `Alt` elle
+rappelle. Sur un clavier sans `²` — un QWERTY, par exemple — **`F2`** la
+remplace dans les quatre.
 
 Chaque geste répond à **deux touches** : `²` (au-dessus de Tab) et `F2`. La
 première est la plus rapide sur un clavier français ; la seconde existe et
@@ -80,7 +80,7 @@ porte le même nom sur tous les claviers.
 
 | Touche | Effet |
 |---|---|
-| **`Alt`+`²`** / **`Alt`+`F2`**, ou **`?`** | Affiche le rappel des raccourcis, par-dessus la page |
+| **`Alt`+`²`** | Affiche le rappel des raccourcis, par-dessus la page |
 | **`²`** ou **`F2`** | Coupe et rallume les traductions |
 | **`Maj`+`²`** / **`Maj`+`F2`**, ou **`*`** (à droite d'Entrée) | Bascule entre panneau complet et texte de la carte seul |
 | **`Ctrl`+`²`** / **`Ctrl`+`F2`** | Fige le panneau sur place et le rend cliquable |

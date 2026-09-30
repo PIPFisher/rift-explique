@@ -11,7 +11,7 @@
   "use strict";
 
   var REMOTE = "https://pipfisher.github.io/rift-explique/fr.json";
-  var VERSION = "1.19.2";
+  var VERSION = "1.20.0";
 
   // Reprise après un rechargement de l'extension. Chrome laisse l'ancien
   // script tourner dans les onglets déjà ouverts : le service worker nous
@@ -216,19 +216,14 @@
     if (aide) { fermeAide(); return; }
     if (panel && panel.style.display !== "none") hide();
 
+    // Une seule pastille par geste. La touche de secours existe pour les
+    // claviers sans « ² », mais l'afficher partout doublait la liste : elle
+    // tient en une ligne, en bas, là où on la cherche quand on en a besoin.
     var t = nomTouche(TOUCHE);
     var bis = TOUCHE_BIS ? nomTouche(TOUCHE_BIS) : null;
-    var mode = MODE_TOUCHE ? nomTouche(MODE_TOUCHE) : null;
 
-    function touches() {
-      var s = "<kbd>" + esc(t) + "</kbd>";
-      if (bis) s += '<span class="rbfr-ou">ou</span><kbd>' + esc(bis) + "</kbd>";
-      return s;
-    }
     function avec(mod) {
-      var s = "<kbd>" + esc(mod + " + " + t) + "</kbd>";
-      if (bis) s += '<span class="rbfr-ou">ou</span><kbd>' + esc(mod + " + " + bis) + "</kbd>";
-      return s;
+      return "<kbd>" + esc(mod ? mod + " + " + t : t) + "</kbd>";
     }
 
     aide = document.createElement("div");
@@ -237,24 +232,25 @@
       '<div class="rbfr-aide-boite" role="dialog" aria-label="Raccourcis clavier">' +
         '<h2>Raccourcis</h2>' +
         '<dl>' +
-          '<dt>' + touches() + '</dt>' +
+          '<dt>' + avec(null) + '</dt>' +
           '<dd>Couper ou rallumer les traductions' +
             (ACTIF ? "" : " — elles sont coupées en ce moment") + '</dd>' +
-          '<dt>' + avec("Maj") +
-            (mode ? '<span class="rbfr-ou">ou</span><kbd>' + esc(mode) + "</kbd>" : "") + '</dt>' +
+          '<dt>' + avec("Maj") + '</dt>' +
           '<dd>Texte de la carte seul, sans les explications' +
             (SOBRE ? " — c'est le mode actuel" : "") + '</dd>' +
           '<dt>' + avec("Ctrl") + '</dt>' +
           '<dd>Figer le panneau sur place et le rendre cliquable</dd>' +
-          '<dt>' + avec("Alt") + '<span class="rbfr-ou">ou</span><kbd>?</kbd></dt>' +
+          '<dt>' + avec("Alt") + '</dt>' +
           '<dd>Ce rappel</dd>' +
           '<dt><kbd>Échap</kbd></dt>' +
           '<dd>Libérer le panneau figé, ou fermer ce rappel</dd>' +
         '</dl>' +
-        '<p class="rbfr-aide-pied">Les réglages sont aussi dans la fenêtre de l\'extension, ' +
-          'en cliquant sur son icône. ' +
+        '<p class="rbfr-aide-pied">' +
+          (bis ? 'Sur un clavier sans <kbd>' + esc(t) + '</kbd>, <kbd>' + esc(bis) +
+                 '</kbd> le remplace dans les quatre raccourcis.<br>' : '') +
+          'Les réglages sont aussi dans la fenêtre de l\'extension, en cliquant sur son icône. ' +
           '<a class="rbfr-link" href="' + SITE + '" target="_blank" rel="noopener">Le Rift Expliqué ↗</a></p>' +
-        '<p class="rbfr-aide-sortie">Appuie sur <kbd>?</kbd> ou clique pour fermer</p>' +
+        '<p class="rbfr-aide-sortie">' + avec("Alt") + ' ou un clic pour fermer</p>' +
       '</div>';
     document.documentElement.appendChild(aide);
     // pas d'enregistrement global : retirer le nœud emporte son écouteur
@@ -276,9 +272,6 @@
     // la touche qui le porte — Comma sur un AZERTY, Slash sur un QWERTY. Le
     // garde-fou « e.key !== "<" » évite de voler le chevron aux QWERTY, où
     // Maj+Comma produit « < » et pas « ? ».
-    var positionPoint = (e.code === "Comma" || e.code === "Slash") &&
-                        e.shiftKey && e.key !== "<";
-
     var nu      = !e.ctrlKey && !e.altKey && !e.metaKey && !e.shiftKey;
     var majSeul = e.shiftKey && !e.ctrlKey && !e.altKey && !e.metaKey;
     var ctrlSeul= e.ctrlKey && !e.shiftKey && !e.altKey && !e.metaKey;
@@ -286,11 +279,12 @@
 
     var principale = estPrincipale(e.code);
 
-    // Les deux chemins vers le rappel, réunis avant tout le reste : sans ça,
-    // la frappe qui doit le refermer le referme puis le rouvre aussitôt.
-    var surAide = (principale && altSeul) ||
-                  ((e.key === "?" || positionPoint) && !e.ctrlKey && !e.altKey && !e.metaKey);
-    if (surAide) { e.preventDefault(); basculeAide(); return; }
+    // Le rappel se traite avant tout le reste : sinon la frappe qui doit le
+    // refermer le referme puis le rouvre aussitôt.
+    // « ? » a été essayé puis abandonné : il demande Maj sur un clavier
+    // français, et le caractère ne remonte pas de façon fiable dans ce cas.
+    // Alt + la touche principale ne dépend d'aucun caractère.
+    if (principale && altSeul) { e.preventDefault(); basculeAide(); return; }
 
     // n'importe quelle autre touche referme le rappel — sauf les modificateurs
     // eux-mêmes, dont le keydown précède la touche et refermerait ce qu'on
@@ -931,7 +925,7 @@
         (ACTIF ? "" : " (éteint)") +
         " · " + (MODE_TOUCHE || "Maj+" + TOUCHE) + " : complet/sobre" + (SOBRE ? " (sobre)" : "") +
         " · Ctrl+" + TOUCHE + " : figer" +
-        " · ? : rappel des raccourcis");
+        " · Alt+" + TOUCHE + " : rappel des raccourcis");
     } catch (e) {}
   });
 
