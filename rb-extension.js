@@ -38,6 +38,12 @@ window.Extension = (function(){
         "les cartes retorses reçoivent une note. Quand tu connais tes cartes, « Maj&nbsp;+&nbsp;² » " +
         "— ou « Maj&nbsp;+&nbsp;F2 », ou la touche « * » à droite d'Entrée — range tout ça et ne " +
         "laisse que le texte de la carte, traduit. Une seule ligne par effet, rien à survoler en trop." },
+    { t:"Une touche qui rappelle les autres",
+      s:"« Alt&nbsp;+&nbsp;² » — ou « ?&nbsp;», la convention du web — affiche la liste des " +
+        "raccourcis par-dessus la page, en partie comme ailleurs. Rien à mémoriser, rien à " +
+        "aller chercher. Échap ou un clic la referment. La forme avec Alt existe parce que " +
+        "le point d'interrogation demande Maj sur un clavier français, et que toutes les " +
+        "dispositions ne le rapportent pas de la même façon." },
     { t:"Une fenêtre de réglages",
       s:"Un clic sur l'icône de l'extension ouvre les réglages : la version installée, le nombre " +
         "de cartes chargées, les mêmes bascules que les raccourcis, et un bouton pour forcer la " +
