@@ -1,5 +1,5 @@
 /* ============================================================
-   rb-fr.js — traductions françaises des 1197 cartes
+   rb-fr.js — traductions françaises des 1320 cartes
    ------------------------------------------------------------
    Clé = numéro de collection de la carte (champ "code").
    n    : nom français
@@ -1791,6 +1791,458 @@ window.RB_FR = {
   },
 
   /* ---------- RAD ---------- */
+  "RAD-001/167": {
+    n: "Démolisseur amateur",
+    tx: "Quand tu me joues, crée un jeton d'équipement Bombe sur un champ de bataille. (Il a Déploiement. Quand il meurt, inflige 2 dégâts à un ennemi présent là et tue tes autres Bombes présentes là.)"
+  },
+  "RAD-002/167": {
+    n: "Bannière de conquête",
+    tx: "Déploiement. (Ne se joue que sur un champ de bataille. Quand un adversaire tient ce champ de bataille, cet équipement meurt.)\nLes unités alliées présentes ici ont Assaut. (+1 Puissance tant qu'elles sont attaquantes.)"
+  },
+  "RAD-003/167": {
+    n: "Pisteur de Bilgewater",
+    tx: "Quand tu me joues, inflige 1 dégât à deux unités au maximum."
+  },
+  "RAD-004/167": {
+    n: "Rixe",
+    tx: "Action. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nDonne à une unité autant d'Assaut que sa Puissance, ce tour-ci. (Chaque Assaut lui donne +1 Puissance tant qu'elle est attaquante.)"
+  },
+  "RAD-005/167": {
+    n: "Rancune tenace",
+    tx: "J'arrive prête si une unité ou un équipement allié est mort ce tour-ci."
+  },
+  "RAD-012/167": {
+    n: "Enclume runelame",
+    tx: "Quand tu joues cette carte, ou quand elle quitte le plateau, bannis la première carte de ton deck principal. Jusqu'à ta prochaine phase Finale, tu peux jouer la carte bannie. (Tu en paies quand même les coûts.)\n2 Énergie + 1 Essence runique, épuiser : tue cette carte."
+  },
+  "RAD-013/167": {
+    n: "Englouti par les sables",
+    tx: "Action. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nAu choix :\n— inflige 4 dégâts à une unité présente sur un champ de bataille ;\n— tue un équipement."
+  },
+  "RAD-014/167": {
+    n: "Nageuse chatoyante",
+    tx: "Tu peux tuer une unité ou un équipement allié en coût additionnel pour me jouer.\nQuand tu me joues, si tu as payé ce coût, inflige 2 dégâts à une unité."
+  },
+  "RAD-015/167": {
+    n: "Akali",
+    tx: "La première fois que je me déplace à chaque tour, ajoute 1 Énergie + 1 Essence runique, de n'importe quel domaine.\nLa deuxième fois que je me déplace à chaque tour, bannis la première carte de ton deck principal. Jusqu'à ta prochaine phase Finale, tu peux jouer cette carte. (Tu en paies quand même les coûts.)"
+  },
+  "RAD-016/167": {
+    n: "Énergie coalescente",
+    tx: "À la fin de ton tour, recycle toutes tes runes, puis canalise 4 runes, épuisées."
+  },
+  "RAD-023/167": {
+    n: "Ziggs",
+    tx: "Quand tu me joues, crée un jeton d'équipement Bombe sur un champ de bataille. (Il a Déploiement. Quand il meurt, inflige 2 dégâts à un ennemi présent là et tue tes autres Bombes présentes là.)\nLes capacités de tes équipements infligent 1 dégât bonus."
+  },
+  "RAD-023a/167": {
+    n: "Ziggs",
+    tx: "Quand tu me joues, crée un jeton d'équipement Bombe sur un champ de bataille. (Il a Déploiement. Quand il meurt, inflige 2 dégâts à un ennemi présent là et tue tes autres Bombes présentes là.)\nLes capacités de tes équipements infligent 1 dégât bonus."
+  },
+  "RAD-024/167": {
+    n: "Racine-songe en fleur",
+    tx: "Déploiement. (Ne se joue que sur un champ de bataille. Quand un adversaire tient ce champ de bataille, cet équipement meurt.)\nQuand tu gagnes un combat ici, pioche 1 carte."
+  },
+  "RAD-025/167": {
+    n: "Consulter les cieux",
+    tx: "Réaction. (Se joue à tout moment, même avant qu'un sort ou une capacité ne se résolve.)\nDonne Bouclier 2 à une unité ce tour-ci. (+2 Puissance tant qu'elle est défenseuse.)\nPrédiction. (Regarde la première carte de ton deck principal. Tu peux la recycler.)"
+  },
+  "RAD-026/167": {
+    n: "Sanglier retranché",
+    tx: "Tu peux me faire arriver prêt. Si tu le fais, je ne peux pas me déplacer ce tour-ci."
+  },
+  "RAD-033/167": {
+    n: "Ordre : attaquer",
+    tx: "Au choix :\n— déplace vers un champ de bataille un équipement allié ayant Déploiement ;\n— regarde les 5 premières cartes de ton deck principal : tu peux y révéler un équipement et le piocher, puis recycle les autres."
+  },
+  "RAD-034/167": {
+    n: "Se mettre à couvert",
+    tx: "Réaction. (Se joue à tout moment, même avant qu'un sort ou une capacité ne se résolve.)\nRedresse une unité alliée : elle ne peut pas se déplacer ce tour-ci. Pioche 1 carte."
+  },
+  "RAD-035/167": {
+    n: "Floraison vivifiante",
+    tx: "Quand tu joues cette carte, donne +3 Puissance à une unité alliée ce tour-ci.\nÉpuiser une unité alliée Puissante, épuiser : pioche 1 carte. (Une unité est Puissante tant qu'elle a 5 Puissance ou plus.)"
+  },
+  "RAD-036/167": {
+    n: "Rapace des tempêtes",
+    tx: "Protection. (L'adversaire doit payer 1 Essence runique de plus, de n'importe quel domaine, pour me choisir avec un sort ou une capacité.)\nQuand une unité ennemie étourdie meurt ici, pioche 1 carte."
+  },
+  "RAD-037/167": {
+    n: "Conservateur vigilant",
+    tx: "Tes équipements ont Protection. (L'adversaire doit payer 1 Essence runique de plus, de n'importe quel domaine, pour choisir chacun d'eux avec un sort ou une capacité.)"
+  },
+  "RAD-038/167": {
+    n: "Ahri",
+    tx: "Désarmement. (Quand j'attaque, donne -1 Puissance à une unité ennemie présente ici, ce tour-ci.)\nQuand tu réduis de 1 ou plus la Puissance d'une unité ennemie présente ici, donne-moi +1 Puissance ce tour-ci."
+  },
+  "RAD-045/167": {
+    n: "K'Sante",
+    tx: "Bouclier. (+1 Puissance tant que je suis défenseur.)\nQuand j'attaque ou que je défends, double le Bouclier d'une unité que tu contrôles ici, ce tour-ci."
+  },
+  "RAD-045a/167": {
+    n: "K'Sante",
+    tx: "Bouclier. (+1 Puissance tant que je suis défenseur.)\nQuand j'attaque ou que je défends, double le Bouclier d'une unité que tu contrôles ici, ce tour-ci."
+  },
+  "RAD-046/167": {
+    n: "Tribune resplendissante",
+    tx: "Épuiser : pioche 1 carte et canalise 1 rune, épuisée.\nQuand je deviens épuisée, donne +3 Puissance à une unité alliée ce tour-ci."
+  },
+  "RAD-047/167": {
+    n: "Fanfare",
+    tx: "Les trois prochaines fois que tu joues une unité ce tour-ci, pioche 1 carte."
+  },
+  "RAD-048/167": {
+    n: "Note aiguë",
+    tx: "Réaction. (Se joue à tout moment, même avant qu'un sort ou une capacité ne se résolve.)\nDonne à une unité un malus de Puissance égal au nombre d'unités épuisées que tu contrôles, ce tour-ci."
+  },
+  "RAD-055/167": {
+    n: "Sentinelle cliquetante",
+    tx: "Tes Mécas ont Désarmement. (Quand chacun de nous attaque, il donne -1 Puissance à une unité ennemie présente là, ce tour-ci.)"
+  },
+  "RAD-056/167": {
+    n: "Projectile improvisé",
+    tx: "Action. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nChoisis un équipement allié : inflige à une unité présente sur un champ de bataille des dégâts égaux au coût en Énergie de cet équipement."
+  },
+  "RAD-057/167": {
+    n: "Guide-bot piltovien",
+    tx: "Quand tu joues une carte, tu peux faire passer ma Puissance de base au coût en Énergie de cette carte, ce tour-ci."
+  },
+  "RAD-058/167": {
+    n: "Mage des courants",
+    tx: "Accélération. (Tu peux payer 1 Énergie + 1 Essence runique en coût additionnel pour que j'arrive prêt.)\nQuand tu me joues, donne -3 Puissance à une unité ennemie ce tour-ci."
+  },
+  "RAD-059/167": {
+    n: "Supernova",
+    tx: "Inflige 10 dégâts à une unité. Pioche 2 cartes."
+  },
+  "RAD-061/167": {
+    n: "Ekko",
+    tx: "En coût additionnel pour me jouer, renvoie une unité alliée dans la main de son propriétaire.\nGank. (Je peux me déplacer d'un champ de bataille à un autre.)"
+  },
+  "RAD-061a/167": {
+    n: "Ekko",
+    tx: "En coût additionnel pour me jouer, renvoie une unité alliée dans la main de son propriétaire.\nGank. (Je peux me déplacer d'un champ de bataille à un autre.)"
+  },
+  "RAD-063/167": {
+    n: "Kai'Sa",
+    tx: "Désarmement. (Quand j'attaque, donne -1 Puissance à une unité ennemie présente ici, ce tour-ci.)\nTant que je suis dans un affrontement, tes sorts ont Réaction. (Ils se jouent à tout moment, même avant qu'un sort ou une capacité ne se résolve.)"
+  },
+  "RAD-067/167": {
+    n: "Gardien du beffroi",
+    tx: "Quand tu me joues, ou quand je tiens un champ de bataille, fais une Prédiction 3. (Regarde les 3 premières cartes de ton deck principal, recycle celles que tu veux et remets les autres sur le dessus dans l'ordre de ton choix.)\nAgonie : bannis la première carte de ton deck principal. Tu peux la jouer sans payer son coût en Énergie. (Effet obtenu quand je meurs.)"
+  },
+  "RAD-068/167": {
+    n: "Orianna",
+    tx: "Une fois par tour, tant que je suis sur un champ de bataille, tu peux payer 1 Énergie + 1 Essence runique de moins, de n'importe quel domaine, pour jouer un équipement."
+  },
+  "RAD-068a/167": {
+    n: "Orianna",
+    tx: "Une fois par tour, tant que je suis sur un champ de bataille, tu peux payer 1 Énergie + 1 Essence runique de moins, de n'importe quel domaine, pour jouer un équipement."
+  },
+  "RAD-069/167": {
+    n: "Inflexion du point zéro",
+    tx: "Quand tu joues une carte, pioche 2 cartes.\nQuand tu pioches une carte ou plus alors que tu en as déjà 9 ou plus en main, défausse ta main, tue cette carte et choisis un adversaire : il marque 1 point."
+  },
+  "RAD-070/167": {
+    n: "Tenir bon",
+    tx: "Action. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nCette carte coûte 2 Énergie de moins si tu as joué une unité ou un équipement sur un champ de bataille ce tour-ci.\nDonne +3 Puissance à une unité ce tour-ci."
+  },
+  "RAD-071/167": {
+    n: "Ntofo nazumani",
+    tx: "Équiper 1 Énergie. (1 Énergie : attacher cet équipement à une unité que tu contrôles.)"
+  },
+  "RAD-072/167": {
+    n: "Voyageur surchargé",
+    tx: "Tant qu'un équipement allié ayant Déploiement est sur mon champ de bataille, j'ai +1 Puissance."
+  },
+  "RAD-073/167": {
+    n: "Armurerie pillée",
+    tx: "Déploiement. (Ne se joue que sur un champ de bataille. Quand un adversaire tient ce champ de bataille, cet équipement meurt.)\nQuand tu joues cet équipement, ou quand tu conquiers ici, améliore une unité alliée. (Si elle n'a pas d'amélioration, elle reçoit +1 Puissance.)"
+  },
+  "RAD-079/167": {
+    n: "Avalanche",
+    tx: "Inflige 3 dégâts à toutes les unités présentes dans les bases."
+  },
+  "RAD-081/167": {
+    n: "Troupeau d'elnüks",
+    tx: "Caché. (Cache-moi maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux me révéler pour 0, et je gagne Réaction.)\nQuand tu me joues, donne +3 Puissance à une autre unité alliée ce tour-ci, puis recycle-moi si tu m'as joué depuis ma position face cachée."
+  },
+  "RAD-082/167": {
+    n: "Rugissement primordial",
+    tx: "Exhibe une unité. (En jouant cette carte, tu peux révéler une unité de ta main ou désigner une unité alliée.)\nSi tu as exhibé une unité, inflige à une unité des dégâts égaux à la Puissance de l'unité exhibée."
+  },
+  "RAD-083/167": {
+    n: "Chevrier inébranlable",
+    tx: "Bouclier 2. (+2 Puissance tant que je suis défenseur.)\nQuand tu me joues, tu peux tuer un équipement dont le coût en Énergie ne dépasse pas 4."
+  },
+  "RAD-084/167": {
+    n: "Cataclysme",
+    tx: "Tes adversaires ne peuvent pas jouer de sort ce tour-ci.\nDéplace une unité alliée vers un champ de bataille ennemi occupé."
+  },
+  "RAD-085/167": {
+    n: "Graves",
+    tx: "Quand j'attaque ou que je défends, j'inflige des dégâts égaux à ma Puissance à toutes les unités ennemies présentes ici.\nJe n'inflige pas de dégâts de combat."
+  },
+  "RAD-086/167": {
+    n: "K'Sante",
+    tx: "Accélération. (Tu peux payer 1 Énergie + 1 Essence runique en coût additionnel pour que j'arrive prêt.)\nBouclier 2. (+2 Puissance tant que je suis défenseur.)\nQuand je tiens un champ de bataille, canalise 1 rune."
+  },
+  "RAD-086a/167": {
+    n: "K'Sante",
+    tx: "Accélération. (Tu peux payer 1 Énergie + 1 Essence runique en coût additionnel pour que j'arrive prêt.)\nBouclier 2. (+2 Puissance tant que je suis défenseur.)\nQuand je tiens un champ de bataille, canalise 1 rune."
+  },
+  "RAD-090/167": {
+    n: "Evelynn",
+    tx: "Embuscade. (Tu peux me jouer en Réaction sur un champ de bataille où tu as des unités.)\nQuand tu joues une carte depuis sa position face cachée, redresse-moi et donne-moi +1 Puissance ce tour-ci."
+  },
+  "RAD-090a/167": {
+    n: "Evelynn",
+    tx: "Embuscade. (Tu peux me jouer en Réaction sur un champ de bataille où tu as des unités.)\nQuand tu joues une carte depuis sa position face cachée, redresse-moi et donne-moi +1 Puissance ce tour-ci."
+  },
+  "RAD-091/167": {
+    n: "Jarvan IV",
+    tx: "Tes équipements ayant Déploiement ont Action. (Ils se jouent pendant ton tour ou dans un affrontement, chaîne vide.)\nQuand je conquiers, s'il y a ici un équipement allié ayant Déploiement, canalise 1 rune, épuisée."
+  },
+  "RAD-091a/167": {
+    n: "Jarvan IV",
+    tx: "Tes équipements ayant Déploiement ont Action. (Ils se jouent pendant ton tour ou dans un affrontement, chaîne vide.)\nQuand je conquiers, s'il y a ici un équipement allié ayant Déploiement, canalise 1 rune, épuisée."
+  },
+  "RAD-093/167": {
+    n: "Expert en déminage",
+    tx: "J'arrive prêt si tu ne contrôles aucune autre unité.\nDésarmement 2. (Quand j'attaque, donne -2 Puissance à une unité ennemie présente ici, ce tour-ci.)"
+  },
+  "RAD-095/167": {
+    n: "Compagnon d'un instant",
+    tx: "Caché. (Cache-moi maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux me révéler pour 0, et je gagne Réaction.)\nQuand tu me joues, si ce n'est pas ton tour, donne-moi Temporaire. (Je meurs au début de la phase Initiale de mon contrôleur, avant le score.)"
+  },
+  "RAD-096/167": {
+    n: "Charge explosive",
+    tx: "Action. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nDéplace une unité alliée, puis crée un jeton d'équipement Bombe sur un champ de bataille. (Il a Déploiement. Quand il meurt, inflige 2 dégâts à un ennemi présent là et tue tes autres Bombes présentes là.)"
+  },
+  "RAD-097/167": {
+    n: "Sirène des hauts-fonds",
+    tx: "Désarmement. (Quand j'attaque, donne -1 Puissance à une unité ennemie présente ici, ce tour-ci.)\nGank. (Je peux me déplacer d'un champ de bataille à un autre.)"
+  },
+  "RAD-098/167": {
+    n: "Chant de la sirène",
+    tx: "Réaction. (Se joue à tout moment, même avant qu'un sort ou une capacité ne se résolve.)\nDéplace une unité ennemie qui s'est déplacée ce tour-ci."
+  },
+  "RAD-105/167": {
+    n: "Innovateur téméraire",
+    tx: "Accélération. (Tu peux payer 1 Énergie + 1 Essence runique en coût additionnel pour que j'arrive prêt.)\nQuand je deviens épuisé, au choix :\n— crée un jeton d'équipement Or, épuisé (il a « Réaction : tuer ce jeton et l'épuiser — ajoute 1 Essence runique, de n'importe quel domaine ») ;\n— paie 1 Essence runique pour piocher 1 carte."
+  },
+  "RAD-106/167": {
+    n: "Du bon matos",
+    tx: "Déploiement. (Ne se joue que sur un champ de bataille. Quand un adversaire tient ce champ de bataille, cet équipement meurt.)\nQuand tu joues cet équipement, défausse 1 carte, puis pioche 3 cartes.\nQuand tu tiens ce champ de bataille, renvoie cet équipement dans la main de son propriétaire."
+  },
+  "RAD-107/167": {
+    n: "Étranger troublant",
+    tx: "Caché. (Cache-moi maintenant pour 1 Essence runique, de n'importe quel domaine ; à partir du tour suivant, tu peux me révéler pour 0, et je gagne Réaction.)\nQuand tu me joues, choisis un champ de bataille : s'il s'y trouve 4 unités ou plus, tu peux y renvoyer une unité ennemie dans la main de son propriétaire."
+  },
+  "RAD-109/167": {
+    n: "Evelynn",
+    tx: "Désarmement. (Quand j'attaque, donne -1 Puissance à une unité ennemie présente ici, ce tour-ci.)\nQuand je tiens un champ de bataille, si tu contrôles ici une carte face cachée, marque 1 point."
+  },
+  "RAD-109a/167": {
+    n: "Evelynn",
+    tx: "Désarmement. (Quand j'attaque, donne -1 Puissance à une unité ennemie présente ici, ce tour-ci.)\nQuand je tiens un champ de bataille, si tu contrôles ici une carte face cachée, marque 1 point."
+  },
+  "RAD-110/167": {
+    n: "Lulu",
+    tx: "Quand je me déplace, tu peux faire passer à 4 la Puissance de base d'une autre unité, ce tour-ci."
+  },
+  "RAD-115/167": {
+    n: "Transpositionniste",
+    tx: "1 Essence runique, épuiser : renvoie une unité alliée dans la main de son propriétaire. Tu peux jouer une unité de Puissance inférieure à celle qu'avait cette unité, sans payer son coût."
+  },
+  "RAD-116/167": {
+    n: "Affiche de concert",
+    tx: "Déploiement. (Ne se joue que sur un champ de bataille. Quand un adversaire tient ce champ de bataille, cet équipement meurt.)\nQuand tu joues cet équipement, ou quand tu conquiers ici, tu peux payer 1 Énergie pour créer un jeton d'unité Recrue de 1 Puissance dans ta base."
+  },
+  "RAD-117/167": {
+    n: "Pour Demacia !",
+    tx: "Réaction. (Se joue à tout moment, même avant qu'un sort ou une capacité ne se résolve.)\nChoisis un champ de bataille : donne Bouclier 2 aux unités alliées présentes là, ce tour-ci. (+2 Puissance tant qu'elles sont défenseuses.)"
+  },
+  "RAD-118/167": {
+    n: "Héraut de l'empereur",
+    tx: "Quand tu me joues, choisis une unité alliée : sa Puissance de base passe à 5 ce tour-ci."
+  },
+  "RAD-125/167": {
+    n: "Dévoreur des dunes",
+    tx: "Tu peux tuer une unité alliée en coût additionnel pour me jouer. Si tu le fais, je coûte 2 Énergie de moins.\nProtection. (L'adversaire doit payer 1 Essence runique de plus, de n'importe quel domaine, pour me choisir avec un sort ou une capacité.)"
+  },
+  "RAD-126/167": {
+    n: "Esprit éploré",
+    tx: "Agonie : tu peux tuer une unité ou un équipement présent ici. (Effet obtenu quand je meurs.)"
+  },
+  "RAD-127/167": {
+    n: "Démonstration enflammée",
+    tx: "Exhibe une carte dont le coût en Énergie est de 7 ou plus. (En jouant cette carte, tu peux révéler une telle carte de ta main ou en désigner une alliée.)\nCrée deux jetons d'unité Recrue de 1 Puissance dans ta base. Si tu as exhibé une carte, crées-en quatre à la place."
+  },
+  "RAD-128/167": {
+    n: "Éclaireur inébranlable",
+    tx: "Tank. (Les dégâts de combat doivent m'être assignés en premier.)\nTant qu'il y a 2 unités ou équipements alliés ou plus, autres que moi, sur mon champ de bataille, j'ai +2 Puissance."
+  },
+  "RAD-129/167": {
+    n: "Capitaine trifarien",
+    tx: "Quand tu me joues, regarde les 4 premières cartes de ton deck principal : tu peux y révéler une unité ou un équipement dont le coût ne dépasse pas 3 Énergie et 1 Essence runique, de n'importe quel domaine, et la piocher. Recycle les autres."
+  },
+  "RAD-132/167": {
+    n: "Heimerdinger",
+    tx: "Si tu devais créer un jeton d'unité à un endroit alors que je suis sur un champ de bataille, tu peux créer à la place un jeton d'unité Méca de 3 Puissance au même endroit."
+  },
+  "RAD-136/167": {
+    n: "Geôle du port",
+    tx: "Déploiement. (Ne se joue que sur un champ de bataille. Quand un adversaire tient ce champ de bataille, cet équipement meurt.)\nQuand tu joues cet équipement, bannis une unité présente ici.\nQuand tu tiens ce champ de bataille, tue cet équipement pour jouer la carte bannie sans payer son coût. (Les jetons ne sont pas des cartes.)"
+  },
+  "RAD-137/167": {
+    n: "Mordekaiser",
+    tx: "Quand tu me joues, ou quand j'attaque, tu peux défausser 1 carte pour tuer une unité ou un équipement."
+  },
+  "RAD-137a/167": {
+    n: "Mordekaiser",
+    tx: "Quand tu me joues, ou quand j'attaque, tu peux défausser 1 carte pour tuer une unité ou un équipement."
+  },
+  "RAD-138/167": {
+    n: "Seraphine",
+    tx: "Quand tu me joues, ou quand je deviens épuisée, crée un jeton d'unité Recrue de 1 Puissance dans ta base.\nJ'ai +1 Puissance pour chaque autre unité épuisée que tu contrôles."
+  },
+  "RAD-138a/167": {
+    n: "Seraphine",
+    tx: "Quand tu me joues, ou quand je deviens épuisée, crée un jeton d'unité Recrue de 1 Puissance dans ta base.\nJ'ai +1 Puissance pour chaque autre unité épuisée que tu contrôles."
+  },
+  "RAD-139/167": {
+    n: "Le Garçon qui brisa le temps",
+    tx: "Amplification — 1 Énergie et m'épuiser. (Coût à payer pour m'amplifier. Utilisable seulement si je ne le suis pas déjà.)\nRetire-moi mon amplification, épuise-moi : réduis de 2 Énergie + 1 Essence runique, de n'importe quel domaine, le coût de la prochaine unité que tu joues ce tour-ci, et donne-lui « Tue-moi à la fin du tour »."
+  },
+  "RAD-140/167": {
+    n: "Chronorupture",
+    tx: "En coût additionnel pour jouer cette carte, paie autant d'Essence runique que tu veux.\nBannis un nombre d'unités que tu contrôles égal à l'Essence runique ainsi payée, puis, pour chacune, son propriétaire la rejoue au même endroit ou dans sa base, sans payer son coût. (Tu choisis l'ordre.)"
+  },
+  "RAD-141/167": {
+    n: "Expert en hextosifs",
+    tx: "1 Énergie + 1 Essence runique, de n'importe quel domaine, épuiser : crée un jeton d'équipement Bombe sur un champ de bataille. (Il a Déploiement. Quand il meurt, inflige 2 dégâts à un ennemi présent là et tue tes autres Bombes présentes là.)"
+  },
+  "RAD-142/167": {
+    n: "Champ de mines hextosives",
+    tx: "Action. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nTue autant de jetons Bombe alliés que tu veux. À la fin du tour, crée autant de jetons Bombe sur un même champ de bataille."
+  },
+  "RAD-143/167": {
+    n: "Revenant de fer",
+    tx: "Réaction : bannir une unité ou un équipement de ta défausse, épuiser — ajoute 1 Essence runique, de n'importe quel domaine. Cette Essence runique ne peut servir qu'à jouer des unités ou des équipements. (On ne peut pas réagir aux capacités qui ajoutent des ressources.)"
+  },
+  "RAD-145/167": {
+    n: "Dame de l'horlogerie",
+    tx: "Au début de ta phase Principale, tu peux payer 1 Énergie pour choisir un équipement allié : il devient un équipement-unité dont la Puissance est égale à son coût en Énergie, jusqu'à ce que tu choisisses un autre équipement avec moi."
+  },
+  "RAD-147/167": {
+    n: "Fierté de Nazumah",
+    tx: "1 Énergie, épuiser : donne à une unité alliée « J'ai autant d'Assaut que de Bouclier » ce tour-ci. (Chaque Assaut lui donne +1 Puissance tant qu'elle est attaquante.)"
+  },
+  "RAD-148/167": {
+    n: "Coups de ntofo",
+    tx: "Action. (Se joue pendant ton tour ou dans un affrontement, chaîne vide.)\nDonne Bouclier 2 à une unité alliée ce tour-ci, puis inflige à une unité ennemie des dégâts égaux à son Bouclier. (Chaque Bouclier donne +1 Puissance à une unité tant qu'elle est défenseuse.)"
+  },
+  "RAD-150/167": {
+    n: "Lame de l'exilé",
+    tx: "Équiper — 1 Essence runique, de n'importe quel domaine, ou épuiser une unité alliée. (Coût à payer pour attacher cet équipement à une unité que tu contrôles.)"
+  },
+  "RAD-151/167": {
+    n: "Chanteuse aux yeux d'étoiles",
+    tx: "En coût additionnel pour jouer un sort, tu peux m'épuiser ainsi que trois unités alliées pour réduire de 2 Énergie le coût de ce sort."
+  },
+  "RAD-152/167": {
+    n: "Bis",
+    tx: "Choisis-en deux :\n— inflige 2 dégâts à une unité ;\n— crée deux jetons d'unité Recrue de 1 Puissance ;\n— donne +1 Puissance à deux unités au maximum, ce tour-ci ;\n— regarde les 2 premières cartes de ton deck principal, pioche-en 1 et recycle l'autre."
+  },
+  "RAD-153/167": {
+    n: "L'Étreinte de l'agonie",
+    tx: "Une fois par tour, quand tu joues une carte depuis sa position face cachée, pioche 1 carte. Ensuite, si ce n'est pas ton tour, défausse 1 carte."
+  },
+  "RAD-155/167": {
+    n: "Parangon de Demacia",
+    tx: "Quand tu joues un équipement ayant Déploiement, tu peux m'épuiser et payer 1 Essence runique, de n'importe quel domaine, pour déplacer une unité alliée vers ce champ de bataille."
+  },
+  "RAD-156/167": {
+    n: "Étendard démacien",
+    tx: "Déploiement. (Ne se joue que sur un champ de bataille. Quand un adversaire tient ce champ de bataille, cet équipement meurt.)\nQuand une ou plusieurs unités alliées attaquent ici, donne +2 Puissance à l'une d'elles ce tour-ci.\nQuand tu tiens ce champ de bataille, tu peux renvoyer cet équipement dans la main de son propriétaire."
+  },
+  "RAD-157/167": {
+    n: "Académie des éclaireurs de Bandle",
+    tx: "Quand tu caches une carte ici, crée un jeton d'équipement Or, épuisé. (Il a « Réaction : tuer ce jeton et l'épuiser — ajoute 1 Essence runique, de n'importe quel domaine ».)"
+  },
+  "RAD-158/167": {
+    n: "Marché noir",
+    tx: "2 Essences runiques, de n'importe quel domaine : pioche 1 carte. Chaque joueur peut utiliser cette capacité une fois pendant son tour, même s'il ne contrôle pas ce champ de bataille."
+  },
+  "RAD-160/167": {
+    n: "Panorama cosmique",
+    tx: "Quand tu tiens ce champ de bataille, si ton deck de runes est vide, tu marques 1 point."
+  },
+  "RAD-161/167": {
+    n: "Mémorial Durand",
+    tx: "Quand tu défends ici, choisis une unité que tu contrôles ici : donne-lui Tank pour ce combat. (Les dégâts de combat doivent lui être assignés en premier.)"
+  },
+  "RAD-162/167": {
+    n: "Repaire des Lucioles",
+    tx: "Quand tu conquiers ici, la prochaine unité que tu joues ce tour-ci a Accélération. (Tu peux payer 1 Énergie + 1 Essence runique de son domaine en coût additionnel pour qu'elle arrive prête.)"
+  },
+  "RAD-163/167": {
+    n: "Cercle des chasseurs",
+    tx: "Pour chaque joueur, la première unité ou le premier équipement qu'il joue ici pendant son tour coûte 1 Énergie de moins."
+  },
+  "RAD-164/167": {
+    n: "Amphithéâtre comble",
+    tx: "Les unités Champion présentes ici ont +1 Puissance."
+  },
+  "RAD-165/167": {
+    n: "Rakelstake",
+    tx: "Pour chaque joueur, la première fois qu'il joue ici une unité ou un équipement à chaque tour, il fait une Prédiction. (Il regarde la première carte de son deck principal et peut la recycler.)"
+  },
+  "RAD-166/167": {
+    n: "Monastère en ruine",
+    tx: "Quand tu conquiers ici, tu peux défausser 1 carte et canaliser 1 rune, épuisée."
+  },
+  "RAD-167/167": {
+    n: "Neeko",
+    tx: "(Les cartes neutres peuvent entrer dans un deck de n'importe quel domaine.)\nSi Neeko est dans ton deck, choisis 3 légendes différentes en plus de ta légende de départ. (Différentes signifie qu'aucune ne porte le même nom.)\nQuand tu me joues, choisis une de ces légendes et ajoute-la à ta zone de légende tant que je suis sur le plateau."
+  },
+  "RAD-168/167": {
+    n: "Le Garçon qui brisa le temps",
+    tx: "Amplification — 1 Énergie et m'épuiser. (Coût à payer pour m'amplifier. Utilisable seulement si je ne le suis pas déjà.)\nRetire-moi mon amplification, épuise-moi : réduis de 2 Énergie + 1 Essence runique, de n'importe quel domaine, le coût de la prochaine unité que tu joues ce tour-ci, et donne-lui « Tue-moi à la fin du tour »."
+  },
+  "RAD-169/167": {
+    n: "Expert en hextosifs",
+    tx: "1 Énergie + 1 Essence runique, de n'importe quel domaine, épuiser : crée un jeton d'équipement Bombe sur un champ de bataille. (Il a Déploiement. Quand il meurt, inflige 2 dégâts à un ennemi présent là et tue tes autres Bombes présentes là.)"
+  },
+  "RAD-170/167": {
+    n: "Revenant de fer",
+    tx: "Réaction : bannir une unité ou un équipement de ta défausse, épuiser — ajoute 1 Essence runique, de n'importe quel domaine. Cette Essence runique ne peut servir qu'à jouer des unités ou des équipements. (On ne peut pas réagir aux capacités qui ajoutent des ressources.)"
+  },
+  "RAD-171/167": {
+    n: "Dame de l'horlogerie",
+    tx: "Au début de ta phase Principale, tu peux payer 1 Énergie pour choisir un équipement allié : il devient un équipement-unité dont la Puissance est égale à son coût en Énergie, jusqu'à ce que tu choisisses un autre équipement avec moi."
+  },
+  "RAD-172/167": {
+    n: "Fierté de Nazumah",
+    tx: "1 Énergie, épuiser : donne à une unité alliée « J'ai autant d'Assaut que de Bouclier » ce tour-ci. (Chaque Assaut lui donne +1 Puissance tant qu'elle est attaquante.)"
+  },
+  "RAD-174/167": {
+    n: "Chanteuse aux yeux d'étoiles",
+    tx: "En coût additionnel pour jouer un sort, tu peux m'épuiser ainsi que trois unités alliées pour réduire de 2 Énergie le coût de ce sort."
+  },
+  "RAD-175/167": {
+    n: "L'Étreinte de l'agonie",
+    tx: "Une fois par tour, quand tu joues une carte depuis sa position face cachée, pioche 1 carte. Ensuite, si ce n'est pas ton tour, défausse 1 carte."
+  },
+  "RAD-176/167": {
+    n: "Parangon de Demacia",
+    tx: "Quand tu joues un équipement ayant Déploiement, tu peux m'épuiser et payer 1 Essence runique, de n'importe quel domaine, pour déplacer une unité alliée vers ce champ de bataille."
+  },
+  "RAD-178/167": {
+    n: "K'Sante",
+    tx: "Accélération. (Tu peux payer 1 Énergie + 1 Essence runique en coût additionnel pour que j'arrive prêt.)\nBouclier 2. (+2 Puissance tant que je suis défenseur.)\nQuand je tiens un champ de bataille, canalise 1 rune."
+  },
   "RAD-179/167": {
     n: "Aphelios, l'Exalté",
     tx: "Quand tu m'attaches un Équipement, choisis un effet que tu n'as pas déjà choisi ce tour-ci —\n— redresse 2 runes ;\n— canalise 1 rune, épuisée ;\n— améliore une unité alliée. (Améliorer une unité : lui donner +1 Puissance si elle n'en a pas déjà une.)",
@@ -1827,6 +2279,46 @@ window.RB_FR = {
     note: "L'épuiser donne 1 Énergie. La recycler donne 1 Essence runique de Calme."
   },
 
+  "RAD-R03": {
+    n: "Rune d'Esprit",
+    tx: "Aucun texte de règles."
+  },
+  "RAD-R03a": {
+    n: "Rune d'Esprit",
+    tx: "Aucun texte de règles."
+  },
+  "RAD-R04": {
+    n: "Rune de Corps",
+    tx: "Aucun texte de règles."
+  },
+  "RAD-R04a": {
+    n: "Rune de Corps",
+    tx: "Aucun texte de règles."
+  },
+  "RAD-R05": {
+    n: "Rune de Chaos",
+    tx: "Aucun texte de règles."
+  },
+  "RAD-R05a": {
+    n: "Rune de Chaos",
+    tx: "Aucun texte de règles."
+  },
+  "RAD-SP2/005": {
+    n: "Akali",
+    tx: "La première fois que je me déplace à chaque tour, ajoute 1 Énergie + 1 Essence runique, de n'importe quel domaine.\nLa deuxième fois que je me déplace à chaque tour, bannis la première carte de ton deck principal. Jusqu'à ta prochaine phase Finale, tu peux jouer cette carte. (Tu en paies quand même les coûts.)"
+  },
+  "RAD-SP3/005": {
+    n: "Evelynn",
+    tx: "Désarmement. (Quand j'attaque, donne -1 Puissance à une unité ennemie présente ici, ce tour-ci.)\nQuand je tiens un champ de bataille, si tu contrôles ici une carte face cachée, marque 1 point."
+  },
+  "RAD-SP4/005": {
+    n: "Kai'Sa",
+    tx: "Désarmement. (Quand j'attaque, donne -1 Puissance à une unité ennemie présente ici, ce tour-ci.)\nTant que je suis dans un affrontement, tes sorts ont Réaction. (Ils se jouent à tout moment, même avant qu'un sort ou une capacité ne se résolve.)"
+  },
+  "RAD-SP5/005": {
+    n: "Seraphine",
+    tx: "Quand tu me joues, ou quand je deviens épuisée, crée un jeton d'unité Recrue de 1 Puissance dans ta base.\nJ'ai +1 Puissance pour chaque autre unité épuisée que tu contrôles."
+  },
   "SFD-001/221": {
     n: "Contre toute attente",
     tx: "Réaction. (Se joue à tout moment, même avant qu'un sort ou une capacité ne se résolve.)\nDonne à une unité alliée présente sur un champ de bataille +2 Puissance ce tour-ci pour chaque unité ennemie présente au même endroit."

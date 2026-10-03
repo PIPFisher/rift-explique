@@ -10,13 +10,13 @@ window.Extension = (function(){
   var DOSSIER = REPO + "/tree/main/extension";
 
   var ATOUTS = [
-    { t:"Les 1197 cartes",
+    { t:"Les 1320 cartes",
       s:"Nom, texte de règles et, sur les cartes qui le méritent, une note qui explique le piège. " +
         "Tout le jeu est couvert : Origins, Proving Grounds, Spiritforged, Unleashed, Vendetta et Radiance." },
     { t:"Une terminologie tenue",
       s:"Essence runique, Puissance, Agonie, Amplification, Protection… Riot ne publie pas encore " +
         "Riftbound en français : ces termes sont un choix assumé, appliqué de la même façon sur les " +
-        "1197 cartes et dans les règles, pour qu'un mot veuille toujours dire la même chose." },
+        "1320 cartes et dans les règles, pour qu'un mot veuille toujours dire la même chose." },
     { t:"Les pictogrammes du jeu",
       s:"Énergie, runes de chaque domaine, Puissance et épuisement s'affichent avec les symboles " +
         "officiels de Riot, servis depuis leurs serveurs. Ce sont exactement les symboles que tu as sous les yeux sur la carte." },
@@ -96,8 +96,8 @@ window.Extension = (function(){
           '<p class="xt-dl-sub">Archive du projet · les cinq étapes sont juste en dessous</p>' +
         '</div>' +
         '<ul class="xt-facts">' +
-          '<li><b>1197</b> cartes traduites</li>' +
-          '<li><b>967</b> rappels de règles</li>' +
+          '<li><b>1320</b> cartes traduites</li>' +
+          '<li><b>1065</b> rappels de règles</li>' +
           '<li><b>834</b> notes explicatives</li>' +
           '<li><b>0</b> donnée envoyée</li>' +
         '</ul>' +

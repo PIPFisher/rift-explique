@@ -432,7 +432,7 @@ window.REGLES_DATA = {
     titre: "Les mots-clés",
     couleur: "vert",
     eyebrow: "Les mots surlignés sur les cartes",
-    lede: "Les vingt-cinq mots surlignés qu'on trouve sur les cartes. Chacun est un raccourci " +
+    lede: "Les vingt-huit mots surlignés qu'on trouve sur les cartes. Chacun est un raccourci " +
       "pour une phrase de règles complète : ce chapitre donne cette phrase, puis ce qui " +
       "coince en pratique.<br>Comme les cartes sont imprimées en anglais, chaque mot porte ici " +
       "<b>son nom anglais à côté du nom français</b> — et la recherche, en haut à gauche, " +
@@ -539,7 +539,13 @@ window.REGLES_DATA = {
             r: "<b>Je peux me déplacer d'un champ de bataille à un autre</b> avec un déplacement standard.",
             p: ["Normalement une unité part de ta base. Gank ajoute une destination : elle peut aussi aller d'un champ de bataille à un autre.",
                 "C'est une permission, pas un déplacement en plus : l'unité n'en obtient pas le droit de bouger une fois de plus dans le tour.",
-                "Le même mot-clé écrit deux fois n'ajoute rien."] }
+                "Le même mot-clé écrit deux fois n'ajoute rien."] },
+          { m: "Désarmement", vo: "Disarm", id: "mc-desarmement",
+            r: "<b>Quand j'attaque, donne -1 Puissance à une unité ennemie présente ici, ce tour-ci.</b>",
+            p: ["Le déclenchement part quand l'unité <b>attaque</b>, jamais quand elle défend.",
+                "<b>Désarmement N</b> retire N Puissance au lieu d'une. Plusieurs Désarmement sur la même unité se cumulent.",
+                "Le malus vaut pour le tour entier, pas seulement pour le combat en cours.",
+                "Apparu avec l'extension Radiance."] }
         ],
         cas: [
           { t: "Tank et Arrière-ligne sur la même unité",
@@ -654,7 +660,13 @@ window.REGLES_DATA = {
                 "Si l'équipement n'a pas de coût d'Équiper, ou si le coût ne peut pas être payé, ou si le détachement ou l'attachement est impossible, l'équipement <b>ne bouge pas</b>.",
                 "La capacité Équiper n'est pas activée pour autant, et l'unité avec Expert en armes n'est pas ciblée par elle.",
                 "Écrit deux fois, il se déclenche deux fois, et chaque déclenchement peut viser un équipement différent.",
-                "N'a plus aucune fonction une fois l'unité en jeu."] }
+                "N'a plus aucune fonction une fois l'unité en jeu."] },
+          { m: "Déploiement", vo: "Deploy", id: "mc-deploiement",
+            r: "<b>Ne se joue que sur un champ de bataille. Quand un adversaire tient ce champ de bataille, cet équipement meurt.</b>",
+            p: ["Une restriction et un déclenchement à la fois : l'équipement ne peut pas être posé dans une base, et il ne survit pas à la perte du lieu.",
+                "Il meurt quand l'adversaire <b>tient</b> le champ de bataille, c'est-à-dire pendant sa phase Initiale — pas à l'instant où il en prend le contrôle.",
+                "Plusieurs cartes de Radiance savent déplacer un équipement ayant Déploiement d'un champ de bataille à un autre, ou le reprendre en main avant qu'il ne tombe.",
+                "Apparu avec l'extension Radiance."] }
         ],
         erreurs: [
           { t: "Jouer un équipement avec Dégainer sans l'attacher.",
@@ -689,7 +701,13 @@ window.REGLES_DATA = {
             r: "<b>Tant que j'ai le statut amplifié, je gagne [texte].</b>",
             p: ["Être amplifié ne fait rien par soi-même : c'est un marqueur posé sur la carte, rien de plus. Il sert d'interrupteur pour le texte écrit après <b>Amplifié</b>, qui ne compte que tant que le marqueur est là.",
                 "C'est le pendant d'Amplification : l'un pose le marqueur, l'autre s'en sert.",
-                "Si le texte dépendant est une capacité déclenchée du type « quand je deviens amplifié », elle se déclenche bien au moment où la source est amplifiée."] }
+                "Si le texte dépendant est une capacité déclenchée du type « quand je deviens amplifié », elle se déclenche bien au moment où la source est amplifiée."] },
+          { m: "Exhiber", vo: "Show Off", id: "mc-exhiber",
+            r: "<b>En jouant cette carte, tu peux révéler de ta main une carte correspondant à la description, ou en désigner une alliée déjà sur le plateau.</b>",
+            p: ["C'est facultatif. Sans exhiber, la carte se joue quand même : seul l'effet conditionnel est perdu.",
+                "La carte exhibée ne bouge pas : elle est montrée, pas jouée, pas défaussée.",
+                "Le reste du texte précise ce qu'on gagne si on a exhibé — souvent un effet doublé, ou calculé sur la carte montrée.",
+                "Apparu avec l'extension Radiance."] }
         ],
         erreurs: [
           { t: "Compter la carte elle-même pour sa propre Légion.",

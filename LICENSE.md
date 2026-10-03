@@ -13,7 +13,7 @@ Projet de fan non officiel, sans lien avec Riot Games ni avec Rift Atlas.
 
 ## Ce qui appartient à l'auteur
 
-La **traduction française des 1197 cartes**, les **notes explicatives**, les
+La **traduction française des 1320 cartes**, les **notes explicatives**, les
 choix de terminologie, le lexique des règles, ainsi que le code du site et de
 l'extension sont l'œuvre de **Fisher** (<https://github.com/PIPFisher>),
 publiée sous licence **Creative Commons Attribution – Pas d'Utilisation

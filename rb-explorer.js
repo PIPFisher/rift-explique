@@ -1,5 +1,5 @@
 /* ============================================================
-   explorer.js — recherche et filtres sur les 1197 cartes
+   explorer.js — recherche et filtres sur les 1320 cartes
    ============================================================ */
 window.Explorer = (function(){
   "use strict";
@@ -64,8 +64,8 @@ window.Explorer = (function(){
       '<div class="view-head">' +
         '<div class="eyebrow">Collection · ' + RB.cards.length + ' cartes</div>' +
         '<h1>Les cartes</h1>' +
-        '<p class="lede">Toutes les cartes des cinq extensions, avec leurs illustrations officielles. ' +
-        'Les 1197 cartes sont traduites en français. Clique sur une carte pour son texte complet et sa traduction ; survole un mot-clé pour son explication.</p>' +
+        '<p class="lede">Toutes les cartes des six extensions, avec leurs illustrations officielles. ' +
+        'Les 1320 cartes sont traduites en français. Clique sur une carte pour son texte complet et sa traduction ; survole un mot-clé pour son explication.</p>' +
       '</div>' +
       '<div class="panel" style="margin-bottom:16px">' +
         '<div class="filters">' +

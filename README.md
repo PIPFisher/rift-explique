@@ -1,6 +1,6 @@
 # Le Rift Expliqué
 
-Riftbound en français : les 1197 cartes traduites à la main, et une extension
+Riftbound en français : les 1320 cartes traduites à la main, et une extension
 Chrome qui affiche la traduction au survol de la souris pendant la partie.
 
 **[rift-explique.github.io](https://rift-explique.github.io)**
@@ -54,12 +54,12 @@ ainsi.
 | Onglet | Contenu |
 |---|---|
 | **Extension** | Ce que fait l'extension, son installation, ce qu'elle envoie |
-| **Les règles** | Le vocabulaire du jeu, puis les vingt-cinq mots-clés avec leur nom anglais et le numéro d'article officiel |
+| **Les règles** | Le vocabulaire du jeu, puis les vingt-huit mots-clés avec leur nom anglais et le numéro d'article officiel |
 | **Démarrer** | Les questions de la première partie : affrontement, chaîne, score, pièges classiques |
 
 ## La traduction
 
-Les 1197 cartes des six extensions — Origins, Proving Grounds, Spiritforged,
+Les 1320 cartes des six extensions — Origins, Proving Grounds, Spiritforged,
 Unleashed, Vendetta et Radiance — sont traduites dans `rb-fr.js`, qui est la
 source. `fr.json` en est l'index généré, servi au site et à l'extension.
 
@@ -89,7 +89,7 @@ index.html            coquille et navigation
 style.css             thème sombre, composants
 rb-app.js             navigation entre les onglets
 rb-core.js            chargement, pictogrammes, lexique
-rb-fr.js              traduction des 1197 cartes — la source
+rb-fr.js              traduction des 1320 cartes — la source
 fr.json               index généré depuis rb-fr.js, servi au site et à l'extension
 cards-data.js         données officielles allégées, liens vers les images de Riot
 rb-extension.js       onglet « Extension »
