@@ -97,6 +97,16 @@ window.RB = (function(){
     return card.img + sep + "w=" + (width || 320) + "&q=80&auto=format";
   }
 
+  // Certaines cartes sont connues avant que Riot n'en publie l'illustration :
+  // les images viennent des serveurs de Riot et ne sont jamais recopiées ici,
+  // alors on dessine un cadre sobre en attendant.
+  function visuel(card, width, alt){
+    if(card.img) return '<img' + (alt ? ' loading="lazy"' : '') + ' src="' + esc(img(card, width)) +
+      '" alt="' + esc(card.n) + '" onerror="this.style.visibility=\'hidden\'">';
+    return '<div class="sans-art" style="--dom:' + domColor(card) + '">' +
+      '<b>' + esc(displayName(card)) + '</b><span>Illustration pas encore publiée par Riot</span></div>';
+  }
+
   /* ---------- helpers ---------- */
   function domColor(card){
     var d = (card.d && card.d[0]) || "Colorless";
@@ -123,8 +133,7 @@ window.RB = (function(){
     var land = c.o === "landscape";
     return '<article class="card' + (land ? " landscape" : "") + '" data-id="' + esc(c.id) + '" ' +
              'style="--dom:' + domColor(c) + '" tabindex="0" role="button" aria-label="' + esc(c.n) + '">' +
-             '<img loading="lazy" src="' + esc(img(c, opts.w || 320)) + '" alt="' + esc(c.n) + '" ' +
-               'onerror="this.style.visibility=\'hidden\'">' +
+             visuel(c, opts.w || 320, true) +
              (opts.caption === false ? "" :
                '<div class="card-cap"><b>' + esc(displayName(c)) + '</b><i>' + esc(c.e == null ? typeFR(c.t) : c.e) + '</i></div>') +
            '</article>';
@@ -147,7 +156,7 @@ window.RB = (function(){
     stats += '<div class="stat"><span>Numéro</span><b>' + esc(c.code) + '</b></div>';
 
     return '<div class="detail">' +
-      '<img src="' + esc(img(c, 640)) + '" alt="' + esc(c.n) + '">' +
+      visuel(c, 640, false) +
       '<div class="detail-meta">' +
         '<h2>' + esc(displayName(c)) + '</h2>' +
         (hasFrenchName(c) ? '<div class="vo-name">' + esc(nameVO(c)) + '</div>' : '') +

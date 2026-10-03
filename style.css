@@ -153,6 +153,24 @@ label.field span{font-family:var(--cond);font-size:12px;letter-spacing:.12em;tex
 .card:hover{transform:translateY(-3px);box-shadow:0 14px 26px -14px #000;border-color:var(--dom)}
 .card img{width:100%;aspect-ratio:744/1039;object-fit:cover;background:#0A141C}
 .card.landscape img{aspect-ratio:1039/744}
+/* carte connue, illustration pas encore publiée par Riot */
+.sans-art{
+  --dom:var(--Colorless);
+  width:100%;aspect-ratio:744/1039;border-radius:6px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;
+  text-align:center;padding:14px;
+  background:
+    repeating-linear-gradient(135deg, rgba(255,255,255,.015) 0 9px, transparent 9px 18px),
+    linear-gradient(180deg, color-mix(in srgb, var(--dom) 16%, #0A141C), #0A141C);
+  border:1px dashed color-mix(in srgb, var(--dom) 45%, #162b36);
+}
+.sans-art b{font-family:var(--serif);font-size:15px;color:#EFF6F8;line-height:1.25}
+.sans-art span{font-family:var(--cond);font-size:12px;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--text-faint);max-width:22ch;line-height:1.3}
+.card .sans-art{border-radius:0;border:0}
+.landscape .sans-art{aspect-ratio:1039/744}
+.detail .sans-art{border-radius:8px}
+
 .card .fallback{
   position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:10px;
   font-family:var(--cond);font-size:13px;letter-spacing:.06em;color:var(--text-faint);
