@@ -11,7 +11,7 @@
   "use strict";
 
   var REMOTE = "https://rift-explique.github.io/fr.json";
-  var VERSION = "1.22.0";
+  var VERSION = "1.23.0";
 
   // Reprise après un rechargement de l'extension. Chrome laisse l'ancien
   // script tourner dans les onglets déjà ouverts : le service worker nous
@@ -461,12 +461,12 @@
   //   c  magenta     #C8326E  Assaut, Bouclier, Tank
   //   n  gris        #787878  Vision, Amplification
   var KW_FAM = [
-    ["t", ["Accélération", "Répétition", "Embuscade", "Réaction", "Dégainer", "Action", "Légion", "Caché", "Flux"]],
+    ["t", ["Accélération", "Déploiement", "Répétition", "Embuscade", "Réaction", "Dégainer", "Action", "Légion", "Caché", "Flux"]],
     ["e", ["Amplifiées", "Amplifiés", "Amplifiée", "Amplifié", "Temporaire", "Protection", "Vengeance", "Agonie", "Chasse", "Niveau", "Vision", "Gank"]],
-    ["c", ["Arrière-ligne", "Bouclier", "Assaut", "Tank"]],
-    ["n", ["Expert en armes", "Amplification", "Prédiction", "Puissantes", "Puissante", "Équiper", "Brûler", "Unique"]]
+    ["c", ["Désarmement", "Arrière-ligne", "Bouclier", "Assaut", "Tank"]],
+    ["n", ["Expert en armes", "Amplification", "Prédiction", "Puissantes", "Puissante", "Équiper", "Exhiber", "Exhibe", "Brûler", "Unique"]]
   ];
-  var KW_VAL = /^(Assaut|Bouclier|Protection|Chasse|Niveau|Brûler|Prédiction)$/;
+  var KW_VAL = /^(Assaut|Bouclier|Protection|Chasse|Niveau|Brûler|Prédiction|Désarmement)$/;
 
   var KW = (function () {
     var all = [];

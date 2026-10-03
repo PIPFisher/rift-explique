@@ -2,9 +2,9 @@
 
 Affiche la **traduction française d'une carte au survol de la souris**, sur [Rift Atlas](https://riftatlas.com) et dans le simulateur de parties [play.riftatlas.com](https://play.riftatlas.com).
 
-Les 1197 cartes du jeu sont traduites : nom, texte de règles, et une note explicative sur les cartes difficiles à comprendre.
+Les 1320 cartes du jeu sont traduites : nom, texte de règles, et une note explicative sur les cartes difficiles à comprendre.
 
-Riot ne publiant pas encore de version française, la terminologie — Agonie, Amplification, Protection, Essence runique… — est un choix de l'auteur, tenu de la même façon sur les 1197 cartes et dans les règles. Le panneau reprend le **code couleur imprimé sur les cartes** : sarcelle pour la façon de jouer la carte, vert pour ses capacités, rose pour son rôle au combat, gris pour les actions de jeu.
+Riot ne publiant pas encore de version française, la terminologie — Agonie, Amplification, Protection, Essence runique… — est un choix de l'auteur, tenu de la même façon sur les 1320 cartes et dans les règles. Le panneau reprend le **code couleur imprimé sur les cartes** : sarcelle pour la façon de jouer la carte, vert pour ses capacités, rose pour son rôle au combat, gris pour les actions de jeu.
 
 ---
 
