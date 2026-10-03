@@ -149,10 +149,21 @@
     annonce("Panneau figé — tu peux cliquer dedans");
   }
 
+  /* Un traducteur de page (celui de Chrome, par exemple) traduit tout ce qu'il
+     trouve dans le document, y compris ce que nous venons d'y écrire. Il croit
+     lire de l'anglais, et notre « Sort » ressort en « Tri ». Ces trois marques
+     lui disent de laisser notre texte tranquille. */
+  function francais(el) {
+    el.lang = "fr";
+    el.setAttribute("translate", "no");
+    el.classList.add("notranslate");
+    return el;
+  }
+
   function annonce(texte, eteint) {
     var t = document.querySelector(".rbfr-toast");
     if (!t) {
-      t = document.createElement("div");
+      t = francais(document.createElement("div"));
       t.className = "rbfr-toast";
       document.documentElement.appendChild(t);
     }
@@ -226,7 +237,7 @@
       return "<kbd>" + esc(mod ? mod + " + " + t : t) + "</kbd>";
     }
 
-    aide = document.createElement("div");
+    aide = francais(document.createElement("div"));
     aide.className = "rbfr-aide";
     aide.innerHTML =
       '<div class="rbfr-aide-boite" role="dialog" aria-label="Raccourcis clavier">' +
@@ -473,12 +484,12 @@
   // pour une copie de données trop ancienne ou un premier chargement hors ligne.
   var KW_SECOURS = {
     fam: {
-      t: ["Accélération", "Déploiement", "Répétition", "Embuscade", "Réaction", "Dégainer", "Action", "Légion", "Caché", "Flux"],
-      e: ["Amplifiées", "Amplifiés", "Amplifiée", "Amplifié", "Temporaire", "Protection", "Vengeance", "Agonie", "Chasse", "Niveau", "Vision", "Gank"],
-      c: ["Désarmement", "Arrière-ligne", "Bouclier", "Assaut", "Tank"],
-      n: ["Expert en armes", "Amplification", "Prédiction", "Puissantes", "Puissante", "Équiper", "Exhiber", "Exhibe", "Brûler", "Unique"]
+      t: ["Accelerate", "Quick-Draw", "Reaction", "Ambush", "Repeat", "Deploy", "Action", "Legion", "Hidden", "Flow"],
+      e: ["Empowered", "Temporary", "Deathknell", "Deflect", "Ganking", "Hunt", "Level", "Vision"],
+      c: ["Backline", "Disarm", "Shield", "Assault", "Stunned", "Stun", "Tank"],
+      n: ["Weaponmaster", "Show Off", "Empower", "Predict", "Mighty", "Buffed", "Equip", "Buff", "Burn", "Unique"]
     },
-    val: ["Assaut", "Bouclier", "Protection", "Chasse", "Niveau", "Brûler", "Prédiction", "Désarmement"]
+    val: ["Assault", "Shield", "Deflect", "Hunt", "Level", "Burn", "Predict", "Disarm"]
   };
 
   var KW = null;
@@ -682,7 +693,7 @@
 
   function ensurePanel() {
     if (panel) return panel;
-    panel = document.createElement("div");
+    panel = francais(document.createElement("div"));
     // en jeu, le panneau est plus grand et plus lisible, où qu'il se place
     panel.className = "rbfr-panel" + (INGAME ? " rbfr-ingame" : "");
     panel.style.display = "none";
@@ -828,7 +839,7 @@
       if (old.parentElement === h1.parentElement) return;  // rien de mieux à proposer
     }
     if (old) old.remove();
-    var box = document.createElement("section");
+    var box = francais(document.createElement("section"));
     box.dataset.code = code || "";
     box.className = "rbfr-inline";
     box.innerHTML = panelHTML(lookup(code, h1.innerText), code, h1.innerText);
