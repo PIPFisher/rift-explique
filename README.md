@@ -63,10 +63,11 @@ Les 1327 cartes des six extensions — Origins, Proving Grounds, Spiritforged,
 Unleashed, Vendetta et Radiance — sont traduites dans `rb-fr.js`, qui est la
 source. `fr.json` en est l'index généré, servi au site et à l'extension.
 
-La terminologie est un choix de l'auteur, appliqué de la même façon sur les
-cartes et dans les règles : Essence runique, Puissance, Agonie, Amplification,
-Protection, Expert en armes, Dégainer, Arrière-ligne. Un mot y veut toujours
-dire la même chose.
+Les mots-clés gardent leur nom anglais — Ambush, Deathknell, Deflect, Empower,
+Buff, Stun — parce que c'est celui qui est imprimé sur la carte et employé dans
+le simulateur, sur Rift Atlas et au Discord. Autour d'eux, la phrase est en
+français, et la parenthèse explique le mot. Le reste du vocabulaire, lui, est
+traduit et tenu d'un bout à l'autre : Essence runique, Puissance, Énergie.
 
 La grammaire des pictogrammes de Riot est respectée à la lettre : `[C]` désigne
 une rune du domaine de la carte, `[A]` une rune de n'importe quel domaine, et

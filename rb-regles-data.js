@@ -114,9 +114,9 @@ window.REGLES_DATA = {
             r: "<b>Renvoyer une unité à sa base.</b> Elle n'est ni tuée ni défaussée : elle quitte simplement le champ de bataille.",
             p: ["C'est ce qui arrive aux attaquants quand des défenseurs tiennent encore après un combat.",
                 "Si un rappel remplace une mort, l'unité n'allant pas à la défausse, son <b>Agonie</b> (<i>Deathknell</i>) ne se déclenche pas."] },
-          { m: "Une amélioration", id: "voc-amelioration",
+          { m: "Un Buff", vo: "Buff", id: "voc-amelioration",
             r: "<b>Un bonus de +1 Puissance posé sur une unité.</b>",
-            p: ["Une unité ne peut en porter qu'une seule à la fois. <b>Assaut</b> (<i>Assault</i>), <b>Bouclier</b> (<i>Shield</i>) et <b>Protection</b> (<i>Deflect</i>) se cumulent, en revanche."] }
+            p: ["Une unité ne peut en porter qu'un seul à la fois. <b>Assault</b>, <b>Shield</b> et <b>Deflect</b> se cumulent, en revanche."] }
         ]
       },
       {
@@ -141,9 +141,9 @@ window.REGLES_DATA = {
             r: "<b>Le contrôle qui suit immédiatement le fait de jouer une carte.</b>",
             p: ["S'il révèle qu'une condition obligatoire n'a pas pu être remplie, tout est annulé et la carte retourne d'où elle vient.",
                 "C'est aussi le moment où une carte posée sur la chaîne cesse d'être « en attente » pour être <b>finalisée</b>."] },
-          { m: "Prédire", id: "voc-predire",
+          { m: "Predict", vo: "Predict", id: "voc-predire",
             r: "<b>Regarder la première carte de ton deck principal</b>, puis choisir de la laisser ou de la recycler.",
-            p: ["C'est ce que fait le mot-clé <b>Vision</b> quand ton permanent arrive — le mot est le même en anglais."] }
+            p: ["C'est ce que fait le mot-clé <b>Vision</b> quand ton permanent arrive."] }
         ]
       }
     ]

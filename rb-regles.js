@@ -55,14 +55,19 @@ window.Regles = (function(){
   }
 
   /* ---------- un mot-clé ---------- */
-  function motHTML(m){
+  // Dans le chapitre des mots-clés, c'est le nom anglais qui mène : c'est celui
+  // qui est imprimé sur la carte et employé partout ailleurs. Le français le
+  // suit, entre parenthèses, pour ceux qui l'avaient appris comme ça.
+  function motHTML(m, vedetteAnglaise){
+    var titre = (vedetteAnglaise && m.vo) ? m.vo : m.m;
+    var second = (vedetteAnglaise && m.vo) ? m.m : m.vo;
     var cherchable = plat(m.m + " " + (m.vo || "") + " " + (m.r || "") +
                           " " + (m.p || []).join(" ")).toLowerCase();
     // le chapitre de vocabulaire n'a pas de numéro d'article : il porte un id à lui
     return '<div class="rg-m" id="mot-' + esc(m.id || m.ref) + '" data-t="' + esc(cherchable) + '">' +
       '<div class="rg-m-head">' +
-        '<h4>' + esc(m.m) + '</h4>' +
-        (m.vo ? '<span class="rg-m-vo">' + esc(m.vo) + '</span>' : '') +
+        '<h4>' + esc(titre) + '</h4>' +
+        (second ? '<span class="rg-m-vo">' + esc(second) + '</span>' : '') +
         (m.ref
           ? '<a class="rg-ref" href="' + D.source + '" target="_blank" rel="noopener" ' +
               'title="Article ' + esc(m.ref) + ' des règles officielles">' + esc(m.ref) + '</a>'
@@ -93,7 +98,8 @@ window.Regles = (function(){
     var corps =
       (s.intro ? '<p class="rg-intro">' + s.intro + '</p>' : '') +
       ((s.mots && s.mots.length)
-        ? '<div class="rg-ms">' + s.mots.map(motHTML).join("") + '</div>' : '') +
+        ? '<div class="rg-ms">' + s.mots.map(function(m){
+            return motHTML(m, c.id === "mots-cles"); }).join("") + '</div>' : '') +
       ((s.regles && s.regles.length)
         ? '<div class="rg-rs">' + s.regles.map(regleHTML).join("") + '</div>' : '') +
       encartsHTML(s) +
@@ -123,7 +129,9 @@ window.Regles = (function(){
     if(!tous.length) return "";
     // on classe sur le mot, pas sur son article : « La base » se cherche à B
     function cle(s){ return s.replace(/^(l'|la |le |les |un |une )/i, ""); }
-    tous.sort(function(a, b){ return cle(a.m.m).localeCompare(cle(b.m.m), "fr"); });
+    var anglais = c.id === "mots-cles";
+    var nom = function(m){ return (anglais && m.vo) ? m.vo : m.m; };
+    tous.sort(function(a, b){ return cle(nom(a.m)).localeCompare(cle(nom(b.m)), "fr"); });
     var titre = c.indexTitre
       ? c.indexTitre.replace("%n", tous.length)
       : "Les " + tous.length + " mots-clés, par ordre alphabétique";
@@ -131,7 +139,7 @@ window.Regles = (function(){
       '<p class="rg-index-t">' + esc(titre) + ' — clique pour ouvrir&nbsp;:</p>' +
       '<div class="rg-chips">' + tous.map(function(x){
         return '<button type="button" class="rg-chip" data-sec="' + esc(x.s) + '" ' +
-          'data-mot="mot-' + esc(x.m.id || x.m.ref) + '">' + esc(x.m.m) + '</button>';
+          'data-mot="mot-' + esc(x.m.id || x.m.ref) + '">' + esc(nom(x.m)) + '</button>';
       }).join("") + '</div></div>';
   }
 

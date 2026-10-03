@@ -13,10 +13,10 @@ window.Extension = (function(){
     { t:"Les 1327 cartes",
       s:"Nom, texte de règles et, sur les cartes qui le méritent, une note qui explique le piège. " +
         "Tout le jeu est couvert : Origins, Proving Grounds, Spiritforged, Unleashed, Vendetta et Radiance." },
-    { t:"Une terminologie tenue",
-      s:"Essence runique, Puissance, Agonie, Amplification, Protection… Riot ne publie pas encore " +
-        "Riftbound en français : ces termes sont un choix assumé, appliqué de la même façon sur les " +
-        "1327 cartes et dans les règles, pour qu'un mot veuille toujours dire la même chose." },
+    { t:"Les mots-clés restent en anglais",
+      s:"Ambush, Deathknell, Deflect, Buff, Stun… ce sont les mots imprimés sur la carte, ceux du " +
+        "simulateur, de Rift Atlas et du Discord. La phrase autour est en français, et la parenthèse " +
+        "explique le mot : tu comprends la carte sans apprendre un vocabulaire que personne d'autre n'emploie." },
     { t:"Les pictogrammes du jeu",
       s:"Énergie, runes de chaque domaine, Puissance et épuisement s'affichent avec les symboles " +
         "officiels de Riot, servis depuis leurs serveurs. Ce sont exactement les symboles que tu as sous les yeux sur la carte." },
