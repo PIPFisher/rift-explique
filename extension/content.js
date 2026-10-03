@@ -11,7 +11,7 @@
   "use strict";
 
   var REMOTE = "https://rift-explique.github.io/fr.json";
-  var VERSION = "1.23.0";
+  var VERSION = "1.24.0";
 
   // Reprise après un rechargement de l'extension. Chrome laisse l'ancien
   // script tourner dans les onglets déjà ouverts : le service worker nous
@@ -342,17 +342,24 @@
       // le cache vaut 24 h : ni relecture de la copie embarquée (1 Mo à
       // analyser), ni retéléchargement à chaque page visitée
       DATA = cached;
+      construitKW();
       return;
     }
     var locale = null;
     try { locale = await fetch(chrome.runtime.getURL("fr.json")).then(function (r) { return r.json(); }); }
     catch (e) {}
     DATA = locale || { byCode: {}, byName: {} };
+    construitKW();
     fetch(REMOTE, { cache: "no-cache" })
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (fresh) {
         // une copie distante d'une structure plus ancienne est ignorée
-        if (utilisable(fresh)) { DATA = fresh; store(fresh); applyConfig(); refreshMarks(); }
+        if (utilisable(fresh)) {
+          DATA = fresh; store(fresh);
+          // les mots-clés arrivent avec les données : on refait la liste avant
+          // de redessiner, sinon un mot-clé tout neuf resterait sans couleur
+          construitKW(); applyConfig(); refreshMarks();
+        }
       })
       .catch(function () {});
   }
@@ -460,31 +467,47 @@
   //   e  vert olive  #96B432  Agonie, Caché, Amplifié, Protection, Chasse, Niveau, Temporaire
   //   c  magenta     #C8326E  Assaut, Bouclier, Tank
   //   n  gris        #787878  Vision, Amplification
-  var KW_FAM = [
-    ["t", ["Accélération", "Déploiement", "Répétition", "Embuscade", "Réaction", "Dégainer", "Action", "Légion", "Caché", "Flux"]],
-    ["e", ["Amplifiées", "Amplifiés", "Amplifiée", "Amplifié", "Temporaire", "Protection", "Vengeance", "Agonie", "Chasse", "Niveau", "Vision", "Gank"]],
-    ["c", ["Désarmement", "Arrière-ligne", "Bouclier", "Assaut", "Tank"]],
-    ["n", ["Expert en armes", "Amplification", "Prédiction", "Puissantes", "Puissante", "Équiper", "Exhiber", "Exhibe", "Brûler", "Unique"]]
-  ];
-  var KW_VAL = /^(Assaut|Bouclier|Protection|Chasse|Niveau|Brûler|Prédiction|Désarmement)$/;
+  // La liste voyage avec les traductions (champ « motsCles » de fr.json) : une
+  // extension qui sort ajoute ses mots-clés à tout le monde par la mise à jour
+  // quotidienne, sans réinstallation. Ce qui suit n'est qu'un filet de secours,
+  // pour une copie de données trop ancienne ou un premier chargement hors ligne.
+  var KW_SECOURS = {
+    fam: {
+      t: ["Accélération", "Déploiement", "Répétition", "Embuscade", "Réaction", "Dégainer", "Action", "Légion", "Caché", "Flux"],
+      e: ["Amplifiées", "Amplifiés", "Amplifiée", "Amplifié", "Temporaire", "Protection", "Vengeance", "Agonie", "Chasse", "Niveau", "Vision", "Gank"],
+      c: ["Désarmement", "Arrière-ligne", "Bouclier", "Assaut", "Tank"],
+      n: ["Expert en armes", "Amplification", "Prédiction", "Puissantes", "Puissante", "Équiper", "Exhiber", "Exhibe", "Brûler", "Unique"]
+    },
+    val: ["Assaut", "Bouclier", "Protection", "Chasse", "Niveau", "Brûler", "Prédiction", "Désarmement"]
+  };
 
-  var KW = (function () {
+  var KW = null;
+
+  function construitKW() {
+    var src = (DATA && DATA.motsCles && DATA.motsCles.fam) ? DATA.motsCles : KW_SECOURS;
     var all = [];
-    KW_FAM.forEach(function (f) { f[1].forEach(function (w) { all.push([w, f[0]]); }); });
+    Object.keys(src.fam).forEach(function (f) {
+      (src.fam[f] || []).forEach(function (w) { if (w) all.push([String(w), f]); });
+    });
+    if (!all.length) { KW = null; return; }
+    // le plus long d'abord : « Expert en armes » avant « Expert »
     all.sort(function (a, b) { return b[0].length - a[0].length; });
     var q = function (s) { return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); };
     var fam = {};
     all.forEach(function (x) { fam[x[0]] = x[1]; });
-    return {
+    KW = {
       re: new RegExp("(^|[^A-Za-zÀ-ÿ])(" + all.map(function (x) { return q(x[0]); }).join("|") + ")(?![A-Za-zÀ-ÿ])", "g"),
-      fam: fam
+      fam: fam,
+      val: new RegExp("^(" + (src.val || []).map(q).join("|") + ")$")
     };
-  })();
+  }
+  construitKW();
 
   function markKeywords(s) {
+    if (!KW) return s;
     return s.replace(KW.re, function (_, pre, word, off, whole) {
       var label = word;
-      if (KW_VAL.test(word)) {
+      if (KW.val.test(word)) {
         var m = whole.slice(off + pre.length + word.length).match(/^ (\d+)/);
         if (m) label = word + " " + m[1];
       }
