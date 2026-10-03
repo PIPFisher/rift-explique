@@ -89,6 +89,7 @@ index.html            coquille et navigation
 style.css             thème sombre, composants
 rb-app.js             navigation entre les onglets
 rb-core.js            chargement, pictogrammes, lexique
+rb-motscles.js        les mots-clés mis en couleur — source unique, embarquée dans fr.json
 rb-fr.js              traduction des 1320 cartes — la source
 fr.json               index généré depuis rb-fr.js, servi au site et à l'extension
 cards-data.js         données officielles allégées, liens vers les images de Riot

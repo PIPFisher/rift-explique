@@ -178,27 +178,28 @@ window.RB = (function(){
   //   e  vert olive  #96B432  Agonie, Caché, Amplifié, Protection, Chasse, Niveau, Temporaire
   //   c  magenta     #C8326E  Assaut, Bouclier, Tank
   //   n  gris        #787878  Vision, Amplification
-  var KW_FAM = [
-    ["t", ["Accélération", "Répétition", "Embuscade", "Réaction", "Dégainer", "Action", "Légion", "Caché", "Flux"]],
-    ["e", ["Amplifiées", "Amplifiés", "Amplifiée", "Amplifié", "Temporaire", "Protection", "Agonie", "Chasse", "Niveau", "Vision", "Gank"]],
-    ["c", ["Arrière-ligne", "Bouclier", "Assaut", "Tank"]],
-    ["n", ["Expert en armes", "Amplification", "Prédiction", "Puissantes", "Puissante", "Équiper", "Brûler", "Unique"]]
-  ];
-  var KW_VAL = /^(Assaut|Bouclier|Protection|Chasse|Niveau|Brûler|Prédiction)$/;
+  // La liste vient de rb-motscles.js, qui est aussi embarqué dans fr.json pour
+  // l'extension : une seule source à tenir à jour pour les deux.
+  var MOTS = window.RB_MOTS || { fam: {}, val: [] };
+  var KW_VAL = new RegExp("^(" + (MOTS.val || []).map(function(s){
+    return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }).join("|") + ")$");
 
   var KW_RE = (function(){
     var all = [];
-    KW_FAM.forEach(function(f){ f[1].forEach(function(w){ all.push([w, f[0]]); }); });
+    Object.keys(MOTS.fam || {}).forEach(function(f){
+      (MOTS.fam[f] || []).forEach(function(w){ if(w) all.push([String(w), f]); });
+    });
     all.sort(function(a, b){ return b[0].length - a[0].length; });
     var esc2 = function(s){ return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); };
     return {
       list: all,
-      re: new RegExp("(^|[^A-Za-zÀ-ÿ])(" + all.map(function(x){ return esc2(x[0]); }).join("|") + ")(?![A-Za-zÀ-ÿ])", "g"),
+      re: all.length ? new RegExp("(^|[^A-Za-zÀ-ÿ])(" + all.map(function(x){ return esc2(x[0]); }).join("|") + ")(?![A-Za-zÀ-ÿ])", "g") : null,
       fam: all.reduce(function(m, x){ m[x[0]] = x[1]; return m; }, {})
     };
   })();
 
   function markKeywords(s){
+    if(!KW_RE.re) return s;
     return s.replace(KW_RE.re, function(_, pre, word, off, whole){
       var fam = KW_RE.fam[word];
       var label = word;
